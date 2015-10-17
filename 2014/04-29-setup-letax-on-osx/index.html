@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>OS X 上中文 LaTeX 环境的搭建 | Lencerf&#39;s Walk</title>
+  <meta name="author" content="Lencerf">
+  
+  <meta name="description" content="to hit the marked point">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="OS X 上中文 LaTeX 环境的搭建"/>
+  <meta property="og:site_name" content="Lencerf&#39;s Walk"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link href="/img/favicon.png" rel="icon">
+  
+  
+  <link rel="alternate" href="/atom.xml" title="Lencerf&#39;s Walk" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60772880-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
+	<div class="alignleft" style="margin-left: 30px">
+	  <h1 style="font-style: italic;">Lencerf&#39;s Walk</h1>
+	  <h2>No Panic, No Escape and No Sloth.</a></h2>
+	</div>
+	<nav id="main-nav" class="alignright">
+	  <ul>
+	    
+	      <li><a href="/">HOME</a></li>
+	    
+	      <li><a href="/archives">BLOG</a></li>
+	    
+	  </ul>
+	  <div class="clearfix"></div>
+	</nav>
+	<div class="clearfix"></div>
+</div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+	<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">OS X 上中文 LaTeX 环境的搭建</h1>
+  
+
+      
+      <div style="margin-top:5px">
+        <time datetime="2014-04-29T15:14:19.000Z">April 29, 2014
+      </div>
+      
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。</p>
+<p>本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。</p>
+</blockquote>
+<p><a id="more"></a>　　众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。<br>在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。</p>
+<p>　　首先安装 TeX 基本系统。上 <a href="http://tug.org/mactex/" target="_blank" rel="external">MaxTeX 主页</a>下载 TeXLive 发行版，建议下载<a href="http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg" target="_blank" rel="external">基本包</a>（&lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 <code>apt-get</code> 命令即可。<br>事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。</p>
+<p>　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：<a href="http://pages.uoregon.edu/koch/texshop/texshop.html" target="_blank" rel="external">TeXShop</a>！<br><img src="http://lenserf-quantum-field.qiniudn.com/TeXonOSXTeXShop.png" alt="TeXShop"><br>　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：<br>在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样<del>奇奇怪怪</del>的问题。<br>在“排版”页的默认指令处选择“采用键入的指令”，输入”XeLaTeX”。</p>
+<p>　　现在来测试一下吧，在TeXShop里输入</p>
+<pre><code>\documentclass{article}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun} %设置默认的中文字体为宋体
+\begin{document}
+Hello! 这是中文测试!
+\<span class="keyword">end</span>{document}
+</code></pre><p>然后点击 TeXShop 工具栏上的“排版”按钮，应当就能顺利生成一个非常简单的中英文混排的文档了。<br><img src="http://lenserf-quantum-field.qiniudn.com/TeXonOSXtest.png" alt=""><br>看吧，中英文直接混排，别提多方便了。</p>
+<p>　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体</p>
+<pre><code>\<span class="built_in">set</span>CJKmainfont{<span class="variable">&lt;font name&gt;</span>} %设置默认字体
+\<span class="built_in">set</span>CJKsansfont{<span class="variable">&lt;font name&gt;</span>} %设置中文sffamily字体
+\<span class="built_in">set</span>CJKmonofont{<span class="variable">&lt;font name&gt;</span>} %设置中文ttfamily字体
+</code></pre><p>也可以单独设置某字体，比如设置仿宋字体：</p>
+<pre><code>\setCJKfamilyfont<span class="list">{fangsong}</span><span class="list">{FangSong}</span>     %使用仿宋字体，放在导言区
+\CJKfamily<span class="list">{fangsong}</span> 仿宋字体测试。 %放在正文里面
+</code></pre><p>　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将<code>&lt;font name&gt;</code>替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。<br><img src="http://lenserf-quantum-field.qiniudn.com/TeXonOSXfont.png" alt="OS X 字体册"></p>
+<p>　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考<a href="ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf" target="_blank" rel="external">《xeCJK宏包》</a>（作者：孙文昌）。</p>
+<p>　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。<br><img src="http://lenserf-quantum-field.qiniudn.com/TeXonOSXequation.png" alt="Daum Equation Editor"><br>下载地址：<a href="https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12" target="_blank" rel="external">Mac App Store</a>。当然也可以在 Chrome 商店里面直接搜索。</p>
+<p>　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)</p>
+<p>　　以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)</p>
+<pre><code><span class="comment">% !Mode:: "TeX:UTF-8"</span>
+<span class="comment">%!TEX program = xelatex</span>
+<span class="command">\documentclass</span><span class="special">[</span>12pt,a4paper<span class="special">]</span><span class="special">{</span>article<span class="special">}</span> 
+<span class="comment">%常用宏包</span>
+<span class="command">\usepackage</span><span class="special">{</span>geometry<span class="special">}</span>
+<span class="comment">%\geometry{left=3cm,right=3cm,top=3cm,bottom=3.5cm} %页边距设置</span>
+<span class="command">\usepackage</span><span class="special">{</span>url<span class="special">}</span>
+
+<span class="comment">%英文字体</span>
+<span class="command">\usepackage</span><span class="special">{</span>booktabs<span class="special">}</span>
+<span class="command">\usepackage</span><span class="special">{</span>fontspec,xltxtra,xunicode<span class="special">}</span>
+<span class="command">\defaultfontfeatures</span><span class="special">{</span>Mapping=tex-text<span class="special">}</span>
+<span class="command">\setromanfont</span><span class="special">[</span>Mapping=tex-text<span class="special">]</span><span class="special">{</span>TimesNewRomanPSMT<span class="special">}</span>
+<span class="command">\setsansfont</span><span class="special">[</span>Scale=MatchLowercase,Mapping=tex-text<span class="special">]</span><span class="special">{</span>Gill Sans<span class="special">}</span>
+<span class="command">\setmonofont</span><span class="special">[</span>Scale=MatchLowercase<span class="special">]</span><span class="special">{</span>Courier<span class="special">}</span>
+
+<span class="comment">%中文设置</span>
+<span class="command">\usepackage</span><span class="special">[</span>slantfont,boldfont<span class="special">]</span><span class="special">{</span>xeCJK<span class="special">}</span>
+<span class="command">\setCJKmainfont</span><span class="special">[</span>BoldFont=AdobeHeitiStd-Regular<span class="special">]</span><span class="special">{</span>AdobeHeitiStd-Regular<span class="special">}</span>
+<span class="command">\setCJKfamilyfont</span><span class="special">{</span>Song<span class="special">}</span><span class="special">{</span>AdobeSongStd-Light<span class="special">}</span>
+<span class="command">\setCJKfamilyfont</span><span class="special">{</span>Hei<span class="special">}</span><span class="special">{</span>AdobeHeitiStd-Regular<span class="special">}</span>
+<span class="command">\setCJKfamilyfont</span><span class="special">{</span>Kai<span class="special">}</span><span class="special">{</span>AdobeKaitiStd-Regular<span class="special">}</span>
+<span class="command">\setCJKfamilyfont</span><span class="special">{</span>Hupo<span class="special">}</span><span class="special">{</span>STHupo<span class="special">}</span>
+<span class="command">\setCJKfamilyfont</span><span class="special">{</span>FS<span class="special">}</span><span class="special">{</span>AdobeFangsongStd-Regular<span class="special">}</span>
+<span class="command">\XeTeXlinebreaklocale</span> "zh"<span class="comment">%中文断行用</span>
+<span class="command">\usepackage</span><span class="special">{</span>indentfirst<span class="special">}</span> <span class="comment">%首行缩进</span>
+
+<span class="comment">%数学设置</span>
+<span class="command">\usepackage</span><span class="special">{</span>amssymb<span class="special">}</span>
+<span class="command">\usepackage</span><span class="special">{</span>amsmath<span class="special">}</span>
+
+<span class="comment">%插图</span>
+<span class="command">\usepackage</span><span class="special">{</span>graphicx<span class="special">}</span>
+<span class="comment">%\usepackage{subfig}</span>
+<span class="comment">%插图模板</span>
+<span class="command">\iffalse</span> 
+<span class="command">\begin</span><span class="special">{</span>figure<span class="special">}</span><span class="special">[</span>htb<span class="special">]</span>
+<span class="command">\centering</span>
+<span class="command">\includegraphics</span><span class="special">{</span>文件名.png<span class="special">}</span>
+<span class="command">\caption</span><span class="special">{</span>图片标题<span class="special">}</span> <span class="command">\label</span><span class="special">{</span>标签<span class="special">}</span>
+<span class="command">\end</span><span class="special">{</span>figure<span class="special">}</span>
+<span class="command">\fi</span>
+
+<span class="comment">%作图</span>
+<span class="command">\usepackage</span><span class="special">{</span>pgf,tikz<span class="special">}</span>
+<span class="command">\usetikzlibrary</span><span class="special">{</span>arrows<span class="special">}</span>
+
+<span class="comment">%定义关键词命令 </span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\keywords</span><span class="special">}</span><span class="special">[</span>1<span class="special">]</span><span class="special">{</span><span class="command">\textbf</span><span class="special">{</span>Key words<span class="special">}</span>: <span class="special">#</span>1<span class="special">}</span>
+<span class="comment">%定义微分算符d和dbar、求导</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\dif</span><span class="special">}</span><span class="special">{</span><span class="command">\mathrm</span><span class="special">{</span>d<span class="special">}</span><span class="special">}</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\dbar</span><span class="special">}</span><span class="special">{</span><span class="command">\mathrm</span><span class="special">{</span>đ<span class="special">}</span><span class="special">}</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\der</span><span class="special">}</span><span class="special">[</span>2<span class="special">]</span><span class="special">{</span><span class="command">\displaystyle</span><span class="command">\frac</span><span class="special">{</span><span class="command">\dif</span> <span class="special">#</span>1<span class="special">}</span><span class="special">{</span><span class="command">\dif</span> <span class="special">#</span>2<span class="special">}</span><span class="special">}</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\ket</span><span class="special">}</span><span class="special">[</span>1<span class="special">]</span><span class="special">{</span>|<span class="special">#</span>1<span class="command">\rangle</span><span class="special">}</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\ketp</span><span class="special">}</span><span class="special">[</span>1<span class="special">]</span><span class="special">{</span><span class="command">\ket</span><span class="special">{</span><span class="special">#</span>1<span class="special">}</span>_p<span class="special">}</span>
+<span class="command">\newcommand</span><span class="special">{</span><span class="command">\bra</span><span class="special">}</span><span class="special">[</span>1<span class="special">]</span><span class="special">{</span><span class="command">\langle</span> <span class="special">#</span>1|<span class="special">}</span>
+
+ <span class="comment">%把 Reference 等换成中文</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\contentsname</span><span class="special">}</span><span class="special">{</span>目录<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\listfigurename</span><span class="special">}</span><span class="special">{</span>插图目录<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\listtablename</span><span class="special">}</span><span class="special">{</span>表格目录<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\refname</span><span class="special">}</span><span class="special">{</span>参考文献<span class="special">}</span> 
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\abstractname</span><span class="special">}</span><span class="special">{</span>摘要<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\indexname</span><span class="special">}</span><span class="special">{</span>索引<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\tablename</span><span class="special">}</span><span class="special">{</span>表<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\figurename</span><span class="special">}</span><span class="special">{</span>图<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\today</span><span class="special">}</span><span class="special">{</span><span class="command">\number</span><span class="command">\year</span> 年 <span class="command">\number</span><span class="command">\month</span> 月 <span class="command">\number</span><span class="command">\day</span> 日<span class="special">}</span>
+<span class="command">\renewcommand</span><span class="special">{</span><span class="command">\keywords</span><span class="special">}</span><span class="special">[</span>1<span class="special">]</span><span class="special">{</span><span class="command">\textbf</span><span class="special">{</span>关键词<span class="special">}</span>: <span class="special">#</span>1<span class="special">}</span>
+
+<span class="comment">%让引用变成上标</span>
+<span class="command">\makeatletter</span>
+<span class="command">\def</span><span class="command">\@</span>cite<span class="special">#</span>1<span class="special">#</span>2<span class="special">{</span><span class="command">\textsuperscript</span><span class="special">{</span><span class="special">[</span><span class="special">{</span><span class="special">#</span>1<span class="command">\if</span>@tempswa , <span class="special">#</span>2<span class="command">\fi</span><span class="special">}</span><span class="special">]</span><span class="special">}</span><span class="special">}</span>
+<span class="command">\makeatother</span>
+
+<span class="command">\begin</span><span class="special">{</span>document<span class="special">}</span>
+<span class="command">\title</span><span class="special">{</span>标题 Title<span class="special">}</span>
+<span class="command">\author</span><span class="special">{</span>作者 Author<span class="special">}</span>
+ <span class="command">\date</span><span class="special">{</span><span class="special">}</span>   <span class="comment">%去除标题的日期</span>
+ <span class="command">\maketitle</span>
+
+ <span class="comment">%摘要</span>
+<span class="command">\begin</span><span class="special">{</span>abstract<span class="special">}</span>
+
+<span class="command">\end</span><span class="special">{</span>abstract<span class="special">}</span>
+
+<span class="comment">%关键词</span>
+<span class="command">\keywords</span><span class="special">{</span>关键词<span class="special">}</span>
+
+<span class="comment">%论文主体</span>
+<span class="command">\section</span><span class="special">{</span>引言<span class="special">}</span>
+<span class="command">\textbf</span><span class="special">{</span>我焰美如画<span class="special">}</span>
+<span class="command">\url</span><span class="special">{</span>changyuan.lv@gmail.com<span class="special">}</span>
+<span class="comment">%定理</span>
+<span class="comment">%\theoremstyle{definition}</span>
+<span class="command">\newtheorem</span><span class="special">{</span>Theorem<span class="special">}</span><span class="special">{</span>定理<span class="special">}</span>
+<span class="command">\begin</span><span class="special">{</span>Theorem<span class="special">}</span><span class="special">[</span>圆环之理<span class="special">]</span>
+魔女不存在于这个世界。
+<span class="command">\end</span><span class="special">{</span>Theorem<span class="special">}</span>
+<span class="command">\begin</span><span class="special">{</span>Theorem<span class="special">}</span><span class="special">[</span>压缩映像原理<span class="special">]</span>
+距离空间<span class="formula">$(A,<span class="command">\rho</span>_A), (B,<span class="command">\rho</span>_B)$</span>
+<span class="command">\end</span><span class="special">{</span>Theorem<span class="special">}</span>
+
+<span class="comment">%引理</span>
+<span class="command">\newtheorem</span><span class="special">{</span>lemma<span class="special">}</span><span class="special">{</span>引理<span class="special">}</span>
+<span class="command">\begin</span><span class="special">{</span>lemma<span class="special">}</span><span class="special">[</span>Riemann-Lebesgue 引理<span class="special">]</span>
+<span class="command">\begin</span><span class="special">{</span>equation<span class="special">}</span>
+f<span class="command">\hat</span>(<span class="command">\omega</span>)=0 
+<span class="command">\end</span><span class="special">{</span>equation<span class="special">}</span>
+<span class="command">\end</span><span class="special">{</span>lemma<span class="special">}</span>
+
+<span class="comment">%引用</span>
+<span class="command">\begin</span><span class="special">{</span>quote<span class="special">}</span><span class="command">\sl</span> <span class="comment">%斜体</span>
+扼住命运的咽喉，然后被命运掐死，直到死亡仍然不放开紧握的双手，然后留下希望的果种，乘风燎原。
+<span class="command">\end</span><span class="special">{</span>quote<span class="special">}</span>
+
+<span class="comment">%以下是参考文献</span>
+<span class="command">\bibliographystyle</span><span class="special">{</span>unsrt<span class="special">}</span>
+<span class="command">\bibliography</span><span class="special">{</span>文献<span class="special">}</span>
+<span class="command">\nocite</span><span class="special">{</span>*<span class="special">}</span>
+<span class="command">\end</span><span class="special">{</span>document<span class="special">}</span>
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <span class="categories">
+    <a href="/categories/Academy/">Academy</a>
+  </span>
+
+        
+  
+  <span class="tags">
+    <a href="/tags/LaTeX/">LaTeX</a>, <a href="/tags/OS-X/">OS X</a>
+  </span>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h2 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+<aside id="sidebar" class="alignright">
+	
+	  
+<div class="widget tag">
+  <h3 class="title">CATEGORIES</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Academy/">Academy</a> (3)</li>
+  
+    <li><a href="/categories/Technique/">Technique</a> (5)</li>
+  
+    <li><a href="/categories/学术/">学术</a> (1)</li>
+  
+  </ul>
+</div>
+
+	
+	  
+<div class="widget tagcloud">
+  <h3 class="title">TAGS</h3>
+  <div class="entry">
+    <a href="/tags/Automator/" style="font-size: 10px;">Automator</a> <a href="/tags/LaTeX/" style="font-size: 20px;">LaTeX</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Mathematica/" style="font-size: 10px;">Mathematica</a> <a href="/tags/OS-X/" style="font-size: 15px;">OS X</a> <a href="/tags/Sublime-Text-3/" style="font-size: 10px;">Sublime Text 3</a> <a href="/tags/homebrew/" style="font-size: 10px;">homebrew</a> <a href="/tags/socks5/" style="font-size: 10px;">socks5</a> <a href="/tags/折腾/" style="font-size: 10px;">折腾</a>
+  </div>
+</div>
+
+	
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div style="text-align:center">
+  &copy; 2015 Lencerf&#39;s Walk
+   · Created with <a href="http://hexo.io/">Hexo</a>
+	
+   · <a href="/atom.xml"> Feeds <span style="font-family:FontAwesome"></span></a>
+   
+   	
+   · <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
+   
+</div>
+<div class="clearfix"></div>
+</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<script src="/js/gallery.js"></script>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript">
+var disqus_shortname = 'changyuanme';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
