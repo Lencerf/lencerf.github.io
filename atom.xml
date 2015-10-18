@@ -179,11 +179,11 @@
     <link href="http://changyuan.me/2015/06-02-small-trick-unix2dos-as-service/"/>
     <id>http://changyuan.me/2015/06-02-small-trick-unix2dos-as-service/</id>
     <published>2015-06-01T16:32:49.000Z</published>
-    <updated>2015-10-10T15:05:49.000Z</updated>
+    <updated>2015-10-18T12:59:42.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with <code>CRLF</code> line breaks while TeXShop.app uses <code>LF</code> as a line ending.</p>
 </blockquote>
-<p><a id="more"></a>Unix, which OS X is based on, uses <code>LF</code> as the default line break, different from Windows. Although I can use TextWrangle.app to convert text files between the two formats, but I really don’t like TextWrangle. (Sublime Text is wonderful!!!)</p>
+<p><a id="more"></a>Unix, on which OS X is based, uses <code>LF</code> as the default line break, different from Windows. Although I can use TextWrangle.app to convert text files between the two formats, but I really don’t like TextWrangle. (Sublime Text is wonderful!!!)</p>
 <p>So I find unix2dox, a command line tool that is developed to “convert text between DOS, UNIX, and Mac formats”. With Automator, the problem can be better solved.</p>
 <ol>
 <li>Install unix2dos<br><code>brew install unix2dos</code></li>
