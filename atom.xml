@@ -76,7 +76,7 @@
 </code></pre><p>Install <code>python3</code>, <code>ffmpeg</code> and <code>mpv</code> using <code>homebrew</code></p>
 <pre><code><span class="keyword">brew </span>install python3 ffmpeg Caskroom/cask/mpv
 </code></pre><p>Get the python script bilidan.py</p>
-<pre><code>git clone <span class="string">https:</span><span class="comment">//github.com/m13253/BiliDan.git</span>
+<pre><code>git <span class="keyword">clone</span> <span class="title">https</span>://github.com/m13253/BiliDan.git
 </code></pre><p>Let <code>bilidan.py</code> executable</p>
 <pre><code><span class="keyword">chmod</span> u+<span class="keyword">x</span> BiliDan/bilidan.py
 </code></pre><p>Open the terminal and run the following codes:</p>
