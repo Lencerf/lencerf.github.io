@@ -4,7 +4,7 @@
   <subtitle><![CDATA[stay simple, stay naïve]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://changyuan.me/"/>
-  <updated>2015-11-06T03:13:39.000Z</updated>
+  <updated>2015-11-06T07:06:42.000Z</updated>
   <id>http://changyuan.me/</id>
   
   <author>
@@ -18,13 +18,13 @@
     <title><![CDATA[This is the homepage of Changyuan Lyu]]></title>
     <link href="http://changyuan.me/2015/11-06-homepage/"/>
     <id>http://changyuan.me/2015/11-06-homepage/</id>
-    <published>2015-11-06T03:13:39.000Z</published>
-    <updated>2015-11-06T03:13:39.000Z</updated>
+    <published>2015-11-06T07:06:42.000Z</published>
+    <updated>2015-11-06T07:06:42.000Z</updated>
     <content type="html"><![CDATA[<!--## This is the homepage of Changyuan Lyu-->
 <p>Changyuan Lyu is currently an undergraduate at Kuang Yaming Honors School at Nanjing University, China, gaining his Bachelor’s degree of physics.</p>
 <h2 id="Research_Interests">Research Interests</h2><p>Quantum Mechanics, Quantum Information, Quantum Walk</p>
 <h2 id="Publications">Publications</h2><ul>
-<li><strong>Changyuan Lyu</strong>, Luyan Yu, Shengjun Wu. <em>Localization in Quantum Walks on a Honeycomb Network</em>. <a href="http://arxiv.org/abs/1509.03919" target="_blank" rel="external">Phys. Rev. A <strong>95</strong>, 052305 (2015).</a><br>Also on arXiv: <a href="http://arxiv.org/abs/1509.03919" target="_blank" rel="external">1509.03919</a></li>
+<li><strong>Changyuan Lyu</strong>, Luyan Yu, Shengjun Wu. <em>Localization in Quantum Walks on a Honeycomb Network</em>. <a href="http://arxiv.org/abs/1509.03919" target="_blank" rel="external">Phys. Rev. A <strong>95</strong>, 052305 (2015)</a>.<br>Also on arXiv: <a href="http://arxiv.org/abs/1509.03919" target="_blank" rel="external">1509.03919</a></li>
 </ul>
 <h2 id="Expertise_and_Skills">Expertise and Skills</h2><p>Mathematica, LaTeX, OS X, C++</p>
 ]]></content>
