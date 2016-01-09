@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Watch Video on Bilibili via bilidan.py on OS X | Lencerf&#39;s Walk</title>
+  <title>Embed figures of eps format in LaTeX papers -- with dvips | Lencerf&#39;s Walk</title>
   <meta name="author" content="Lencerf">
   
   <meta name="description" content="to hit the marked point">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Watch Video on Bilibili via bilidan.py on OS X"/>
+  <meta property="og:title" content="Embed figures of eps format in LaTeX papers -- with dvips"/>
   <meta property="og:site_name" content="Lencerf&#39;s Walk"/>
 
   
@@ -67,30 +67,22 @@
     <header>
       
   
-    <h1 class="title">Watch Video on Bilibili via bilidan.py on OS X</h1>
+    <h1 class="title">Embed figures of eps format in LaTeX papers -- with dvips</h1>
   
 
       
       <div style="margin-top:5px">
-        <time datetime="2015-09-23T11:11:25.000Z">September 23, 2015
+        <time datetime="2016-01-09T09:08:08.000Z">January 9, 2016
       </div>
       
     </header>
     <div class="entry">
       
-        <p>Install <a href="http://brew.sh" target="_blank" rel="external">homebrew</a></p>
-<pre><code>ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span>
-</code></pre><p>Install <code>python3</code>, <code>ffmpeg</code> and <code>mpv</code> using <code>homebrew</code></p>
-<pre><code><span class="keyword">brew </span>install python3 ffmpeg Caskroom/cask/mpv
-</code></pre><p>Get the python script bilidan.py</p>
-<pre><code>git <span class="keyword">clone</span> <span class="title">https</span>://github.com/m13253/BiliDan.git
-</code></pre><p>Let <code>bilidan.py</code> executable</p>
-<pre><code><span class="keyword">chmod</span> u+<span class="keyword">x</span> BiliDan/bilidan.py
-</code></pre><p>Open the terminal and run the following codes:</p>
-<pre><code>BiliDan<span class="regexp">/bilidan.py http:/</span><span class="regexp">/www.bilibili.com/</span>video<span class="regexp">/av715519/</span>
-</code></pre><p>Now we can watch the video without Flash Player!</p>
-<p>Tips: you may need to wait the mpv player for some minutes the first time you run the codes above. Just be patient.   </p>
-<p>Thanks to <a href="https://github.com/m13253" target="_blank" rel="external">m13253</a> for the projects <a href="https://github.com/m13253/BiliDan" target="_blank" rel="external">BiliDan</a> and <a href="https://github.com/m13253/danmaku2ass" target="_blank" rel="external">danmaku2ass</a>!</p>
+        <p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+<p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
+<p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat" target="_blank" rel="external">this question</a> on stackexchange. Some parameters are needed when hyperref is used with dvips:</p>
+<pre><code>\usepackage<span class="string">[dvips,breaklinks]</span>{hyperref}
+</code></pre><p><strong>But, why not use XeLaTeX to compile the source file?</strong> </p>
 
       
     </div>
@@ -99,13 +91,13 @@
         
   
   <span class="categories">
-    <a href="/categories/Technique/">Technique</a>
+    <a href="/categories/Academy/">Academy</a>
   </span>
 
         
   
   <span class="tags">
-    <a href="/tags/OS-X/">OS X</a>
+    <a href="/tags/LaTeX/">LaTeX</a>, <a href="/tags/Mac/">Mac</a>
   </span>
 
         

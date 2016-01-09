@@ -4,7 +4,7 @@
   <subtitle><![CDATA[stay simple, stay naïve]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://changyuan.me/"/>
-  <updated>2016-01-03T15:55:29.000Z</updated>
+  <updated>2016-01-09T09:31:15.000Z</updated>
   <id>http://changyuan.me/</id>
   
   <author>
@@ -13,6 +13,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Embed figures of eps format in LaTeX papers -- with dvips]]></title>
+    <link href="http://changyuan.me/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/"/>
+    <id>http://changyuan.me/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</id>
+    <published>2016-01-09T09:08:08.000Z</published>
+    <updated>2016-01-09T09:31:15.000Z</updated>
+    <content type="html"><![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+<p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
+<p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat" target="_blank" rel="external">this question</a> on stackexchange. Some parameters are needed when hyperref is used with dvips:</p>
+<pre><code>\usepackage<span class="string">[dvips,breaklinks]</span>{hyperref}
+</code></pre><p><strong>But, why not use XeLaTeX to compile the source file?</strong> </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figure]]>
+    </summary>
+    
+      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+    
+      <category term="Mac" scheme="http://changyuan.me/tags/Mac/"/>
+    
+      <category term="Academy" scheme="http://changyuan.me/categories/Academy/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[An example of differences between compilers]]></title>
