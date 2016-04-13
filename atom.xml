@@ -3,9 +3,9 @@
   <title><![CDATA[Lencerf's Walk]]></title>
   <subtitle><![CDATA[stay simple, stay naïve]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://changyuan.me/"/>
+  <link href="http://lencerf.github.io/"/>
   <updated>2016-01-09T09:31:15.000Z</updated>
-  <id>http://changyuan.me/</id>
+  <id>http://lencerf.github.io/</id>
   
   <author>
     <name><![CDATA[Lencerf]]></name>
@@ -16,32 +16,32 @@
   
   <entry>
     <title><![CDATA[Embed figures of eps format in LaTeX papers -- with dvips]]></title>
-    <link href="http://changyuan.me/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/"/>
-    <id>http://changyuan.me/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</id>
+    <link href="http://lencerf.github.io/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/"/>
+    <id>http://lencerf.github.io/2016/01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</id>
     <published>2016-01-09T09:08:08.000Z</published>
     <updated>2016-01-09T09:31:15.000Z</updated>
-    <content type="html"><![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+    <content type="html"><![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/" target="_blank" rel="external">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
 <p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
 <p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat" target="_blank" rel="external">this question</a> on stackexchange. Some parameters are needed when hyperref is used with dvips:</p>
 <pre><code>\usepackage<span class="string">[dvips,breaklinks]</span>{hyperref}
 </code></pre><p><strong>But, why not use XeLaTeX to compile the source file?</strong> </p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figure]]>
+    <![CDATA[<p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/" target="_blank" rel="extern]]>
     </summary>
     
-      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="http://lencerf.github.io/tags/LaTeX/"/>
     
-      <category term="Mac" scheme="http://changyuan.me/tags/Mac/"/>
+      <category term="Mac" scheme="http://lencerf.github.io/tags/Mac/"/>
     
-      <category term="Academy" scheme="http://changyuan.me/categories/Academy/"/>
+      <category term="Academy" scheme="http://lencerf.github.io/categories/Academy/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[An example of differences between compilers]]></title>
-    <link href="http://changyuan.me/2016/01-03-an-example-of-differences-between-compilers/"/>
-    <id>http://changyuan.me/2016/01-03-an-example-of-differences-between-compilers/</id>
+    <link href="http://lencerf.github.io/2016/01-03-an-example-of-differences-between-compilers/"/>
+    <id>http://lencerf.github.io/2016/01-03-an-example-of-differences-between-compilers/</id>
     <published>2016-01-03T15:40:04.000Z</published>
     <updated>2016-01-03T15:55:29.000Z</updated>
     <content type="html"><![CDATA[<p>For the code fragment below,</p>
@@ -67,16 +67,16 @@
 <span class="preprocessor">#<span class="keyword">includ]]>
     </summary>
     
-      <category term="C" scheme="http://changyuan.me/tags/C/"/>
+      <category term="C" scheme="http://lencerf.github.io/tags/C/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[brew with a socks5 proxy]]></title>
-    <link href="http://changyuan.me/2015/10-03-brew-with-a-socks5-proxy/"/>
-    <id>http://changyuan.me/2015/10-03-brew-with-a-socks5-proxy/</id>
+    <link href="http://lencerf.github.io/2015/10-03-brew-with-a-socks5-proxy/"/>
+    <id>http://lencerf.github.io/2015/10-03-brew-with-a-socks5-proxy/</id>
     <published>2015-10-03T14:47:28.000Z</published>
     <updated>2015-10-10T14:41:42.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -95,18 +95,18 @@
 <p]]>
     </summary>
     
-      <category term="homebrew" scheme="http://changyuan.me/tags/homebrew/"/>
+      <category term="homebrew" scheme="http://lencerf.github.io/tags/homebrew/"/>
     
-      <category term="socks5" scheme="http://changyuan.me/tags/socks5/"/>
+      <category term="socks5" scheme="http://lencerf.github.io/tags/socks5/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Watch Video on Bilibili via bilidan.py on OS X]]></title>
-    <link href="http://changyuan.me/2015/09-23-watch-video-using-bilidan/"/>
-    <id>http://changyuan.me/2015/09-23-watch-video-using-bilidan/</id>
+    <link href="http://lencerf.github.io/2015/09-23-watch-video-using-bilidan/"/>
+    <id>http://lencerf.github.io/2015/09-23-watch-video-using-bilidan/</id>
     <published>2015-09-23T11:11:25.000Z</published>
     <updated>2015-10-02T15:07:17.000Z</updated>
     <content type="html"><![CDATA[<p>Install <a href="http://brew.sh" target="_blank" rel="external">homebrew</a></p>
@@ -128,16 +128,16 @@
 <pre><code>ruby <span class="operator">-e</span> <span c]]>
     </summary>
     
-      <category term="OS X" scheme="http://changyuan.me/tags/OS-X/"/>
+      <category term="OS X" scheme="http://lencerf.github.io/tags/OS-X/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Make unix2doc a system service of OS X]]></title>
-    <link href="http://changyuan.me/2015/06-02-small-trick-unix2dos-as-service/"/>
-    <id>http://changyuan.me/2015/06-02-small-trick-unix2dos-as-service/</id>
+    <link href="http://lencerf.github.io/2015/06-02-small-trick-unix2dos-as-service/"/>
+    <id>http://lencerf.github.io/2015/06-02-small-trick-unix2dos-as-service/</id>
     <published>2015-06-01T16:32:49.000Z</published>
     <updated>2015-10-18T12:59:42.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -159,18 +159,18 @@
     
     </summary>
     
-      <category term="Automator" scheme="http://changyuan.me/tags/Automator/"/>
+      <category term="Automator" scheme="http://lencerf.github.io/tags/Automator/"/>
     
-      <category term="OS X" scheme="http://changyuan.me/tags/OS-X/"/>
+      <category term="OS X" scheme="http://lencerf.github.io/tags/OS-X/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Embed figures of eps format in LaTeX papers]]></title>
-    <link href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/"/>
-    <id>http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/</id>
+    <link href="http://lencerf.github.io/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/"/>
+    <id>http://lencerf.github.io/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/</id>
     <published>2015-05-17T01:07:14.000Z</published>
     <updated>2015-10-12T05:32:54.000Z</updated>
     <content type="html"><![CDATA[<p>Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don’t need to use the terrible CJK package.</p>
@@ -194,18 +194,18 @@
     <![CDATA[<p>Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed an]]>
     </summary>
     
-      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="http://lencerf.github.io/tags/LaTeX/"/>
     
-      <category term="Mac" scheme="http://changyuan.me/tags/Mac/"/>
+      <category term="Mac" scheme="http://lencerf.github.io/tags/Mac/"/>
     
-      <category term="Academy" scheme="http://changyuan.me/categories/Academy/"/>
+      <category term="Academy" scheme="http://lencerf.github.io/categories/Academy/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[设置 Mathematica 的默认字号]]></title>
-    <link href="http://changyuan.me/2015/02-25-set-default-fontsize-for-mathematica/"/>
-    <id>http://changyuan.me/2015/02-25-set-default-fontsize-for-mathematica/</id>
+    <link href="http://lencerf.github.io/2015/02-25-set-default-fontsize-for-mathematica/"/>
+    <id>http://lencerf.github.io/2015/02-25-set-default-fontsize-for-mathematica/</id>
     <published>2015-02-25T09:22:43.000Z</published>
     <updated>2015-10-09T00:39:47.000Z</updated>
     <content type="html"><![CDATA[<p>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。</p>
@@ -218,18 +218,18 @@
 <p>在 Mathematica 的 Format-&gt;Option Inspector 中以<code>fontsize</code>搜索<cod]]>
     </summary>
     
-      <category term="Mac" scheme="http://changyuan.me/tags/Mac/"/>
+      <category term="Mac" scheme="http://lencerf.github.io/tags/Mac/"/>
     
-      <category term="Mathematica" scheme="http://changyuan.me/tags/Mathematica/"/>
+      <category term="Mathematica" scheme="http://lencerf.github.io/tags/Mathematica/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[a template of beamer]]></title>
-    <link href="http://changyuan.me/2014/12-01-a-beamer-template/"/>
-    <id>http://changyuan.me/2014/12-01-a-beamer-template/</id>
+    <link href="http://lencerf.github.io/2014/12-01-a-beamer-template/"/>
+    <id>http://lencerf.github.io/2014/12-01-a-beamer-template/</id>
     <published>2014-11-30T16:17:10.000Z</published>
     <updated>2015-10-10T12:42:26.000Z</updated>
     <content type="html"><![CDATA[<p>Just a template of beamer</p>
@@ -333,16 +333,16 @@
     
     </summary>
     
-      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="http://lencerf.github.io/tags/LaTeX/"/>
     
-      <category term="Academy" scheme="http://changyuan.me/categories/Academy/"/>
+      <category term="Academy" scheme="http://lencerf.github.io/categories/Academy/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[配置 Sublime Text 的 LaTeX 写作环境]]></title>
-    <link href="http://changyuan.me/2014/11-20-latex-with-sublime-text-3/"/>
-    <id>http://changyuan.me/2014/11-20-latex-with-sublime-text-3/</id>
+    <link href="http://lencerf.github.io/2014/11-20-latex-with-sublime-text-3/"/>
+    <id>http://lencerf.github.io/2014/11-20-latex-with-sublime-text-3/</id>
     <published>2014-11-20T15:32:35.000Z</published>
     <updated>2015-10-02T15:05:23.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -371,22 +371,22 @@
     
     </summary>
     
-      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="http://lencerf.github.io/tags/LaTeX/"/>
     
-      <category term="Mac" scheme="http://changyuan.me/tags/Mac/"/>
+      <category term="Mac" scheme="http://lencerf.github.io/tags/Mac/"/>
     
-      <category term="Sublime Text 3" scheme="http://changyuan.me/tags/Sublime-Text-3/"/>
+      <category term="Sublime Text 3" scheme="http://lencerf.github.io/tags/Sublime-Text-3/"/>
     
-      <category term="折腾" scheme="http://changyuan.me/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="折腾" scheme="http://lencerf.github.io/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="Technique" scheme="http://changyuan.me/categories/Technique/"/>
+      <category term="Technique" scheme="http://lencerf.github.io/categories/Technique/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[OS X 上中文 LaTeX 环境的搭建]]></title>
-    <link href="http://changyuan.me/2014/04-29-setup-letax-on-osx/"/>
-    <id>http://changyuan.me/2014/04-29-setup-letax-on-osx/</id>
+    <link href="http://lencerf.github.io/2014/04-29-setup-letax-on-osx/"/>
+    <id>http://lencerf.github.io/2014/04-29-setup-letax-on-osx/</id>
     <published>2014-04-29T15:14:19.000Z</published>
     <updated>2015-10-02T15:04:53.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -546,18 +546,18 @@ f<span class="command">\hat</span>(<span class="command">\omega</span>)=0
     
     </summary>
     
-      <category term="LaTeX" scheme="http://changyuan.me/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="http://lencerf.github.io/tags/LaTeX/"/>
     
-      <category term="OS X" scheme="http://changyuan.me/tags/OS-X/"/>
+      <category term="OS X" scheme="http://lencerf.github.io/tags/OS-X/"/>
     
-      <category term="Academy" scheme="http://changyuan.me/categories/Academy/"/>
+      <category term="Academy" scheme="http://lencerf.github.io/categories/Academy/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[This is the homepage of Changyuan Lyu]]></title>
-    <link href="http://changyuan.me/2010/01-03-homepage/"/>
-    <id>http://changyuan.me/2010/01-03-homepage/</id>
+    <link href="http://lencerf.github.io/2010/01-03-homepage/"/>
+    <id>http://lencerf.github.io/2010/01-03-homepage/</id>
     <published>2010-01-03T15:40:04.000Z</published>
     <updated>2016-01-25T01:19:42.000Z</updated>
     <content type="html"><![CDATA[<p>I am currently an undergraduate at Kuang Yaming Honors School at Nanjing University, China, gaining my Bachelor’s degree of Physics. Click <a href="/mycv/index.html">here</a> to view my CV.</p>
