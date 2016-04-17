@@ -48,7 +48,7 @@
     </header>
   
     <div class="entry">
-      <p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+      <p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
 
 <p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
 
