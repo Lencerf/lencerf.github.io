@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.15" />
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<title>Embed figures of eps format in LaTeX papers -- with dvips - Lencerf&#39;s Walk</title>
+<meta property='og:title' content="Embed figures of eps format in LaTeX papers -- with dvips - Lencerf&#39;s Walk">
+<meta property="og:type" content="article">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<meta property="og:url" content="http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/">
+
+</head>
+<body>
+	<header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
+	<div class="alignleft" style="margin-left: 30px">
+	  <h1 style="font-style: italic;">Lencerf&#39;s Walk</h1>
+	  <h2>stay simple, stay naïve</h2>
+	</div>
+	<nav id="main-nav" class="alignright">
+	  <ul>
+	  
+	      <li><a href="/archives/archives/">BLOG</a></li>
+	  
+	      <li><a href="/">HOME</a></li>
+	  
+	  	    
+	  </ul>
+	  <div class="clearfix"></div>
+	</nav>
+	<div class="clearfix"></div>
+</div></header>
+	
+	<div id="content" class="inner">
+	    <div id="main-col" class="alignleft"><div id="wrapper">
+			<article class="post">
+  <div class="post-content">
+  
+    <header>
+      <h1 class="title">Embed figures of eps format in LaTeX papers -- with dvips</h1>
+      <div style="margin-top:5px">
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2016-01-09T17:08:08&#43;08:00">January 9, 2016</time>
+      </div>
+    </header>
+  
+    <div class="entry">
+      <p>At the end of my earlier <a href="http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+
+<p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
+
+<p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat">this question</a> on stackexchange. Some parameters are needed when hyperref is used with dvips:</p>
+
+<pre><code class="language-tex">\usepackage[dvips,breaklinks]{hyperref}
+</code></pre>
+
+<p><strong>But, why not use XeLaTeX to compile the source file?</strong></p>
+
+    </div>
+    <footer>
+    
+    <span class="tags">
+    <a href="http://lencerf.github.io/tags/latex">LaTeX</a>,  
+    <a href="http://lencerf.github.io/tags/mac">Mac</a>,  
+      </span>
+    
+
+    
+    <span class="categories">
+    <a href="http://lencerf.github.io/categories/academy">Academy</a>
+      </span>
+    
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h2 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<script type="text/javascript">
+var disqus_shortname = "changyuanme";
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+		</div></div>
+		<aside id="sidebar" class="alignright">
+
+
+
+<div class="widget tag">
+  <h3 class="title">RECENT POSTS</h3>
+  <ul class="entry">
+    
+      <li>▪ <a href="/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a></li>
+    
+      <li>▪ <a href="/post/2016-01-03-an-example-of-differences-between-compilers/">An example of differences between compilers</a></li>
+    
+      <li>▪ <a href="/post/2015-10-03-brew-with-a-socks5-proxy/">brew with a socks5 proxy</a></li>
+    
+      <li>▪ <a href="/post/2015-09-23-watch-video-using-bilidan/">Watch Video on Bilibili via bilidan.py on OS X</a></li>
+    
+      <li>▪ <a href="/post/2015-06-02-small-trick-unix2dos-as-service/">Make unix2doc a system service of OS X</a></li>
+    
+      <li>▪ <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">Embed figures of eps format in LaTeX papers</a></li>
+    
+      <li>▪ <a href="/post/2015-02-25-set-default-fontsize-for-mathematica/">设置 Mathematica 的默认字号</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="widget tag">
+  <h3 class="title">CATEGORIES</h3>
+  <ul class="entry">
+    
+      <li><a href="/categories/academy">Academy</a></li>
+    
+      <li><a href="/categories/technique">Technique</a></li>
+    
+  </ul>
+</div>
+
+
+
+</aside>
+	    <div class="clearfix"></div>
+	</div>
+	
+<footer id="footer" class="inner">
+<div style="text-align:center">
+	&copy; 2016 Lencerf&#39;s Walk | Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
+</div>
+<div class="clearfix"></div>
+</footer>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<script src="http://lencerf.github.io/js/gallery.js"></script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+
+
+<script >hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Lencerf&#39;s Walk</title>
+    <link>http://lencerf.github.io/tags/c/</link>
+    <description>Recent content in C on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2016 23:40:04 +0800</lastBuildDate>
+    <atom:link href="http://lencerf.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>An example of differences between compilers</title>
+      <link>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
+#include &amp;quot;stdio.h&amp;quot;
+int main(int argc, char const *argv[]) {
+    int a = 1;
+    int c = (a=a * 2) + (a = a + 3);
+    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the biniary file and we will get:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, if I use &lt;code&gt;clang&lt;/code&gt; to compile the codes, there will be a warning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run the generated file:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
