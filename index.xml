@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lencerf&#39;s Walk</title>
+    <link>http://lencerf.github.io/</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jan 2016 17:08:08 +0800</lastBuildDate>
+    <atom:link href="http://lencerf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
+      <link>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;http://changyuan.me/2015/05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+
+&lt;p&gt;Today when I am tring PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
+
+&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some parameters are needed when hyperref is used with dvips:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvips,breaklinks]{hyperref}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;But, why not use XeLaTeX to compile the source file?&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example of differences between compilers</title>
+      <link>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
+#include &amp;quot;stdio.h&amp;quot;
+int main(int argc, char const *argv[]) {
+    int a = 1;
+    int c = (a=a * 2) + (a = a + 3);
+    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the biniary file and we will get:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, if I use &lt;code&gt;clang&lt;/code&gt; to compile the codes, there will be a warning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run the generated file:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>brew with a socks5 proxy</title>
+      <link>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;set a socks proxy with git for the http transport&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;set a socks proxy for curl: jsut add &lt;code&gt;proxy=socks5://127.0.0.1:1080&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Watch Video on Bilibili via bilidan.py on OS X</title>
+      <link>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
+      <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
+      <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Install &lt;code&gt;python3&lt;/code&gt;, &lt;code&gt;ffmpeg&lt;/code&gt; and &lt;code&gt;mpv&lt;/code&gt; using &lt;code&gt;homebrew&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install python3 ffmpeg Caskroom/cask/mpv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get the python script bilidan.py&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/m13253/BiliDan.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let &lt;code&gt;bilidan.py&lt;/code&gt; executable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod u+x BiliDan/bilidan.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Open the terminal and run the following codes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;BiliDan/bilidan.py http://www.bilibili.com/video/av715519/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we can watch the video without Flash Player!&lt;/p&gt;
+
+&lt;p&gt;Tips: you may need to wait the mpv player for some minutes the first time you run the codes above. Just be patient.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://github.com/m13253&#34;&gt;m13253&lt;/a&gt; for the projects &lt;a href=&#34;https://github.com/m13253/BiliDan&#34;&gt;BiliDan&lt;/a&gt; and &lt;a href=&#34;https://github.com/m13253/danmaku2ass&#34;&gt;danmaku2ass&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Make unix2doc a system service of OS X</title>
+      <link>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unix, on which OS X is based, uses &lt;code&gt;LF&lt;/code&gt; as the default line break, different from Windows. Although I can use TextWrangle.app to convert text files between the two formats, but I really don&amp;rsquo;t like TextWrangle. (Sublime Text is wonderful!!!)&lt;/p&gt;
+
+&lt;p&gt;So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. With Automator, the problem can be better solved.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install unix2dos
+&lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a new service in Automator as follow
+&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1etdcio105aj20h00dfwht.jpg&#34; alt=&#34;Automator script&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Have a try!
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1etdcmh4mmtj207c06cdg5.jpg&#34; alt=&#34;unix2dos in the context menu&#34; /&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Embed figures of eps format in LaTeX papers</title>
+      <link>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
+      <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
+      <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
+
+&lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;latex paper.tex;
+bibtex peper;
+latex peper;
+latex paper;
+dvipdfmx paper.dvi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Another problem is about the figure. APS recommend eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to transform eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning struggle with the horrible blanks.&lt;/p&gt;
+
+&lt;p&gt;Installing Ghostscript is easy, just brew it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install ghostscript
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if package hyperref is used.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\usepackage[dvipdfmx]{hyperref}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Certainly, PDF copy can be generated by other commands besides dvipdfmx. For example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dvips paper.dvi
+ps2pdf paper.ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But you may get an ugly reference article list. :(&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>设置 Mathematica 的默认字号</title>
+      <link>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
+
+&lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;最后，在&lt;a href=&#34;http://mathematica.stackexchange.com/questions/59283/changing-the-default-font-size&#34;&gt;StackExchange&lt;/a&gt;找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把&lt;code&gt;1&lt;/code&gt;修改为&lt;code&gt;1.5&lt;/code&gt;或其他，即把整个 notebook 的显示全局放大。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1eplqnlb507j20l80gxju9.jpg&#34; alt=&#34;设置全局放大&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>a template of beamer</title>
+      <link>http://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;%!Mode:: &amp;quot;TeX:UTF-8&amp;quot;
+%!TEX program = xelatex
+\documentclass[10pt]{beamer}
+%[]中加t可以使内容从顶部开始
+
+%英文字体
+\usepackage{booktabs}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Courier}
+
+%中文设置
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Song}{AdobeSongStd-Light}
+\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{Hupo}{STHupo}
+\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
+\XeTeXlinebreaklocale &amp;quot;zh&amp;quot; %中文断行用
+
+%beamer配置
+\usetheme{Luebeck}%
+\setbeamertemplate{headline}{}
+\setbeamertemplate{navigation symbols}{} %去掉导航条
+\usefonttheme{serif}
+%加上sectionpage
+\AtBeginSection[]{
+\begin{frame}
+\begin{center}
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+\usebeamerfont{part title}{\large \insertsection}
+\end{beamercolorbox}
+\end{center}
+\end{frame}
+}
+
+%数学设置
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%插图
+\usepackage{graphicx}
+
+%作图
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\title[简略标题]{titlepage上显示的完整标题}
+\author[作者]{titlepage上显示的完整作者信息，可以包括邮件地址}
+\institute[简略机构]{titlepage上要显示的完整机构}
+\date{2014.mm.dd}
+
+\begin{document}
+%标题页
+\frame{\titlepage}
+%outline
+\section[Outline]{}
+\frame{
+\frametitle{主要内容}
+\tableofcontents
+}
+%正文
+\section{章节1}
+\frame   %[allowframebreaks]似乎与\pause冲突
+{\frametitle{页标题}
+        \begin{itemize}
+        \item 信息1
+        \pause
+        \item 信息2
+        \only&amp;lt;3&amp;gt;{
+        \item 信息3}
+        \item 信息4
+        \end{itemize}
+}
+
+\section{章节2}
+\frame[allowframebreaks]{
+\frametitle{页标题}
+}
+
+%感谢页
+\frame{
+ \begin{center}
+ \begin{beamercolorbox}[sep=8pt,center]{part title}
+\usebeamerfont{part title}{\huge Thank You!}
+\end{beamercolorbox}
+ \end{center}
+}
+
+\end{document}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
+      <link>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;安装-latextools:6d22bf66e16e2d09aca2fb08d111cfd9&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;View -&amp;gt; Show Console，打开终端界面，将 Package Control &lt;a href=&#34;https://sublime.wbond.net/installation&#34;&gt;官网&lt;/a&gt;给出的代码复制粘贴进终端，回车完成 Package Control 的安装。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Command-Shift-P&lt;/code&gt;调出命令窗口，输入&lt;code&gt;Install&lt;/code&gt;，等待一会，之后输入&lt;code&gt;LaTeXTools&lt;/code&gt;，回车完成安装，时常取决于网络。&lt;/li&gt;
+&lt;li&gt;安装 &lt;a href=&#34;http://skim-app.sourceforge.net/&#34;&gt;Skim&lt;/a&gt;，用于预览编译好的PDF文件。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;初始设置:6d22bf66e16e2d09aca2fb08d111cfd9&#34;&gt;初始设置&lt;/h2&gt;
+
+&lt;h3 id=&#34;latextools:6d22bf66e16e2d09aca2fb08d111cfd9&#34;&gt;LaTeXTools&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;初始化：按下&lt;code&gt;Command-Shift-P&lt;/code&gt;，输入&amp;rdquo;latextools&amp;rdquo;，选择&amp;rdquo;LaTeXTools:Reconfigure&amp;hellip;&amp;ldquo;，回车。
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg&#34; alt=&#34;LaTeXTools 的初始化&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;设置编译时输出详细日志：前往&lt;code&gt;~/Library/Application Support/Sublime Text 3/Packages/User/&lt;/code&gt;，打开&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;，将&lt;code&gt;&amp;quot;display_log&amp;quot; : false,&lt;/code&gt;改为&lt;code&gt;&amp;quot;display_log&amp;quot; : true,&lt;/code&gt;。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;设置默认使用 XeLaTeX 编译文件：虽然可以去修改&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;,不过最简单安全的方法还是在自己的 TeX 源文件开头加上&lt;code&gt;%!TEX program = xelatex&lt;/code&gt;，修改一下自己的模板就一劳永逸了，难道每次都从输入&lt;code&gt;\begin{document}&lt;/code&gt;开始？&lt;/p&gt;
+
+&lt;h3 id=&#34;skim:6d22bf66e16e2d09aca2fb08d111cfd9&#34;&gt;Skim&lt;/h3&gt;
+
+&lt;p&gt;在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg&#34; alt=&#34;Skim 设置&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键:6d22bf66e16e2d09aca2fb08d111cfd9&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Skim：&lt;code&gt;Command-Shift-J&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OS X 上中文 LaTeX 环境的搭建</title>
+      <link>http://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
+      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      
+      <guid>http://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
+
+&lt;p&gt;本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;　　众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
+在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。&lt;/p&gt;
+
+&lt;p&gt;　　首先安装 TeX 基本系统。上 &lt;a href=&#34;http://tug.org/mactex/&#34;&gt;MaxTeX 主页&lt;/a&gt;下载 TeXLive 发行版，建议下载&lt;a href=&#34;http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg&#34;&gt;基本包&lt;/a&gt;（&amp;lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 &lt;code&gt;apt-get&lt;/code&gt; 命令即可。
+事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。&lt;/p&gt;
+
+&lt;p&gt;　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：&lt;a href=&#34;http://pages.uoregon.edu/koch/texshop/texshop.html&#34;&gt;TeXShop&lt;/a&gt;！
+&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXTeXShop.png&#34; alt=&#34;TeXShop&#34; /&gt;
+　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
+在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样&lt;del&gt;奇奇怪怪&lt;/del&gt;的问题。
+在“排版”页的默认指令处选择“采用键入的指令”，输入&amp;rdquo;XeLaTeX&amp;rdquo;。&lt;/p&gt;
+
+&lt;p&gt;　　现在来测试一下吧，在TeXShop里输入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\documentclass{article}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun} %设置默认的中文字体为宋体
+\begin{document}
+Hello! 这是中文测试!
+\end{document}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后点击 TeXShop 工具栏上的“排版”按钮，应当就能顺利生成一个非常简单的中英文混排的文档了。
+&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXtest.png&#34; alt=&#34;&#34; /&gt;
+看吧，中英文直接混排，别提多方便了。&lt;/p&gt;
+
+&lt;p&gt;　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\setCJKmainfont{&amp;lt;font name&amp;gt;} %设置默认字体
+\setCJKsansfont{&amp;lt;font name&amp;gt;} %设置中文sffamily字体
+\setCJKmonofont{&amp;lt;font name&amp;gt;} %设置中文ttfamily字体
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以单独设置某字体，比如设置仿宋字体：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\setCJKfamilyfont{fangsong}{FangSong}     %使用仿宋字体，放在导言区
+\CJKfamily{fangsong} 仿宋字体测试。 %放在正文里面
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将&lt;code&gt;&amp;lt;font name&amp;gt;&lt;/code&gt;替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
+&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXfont.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考&lt;a href=&#34;ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf&#34;&gt;《xeCJK宏包》&lt;/a&gt;（作者：孙文昌）。&lt;/p&gt;
+
+&lt;p&gt;　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
+&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXequation.png&#34; alt=&#34;Daum Equation Editor&#34; /&gt;
+下载地址：&lt;a href=&#34;https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12&#34;&gt;Mac App Store&lt;/a&gt;。当然也可以在 Chrome 商店里面直接搜索。&lt;/p&gt;
+
+&lt;p&gt;　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)&lt;/p&gt;
+
+&lt;p&gt;　　以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;% !Mode:: &amp;quot;TeX:UTF-8&amp;quot;
+%!TEX program = xelatex
+\documentclass[12pt,a4paper]{article} 
+%常用宏包
+\usepackage{geometry}
+%\geometry{left=3cm,right=3cm,top=3cm,bottom=3.5cm} %页边距设置
+\usepackage{url}
+
+%英文字体
+\usepackage{booktabs}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Courier}
+
+%中文设置
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Song}{AdobeSongStd-Light}
+\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{Hupo}{STHupo}
+\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
+\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;%中文断行用
+\usepackage{indentfirst} %首行缩进
+
+%数学设置
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%插图
+\usepackage{graphicx}
+%\usepackage{subfig}
+%插图模板
+\iffalse 
+\begin{figure}[htb]
+\centering
+\includegraphics{文件名.png}
+\caption{图片标题} \label{标签}
+\end{figure}
+\fi
+
+%作图
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+%定义关键词命令 
+\newcommand{\keywords}[1]{\textbf{Key words}: #1}
+%定义微分算符d和dbar、求导
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\dbar}{\mathrm{đ}}
+\newcommand{\der}[2]{\displaystyle\frac{\dif #1}{\dif #2}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\ketp}[1]{\ket{#1}_p}
+\newcommand{\bra}[1]{\langle #1|}
+
+ %把 Reference 等换成中文
+\renewcommand{\contentsname}{目录}
+\renewcommand{\listfigurename}{插图目录}
+\renewcommand{\listtablename}{表格目录}
+\renewcommand{\refname}{参考文献} 
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\indexname}{索引}
+\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{图}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand{\keywords}[1]{\textbf{关键词}: #1}
+
+%让引用变成上标
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+\begin{document}
+\title{标题 Title}
+\author{作者 Author}
+ \date{}   %去除标题的日期
+ \maketitle
+ 
+ %摘要
+\begin{abstract}
+
+\end{abstract}
+
+%关键词
+\keywords{关键词}
+
+%论文主体
+\section{引言}
+\textbf{我焰美如画}
+\url{changyuan.lv@gmail.com}
+%定理
+%\theoremstyle{definition}
+\newtheorem{Theorem}{定理}
+\begin{Theorem}[圆环之理]
+魔女不存在于这个世界。
+\end{Theorem}
+\begin{Theorem}[压缩映像原理]
+距离空间$(A,\rho_A), (B,\rho_B)$
+\end{Theorem}
+
+%引理
+\newtheorem{lemma}{引理}
+\begin{lemma}[Riemann-Lebesgue 引理]
+\begin{equation}
+f\hat(\omega)=0 
+\end{equation}
+\end{lemma}
+
+%引用
+\begin{quote}\sl %斜体
+扼住命运的咽喉，然后被命运掐死，直到死亡仍然不放开紧握的双手，然后留下希望的果种，乘风燎原。
+\end{quote}
+
+%以下是参考文献
+\bibliographystyle{unsrt}
+\bibliography{文献}
+\nocite{*}
+\end{document}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homepage</title>
+      <link>http://lencerf.github.io/homepage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lencerf.github.io/homepage/</guid>
+      <description>
+
+&lt;h1 id=&#34;this-is-the-homepage-of-lencerf:df172b50a72343cc3a669e7d2f82e221&#34;&gt;This is the homepage of Lencerf.&lt;/h1&gt;
+
+&lt;p&gt;I am currently an undergraduate at Kuang Yaming Honors School at Nanjing University, China, gaining my Bachelor&amp;rsquo;s degree of Physics.&lt;/p&gt;
+
+&lt;h2 id=&#34;research-interests:df172b50a72343cc3a669e7d2f82e221&#34;&gt;Research Interests&lt;/h2&gt;
+
+&lt;p&gt;Quantum Information, Quantum Optics, Condensed Matter, Computational Physics&lt;/p&gt;
+
+&lt;h2 id=&#34;publications:df172b50a72343cc3a669e7d2f82e221&#34;&gt;Publications&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Changyuan Lyu&lt;/strong&gt;, Luyan Yu, Shengjun Wu. &lt;em&gt;Localization in Quantum Walks on a Honeycomb Network&lt;/em&gt;. &lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevA.92.052305&#34;&gt;Phys. Rev. A &lt;strong&gt;92&lt;/strong&gt;, 052305 (2015)&lt;/a&gt;.
+Also on arXiv: &lt;a href=&#34;http://arxiv.org/abs/1509.03919&#34;&gt;1509.03919&lt;/a&gt;
+&lt;img src=&#34;img/localization.png&#34; alt=&#34;Localization: simulations and analyses&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;expertise-and-skills:df172b50a72343cc3a669e7d2f82e221&#34;&gt;Expertise and Skills&lt;/h2&gt;
+
+&lt;p&gt;Basic: HTML, CSS, Objective-C, Git
+Proficient: LaTeX, Mathematica, C++, OS X &amp;amp; Linux Shell
+Currently learning Haskell&lt;/p&gt;
+
+&lt;h2 id=&#34;hobbies:df172b50a72343cc3a669e7d2f82e221&#34;&gt;Hobbies&lt;/h2&gt;
+
+&lt;p&gt;programming, jpop music, typography, photography, Rubik’s cube, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
