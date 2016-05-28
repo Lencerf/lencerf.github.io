@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mac on Lencerf&#39;s Walk</title>
-    <link>http://lencerf.github.io/tags/mac/</link>
+    <link>https://lencerf.github.io/tags/mac/</link>
     <description>Recent content in Mac on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Jan 2016 17:08:08 +0800</lastBuildDate>
-    <atom:link href="http://lencerf.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lencerf.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <link>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <guid>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
 
 &lt;p&gt;Today when I am tring PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
@@ -30,10 +30,10 @@
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
+      <link>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
+      <guid>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
       <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
 
 &lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
@@ -69,10 +69,10 @@ ps2pdf paper.ps
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
 
 &lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
@@ -85,10 +85,10 @@ ps2pdf paper.ps
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
 
 &lt;blockquote&gt;

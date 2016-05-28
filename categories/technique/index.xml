@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technique on Lencerf&#39;s Walk</title>
-    <link>http://lencerf.github.io/categories/technique/</link>
+    <link>https://lencerf.github.io/categories/technique/</link>
     <description>Recent content in Technique on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2016 23:40:04 +0800</lastBuildDate>
-    <atom:link href="http://lencerf.github.io/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lencerf.github.io/categories/technique/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>An example of differences between compilers</title>
-      <link>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
       <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
@@ -51,10 +51,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -72,10 +72,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Watch Video on Bilibili via bilidan.py on OS X</title>
-      <link>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
+      <link>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
       <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
+      <guid>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
       <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
@@ -111,10 +111,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -136,10 +136,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
 
 &lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
@@ -152,10 +152,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
 
 &lt;blockquote&gt;

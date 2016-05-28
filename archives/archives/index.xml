@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on Lencerf&#39;s Walk</title>
-    <link>http://lencerf.github.io/archives/archives/</link>
+    <link>https://lencerf.github.io/archives/archives/</link>
     <description>Recent content in Archives on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Jan 2016 17:08:08 +0800</lastBuildDate>
-    <atom:link href="http://lencerf.github.io/archives/archives/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lencerf.github.io/archives/archives/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <link>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <guid>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
 
 &lt;p&gt;Today when I am tring PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
@@ -30,10 +30,10 @@
     
     <item>
       <title>An example of differences between compilers</title>
-      <link>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
       <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
@@ -70,10 +70,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -91,10 +91,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Watch Video on Bilibili via bilidan.py on OS X</title>
-      <link>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
+      <link>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
       <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
+      <guid>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
       <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
@@ -130,10 +130,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -155,10 +155,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
+      <link>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
+      <guid>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
       <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
 
 &lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
@@ -194,10 +194,10 @@ ps2pdf paper.ps
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
 
 &lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
@@ -210,10 +210,10 @@ ps2pdf paper.ps
     
     <item>
       <title>a template of beamer</title>
-      <link>http://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <link>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
       <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;%!Mode:: &amp;quot;TeX:UTF-8&amp;quot;
@@ -315,10 +315,10 @@ ps2pdf paper.ps
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -361,10 +361,10 @@ ps2pdf paper.ps
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>http://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>http://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 
