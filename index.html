@@ -53,16 +53,23 @@
     </div>
 
 <script type="text/javascript">
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        var target = {x: width/2, y: height/2};
+        
+        
+        
 
         var largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = height+'px';
+        
 
         var canvas = document.getElementById('demo-canvas');
-        canvas.width = width;
-        canvas.height = height;
+        
+        
+
+        window.addEventListener('resize', resize);
+        function resize() {
+            largeHeader.style.height = window.innerHeight;+'px';
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
         </script>
 
     
