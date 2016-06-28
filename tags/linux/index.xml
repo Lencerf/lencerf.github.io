@@ -38,13 +38,13 @@
 
 &lt;p&gt;格式化硬盘分区&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mkfs.exf4 /dev/sda1
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.exf4 /dev/sda1
 mkfs.exf4 /dev/sda2
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mount /dev/sda1 /mnt
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mount /dev/sda1 /mnt
 mkdir /mnt/home
 mount /dev/sda2 /mnt/home
 &lt;/code&gt;&lt;/pre&gt;
@@ -53,29 +53,29 @@ mount /dev/sda2 /mnt/home
 
 &lt;p&gt;配置镜像源（country=你所在的地区代码）&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开 mirrorlist，反注释掉想要使用的镜像源&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/pacman.d/mirrorlist
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/pacman.d/mirrorlist
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装 Arch Linux&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacstrap /mnt base base-devel
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacstrap /mnt base base-devel
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/3.png&#34; alt=&#34;安装过程&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;arch-root /mnt
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-root /mnt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;首先设置 Root 密码&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;passwd
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;passwd
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;设置时区，可以通过&lt;code&gt;date&lt;/code&gt;命令测试时区是否设置正确&lt;/p&gt;
@@ -85,24 +85,24 @@ mount /dev/sda2 /mnt/home
 
 &lt;p&gt;设置主机名&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;echo Archlinux-PD &amp;gt; /etc/hostname
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;echo Archlinux-PD &amp;gt; /etc/hostname
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;生成语言配置。首先打开&lt;code&gt;/etc/locale.gen&lt;/code&gt;，反注释掉所需要的语言（en_US.UTF8、zh_CN.UTF8），然后执行命令&lt;code&gt;locale-gen&lt;/code&gt;。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/locale.gen
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/locale.gen
 locale-gen
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装启动引导 grub&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S grub
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S grub
 grub-install /dev/sda
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;配置 grub&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mkinitcpio -p linux
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkinitcpio -p linux
 grub-mkconfig -o /boot/grub/grub.config
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -110,7 +110,7 @@ grub-mkconfig -o /boot/grub/grub.config
 
 &lt;p&gt;开启网络，然后退出新系统，回到&lt;code&gt;arch-root&lt;/code&gt;命令之前的界面。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;systemctl enable dhcpcd
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl enable dhcpcd
 exit
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -121,7 +121,7 @@ exit
 
 &lt;p&gt;umount 挂载的磁盘，重启虚拟机。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;umount /mnt/home
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;umount /mnt/home
 umount /mnt
 reboot
 &lt;/code&gt;&lt;/pre&gt;
@@ -136,18 +136,18 @@ reboot
 
 &lt;p&gt;先测试一下网络连接情况&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ping -c 5 archlinux.org
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ping -c 5 archlinux.org
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;如果连接不通，可以尝试手动开启网络&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;systemctl start dhcpcd
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl start dhcpcd
 ip addr
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;更新一下软件包，然后开始安装 Plasma 和其它必要的软件包。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -Syu
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -Syu
 pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils 
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -162,43 +162,43 @@ pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils
 
 &lt;p&gt;安装完成后，配置一下 X（下面的命令注意 X 要大写）&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Xorg -configure
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Xorg -configure
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;上面的命令会生成一份配置模版&lt;code&gt;/root/xorg.conf.new&lt;/code&gt;，用编辑器打开。&lt;/p&gt;
 
 &lt;p&gt;因为我用的是非 retina 屏幕的 MBP 13， 所以在&lt;code&gt;Section &amp;quot;Screen&amp;quot;&lt;/code&gt;下的&lt;code&gt;Section &amp;quot;Display&amp;quot;&lt;/code&gt;中添加一行&lt;code&gt;Modes &amp;quot;1280x800&amp;quot;&lt;/code&gt;就好了。保存，将配置文件移动到合适的位置，然后启用&lt;code&gt;sddm&lt;/code&gt;服务。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mv /root/xorg.conf.new /etc/X11/xorg.conf
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mv /root/xorg.conf.new /etc/X11/xorg.conf
 systemctl enable sddm
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;添加用户并设置密码，把 yourname 换成你喜欢的名字&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;useradd -m -G wheel -s /usr/bin/zsh yourname
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;useradd -m -G wheel -s /usr/bin/zsh yourname
 passwd yourname
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/sodoers
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sodoers
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在末尾添加一行&lt;code&gt;lencerf ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;gpasswd -a lencerf audio
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a lencerf audio
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装一些不错的字体&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;移除没什么用的媒体中心&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo pacman -R plasma-mediacenter
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo pacman -R plasma-mediacenter
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。&lt;/p&gt;
@@ -217,7 +217,7 @@ passwd yourname
 &lt;li&gt;&lt;p&gt;开启 ssh 服务&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S openssh
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S openssh
 systemctl enable sshd.service
 systemctl start sshd
 &lt;/code&gt;&lt;/pre&gt;
@@ -228,7 +228,7 @@ systemctl start sshd
 &lt;li&gt;&lt;p&gt;Last but maybe the most important, for some Asian users,&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S shadowsocks-libev
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S shadowsocks-libev
 nano /etc/shadowsocks/config.json
 systemctl enabnle shadowsocks-libev@config
 systemctl start shadowsocks-libev@config

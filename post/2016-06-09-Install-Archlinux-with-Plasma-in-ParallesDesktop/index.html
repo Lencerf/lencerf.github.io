@@ -71,13 +71,13 @@
 
 <p>格式化硬盘分区</p>
 
-<pre><code class="language-shell">mkfs.exf4 /dev/sda1
+<pre><code class="language-sh">mkfs.exf4 /dev/sda1
 mkfs.exf4 /dev/sda2
 </code></pre>
 
 <p>挂载分区，sda1 挂载到<code>/mnt</code>，sda2 挂载到到<code>/mnt/home</code></p>
 
-<pre><code class="language-shell">mount /dev/sda1 /mnt
+<pre><code class="language-sh">mount /dev/sda1 /mnt
 mkdir /mnt/home
 mount /dev/sda2 /mnt/home
 </code></pre>
@@ -86,29 +86,29 @@ mount /dev/sda2 /mnt/home
 
 <p>配置镜像源（country=你所在的地区代码）</p>
 
-<pre><code class="language-shell">curl -o /etc/pacman.d/mirrorlist &quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;protocol=http&amp;ip_version=4&quot;
+<pre><code class="language-sh">curl -o /etc/pacman.d/mirrorlist &quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;protocol=http&amp;ip_version=4&quot;
 </code></pre>
 
 <p>打开 mirrorlist，反注释掉想要使用的镜像源</p>
 
-<pre><code class="language-shell">nano /etc/pacman.d/mirrorlist
+<pre><code class="language-sh">nano /etc/pacman.d/mirrorlist
 </code></pre>
 
 <p>安装 Arch Linux</p>
 
-<pre><code class="language-shell">pacstrap /mnt base base-devel
+<pre><code class="language-sh">pacstrap /mnt base base-devel
 </code></pre>
 
 <p><img src="/img/arch-pd/3.png" alt="安装过程" /></p>
 
 <p>完成后，进入新安装的系统进行配置</p>
 
-<pre><code class="language-shell">arch-root /mnt
+<pre><code class="language-sh">arch-root /mnt
 </code></pre>
 
 <p>首先设置 Root 密码</p>
 
-<pre><code class="language-shell">passwd
+<pre><code class="language-sh">passwd
 </code></pre>
 
 <p>设置时区，可以通过<code>date</code>命令测试时区是否设置正确</p>
@@ -118,24 +118,24 @@ mount /dev/sda2 /mnt/home
 
 <p>设置主机名</p>
 
-<pre><code class="language-shell">echo Archlinux-PD &gt; /etc/hostname
+<pre><code class="language-sh">echo Archlinux-PD &gt; /etc/hostname
 </code></pre>
 
 <p>生成语言配置。首先打开<code>/etc/locale.gen</code>，反注释掉所需要的语言（en_US.UTF8、zh_CN.UTF8），然后执行命令<code>locale-gen</code>。</p>
 
-<pre><code class="language-shell">nano /etc/locale.gen
+<pre><code class="language-sh">nano /etc/locale.gen
 locale-gen
 </code></pre>
 
 <p>安装启动引导 grub</p>
 
-<pre><code class="language-shell">pacman -S grub
+<pre><code class="language-sh">pacman -S grub
 grub-install /dev/sda
 </code></pre>
 
 <p>配置 grub</p>
 
-<pre><code class="language-shell">mkinitcpio -p linux
+<pre><code class="language-sh">mkinitcpio -p linux
 grub-mkconfig -o /boot/grub/grub.config
 </code></pre>
 
@@ -143,7 +143,7 @@ grub-mkconfig -o /boot/grub/grub.config
 
 <p>开启网络，然后退出新系统，回到<code>arch-root</code>命令之前的界面。</p>
 
-<pre><code class="language-shell">systemctl enable dhcpcd
+<pre><code class="language-sh">systemctl enable dhcpcd
 exit
 </code></pre>
 
@@ -154,7 +154,7 @@ exit
 
 <p>umount 挂载的磁盘，重启虚拟机。</p>
 
-<pre><code class="language-shell">umount /mnt/home
+<pre><code class="language-sh">umount /mnt/home
 umount /mnt
 reboot
 </code></pre>
@@ -169,18 +169,18 @@ reboot
 
 <p>先测试一下网络连接情况</p>
 
-<pre><code class="language-shell">ping -c 5 archlinux.org
+<pre><code class="language-sh">ping -c 5 archlinux.org
 </code></pre>
 
 <p>如果连接不通，可以尝试手动开启网络</p>
 
-<pre><code class="language-shell">systemctl start dhcpcd
+<pre><code class="language-sh">systemctl start dhcpcd
 ip addr
 </code></pre>
 
 <p>更新一下软件包，然后开始安装 Plasma 和其它必要的软件包。</p>
 
-<pre><code class="language-shell">pacman -Syu
+<pre><code class="language-sh">pacman -Syu
 pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils 
 </code></pre>
 
@@ -195,43 +195,43 @@ pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils
 
 <p>安装完成后，配置一下 X（下面的命令注意 X 要大写）</p>
 
-<pre><code class="language-shell">Xorg -configure
+<pre><code class="language-sh">Xorg -configure
 </code></pre>
 
 <p>上面的命令会生成一份配置模版<code>/root/xorg.conf.new</code>，用编辑器打开。</p>
 
 <p>因为我用的是非 retina 屏幕的 MBP 13， 所以在<code>Section &quot;Screen&quot;</code>下的<code>Section &quot;Display&quot;</code>中添加一行<code>Modes &quot;1280x800&quot;</code>就好了。保存，将配置文件移动到合适的位置，然后启用<code>sddm</code>服务。</p>
 
-<pre><code class="language-shell">mv /root/xorg.conf.new /etc/X11/xorg.conf
+<pre><code class="language-sh">mv /root/xorg.conf.new /etc/X11/xorg.conf
 systemctl enable sddm
 </code></pre>
 
 <p>添加用户并设置密码，把 yourname 换成你喜欢的名字</p>
 
-<pre><code class="language-shell">useradd -m -G wheel -s /usr/bin/zsh yourname
+<pre><code class="language-sh">useradd -m -G wheel -s /usr/bin/zsh yourname
 passwd yourname
 </code></pre>
 
 <p>把自己添加到sudoer中</p>
 
-<pre><code class="language-shell">nano /etc/sodoers
+<pre><code class="language-sh">nano /etc/sodoers
 </code></pre>
 
 <p>在末尾添加一行<code>lencerf ALL=(ALL) ALL</code></p>
 
 <p>把自己添加到audio用户组中，这样可以开启声音</p>
 
-<pre><code class="language-shell">gpasswd -a lencerf audio
+<pre><code class="language-sh">gpasswd -a lencerf audio
 </code></pre>
 
 <p>安装一些不错的字体</p>
 
-<pre><code class="language-shell">pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
+<pre><code class="language-sh">pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
 </code></pre>
 
 <p>移除没什么用的媒体中心</p>
 
-<pre><code class="language-shell">sudo pacman -R plasma-mediacenter
+<pre><code class="language-sh">sudo pacman -R plasma-mediacenter
 </code></pre>
 
 <p>到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。</p>
@@ -250,7 +250,7 @@ passwd yourname
 <li><p>开启 ssh 服务</p></li>
 </ul>
 
-<pre><code class="language-shell">pacman -S openssh
+<pre><code class="language-sh">pacman -S openssh
 systemctl enable sshd.service
 systemctl start sshd
 </code></pre>
@@ -261,7 +261,7 @@ systemctl start sshd
 <li><p>Last but maybe the most important, for some Asian users,</p></li>
 </ul>
 
-<pre><code class="language-shell">pacman -S shadowsocks-libev
+<pre><code class="language-sh">pacman -S shadowsocks-libev
 nano /etc/shadowsocks/config.json
 systemctl enabnle shadowsocks-libev@config
 systemctl start shadowsocks-libev@config
