@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technique on Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/categories/technique/</link>
+    <description>Recent content in Technique on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jun 2016 17:08:08 +0800</lastBuildDate>
+    <atom:link href="https://lencerf.github.io/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install Arch Linux with Plasma in Paralles Desktop</title>
+      <link>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
+      <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
+      <description>
+
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载 Arch Linux &lt;a href=&#34;https://www.archlinux.org/download/&#34;&gt;镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;新建虚拟机。因为要安装 Plasma，建议内存至少1G。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;硬盘分区&#34;&gt;硬盘分区&lt;/h2&gt;
+
+&lt;p&gt;启动虚拟机，开始安装，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/1.png&#34; alt=&#34;由光盘镜像引导启动后的界面&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首先需要对硬盘分区。输入命令 &lt;code&gt;cfdisk&lt;/code&gt; 可以打开半图形化的分区工具。首先&lt;code&gt;cfdisk&lt;/code&gt;会让选择分区表类型，选择第二种&lt;code&gt;dos&lt;/code&gt;。然后进入到分区界面，通过下面的菜单&lt;code&gt;New&lt;/code&gt;可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为&lt;code&gt;Bootable&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/2.png&#34; alt=&#34;分区方案&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;完成后选择&lt;code&gt;Write&lt;/code&gt;将分区方案写入硬盘生效，然后&lt;code&gt;Quit&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;格式化硬盘分区&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mkfs.exf4 /dev/sda1
+mkfs.exf4 /dev/sda2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mount /dev/sda1 /mnt
+mkdir /mnt/home
+mount /dev/sda2 /mnt/home
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装-arch-linux&#34;&gt;安装 Arch Linux&lt;/h2&gt;
+
+&lt;p&gt;配置镜像源（country=你所在的地区代码）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打开 mirrorlist，反注释掉想要使用的镜像源&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/pacman.d/mirrorlist
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装 Arch Linux&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacstrap /mnt base base-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/3.png&#34; alt=&#34;安装过程&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;arch-root /mnt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;首先设置 Root 密码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;passwd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置时区，可以通过&lt;code&gt;date&lt;/code&gt;命令测试时区是否设置正确&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-she&#34;&gt;ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置主机名&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;echo Archlinux-PD &amp;gt; /etc/hostname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成语言配置。首先打开&lt;code&gt;/etc/locale.gen&lt;/code&gt;，反注释掉所需要的语言（en_US.UTF8、zh_CN.UTF8），然后执行命令&lt;code&gt;locale-gen&lt;/code&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/locale.gen
+locale-gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装启动引导 grub&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S grub
+grub-install /dev/sda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配置 grub&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mkinitcpio -p linux
+grub-mkconfig -o /boot/grub/grub.config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/4.png&#34; alt=&#34;配置 grub&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;开启网络，然后退出新系统，回到&lt;code&gt;arch-root&lt;/code&gt;命令之前的界面。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;systemctl enable dhcpcd
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成 fstab&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;genfstab /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;umount 挂载的磁盘，重启虚拟机。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;umount /mnt/home
+umount /mnt
+reboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装-plasma&#34;&gt;安装 Plasma&lt;/h2&gt;
+
+&lt;p&gt;如果一切顺利重启后可以看到 grub 启动菜单&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/5.png&#34; alt=&#34;grub 启动菜单&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;进入新安装好的系统，以 root 用户登录，密码就是之前执行&lt;code&gt;passwd&lt;/code&gt;命令时输入的密码。&lt;/p&gt;
+
+&lt;p&gt;先测试一下网络连接情况&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ping -c 5 archlinux.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果连接不通，可以尝试手动开启网络&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;systemctl start dhcpcd
+ip addr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;更新一下软件包，然后开始安装 Plasma 和其它必要的软件包。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -Syu
+pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;解释一下，&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;xorg 是 X 窗口服务器，plasma 即是 KDE5&lt;/li&gt;
+&lt;li&gt;git 和 zsh 没什么好说的&lt;/li&gt;
+&lt;li&gt;konsole 是 KDE 下的默认终端模拟器，firefox是火狐浏览器，dolphin 是文件管理器&lt;/li&gt;
+&lt;li&gt;alsa-utils 是声音模块&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;安装完成后，配置一下 X（下面的命令注意 X 要大写）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Xorg -configure
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的命令会生成一份配置模版&lt;code&gt;/root/xorg.conf.new&lt;/code&gt;，用编辑器打开。&lt;/p&gt;
+
+&lt;p&gt;因为我用的是非 retina 屏幕的 MBP 13， 所以在&lt;code&gt;Section &amp;quot;Screen&amp;quot;&lt;/code&gt;下的&lt;code&gt;Section &amp;quot;Display&amp;quot;&lt;/code&gt;中添加一行&lt;code&gt;Modes &amp;quot;1280x800&amp;quot;&lt;/code&gt;就好了。保存，将配置文件移动到合适的位置，然后启用&lt;code&gt;sddm&lt;/code&gt;服务。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;mv /root/xorg.conf.new /etc/X11/xorg.conf
+systemctl enable sddm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加用户并设置密码，把 yourname 换成你喜欢的名字&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;useradd -m -G wheel -s /usr/bin/zsh yourname
+passwd yourname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;nano /etc/sodoers
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在末尾添加一行&lt;code&gt;lencerf ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;gpasswd -a lencerf audio
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装一些不错的字体&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;移除没什么用的媒体中心&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo pacman -R plasma-mediacenter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/arch-pd/6.png&#34; alt=&#34;Plasma 真漂亮啊！&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;其它&#34;&gt;其它&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;以上过程为本人安装成果的整理记录，可能有疏漏，不一定适用于读者的情况。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;字体的问题还没有完全解决，尤其是终端下的中文字体。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Parallels Tools 似乎和 Arch Linux 不太兼容的样子，虽然能安装上去，但是文件共享一直有问题。具体安装细节可能之后再补充。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;开启 ssh 服务&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S openssh
+systemctl enable sshd.service
+systemctl start sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;通过&lt;code&gt;ip route&lt;/code&gt;可以查看本机IP，必要时可以从 OS X 端 ssh 登陆到 Arch，也可以用&lt;code&gt;scp&lt;/code&gt;往虚拟机里传文件&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Last but maybe the most important, for some Asian users,&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pacman -S shadowsocks-libev
+nano /etc/shadowsocks/config.json
+systemctl enabnle shadowsocks-libev@config
+systemctl start shadowsocks-libev@config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.columbia.edu/~jae/4118-LAST/arch-setup-2015-1.html&#34;&gt;Setting up an Arch Linux VM in VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=Wqh9AQt3nho&#34;&gt;How to Install Arch Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=okct6NwqF_Y&#34;&gt;How to Install Arch Linux 2016 + KDE Plasma 5 + Open-VM-Tools on VMware Player Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yzalog.tk/ss-via-stunnel/&#34;&gt;Yza Log&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org&#34;&gt;ArchWiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linuxtoy.org/archives/archlinux-guide.html&#34;&gt;打造完美的 Linux 桌面 — Archlinux 2007.08-2 (电子版)
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example of differences between compilers</title>
+      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
+#include &amp;quot;stdio.h&amp;quot;
+int main(int argc, char const *argv[]) {
+    int a = 1;
+    int c = (a=a * 2) + (a = a + 3);
+    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the biniary file and we will get:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, if I use &lt;code&gt;clang&lt;/code&gt; to compile the codes, there will be a warning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run the generated file:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>brew with a socks5 proxy</title>
+      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;set a socks proxy with git for the http transport&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;set a socks proxy for curl: jsut add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Watch Video on Bilibili via bilidan.py on OS X</title>
+      <link>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
+      <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
+      <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Install &lt;code&gt;python3&lt;/code&gt;, &lt;code&gt;ffmpeg&lt;/code&gt; and &lt;code&gt;mpv&lt;/code&gt; using &lt;code&gt;homebrew&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install python3 ffmpeg Caskroom/cask/mpv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Get the python script bilidan.py&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/m13253/BiliDan.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let &lt;code&gt;bilidan.py&lt;/code&gt; executable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod u+x BiliDan/bilidan.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Open the terminal and run the following codes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;BiliDan/bilidan.py http://www.bilibili.com/video/av715519/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we can watch the video without Flash Player!&lt;/p&gt;
+
+&lt;p&gt;Tips: you may need to wait the mpv player for some minutes the first time you run the codes above. Just be patient.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://github.com/m13253&#34;&gt;m13253&lt;/a&gt; for the projects &lt;a href=&#34;https://github.com/m13253/BiliDan&#34;&gt;BiliDan&lt;/a&gt; and &lt;a href=&#34;https://github.com/m13253/danmaku2ass&#34;&gt;danmaku2ass&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Make unix2doc a system service of OS X</title>
+      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unix, on which OS X is based, uses &lt;code&gt;LF&lt;/code&gt; as the default line break, different from Windows. Although I can use TextWrangle.app to convert text files between the two formats, but I really don&amp;rsquo;t like TextWrangle. (Sublime Text is wonderful!!!)&lt;/p&gt;
+
+&lt;p&gt;So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. With Automator, the problem can be better solved.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install unix2dos
+&lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a new service in Automator as follow
+&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1etdcio105aj20h00dfwht.jpg&#34; alt=&#34;Automator script&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Have a try!
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1etdcmh4mmtj207c06cdg5.jpg&#34; alt=&#34;unix2dos in the context menu&#34; /&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>设置 Mathematica 的默认字号</title>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
+
+&lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;最后，在 &lt;a href=&#34;http://mathematica.stackexchange.com/questions/59283/changing-the-default-font-size&#34;&gt;StackExchange&lt;/a&gt; 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把&lt;code&gt;1&lt;/code&gt;修改为&lt;code&gt;1.5&lt;/code&gt;或其他，即把整个 notebook 的显示全局放大。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1eplqnlb507j20l80gxju9.jpg&#34; alt=&#34;设置全局放大&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;View -&amp;gt; Show Console，打开终端界面，将 Package Control &lt;a href=&#34;https://sublime.wbond.net/installation&#34;&gt;官网&lt;/a&gt;给出的代码复制粘贴进终端，回车完成 Package Control 的安装。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Command-Shift-P&lt;/code&gt;调出命令窗口，输入&lt;code&gt;Install&lt;/code&gt;，等待一会，之后输入&lt;code&gt;LaTeXTools&lt;/code&gt;，回车完成安装，时常取决于网络。&lt;/li&gt;
+&lt;li&gt;安装 &lt;a href=&#34;http://skim-app.sourceforge.net/&#34;&gt;Skim&lt;/a&gt;，用于预览编译好的PDF文件。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;初始设置&#34;&gt;初始设置&lt;/h2&gt;
+
+&lt;h3 id=&#34;latextools&#34;&gt;LaTeXTools&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;初始化：按下&lt;code&gt;Command-Shift-P&lt;/code&gt;，输入&amp;rdquo;latextools&amp;rdquo;，选择&amp;rdquo;LaTeXTools:Reconfigure&amp;hellip;&amp;ldquo;，回车。
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg&#34; alt=&#34;LaTeXTools 的初始化&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;设置编译时输出详细日志：前往&lt;code&gt;~/Library/Application Support/Sublime Text 3/Packages/User/&lt;/code&gt;，打开&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;，将&lt;code&gt;&amp;quot;display_log&amp;quot; : false,&lt;/code&gt;改为&lt;code&gt;&amp;quot;display_log&amp;quot; : true,&lt;/code&gt;。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;设置默认使用 XeLaTeX 编译文件：虽然可以去修改&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;,不过最简单安全的方法还是在自己的 TeX 源文件开头加上&lt;code&gt;%!TEX program = xelatex&lt;/code&gt;，修改一下自己的模板就一劳永逸了，难道每次都从输入&lt;code&gt;\begin{document}&lt;/code&gt;开始？&lt;/p&gt;
+
+&lt;h3 id=&#34;skim&#34;&gt;Skim&lt;/h3&gt;
+
+&lt;p&gt;在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg&#34; alt=&#34;Skim 设置&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Skim：&lt;code&gt;Command-Shift-J&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
