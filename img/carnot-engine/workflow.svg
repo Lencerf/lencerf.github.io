@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<svg 
+     version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     width="14.145401455749635cm"
+     height="5.885120381776433cm"
+     viewBox="0 0 534 221"
+     >
+<title>
+
+</title>
+<g stroke-linejoin="miter" stroke-dashoffset="0.0000" stroke-dasharray="none" stroke-width="1.0000" stroke-miterlimit="10.000" stroke-linecap="square">
+<g id="misc">
+</g><!-- misc -->
+<g id="layer0">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip1">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip1)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 70.559 157.34 L 252.44 157.34"/>
+<title>线段 T_2</title>
+<desc>线段 T_2: 端点为 A、B 的线段</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip1 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip2">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip2)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 70.948 319.18 L 252.83 319.18"/>
+<title>线段 T_1</title>
+<desc>线段 T_1: 端点为 A_1、B_1 的线段</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip2 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip3">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip3)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 368.96 156.80 L 550.84 156.80"/>
+<title>线段 T_3</title>
+<desc>线段 T_3: 端点为 A_3、B_3 的线段</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip3 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip4">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip4)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 365.35 321.64 L 547.23 321.64"/>
+<title>线段 T_4</title>
+<desc>线段 T_4: 端点为 A_2、B_2 的线段</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip4 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip5">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip5)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 48.121 221.46 L 66.165 221.46"/>
+<title>向量 u</title>
+<desc>向量 u: 向量[C, D]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip5 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip6">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip6)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 83.165 221.46 L 66.165 225.71 L 66.165 217.21 z"/>
+<title>向量 u</title>
+<desc>向量 u: 向量[C, D]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip6 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip7">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip7)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 223.21 225.46 L 249.13 226.33"/>
+<title>向量 v</title>
+<desc>向量 v: 向量[E, F]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip7 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip8">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip8)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 266.12 226.90 L 248.99 230.58 L 249.27 222.08 z"/>
+<title>向量 v</title>
+<desc>向量 v: 向量[E, F]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip8 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip9">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip9)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 181.49 265.47 L 181.85 282.80"/>
+<title>向量 w</title>
+<desc>向量 w: 向量[G, H]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip9 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip10">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip10)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 182.21 299.80 L 177.61 282.89 L 186.10 282.71 z"/>
+<title>向量 w</title>
+<desc>向量 w: 向量[G, H]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip10 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip11">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip11)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 183.27 313.41 L 183.63 330.74"/>
+<title>向量 a</title>
+<desc>向量 a: 向量[I, I&apos;]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip11 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip12">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip12)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 183.98 347.74 L 179.38 330.83 L 187.88 330.66 z"/>
+<title>向量 a</title>
+<desc>向量 a: 向量[I, I&apos;]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip12 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip13">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip13)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 214.55 180.07 L 214.55 291.65"/>
+<title>向量 b</title>
+<desc>向量 b: 向量[J, K]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip13 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip14">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip14)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 214.55 308.65 L 210.30 291.65 L 218.80 291.65 z"/>
+<title>向量 b</title>
+<desc>向量 b: 向量[J, K]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip14 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip15">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip15)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 92.385 300.16 L 92.385 190.71"/>
+<title>向量 c</title>
+<desc>向量 c: 向量[L, M]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip15 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip16">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip16)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 92.385 173.71 L 96.635 190.71 L 88.135 190.71 z"/>
+<title>向量 c</title>
+<desc>向量 c: 向量[L, M]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip16 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip17">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip17)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 201.51 305.56 L 125.86 305.56"/>
+<title>向量 d</title>
+<desc>向量 d: 向量[N, O]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip17 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip18">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip18)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 108.86 305.56 L 125.86 301.31 L 125.86 309.81 z"/>
+<title>向量 d</title>
+<desc>向量 d: 向量[N, O]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip18 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip19">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip19)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 375.52 219.93 L 359.36 219.93"/>
+<title>向量 u_1</title>
+<desc>向量 u_1: 向量[C_1, D_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip19 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip20">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip20)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 342.36 219.93 L 359.36 215.68 L 359.36 224.18 z"/>
+<title>向量 u_1</title>
+<desc>向量 u_1: 向量[C_1, D_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip20 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip21">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip21)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 555.61 227.10 L 533.67 227.10"/>
+<title>向量 v_1</title>
+<desc>向量 v_1: 向量[E_1, F_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip21 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip22">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip22)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 516.67 227.10 L 533.67 222.85 L 533.67 231.35 z"/>
+<title>向量 v_1</title>
+<desc>向量 v_1: 向量[E_1, F_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip22 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip23">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip23)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 478.89 291.93 L 478.89 275.05"/>
+<title>向量 w_1</title>
+<desc>向量 w_1: 向量[G_1, H_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip23 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip24">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip24)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 478.89 258.05 L 483.14 275.05 L 474.64 275.05 z"/>
+<title>向量 w_1</title>
+<desc>向量 w_1: 向量[G_1, H_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip24 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip25">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip25)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 478.67 348.87 L 478.67 332.00"/>
+<title>向量 a_1</title>
+<desc>向量 a_1: 向量[I_1, I&apos;_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip25 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip26">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip26)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 478.67 315.00 L 482.92 332.00 L 474.42 332.00 z"/>
+<title>向量 a_1</title>
+<desc>向量 a_1: 向量[I_1, I&apos;_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip26 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip27">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip27)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 394.95 177.53 L 394.95 289.11"/>
+<title>向量 b_1</title>
+<desc>向量 b_1: 向量[J_1, K_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip27 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip28">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip28)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 394.95 306.11 L 390.70 289.11 L 399.20 289.11 z"/>
+<title>向量 b_1</title>
+<desc>向量 b_1: 向量[J_1, K_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip28 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip29">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip29)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 507.79 303.62 L 507.79 194.17"/>
+<title>向量 c_1</title>
+<desc>向量 c_1: 向量[L_1, M_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip29 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip30">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip30)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 507.79 177.17 L 512.04 194.17 L 503.54 194.17 z"/>
+<title>向量 c_1</title>
+<desc>向量 c_1: 向量[L_1, M_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip30 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip31">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip31)">
+<g stroke-linejoin="round" stroke-width="2.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 408.92 305.02 L 481.14 305.02"/>
+<title>向量 d_1</title>
+<desc>向量 d_1: 向量[N_1, O_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip31 -->
+</g> <!-- transform -->
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, -29.000, -136.00)">
+<clipPath id="clip32">
+  <path d="M 29.000 136.00 L 29.000 359.00 L 565.00 359.00 L 565.00 136.00 z"/>
+</clipPath>
+<g clip-path="url(#clip32)">
+<g fill-opacity="1.0000" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 498.14 305.02 L 481.14 309.27 L 481.14 300.77 z"/>
+<title>向量 d_1</title>
+<desc>向量 d_1: 向量[N_1, O_1]</desc>
+
+</g> <!-- drawing style -->
+</g> <!-- clip32 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 25.000, 109.25)">
+<clipPath id="clip33">
+  <path d="M -1.6667 -7.2833 L -1.6667 7.5833 L 34.067 7.5833 L 34.067 -7.2833 z"/>
+</clipPath>
+<g clip-path="url(#clip33)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">Q</text>
+</g> <!-- clip33 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 36.858, 111.50)">
+<clipPath id="clip34">
+  <path d="M -3.5103 -10.619 L -3.5103 10.619 L 47.537 10.619 L 47.537 -10.619 z"/>
+</clipPath>
+<g clip-path="url(#clip34)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">1</text>
+</g> <!-- clip34 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 202.00, 76.250)">
+<clipPath id="clip35">
+  <path d="M -13.467 -5.0833 L -13.467 9.7833 L 22.267 9.7833 L 22.267 -5.0833 z"/>
+</clipPath>
+<g clip-path="url(#clip35)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">W</text>
+</g> <!-- clip35 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 216.17, 78.500)">
+<clipPath id="clip36">
+  <path d="M -20.587 -7.4762 L -20.587 13.762 L 30.460 13.762 L 30.460 -7.4762 z"/>
+</clipPath>
+<g clip-path="url(#clip36)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">2</text>
+</g> <!-- clip36 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 123.00, 139.25)">
+<clipPath id="clip37">
+  <path d="M -8.2000 -9.2833 L -8.2000 5.5833 L 27.533 5.5833 L 27.533 -9.2833 z"/>
+</clipPath>
+<g clip-path="url(#clip37)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">W</text>
+</g> <!-- clip37 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 137.17, 141.50)">
+<clipPath id="clip38">
+  <path d="M -13.063 -13.476 L -13.063 7.7619 L 37.984 7.7619 L 37.984 -13.476 z"/>
+</clipPath>
+<g clip-path="url(#clip38)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">3</text>
+</g> <!-- clip38 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 122.00, 206.25)">
+<clipPath id="clip39">
+  <path d="M -8.1333 -13.750 L -8.1333 1.1167 L 27.600 1.1167 L 27.600 -13.750 z"/>
+</clipPath>
+<g clip-path="url(#clip39)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">Q</text>
+</g> <!-- clip39 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 133.86, 208.50)">
+<clipPath id="clip40">
+  <path d="M -12.748 -19.857 L -12.748 1.3810 L 38.299 1.3810 L 38.299 -19.857 z"/>
+</clipPath>
+<g clip-path="url(#clip40)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">3</text>
+</g> <!-- clip40 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 13.000, 23.250)">
+<clipPath id="clip41">
+  <path d="M -.86667 -1.5500 L -.86667 13.317 L 34.867 13.317 L 34.867 -1.5500 z"/>
+</clipPath>
+<g clip-path="url(#clip41)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">T</text>
+</g> <!-- clip41 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 21.766, 25.500)">
+<clipPath id="clip42">
+  <path d="M -2.0729 -2.4286 L -2.0729 18.810 L 48.975 18.810 L 48.975 -2.4286 z"/>
+</clipPath>
+<g clip-path="url(#clip42)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">2</text>
+</g> <!-- clip42 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 17.000, 186.25)">
+<clipPath id="clip43">
+  <path d="M -1.1333 -12.417 L -1.1333 2.4500 L 34.600 2.4500 L 34.600 -12.417 z"/>
+</clipPath>
+<g clip-path="url(#clip43)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">T</text>
+</g> <!-- clip43 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 25.766, 188.50)">
+<clipPath id="clip44">
+  <path d="M -2.4539 -17.952 L -2.4539 3.2857 L 48.594 3.2857 L 48.594 -17.952 z"/>
+</clipPath>
+<g clip-path="url(#clip44)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">1</text>
+</g> <!-- clip44 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 323.00, 101.25)">
+<clipPath id="clip45">
+  <path d="M -21.533 -6.7500 L -21.533 8.1167 L 14.200 8.1167 L 14.200 -6.7500 z"/>
+</clipPath>
+<g clip-path="url(#clip45)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">Q</text>
+</g> <!-- clip45 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 334.86, 103.50)">
+<clipPath id="clip46">
+  <path d="M -31.891 -9.8571 L -31.891 11.381 L 19.156 11.381 L 19.156 -9.8571 z"/>
+</clipPath>
+<g clip-path="url(#clip46)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">1</text>
+</g> <!-- clip46 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 500.00, 78.250)">
+<clipPath id="clip47">
+  <path d="M -33.333 -5.2167 L -33.333 9.6500 L 2.4000 9.6500 L 2.4000 -5.2167 z"/>
+</clipPath>
+<g clip-path="url(#clip47)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">W</text>
+</g> <!-- clip47 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 514.17, 80.500)">
+<clipPath id="clip48">
+  <path d="M -48.968 -7.6667 L -48.968 13.571 L 2.0794 13.571 L 2.0794 -7.6667 z"/>
+</clipPath>
+<g clip-path="url(#clip48)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">2</text>
+</g> <!-- clip48 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 417.00, 141.25)">
+<clipPath id="clip49">
+  <path d="M -27.800 -9.4167 L -27.800 5.4500 L 7.9333 5.4500 L 7.9333 -9.4167 z"/>
+</clipPath>
+<g clip-path="url(#clip49)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">W</text>
+</g> <!-- clip49 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 431.17, 143.50)">
+<clipPath id="clip50">
+  <path d="M -41.063 -13.667 L -41.063 7.5714 L 9.9841 7.5714 L 9.9841 -13.667 z"/>
+</clipPath>
+<g clip-path="url(#clip50)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">3</text>
+</g> <!-- clip50 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 416.00, 209.25)">
+<clipPath id="clip51">
+  <path d="M -27.733 -13.950 L -27.733 .91667 L 8.0000 .91667 L 8.0000 -13.950 z"/>
+</clipPath>
+<g clip-path="url(#clip51)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">Q</text>
+</g> <!-- clip51 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 427.86, 211.50)">
+<clipPath id="clip52">
+  <path d="M -40.748 -20.143 L -40.748 1.0952 L 10.299 1.0952 L 10.299 -20.143 z"/>
+</clipPath>
+<g clip-path="url(#clip52)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">3</text>
+</g> <!-- clip52 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 303.00, 18.250)">
+<clipPath id="clip53">
+  <path d="M -20.200 -1.2167 L -20.200 13.650 L 15.533 13.650 L 15.533 -1.2167 z"/>
+</clipPath>
+<g clip-path="url(#clip53)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">T</text>
+</g> <!-- clip53 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 311.77, 20.500)">
+<clipPath id="clip54">
+  <path d="M -29.692 -1.9524 L -29.692 19.286 L 21.356 19.286 L 21.356 -1.9524 z"/>
+</clipPath>
+<g clip-path="url(#clip54)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">2</text>
+</g> <!-- clip54 -->
+</g> <!-- transform -->
+<g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 311.00, 189.25)">
+<clipPath id="clip55">
+  <path d="M -20.733 -12.617 L -20.733 2.2500 L 15.000 2.2500 L 15.000 -12.617 z"/>
+</clipPath>
+<g clip-path="url(#clip55)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmmi10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">T</text>
+</g> <!-- clip55 -->
+</g> <!-- transform -->
+<g transform="matrix(10.500, 0.0000, 0.0000, 10.500, 319.77, 191.50)">
+<clipPath id="clip56">
+  <path d="M -30.454 -18.238 L -30.454 3.0000 L 20.594 3.0000 L 20.594 -18.238 z"/>
+</clipPath>
+<g clip-path="url(#clip56)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmr10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">1</text>
+</g> <!-- clip56 -->
+</g> <!-- transform -->
+</g><!-- layer0 -->
+<defs>
+<font id="Jlm_cmr10" horiz-adv-x="0" >
+<font-face font-family="Jlm_cmr10" font-weight="normal" font-style="normal" font-size="100.00" units-per-em="100.00" ascent="79.992676" descent="19.998169" />
+<missing-glyph horiz-adv-x="74.993"  d="M 12.500 -0.0000 L 12.500 62.500 L 62.500 62.500 L 62.500 -0.0000 L 12.500 -0.0000 z M 60.906 1.5938 L 60.906 60.906 L 14.094 60.906 L 14.094 1.5938 L 60.906 1.5938 z"/>
+<glyph unicode="&#x0033;" horiz-adv-x="49.995" d="M 29.000 35.203 L 29.000 35.203 Q 39.000 33.203 43.406 25.406 Q 45.703 21.500 45.703 17.094 Q 45.703 8.5938 38.703 2.7969 Q 32.594 -2.2031 24.406 -2.2031 Q 14.500 -2.2031 8.5000 3.7031 Q 4.2031 7.9062 4.2031 13.500 Q 4.2031 18.203 8.4062 19.094 Q 9.0938 19.297 9.7969 19.297 Q 13.594 19.297 14.906 16.094 Q 15.297 14.797 15.406 13.703 Q 15.406 9.7031 11.797 8.5000 Q 10.406 8.0000 8.7969 8.2031 Q 12.500 2.0000 21.594 .79688 Q 22.906 .59375 24.094 .59375 Q 30.500 .59375 33.500 6.9062 Q 35.406 10.906 35.406 17.094 Q 35.406 30.406 27.406 33.094 Q 25.594 33.703 23.500 33.703 L 19.094 33.703 Q 16.906 33.703 16.703 34.797 Q 16.703 35.797 18.203 36.000 Q 19.703 36.000 22.094 36.297 Q 27.203 36.500 30.094 40.203 L 30.094 40.297 L 30.203 40.406 L 30.297 40.500 L 30.406 40.500 L 31.000 41.500 Q 33.797 46.203 33.797 52.906 Q 33.797 62.203 26.594 63.797 Q 25.406 64.094 24.203 64.094 Q 17.203 64.094 12.797 60.094 Q 11.703 59.094 10.906 57.906 Q 17.094 57.906 17.094 52.906 Q 17.094 49.297 14.000 48.094 Q 13.094 47.797 12.000 47.797 Q 8.0938 47.797 7.0938 51.297 L 7.0938 51.297 L 7.0938 51.406 Q 6.9062 52.203 6.9062 53.000 Q 6.9062 59.703 13.500 63.703 Q 18.297 66.594 24.594 66.594 Q 33.703 66.594 39.297 61.203 L 39.500 61.000 Q 43.000 57.406 43.000 52.797 Q 43.000 44.500 35.906 38.906 Q 32.797 36.500 29.000 35.203 z"/>
+<glyph unicode="&#x0032;" horiz-adv-x="49.995" d="M 44.906 17.406 L 44.906 17.406 L 42.094 -0.0000 L 5.0000 -0.0000 Q 5.0000 2.5000 5.5938 3.2031 L 6.0938 3.7031 L 25.297 25.094 Q 35.797 36.906 35.797 47.203 Q 35.797 56.094 30.406 60.703 L 30.297 60.797 L 30.203 60.797 Q 27.000 63.500 22.406 63.500 Q 15.203 63.500 10.906 57.297 Q 9.7031 55.500 8.9062 53.297 Q 9.2031 53.406 10.203 53.406 Q 14.203 53.406 15.297 49.797 L 15.297 49.703 Q 15.500 49.000 15.500 48.203 Q 15.500 44.203 11.703 43.094 Q 10.906 42.906 10.297 42.906 Q 6.5938 42.906 5.4062 46.000 Q 5.0000 47.094 5.0000 48.500 Q 5.0000 56.203 10.906 61.703 Q 16.203 66.594 23.703 66.594 Q 34.703 66.594 40.797 59.203 Q 44.297 54.906 44.797 49.000 Q 44.906 48.094 44.906 47.203 Q 44.906 39.906 39.406 33.297 Q 36.500 29.906 30.406 24.297 L 24.297 18.906 L 23.297 18.000 L 12.703 7.7031 L 30.703 7.7031 Q 39.500 7.7031 40.203 8.5000 Q 41.203 9.9062 42.406 17.406 L 44.906 17.406 z"/>
+<glyph unicode="&#x0031;" horiz-adv-x="49.995" d="M 29.406 64.000 L 29.406 7.9062 Q 29.406 4.9062 30.594 4.0938 Q 32.297 3.0938 38.703 3.0938 L 41.906 3.0938 L 41.906 -0.0000 Q 38.406 .29688 25.703 .29688 Q 13.000 .29688 9.5000 -0.0000 L 9.5000 3.0938 L 12.703 3.0938 Q 20.406 3.0938 21.500 4.9062 L 21.594 5.0000 Q 22.000 5.7969 22.000 7.9062 L 22.000 59.703 Q 16.797 57.094 8.9062 57.094 L 8.9062 60.203 Q 20.906 60.203 27.094 66.594 Q 29.000 66.594 29.297 65.906 L 29.297 65.906 L 29.297 65.797 Q 29.406 65.500 29.406 64.000 z"/>
+</font>
+<font id="Jlm_cmmi10" horiz-adv-x="0" >
+<font-face font-family="Jlm_cmmi10" font-weight="normal" font-style="normal" font-size="100.00" units-per-em="100.00" ascent="79.992676" descent="19.998169" />
+<missing-glyph horiz-adv-x="74.993"  d="M 12.500 -0.0000 L 12.500 62.500 L 62.500 62.500 L 62.500 -0.0000 L 12.500 -0.0000 z M 60.906 1.5938 L 60.906 60.906 L 14.094 60.906 L 14.094 1.5938 L 60.906 1.5938 z"/>
+<glyph unicode="&#x0057;" horiz-adv-x="94.391" d="M 91.703 56.703 L 58.906 -.29688 Q 57.797 -2.2031 56.500 -2.2031 Q 55.297 -2.2031 55.094 -1.0000 Q 55.000 -.50000 54.906 .40625 L 51.203 50.906 L 21.797 -.093750 Q 20.703 -2.0000 19.906 -2.0938 L 19.797 -2.2031 L 19.406 -2.2031 Q 18.094 -2.2031 17.906 -.70312 Q 17.797 -.29688 17.797 .40625 L 13.297 61.500 Q 13.094 64.094 12.094 64.703 L 12.000 64.703 L 11.906 64.703 Q 10.906 65.203 8.0000 65.203 Q 5.7031 65.203 5.5000 66.406 Q 5.5000 68.297 7.2969 68.297 L 17.703 68.000 L 17.797 68.000 L 29.906 68.297 L 30.094 68.297 Q 31.500 68.297 31.500 67.203 Q 31.094 65.297 29.406 65.203 Q 21.906 65.094 21.797 61.594 L 25.594 10.906 L 50.906 55.000 L 50.297 62.703 Q 50.094 64.594 48.297 65.000 L 48.297 65.000 Q 47.203 65.203 45.000 65.203 Q 42.797 65.203 42.594 66.297 Q 42.594 68.297 44.500 68.297 L 54.906 68.000 L 55.000 68.000 L 66.594 68.297 L 67.203 68.297 Q 68.703 68.297 68.703 67.203 Q 68.703 65.406 67.203 65.203 L 66.000 65.203 Q 59.203 65.094 59.000 61.703 L 59.000 60.500 L 62.703 10.906 L 89.703 58.000 Q 91.000 60.297 91.000 61.297 Q 91.000 64.906 85.094 65.203 Q 83.594 65.203 83.594 66.406 Q 83.594 68.297 85.500 68.297 L 95.797 68.000 L 95.906 68.000 L 103.41 68.297 L 103.59 68.297 Q 104.59 68.297 104.80 67.203 Q 104.80 65.406 103.30 65.203 L 102.91 65.203 Q 96.906 64.703 93.406 59.500 L 93.297 59.406 L 93.297 59.297 Q 92.594 58.297 91.703 56.703 z"/>
+<glyph unicode="&#x0054;" horiz-adv-x="58.395" d="M 42.703 60.703 L 29.406 7.5938 Q 29.000 6.0938 29.000 5.5000 Q 29.000 4.0000 30.594 3.5938 L 30.703 3.5938 Q 31.406 3.4062 32.703 3.2969 Q 35.297 3.0938 39.094 3.0938 Q 42.203 3.0938 42.406 2.5000 Q 42.500 2.2969 42.500 2.0000 Q 42.094 .093750 40.297 -0.0000 L 31.703 .20312 L 31.594 .20312 L 23.500 .29688 L 23.297 .29688 L 15.000 .20312 L 14.797 .20312 L 6.7031 -0.0000 L 6.5938 -0.0000 Q 4.9062 -0.0000 4.9062 1.2031 Q 4.9062 2.7031 6.0000 3.0000 Q 6.7031 3.0938 9.0938 3.0938 Q 18.000 3.0938 19.703 4.7969 Q 20.297 5.4062 20.703 6.5938 Q 20.703 6.7969 20.797 7.0938 L 20.797 7.2969 L 20.906 7.2969 L 20.906 7.4062 Q 20.906 7.5000 21.000 7.9062 L 34.406 61.297 Q 34.797 62.500 34.797 63.398 Q 34.797 64.297 33.906 64.500 Q 33.297 64.594 32.000 64.594 L 28.094 64.594 Q 17.797 64.594 14.000 62.297 Q 11.906 61.094 10.297 58.594 L 10.203 58.500 L 10.203 58.406 L 10.094 58.406 Q 8.0000 55.094 5.2969 47.297 Q 4.5938 45.406 4.0938 45.297 Q 3.9062 45.203 3.5938 45.203 Q 2.4062 45.203 2.4062 46.297 Q 2.4062 46.906 3.0000 48.094 L 9.0000 65.703 Q 9.5938 67.406 10.406 67.594 Q 10.906 67.703 12.203 67.703 L 67.703 67.703 Q 70.203 67.703 70.406 66.594 Q 70.406 65.703 70.203 64.906 L 67.500 47.500 Q 67.203 45.406 66.000 45.203 Q 64.797 45.203 64.797 46.500 Q 64.797 47.203 65.094 48.406 Q 65.906 53.594 65.906 56.406 Q 65.906 62.203 61.797 63.703 Q 59.203 64.594 51.297 64.594 Q 45.906 64.594 45.000 64.406 Q 43.703 64.094 43.094 62.203 L 43.094 62.094 Q 42.906 61.594 42.703 60.703 z"/>
+<glyph unicode="&#x0051;" horiz-adv-x="78.993" d="M 43.797 .59375 L 43.797 .59375 Q 44.797 -7.2969 47.500 -8.9062 Q 48.797 -9.7031 50.906 -9.7031 Q 55.797 -9.7031 59.594 -5.4062 Q 61.594 -3.2031 62.594 -.093750 Q 63.000 1.0000 63.797 1.0000 Q 64.906 1.0000 64.906 -0.0000 Q 64.906 -1.9062 62.500 -7.2031 Q 56.906 -19.406 48.203 -19.406 Q 39.906 -19.406 39.906 -8.4062 Q 39.906 -6.9062 40.297 -.70312 Q 35.000 -2.2031 30.500 -2.2031 Q 18.000 -2.2031 10.797 6.5938 Q 4.9062 13.797 4.9062 24.500 Q 4.9062 39.500 15.594 52.906 Q 25.500 65.000 38.797 69.000 Q 43.703 70.500 48.500 70.500 Q 61.203 70.500 68.406 61.297 Q 74.000 54.094 74.000 43.594 Q 74.000 28.203 63.000 14.906 Q 54.594 4.7031 43.797 .59375 z M 24.906 1.4062 L 24.297 3.7031 L 24.297 4.5938 Q 24.297 9.5000 28.703 12.797 Q 31.406 14.797 34.500 14.797 Q 41.594 14.797 43.203 4.9062 Q 43.203 4.5938 43.297 4.0000 Q 56.594 11.406 62.406 30.500 Q 65.203 39.406 65.203 46.797 Q 65.203 59.797 57.203 65.203 L 57.094 65.297 L 57.094 65.297 Q 53.094 68.000 47.906 68.000 Q 38.406 68.000 29.500 59.594 Q 26.500 56.797 23.906 53.203 Q 16.094 42.000 14.094 26.594 Q 13.703 23.594 13.703 21.297 Q 13.703 8.0000 22.297 2.7031 Q 23.500 2.0000 24.906 1.4062 z M 31.094 .29688 L 31.094 .29688 Q 35.203 .29688 39.500 2.0938 Q 40.500 3.4062 40.594 4.0938 Q 40.594 11.703 36.000 12.500 L 35.906 12.500 Q 35.297 12.594 34.500 12.594 Q 30.406 12.594 27.797 8.7969 Q 26.500 6.7031 26.500 4.5938 Q 26.500 .29688 31.094 .29688 z"/>
+</font>
+
+</defs> <!-- font definitions -->
+</g> <!-- default stroke -->
+</svg> <!-- bounding box -->
