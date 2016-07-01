@@ -15,7 +15,7 @@
   padding: 0;
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, "苹方-简 常规体", "微软雅黑";
+  font-family: Helvetica, "Noto Sans", "Segoe UI", Arial, "Source Han Sans CN", "PingFang SC", "Microsoft YaHei", "Wenquanyi Micro Hei", sans-serif;
   font-size: 16px;
   background: #eee;
   text-shadow: 0 0 1px transparent;
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, Arial, Verdana, "黑体", STHeiti;
+  font-family: Georgia, "Noto Serif", "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", STHeiti;
 }
 h1 {
   font-size: 1.8em;
@@ -127,7 +127,7 @@ hr {
 #header h1,
 #header h2 {
   font-weight: normal;
-  font-family: Georgia;
+  font-family: Georgia, Noto Serif, serif;
 }
 #header h1 {
   font-size: 2.5em;
@@ -145,7 +145,7 @@ hr {
   top: 0;
 }
 #header #main-nav {
-  font-family: Helvetica;
+  font-family: Helvetica, "Noto Sans", sans-serif;
   font-size: 15px;
   line-height: 2.5em;
   color: #6a6a6a;
