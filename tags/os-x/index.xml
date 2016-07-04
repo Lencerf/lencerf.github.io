@@ -125,7 +125,7 @@ Hello! 这是中文测试!
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将&lt;code&gt;&amp;lt;font name&amp;gt;&lt;/code&gt;替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
-&lt;img src=&#34;http://i.imgur.com/3waQ0EU.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://i.imgur.com/3waQ0EU.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考&lt;a href=&#34;ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf&#34;&gt;《xeCJK宏包》&lt;/a&gt;（作者：孙文昌）。&lt;/p&gt;
 
