@@ -63,11 +63,11 @@
 
 <p>启动虚拟机，开始安装，</p>
 
-<p><img src="/img/arch-pd/1.png" alt="由光盘镜像引导启动后的界面" /></p>
+<p><img src="https://i.imgur.com/3siPvUb.png" alt="由光盘镜像引导启动后的界面" /></p>
 
 <p>首先需要对硬盘分区。输入命令 <code>cfdisk</code> 可以打开半图形化的分区工具。首先<code>cfdisk</code>会让选择分区表类型，选择第二种<code>dos</code>。然后进入到分区界面，通过下面的菜单<code>New</code>可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为<code>Bootable</code>。</p>
 
-<p><img src="/img/arch-pd/2.png" alt="分区方案" /></p>
+<p><img src="https://i.imgur.com/gZoKUgF.png" alt="分区方案" /></p>
 
 <p>完成后选择<code>Write</code>将分区方案写入硬盘生效，然后<code>Quit</code>。</p>
 
@@ -101,7 +101,7 @@ mount /dev/sda2 /mnt/home
 <pre><code class="language-sh">pacstrap /mnt base base-devel
 </code></pre>
 
-<p><img src="/img/arch-pd/3.png" alt="安装过程" /></p>
+<p><img src="https://i.imgur.com/qkazApk.png" alt="安装过程" /></p>
 
 <p>完成后，进入新安装的系统进行配置</p>
 
@@ -141,7 +141,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.config
 </code></pre>
 
-<p><img src="/img/arch-pd/4.png" alt="配置 grub" /></p>
+<p><img src="https://i.imgur.com/hQt0Son.png" alt="配置 grub" /></p>
 
 <p>开启网络，然后退出新系统，回到<code>arch-root</code>命令之前的界面。</p>
 
@@ -165,7 +165,7 @@ reboot
 
 <p>如果一切顺利重启后可以看到 grub 启动菜单</p>
 
-<p><img src="/img/arch-pd/5.png" alt="grub 启动菜单" /></p>
+<p><img src="https://i.imgur.com/zin9rgS.png" alt="grub 启动菜单" /></p>
 
 <p>进入新安装好的系统，以 root 用户登录，密码就是之前执行<code>passwd</code>命令时输入的密码。</p>
 
@@ -238,7 +238,7 @@ passwd yourname
 
 <p>到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。</p>
 
-<p><img src="/img/arch-pd/6.png" alt="Plasma 真漂亮啊！" /></p>
+<p><img src="https://i.imgur.com/6sIFdh5.png" alt="Plasma 真漂亮啊！" /></p>
 
 <h2 id="其它">其它</h2>
 

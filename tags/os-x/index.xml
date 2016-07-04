@@ -92,7 +92,7 @@
 事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。&lt;/p&gt;
 
 &lt;p&gt;　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：&lt;a href=&#34;http://pages.uoregon.edu/koch/texshop/texshop.html&#34;&gt;TeXShop&lt;/a&gt;！
-&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXTeXShop.png&#34; alt=&#34;TeXShop&#34; /&gt;
+&lt;img src=&#34;https://i.imgur.com/B5LGj8n.png&#34; alt=&#34;TeXShop&#34; /&gt;
 　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
 在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样&lt;del&gt;奇奇怪怪&lt;/del&gt;的问题。
 在“排版”页的默认指令处选择“采用键入的指令”，输入&amp;rdquo;XeLaTeX&amp;rdquo;。&lt;/p&gt;
@@ -108,7 +108,7 @@ Hello! 这是中文测试!
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;然后点击 TeXShop 工具栏上的“排版”按钮，应当就能顺利生成一个非常简单的中英文混排的文档了。
-&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXtest.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://i.imgur.com/w1LJI5r.png&#34; alt=&#34;中文测试&#34; /&gt;
 看吧，中英文直接混排，别提多方便了。&lt;/p&gt;
 
 &lt;p&gt;　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体&lt;/p&gt;
@@ -125,12 +125,12 @@ Hello! 这是中文测试!
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将&lt;code&gt;&amp;lt;font name&amp;gt;&lt;/code&gt;替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
-&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXfont.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://i.imgur.com/3waQ0EU.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考&lt;a href=&#34;ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf&#34;&gt;《xeCJK宏包》&lt;/a&gt;（作者：孙文昌）。&lt;/p&gt;
 
 &lt;p&gt;　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
-&lt;img src=&#34;http://lenserf-quantum-field.qiniudn.com/TeXonOSXequation.png&#34; alt=&#34;Daum Equation Editor&#34; /&gt;
+&lt;img src=&#34;https://i.imgur.com/KIRqM0v.png&#34; alt=&#34;Daum Equation Editor&#34; /&gt;
 下载地址：&lt;a href=&#34;https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12&#34;&gt;Mac App Store&lt;/a&gt;。当然也可以在 Chrome 商店里面直接搜索。&lt;/p&gt;
 
 &lt;p&gt;　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)&lt;/p&gt;
@@ -171,14 +171,6 @@ Hello! 这是中文测试!
 %插图
 \usepackage{graphicx}
 %\usepackage{subfig}
-%插图模板
-\iffalse 
-\begin{figure}[htb]
-\centering
-\includegraphics{文件名.png}
-\caption{图片标题} \label{标签}
-\end{figure}
-\fi
 
 %作图
 \usepackage{pgf,tikz}
@@ -227,30 +219,41 @@ Hello! 这是中文测试!
 
 %论文主体
 \section{引言}
-\textbf{我焰美如画}
-\url{changyuan.lv@gmail.com}
+\url{https://google.com}
 %定理
 %\theoremstyle{definition}
 \newtheorem{Theorem}{定理}
-\begin{Theorem}[圆环之理]
-魔女不存在于这个世界。
+\begin{Theorem}[最小做用量原理]
+\begin{equation}
+\delta S=\delta\int_{t_1}^{t_2}L(q,\dot{q},t)dt =0
+\end{equation}
 \end{Theorem}
-\begin{Theorem}[压缩映像原理]
-距离空间$(A,\rho_A), (B,\rho_B)$
+
+\begin{Theorem}[熵增原理]
+\begin{equation}
+dS&amp;gt;0
+\end{equation}
 \end{Theorem}
 
 %引理
 \newtheorem{lemma}{引理}
-\begin{lemma}[Riemann-Lebesgue 引理]
-\begin{equation}
-f\hat(\omega)=0 
-\end{equation}
+\begin{lemma}[Riemann-Lebesgue 引理]\label{RL lemma}
+如果 $f(x) \in L^1([a,b])$, 则有
+ \begin{equation*}
+   \lim\limits_{t \rightarrow \infty} \int_a ^b f(x) \cos{\left(tx \right)} \, \dif{x} = \lim\limits_{t \rightarrow \infty} \int_a ^b f(x)\sin{\left(tx \right)} \, \dif{x} = 0.
+ \end{equation*}
 \end{lemma}
 
 %引用
 \begin{quote}\sl %斜体
-扼住命运的咽喉，然后被命运掐死，直到死亡仍然不放开紧握的双手，然后留下希望的果种，乘风燎原。
+谈笑风生。
 \end{quote}
+
+\begin{figure}[htb]
+\centering
+\includegraphics{文件名.png}
+\caption{图片标题} \label{标签}
+\end{figure}
 
 %以下是参考文献
 \bibliographystyle{unsrt}
