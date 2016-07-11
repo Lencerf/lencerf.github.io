@@ -6,8 +6,59 @@
     <description>Recent content in Posts on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2016 01:05:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jul 2016 01:05:13 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>曲面积分复习跳坑笔记</title>
+      <link>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <description>&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
+
+&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho_(x,y)$ 的不均匀板的质量 $m$。显然，
+$$m=\iint_S\rho(x,y)dxdy,$$
+$S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
+$$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+以 $u, v$ 为被积分参数，$m$ 的表达式为&lt;/p&gt;
+
+&lt;p&gt;$$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,(1)$$&lt;/p&gt;
+
+&lt;p&gt;$|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为
+$$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \newline \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$
+主要在于如何比较直观地理解雅可比行列式。看了知乎上&lt;a href=&#34;http://zhihu.com/question/29964930/answer/51632832&#34;&gt;这个回答&lt;/a&gt;后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式(1)了。&lt;/p&gt;
+
+&lt;p&gt;比普通二重积分复杂一点的是&lt;strong&gt;第一型曲面积分&lt;/strong&gt;。简单地说，普通二重积分中的板是一块平板，所以我们可以直接在平板上建立平面直角坐标系；第一型曲线积分中的板是一块曲面板，我们只能在外部建立空间直角坐标系然后用方程去描述曲面的形状。具体的表达式是：
+$$m=\iint_S\rho(x,y,z)dS,$$
+其中 $dS$ 是曲面 $S$ 上的一块面元。现在假设曲面可以用参数方程描述：
+$$\begin{cases} x = x(u,v)\newline y = y(u,v)\newline z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+$m$ 用对 $u, v$ 的积分表达为
+$$m=\int_a^b du\int_c^d\rho(x(u,v),y(u,v),z(u,v))\sqrt{A^2+B^2+C^2}dv$$
+式中的 $A, B, C$ 分别为
+$$A=\begin{vmatrix} \partial_uy &amp;amp; \partial_uz \newline \partial_vy &amp;amp; \partial_vz \end{vmatrix},B=\begin{vmatrix} \partial_uz &amp;amp; \partial_ux \newline \partial_vz &amp;amp; \partial_vx \end{vmatrix}, C=\begin{vmatrix} \partial_ux &amp;amp; \partial_uy \newline \partial_vx &amp;amp; \partial_vy \end{vmatrix},$$
+理解方式和前面是一样的，只是现在 $d\vec{u}$ 和 $d\vec{v}$ 是是三维矢量了，表达式分别是：
+$$d\vec{u} =(\frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}, \frac{\partial z}{\partial u})dv$$
+$$d\vec{v} =(\frac{\partial x}{\partial v}, \frac{\partial y}{\partial v}, \frac{\partial z}{\partial v})dv$$
+算一下 $|d\vec{u}\times d\vec{v}|$ 就能得到 $\sqrt{A^2+B^2+C^2}dudv$ 了。&lt;/p&gt;
+
+&lt;p&gt;最后是相对最复杂的&lt;strong&gt;第二型曲面积分&lt;/strong&gt;。我们得换一个物理场景了：考虑电流密度场 $\vec{j}(x,y,z)$ 空间中一个曲面 $C(x,y,z)=0$，求通过曲面的电流强度 $I$。$I$ 的表达式不难写出：
+$$I=\iint_C\vec{j}(x,y,z)\cdot d\vec{S},$$
+其中 $d\vec{S}=\vec{e}_ndS$，$dS$ 是曲面上的面元，$\vec{e}_n$ 代表这一点面元的法向单位矢量。事实上把 $d\vec{S}$ 代入积分式中就能把第二型曲面积分转化成第一型曲面积分
+$$I=\iint_C(\vec{j}(x,y,z)\cdot\vec{e}_n) dS,$$
+此时被积分函数就是 $\vec{j}(x,y,z)\cdot\vec{e}_n$。为了求出曲面上每一点处的法矢 $\vec{e}_n$ 的表达式，我们需要利用曲面 $C$ 的参数表达式
+$$\begin{cases} x = x(u,v)\newline y = y(u,v)\newline z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+可以想象，曲面上某点 $(x,y,z)$ 处的法向单位矢量与该点对应的矢量 $d\vec{u}\times d\vec{v}$ 平行，但是有可能相同或相反，这个问题先放一边，我们可以把 $\vec{e}_n$ 写成
+$$\vec{e}_n=\epsilon\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|},$$
+$\epsilon$ 可为 $\pm 1$，用于矫正方向。然后，和上面第一型曲线积分的处理方法一样，$I$ 可以表达为对 $u, v$ 的积分式
+$$I=\iint_D(\epsilon\vec{j}(x,y,z)\cdot\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|})|d\vec{u}\times d\vec{v}|=\iint_D\epsilon\vec{j}(x,y,z)\cdot (d\vec{u}\times d\vec{v}),$$
+此时积分区域换成 $D$, 即 $u, v$ 的定义域，表明是对 $u, v$ 的积分。现在只剩确定 $\epsilon$ 的正负，这是个比较麻烦的问题。为了说清楚这一点，我们首先要注意一件事，二重积分在化为累次积分的过程中有一个问题，累次积分是多次单变量积分，单变量积分的结果与积分上下限的次序是有关的，交换积分上下限积分结果反号，而二重积分结果不应当与这种次序有关（从二重积分的定义就可以看出，二重积分中没有上下限次序这个概念）。或者说，单变量积分中，线元 $dx$ 可正可负，但是二重积分的面元 $dxdy$ 应当保证为正，所以事实上二重积分在化为累次积分的过程中默认要求积分上限比积分下限大。这个问题在第二型曲面积分中的体现就是 $\vec e_n$ 的指向，我们可以人为构造出曲面 $C$ 的两种参数表达式，使得算出来的 $d\vec{u}\times d\vec{v}$ 方向相反。为了避免这个问题就需要选合适的参数表达式，最保险的方案是，将曲面方程 $C(x,y,z)=0$ 中的一个变量反解出来，比如 $z$，将 $x, y$ 作为参数，曲面的参数式就是
+$$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
+这样求出来的 $d\vec{u}\times d\vec{v}$ 总是指向我们通常约定的曲面的正侧，因此 $\epsilon$ 就可以取为 1（当然如果实际问题中确实是要沿着负侧积分，$\epsilon$ 就应当是 -1）。如果取了其他参数式，可能需要小心地先检验一下 $d\vec{u}\times d\vec{v}$ 的方向。&lt;/p&gt;
+
+&lt;p&gt;最后，本文叙述中有些内容并不完整，比如 $x, y$ 和 $u, v$ 之间的变换应当满足的条件等等。不严谨之处，敬请见谅。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>卡诺热机的特别之处</title>

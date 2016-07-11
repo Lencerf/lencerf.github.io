@@ -317,7 +317,10 @@ article header .title a:hover {
 article .entry {
   line-height: 1.6;
 }
-article .entry p,
+article .entry p {
+  margin-top: 7px;
+  margin-bottom: 8px;
+}
 article .entry blockquote,
 article .entry ul,
 article .entry ol,
@@ -837,4 +840,3 @@ figure.highlight .code {
 figure.highlight .line {
   height: 20px;
 }
-
