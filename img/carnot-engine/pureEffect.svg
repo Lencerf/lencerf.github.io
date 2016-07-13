@@ -320,7 +320,7 @@
   <path d="M -9.8500 -7.2833 L -9.8500 4.4500 L 16.417 4.4500 L 16.417 -7.2833 z"/>
 </clipPath>
 <g clip-path="url(#clip27)">
-<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmsy10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">&#x00a1;</text>
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmsy10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">-</text>
 </g> <!-- clip27 -->
 </g> <!-- transform -->
 <g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 162.75, 109.25)">
@@ -424,7 +424,7 @@
   <path d="M -23.450 -5.1500 L -23.450 6.5833 L 2.8167 6.5833 L 2.8167 -5.1500 z"/>
 </clipPath>
 <g clip-path="url(#clip40)">
-<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmsy10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">&#x00a1;</text>
+<text fill-opacity="1.0000" font-style="normal" font-family="Jlm_cmsy10" font-weight="normal" stroke="none" fill="#000000" font-size="1.0000" x="0" y="0">-</text>
 </g> <!-- clip40 -->
 </g> <!-- transform -->
 <g transform="matrix(15.000, 0.0000, 0.0000, 15.000, 366.75, 77.250)">
@@ -464,7 +464,6 @@
 <font id="Jlm_cmsy10" horiz-adv-x="0" >
 <font-face font-family="Jlm_cmsy10" font-weight="normal" font-style="normal" font-size="100.00" units-per-em="100.00" ascent="79.992676" descent="19.998169" />
 <missing-glyph horiz-adv-x="74.993"  d="M 12.500 -0.0000 L 12.500 62.500 L 62.500 62.500 L 62.500 -0.0000 L 12.500 -0.0000 z M 60.906 1.5938 L 60.906 60.906 L 14.094 60.906 L 14.094 1.5938 L 60.906 1.5938 z"/>
-<glyph unicode="&#x00a1;" horiz-adv-x="77.693" d="M 66.094 23.000 L 11.594 23.000 Q 8.4062 23.000 8.2969 25.000 Q 8.2969 27.000 11.594 27.000 L 66.094 27.000 Q 69.297 27.000 69.406 25.000 Q 69.406 23.000 66.094 23.000 z"/>
 </font>
 <font id="Jlm_cmr10" horiz-adv-x="0" >
 <font-face font-family="Jlm_cmr10" font-weight="normal" font-style="normal" font-size="100.00" units-per-em="100.00" ascent="79.992676" descent="19.998169" />
