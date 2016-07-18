@@ -6,17 +6,17 @@
 <link rel="canonical" href="https://lencerf.github.io/">
 <link rel="stylesheet" href="/css/styles.css">
 
-<title>C - Lencerf&#39;s Walk</title>
-<meta property='og:title' content="C - Lencerf&#39;s Walk">
+<title>无外场二维理想 Bose 系统不存在 BEC 的证明 - Lencerf&#39;s Walk</title>
+<meta property='og:title' content="无外场二维理想 Bose 系统不存在 BEC 的证明 - Lencerf&#39;s Walk">
 <meta property="og:type" content="article">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
-<meta property="og:url" content="https://lencerf.github.io/tags/c/">
+<meta property="og:url" content="https://lencerf.github.io/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/">
 
 </head>
 <body>
-  <header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
+	<header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
 	<div class="alignleft" style="margin-left: 30px">
 	  <h1 style="font-style: italic;">Lencerf&#39;s Walk</h1>
 	  <h2>stay simple, stay naïve</h2>
@@ -34,31 +34,105 @@
 	</nav>
 	<div class="clearfix"></div>
 </div></header>
+	
+	<div id="content" class="inner">
+	    <div id="main-col" class="alignleft">
+		    <div id="wrapper"><article class="post">
+  <div class="post-content">
   
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft">
-      <div id="wrapper">
-<h2 class="archive-title tag">C</h2>
-<div class="archive" style="margin-bottom: 30px;">
-
-          
-    <article class="post">
-      <div class="post-content">
-        <header>          
-          <h3 class="title">
-          <archive-time>2016-01-03</archive-time>
-          <a href="/post/2016-01-03-an-example-of-differences-between-compilers/">An example of differences between compilers</a>
-          </h3>
-        </header>
-      </div>
-    </article>
-  
-
-</div></div>
+    <header>
+      <h1 class="title">无外场二维理想 Bose 系统不存在 BEC 的证明</h1>
       
+      <div style="margin-top:5px">
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2014-08-26T01:04:48&#43;08:00">August 26, 2014</time>
+      </div>
+      
+    </header>
+  
+    <div class="entry" id="article-content">
+      <p>Bose 气体满足 Bose-Einstein 分布
+$$
+\begin{equation}
+\langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1}
+\end{equation}$$
+其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。</p>
+
+<p>二维情况下，气体的态密度为$$
+\begin{equation}
+g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k
+\end{equation}$$
+非相对论情况下，粒子的能动量关系为$$
+\begin{equation}
+E=\frac{\hbar k^2}{2m}
+\end{equation}$$
+所以可以将态密度改写为以能量为自变量$$
+\begin{equation}
+g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E
+\end{equation}$$</p>
+
+<p>化学势 $\mu$ 与粒子数 $N$ 之间满足关系
+$$
+\begin{eqnarray}
+(2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;=&amp;N\newline
+\label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;=&amp;N
+\end{eqnarray}$$</p>
+
+<p>把 $\beta(E-\mu)$ 记为 $x$，式$\ref{化学势与粒子数关系}$可化为：
+$$
+\begin{equation}\label{simplified}
+\frac1\beta\int_{-\mu\beta}^{\infty}{\frac{d x}{e^x-1}}=\frac{2\pi\hbar N}{(2S+1)Am}
+\end{equation}$$</p>
+
+<p>左侧的积分可以算出来
+$$\begin{equation}
+\frac{1}{\beta}\int_{-\mu\beta}^{\infty}{\frac{dx}{e^x-1}}=\ln\frac{1}{(1-e^{\mu\beta})^{\frac1\beta}}
+\end{equation}
+$$</p>
+
+<p>代入式\ref{simplified}可以把 $\mu$ 表示出来$$
+\begin{equation}\label{mu}
+\mu=\frac1\beta\ln(1-e^{-c\beta}),c=\frac{2\pi\hbar N}{(2S+1)Am}
+\end{equation}$$
+从式\ref{mu}可以看出，$\mu$ 始终满足 $\mu\leqslant0$，当 $\beta \to \infty$ 即 $T\to 0$ 时，$\mu$ 从0的左侧趋向于0，所以可以说临界温度 $T_c=0K$，即 Bose-Einstein 凝聚不可能发生。</p>
 
     </div>
-    <aside id="sidebar" class="alignright">
+    <footer>
+    
+    <span class="tags">
+    <a href="https://lencerf.github.io/tags/thermodynamics">thermodynamics</a>,  
+      </span>
+    
+
+    
+    <span class="categories">
+    <a href="https://lencerf.github.io/categories/academy">Academy</a>
+      </span>
+    
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h2 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<script type="text/javascript">
+var disqus_shortname = "changyuanme";
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+</div>
+		</div>
+		<aside id="sidebar" class="alignright">
 
 
 
@@ -134,16 +208,16 @@
 
 
 </aside>
-      <div class="clearfix"></div>
-  </div>
-  
+	    <div class="clearfix"></div>
+	</div>
+	
 <footer id="footer" class="inner">
 <div style="text-align:center">
 	&copy; 2016 Lencerf&#39;s Walk | Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a> | <a href="/index.xml" target="_blank"> <span style="font-family:FontAwesome"></span></a>
 </div>
 <div class="clearfix"></div>
 </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
 <script src="https://lencerf.github.io/js/gallery.js"></script>
 

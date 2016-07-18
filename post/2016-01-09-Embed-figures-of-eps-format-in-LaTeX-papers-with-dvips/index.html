@@ -49,7 +49,7 @@
       
     </header>
   
-    <div class="entry">
+    <div class="entry" id="article-content">
       <p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
 
 <p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
@@ -132,9 +132,9 @@ var disqus_shortname = "changyuanme";
   <h3 class="title">CATEGORIES</h3>
   <ul class="entry">
     
-      <li><a href="/categories/technique">Technique</a> (7)</li>
+      <li><a href="/categories/academy">Academy</a> (7)</li>
     
-      <li><a href="/categories/academy">Academy</a> (6)</li>
+      <li><a href="/categories/technique">Technique</a> (7)</li>
     
   </ul>
 </div>
@@ -189,6 +189,7 @@ var disqus_shortname = "changyuanme";
 <script src="https://lencerf.github.io/js/gallery.js"></script>
 
 
+
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({  
   showMathMenu: false,
@@ -220,6 +221,8 @@ MathJax.Hub.Config({
 
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  

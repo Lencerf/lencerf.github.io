@@ -21,13 +21,13 @@
 $$m=\iint_S\rho(x,y)dxdy,$$
 $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
 $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
-以 $u, v$ 为被积分参数，$m$ 的表达式为&lt;/p&gt;
-
-&lt;p&gt;$$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,(1)$$&lt;/p&gt;
-
-&lt;p&gt;$|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为
+以 $u, v$ 为被积分参数，$m$ 的表达式为
+$$\begin{equation}\label{m}
+m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,
+\end{equation}$$
+$|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为
 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \newline \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$
-主要在于如何比较直观地理解雅可比行列式。看了知乎上&lt;a href=&#34;http://zhihu.com/question/29964930/answer/51632832&#34;&gt;这个回答&lt;/a&gt;后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式(1)了。&lt;/p&gt;
+主要在于如何比较直观地理解雅可比行列式。看了知乎上&lt;a href=&#34;http://zhihu.com/question/29964930/answer/51632832&#34;&gt;这个回答&lt;/a&gt;后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式\ref{m}了。&lt;/p&gt;
 
 &lt;p&gt;比普通二重积分复杂一点的是&lt;strong&gt;第一型曲面积分&lt;/strong&gt;。简单地说，普通二重积分中的板是一块平板，所以我们可以直接在平板上建立平面直角坐标系；第一型曲线积分中的板是一块曲面板，我们只能在外部建立空间直角坐标系然后用方程去描述曲面的形状。具体的表达式是：
 $$m=\iint_S\rho(x,y,z)dS,$$
@@ -56,7 +56,7 @@ $$I=\iint_D(\epsilon\vec{j}(x,y,z)\cdot\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\
 $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
 这样求出来的 $d\vec{u}\times d\vec{v}$ 总是指向我们通常约定的曲面的正侧，因此 $\epsilon$ 就可以取为 1（当然如果实际问题中确实是要沿着负侧积分，$\epsilon$ 就应当是 -1）。如果取了其他参数式，可能需要小心地先检验一下 $d\vec{u}\times d\vec{v}$ 的方向。&lt;/p&gt;
 
-&lt;p&gt;最后，本文叙述中有些内容并不完整，比如 $x, y$ 和 $u, v$ 之间的变换应当满足的条件等等。不严谨之处，敬请见谅。&lt;/p&gt;
+&lt;p&gt;最后，本文叙述中有些条件和前提略去了，比如 $x, y$ 和 $u, v$ 之间的变换应当满足的条件等等。不严谨之处，敬请见谅。&lt;/p&gt;
 </description>
     </item>
     
