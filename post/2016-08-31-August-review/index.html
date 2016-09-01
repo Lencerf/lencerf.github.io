@@ -6,13 +6,13 @@
 <link rel="canonical" href="https://lencerf.github.io/">
 <link rel="stylesheet" href="/css/styles.css">
 
-<title>配置 Sublime Text 的 LaTeX 写作环境 - Lencerf&#39;s Walk</title>
-<meta property='og:title' content="配置 Sublime Text 的 LaTeX 写作环境 - Lencerf&#39;s Walk">
+<title>八月小结 - Lencerf&#39;s Walk</title>
+<meta property='og:title' content="八月小结 - Lencerf&#39;s Walk">
 <meta property="og:type" content="article">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
-<meta property="og:url" content="https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/">
+<meta property="og:url" content="https://lencerf.github.io/post/2016-08-31-August-review/">
 
 </head>
 <body>
@@ -41,10 +41,10 @@
   <div class="post-content">
   
     <header>
-      <h1 class="title">配置 Sublime Text 的 LaTeX 写作环境</h1>
+      <h1 class="title">八月小结</h1>
       
       <div style="margin-top:5px">
-      <time itemprop="datePublished" pubdate="pubdate" datetime="2014-11-20T23:32:35&#43;08:00">November 20, 2014</time>
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2016-08-31T21:05:13-05:00">August 31, 2016</time>
       </div>
       
     </header>
@@ -53,55 +53,54 @@
       
 
 <blockquote>
-<p>又开始折腾了。。。</p>
+<p>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。</p>
 </blockquote>
 
-<h2 id="安装-latextools">安装 LaTeXTools</h2>
+<h2 id="心态">心态</h2>
 
-<ol>
-<li>View -&gt; Show Console，打开终端界面，将 Package Control <a href="https://sublime.wbond.net/installation">官网</a>给出的代码复制粘贴进终端，回车完成 Package Control 的安装。</li>
-<li><code>Command-Shift-P</code>调出命令窗口，输入<code>Install</code>，等待一会，之后输入<code>LaTeXTools</code>，回车完成安装，时常取决于网络。</li>
-<li>安装 <a href="http://skim-app.sourceforge.net/">Skim</a>，用于预览编译好的PDF文件。</li>
-</ol>
+<p>近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。</p>
 
-<h2 id="初始设置">初始设置</h2>
+<p>庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一句简单的鼓励分量真的很重。<img src="http://i.imgur.com/3PB1Goz.png" alt="" /></p>
 
-<h3 id="latextools">LaTeXTools</h3>
+<p>虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。</p>
 
-<ol>
-<li>初始化：按下<code>Command-Shift-P</code>，输入&rdquo;latextools&rdquo;，选择&rdquo;LaTeXTools:Reconfigure&hellip;&ldquo;，回车。
-<img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg" alt="LaTeXTools 的初始化" /></li>
-<li>设置编译时输出详细日志：前往<code>~/Library/Application Support/Sublime Text 3/Packages/User/</code>，打开<code>LaTeXTools.sublime-settings</code>，将<code>&quot;display_log&quot; : false,</code>改为<code>&quot;display_log&quot; : true,</code>。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？</li>
+<p>虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。</p>
 
-<li><p>设置默认使用 XeLaTeX 编译文件：虽然可以去修改<code>LaTeXTools.sublime-settings</code>,不过最简单安全的方法还是在自己的 TeX 源文件开头加上<code>%!TEX program = xelatex</code>，修改一下自己的模板就一劳永逸了，难道每次都从输入<code>\begin{document}</code>开始？</p>
+<h2 id="学习">学习</h2>
 
-<h3 id="skim">Skim</h3>
+<p>由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。</p>
 
-<p>在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
-<img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg" alt="Skim 设置" /></p></li>
-</ol>
+<p>另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。</p>
 
-<h2 id="skim-与-sublime-text-之间的跳转按键">Skim 与 Sublime Text 之间的跳转按键</h2>
+<p>真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）</p>
+
+<h2 id="项目">项目</h2>
+
+<p>生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 <a href="https://github.com/m13253/BiliDan">bilidan</a> 的源码，并尝试用我喜欢的 Swift 重写了一遍。然而就在我出国那几天，B站把<code>X-Forwarded-For</code>的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件</p>
 
 <ul>
-<li>Skim：<code>Command-Shift-J</code></li>
-<li>Sublime Text：<code>Command-L</code>,松开<code>Command</code>，迅速按下<code>J</code></li>
+<li><a href="https://github.com/Lencerf/Danmaku">Danmaku</a></li>
 </ul>
+
+<p>主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！</p>
+
+<p>除了对各类编程语言的浅尝辄止外，我一直想点一两个真正的CS技能点，然而数据结构和算法始终是找不到门路。CS科班的室友给我推荐了<a href="https://www.gitbook.com/book/nju-ics/ics2016-programming-assignment/details">这个项目</a>。目前希望能利用本学期的课余时间，按照指引认真做一遍，这样会对计算机系统有点更深刻的理解吧。</p>
+
+<h2 id="生活">生活</h2>
+
+<p>身处大农村，没车寸步难行。尤其是刚来几天，还算暑假，公交线路和班次都少，每天大概一个半小时耗在等公交上了。开学后住的公寓和学校间的直达公交开始运营了，感觉方便了很多。（然而去趟沃尔玛还是得等等等）</p>
+
+<p>美国的饭菜真的不习惯。小时候把汉堡当人间美味，然而现在吃了真的美国汉堡和三明治，我表示再也不想吃了。最近都是自己做，从来没有像现在一样觉得米饭和炒包菜是人间美味过！课程紧张的那几天中午饭就靠 Soylent 搞定，感觉 Drink 2.0 味道蛮好的。</p>
+
+<p>想写的还有很多，也许有空可以专门开一篇文章来写写我的一些见闻想法和思想观念的转变吧。</p>
 
     </div>
     <footer>
     
-    <span class="tags">
-    <a href="https://lencerf.github.io/tags/latex">LaTeX</a>,  
-    <a href="https://lencerf.github.io/tags/mac">Mac</a>,  
-    <a href="https://lencerf.github.io/tags/sublime-text-3">Sublime Text 3</a>,  
-    <a href="https://lencerf.github.io/tags/%E6%8A%98%E8%85%BE">折腾</a>,  
-      </span>
-    
 
     
     <span class="categories">
-    <a href="https://lencerf.github.io/categories/technique">Technique</a>
+    <a href="https://lencerf.github.io/categories/life">Life</a>
       </span>
     
     </footer>
@@ -130,26 +129,6 @@ var disqus_shortname = "changyuanme";
 		</div>
 		<aside id="sidebar" class="alignright">
 
-
-<div class="widget tag">
-  <h3 class="title">Table Of Contents</h3>
-  <div class="entry">
-  <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#安装-latextools">安装 LaTeXTools</a></li>
-<li><a href="#初始设置">初始设置</a>
-<ul>
-<li><a href="#latextools">LaTeXTools</a></li>
-<li><a href="#skim">Skim</a></li>
-</ul></li>
-<li><a href="#skim-与-sublime-text-之间的跳转按键">Skim 与 Sublime Text 之间的跳转按键</a></li>
-</ul></li>
-</ul>
-</nav>
-  </div>
-</div>
 
 
 <div class="widget tag">
