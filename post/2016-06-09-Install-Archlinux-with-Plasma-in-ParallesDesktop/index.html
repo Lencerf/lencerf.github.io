@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="generator" content="Hugo 0.16" />
+<meta name="generator" content="Hugo 0.17" />
 <link rel="canonical" href="https://lencerf.github.io/">
 <link rel="stylesheet" href="/css/styles.css">
 
@@ -73,8 +73,8 @@
 
 <p>格式化硬盘分区</p>
 
-<pre><code class="language-sh">mkfs.exf4 /dev/sda1
-mkfs.exf4 /dev/sda2
+<pre><code class="language-sh">mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
 </code></pre>
 
 <p>挂载分区，sda1 挂载到<code>/mnt</code>，sda2 挂载到到<code>/mnt/home</code></p>
@@ -105,7 +105,7 @@ mount /dev/sda2 /mnt/home
 
 <p>完成后，进入新安装的系统进行配置</p>
 
-<pre><code class="language-sh">arch-root /mnt
+<pre><code class="language-sh">arch-chroot /mnt
 </code></pre>
 
 <p>首先设置 Root 密码</p>
@@ -138,7 +138,7 @@ grub-install /dev/sda
 <p>配置 grub</p>
 
 <pre><code class="language-sh">mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.config
+grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
 
 <p><img src="https://i.imgur.com/hQt0Son.png" alt="配置 grub" /></p>
@@ -216,14 +216,14 @@ passwd yourname
 
 <p>把自己添加到sudoer中</p>
 
-<pre><code class="language-sh">nano /etc/sodoers
+<pre><code class="language-sh">nano /etc/sudoers
 </code></pre>
 
-<p>在末尾添加一行<code>lencerf ALL=(ALL) ALL</code></p>
+<p>在末尾添加一行<code>yourname ALL=(ALL) ALL</code></p>
 
 <p>把自己添加到audio用户组中，这样可以开启声音</p>
 
-<pre><code class="language-sh">gpasswd -a lencerf audio
+<pre><code class="language-sh">gpasswd -a yourname audio
 </code></pre>
 
 <p>安装一些不错的字体</p>

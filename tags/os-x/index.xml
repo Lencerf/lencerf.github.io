@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OS X on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/os-x/</link>
-    <description>Recent content in OS X on Lencerf&#39;s Walk</description>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/tags/os-x/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2015 19:11:25 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/tags/os-x/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -69,8 +68,7 @@
 &lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1etdcio105aj20h00dfwht.jpg&#34; alt=&#34;Automator script&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;Have a try!
 &lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1etdcmh4mmtj207c06cdg5.jpg&#34; alt=&#34;unix2dos in the context menu&#34; /&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -260,8 +258,7 @@ dS&amp;gt;0
 \bibliography{文献}
 \nocite{*}
 \end{document}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

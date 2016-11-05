@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technique on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/categories/technique/</link>
-    <description>Recent content in Technique on Lencerf&#39;s Walk</description>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/categories/technique/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2016 17:08:08 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/categories/technique/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -38,8 +37,8 @@
 
 &lt;p&gt;格式化硬盘分区&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.exf4 /dev/sda1
-mkfs.exf4 /dev/sda2
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
@@ -70,7 +69,7 @@ mount /dev/sda2 /mnt/home
 
 &lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-root /mnt
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-chroot /mnt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;首先设置 Root 密码&lt;/p&gt;
@@ -103,7 +102,7 @@ grub-install /dev/sda
 &lt;p&gt;配置 grub&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.config
+grub-mkconfig -o /boot/grub/grub.cfg
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hQt0Son.png&#34; alt=&#34;配置 grub&#34; /&gt;&lt;/p&gt;
@@ -181,14 +180,14 @@ passwd yourname
 
 &lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sodoers
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sudoers
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;在末尾添加一行&lt;code&gt;lencerf ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在末尾添加一行&lt;code&gt;yourname ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a lencerf audio
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a yourname audio
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装一些不错的字体&lt;/p&gt;
@@ -369,8 +368,7 @@ int main(int argc, char const *argv[]) {
 &lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1etdcio105aj20h00dfwht.jpg&#34; alt=&#34;Automator script&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;Have a try!
 &lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1etdcmh4mmtj207c06cdg5.jpg&#34; alt=&#34;unix2dos in the context menu&#34; /&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -395,11 +393,11 @@ int main(int argc, char const *argv[]) {
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
       <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
-      <description>
-
-&lt;blockquote&gt;
+      <description>&lt;blockquote&gt;
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
 
@@ -431,8 +429,7 @@ int main(int argc, char const *argv[]) {
 &lt;ul&gt;
 &lt;li&gt;Skim：&lt;code&gt;Command-Shift-J&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

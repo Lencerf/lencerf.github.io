@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/linux/</link>
-    <description>Recent content in Linux on Lencerf&#39;s Walk</description>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/tags/linux/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2016 17:08:08 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -38,8 +37,8 @@
 
 &lt;p&gt;格式化硬盘分区&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.exf4 /dev/sda1
-mkfs.exf4 /dev/sda2
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
@@ -70,7 +69,7 @@ mount /dev/sda2 /mnt/home
 
 &lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-root /mnt
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-chroot /mnt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;首先设置 Root 密码&lt;/p&gt;
@@ -103,7 +102,7 @@ grub-install /dev/sda
 &lt;p&gt;配置 grub&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.config
+grub-mkconfig -o /boot/grub/grub.cfg
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hQt0Son.png&#34; alt=&#34;配置 grub&#34; /&gt;&lt;/p&gt;
@@ -181,14 +180,14 @@ passwd yourname
 
 &lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sodoers
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sudoers
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;在末尾添加一行&lt;code&gt;lencerf ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在末尾添加一行&lt;code&gt;yourname ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a lencerf audio
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a yourname audio
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装一些不错的字体&lt;/p&gt;

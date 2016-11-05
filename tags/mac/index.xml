@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mac on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/mac/</link>
-    <description>Recent content in Mac on Lencerf&#39;s Walk</description>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/tags/mac/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jan 2016 17:08:08 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -89,11 +88,11 @@ ps2pdf paper.ps
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
       <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
-      <description>
-
-&lt;blockquote&gt;
+      <description>&lt;blockquote&gt;
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
 
@@ -125,8 +124,7 @@ ps2pdf paper.ps
 &lt;ul&gt;
 &lt;li&gt;Skim：&lt;code&gt;Command-Shift-J&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

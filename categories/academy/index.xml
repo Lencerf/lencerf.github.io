@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academy on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/categories/academy/</link>
-    <description>Recent content in Academy on Lencerf&#39;s Walk</description>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/categories/academy/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jul 2016 01:05:13 +0800</lastBuildDate>
     <atom:link href="https://lencerf.github.io/categories/academy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -182,6 +181,8 @@ ps2pdf paper.ps
       <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
       <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
+&lt;p&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;%!Mode:: &amp;quot;TeX:UTF-8&amp;quot;
 %!TEX program = xelatex
 \documentclass[10pt]{beamer}
@@ -250,14 +251,14 @@ ps2pdf paper.ps
 \section{章节1}
 \frame   %[allowframebreaks]似乎与\pause冲突
 {\frametitle{页标题}
-        \begin{itemize}
-        \item 信息1
-        \pause
-        \item 信息2
-        \only&amp;lt;3&amp;gt;{
-        \item 信息3}
-        \item 信息4
-        \end{itemize}
+		\begin{itemize}
+		\item 信息1
+		\pause
+		\item 信息2
+		\only&amp;lt;3&amp;gt;{
+		\item 信息3}
+		\item 信息4
+		\end{itemize}
 }
 
 \section{章节2}
@@ -275,8 +276,7 @@ ps2pdf paper.ps
 }
 
 \end{document}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -519,8 +519,7 @@ dS&amp;gt;0
 \bibliography{文献}
 \nocite{*}
 \end{document}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>
