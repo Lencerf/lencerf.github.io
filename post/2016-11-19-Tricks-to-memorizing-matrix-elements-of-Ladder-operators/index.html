@@ -6,13 +6,13 @@
 <link rel="canonical" href="https://lencerf.github.io/">
 <link rel="stylesheet" href="/css/styles.css">
 
-<title>brew with a socks5 proxy - Lencerf&#39;s Walk</title>
-<meta property='og:title' content="brew with a socks5 proxy - Lencerf&#39;s Walk">
+<title>Tricks to memorizing matrix elements of Ladder operators - Lencerf&#39;s Walk</title>
+<meta property='og:title' content="Tricks to memorizing matrix elements of Ladder operators - Lencerf&#39;s Walk">
 <meta property="og:type" content="article">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
-<meta property="og:url" content="https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/">
+<meta property="og:url" content="https://lencerf.github.io/post/2016-11-19-Tricks-to-memorizing-matrix-elements-of-Ladder-operators/">
 
 </head>
 <body>
@@ -43,40 +43,43 @@
   <div class="post-content">
   
     <header>
-      <h1 class="title">brew with a socks5 proxy</h1>
+      <h1 class="title">Tricks to memorizing matrix elements of Ladder operators</h1>
       
       <div style="margin-top:5px">
-      <time itemprop="datePublished" pubdate="pubdate" datetime="2015-10-03T22:47:28&#43;08:00">October 3, 2015</time>
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2016-11-19T23:16:18-05:00">November 19, 2016</time>
       </div>
       
     </header>
   
     <div class="entry" id="article-content">
-      <blockquote>
-<p>Finally, I find the right way to use homebrew.</p>
-</blockquote>
+      <p>I still remember how surprised I was when I was learning a simple harmonic oscillator&rsquo;s Ladder operators, $a$ and $a^\dagger$, in Prof. Chiang&rsquo;s summer quantum mechanics class. But for a long time, I did not know how to remember the matrix elements of Ladder operators, including $J_\pm$ in angular momentum theories.</p>
 
-<p>set a socks proxy with git for the http transport</p>
+<p>$$ a|n\rangle=\sqrt{n}|n-1\rangle $$
+$$ a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle $$</p>
 
-<pre><code class="language-sh">git config --global http.proxy 'socks5://127.0.0.1:1081'
-</code></pre>
+<p>$$ J_\pm|j, m\rangle = \sqrt{(j\pm m+1)(j\mp m)}\hbar|j, m\pm 1\rangle $$</p>
 
-<p>set a socks proxy for curl: jsut add <code>proxy=socks5://127.0.0.1:1081</code> to <code>~/.curlrc</code>.</p>
+<p>In other words, I did not know what were the coefficients in front of the new state ket.</p>
 
-<p>Too much time have been wasted because of the poor network.</p>
+<p>This week, I finally found some simple tricks to memorize those $\sqrt{n}$, $\sqrt{n+1}$, and especially, $\sqrt{(j\pm m+1)(j\mp m)}$. That is,</p>
+
+<p>$$ O|n\rangle=\sqrt{\max(n, n&rsquo;)}|n&rsquo;\rangle $$</p>
+
+<p>$O$ represents $a$ or $a^\dagger$ and $n&rsquo;$ is $n-1$ or $n+1$. Similarly, for $J_\pm$,</p>
+
+<p>$$ J_{\pm}|j, m\rangle = \sqrt{(j+\max(m, m&rsquo;))(j-\min(n, n&rsquo;))}\hbar|j, m&rsquo;\rangle $$</p>
+
+<p>and $m&rsquo;$ is $m-1$ or $m+1$, depending on the operator you applied on $|j, m\rangle$.</p>
+
+<p>One can easily verify that the last two equations are equivalent to the original formulas.</p>
 
     </div>
     <footer>
     
-    <span class="tags">
-    <a href="https://lencerf.github.io/tags/socks5">socks5</a>,  
-    <a href="https://lencerf.github.io/tags/homebrew">homebrew</a>,  
-      </span>
-    
 
     
     <span class="categories">
-    <a href="https://lencerf.github.io/categories/technique">Technique</a>
+    <a href="https://lencerf.github.io/categories/academic">Academic</a>
       </span>
     
     </footer>

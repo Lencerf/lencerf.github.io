@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/archives/en/index.xml</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://lencerf.github.io/archives/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tricks to memorizing matrix elements of Ladder operators</title>
+      <link>https://lencerf.github.io/post/2016-11-19-Tricks-to-memorizing-matrix-elements-of-Ladder-operators/</link>
+      <pubDate>Sat, 19 Nov 2016 23:16:18 -0500</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-11-19-Tricks-to-memorizing-matrix-elements-of-Ladder-operators/</guid>
+      <description>&lt;p&gt;I still remember how surprised I was when I was learning a simple harmonic oscillator&amp;rsquo;s Ladder operators, $a$ and $a^\dagger$, in Prof. Chiang&amp;rsquo;s summer quantum mechanics class. But for a long time, I did not know how to remember the matrix elements of Ladder operators, including $J_\pm$ in angular momentum theories.&lt;/p&gt;
+
+&lt;p&gt;$$ a|n\rangle=\sqrt{n}|n-1\rangle $$
+$$ a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle $$&lt;/p&gt;
+
+&lt;p&gt;$$ J_\pm|j, m\rangle = \sqrt{(j\pm m+1)(j\mp m)}\hbar|j, m\pm 1\rangle $$&lt;/p&gt;
+
+&lt;p&gt;In other words, I did not know what were the coefficients in front of the new state ket.&lt;/p&gt;
+
+&lt;p&gt;This week, I finally found some simple tricks to memorize those $\sqrt{n}$, $\sqrt{n+1}$, and especially, $\sqrt{(j\pm m+1)(j\mp m)}$. That is,&lt;/p&gt;
+
+&lt;p&gt;$$ O|n\rangle=\sqrt{\max(n, n&amp;rsquo;)}|n&amp;rsquo;\rangle $$&lt;/p&gt;
+
+&lt;p&gt;$O$ represents $a$ or $a^\dagger$ and $n&amp;rsquo;$ is $n-1$ or $n+1$. Similarly, for $J_\pm$,&lt;/p&gt;
+
+&lt;p&gt;$$ J_{\pm}|j, m\rangle = \sqrt{(j+\max(m, m&amp;rsquo;))(j-\min(n, n&amp;rsquo;))}\hbar|j, m&amp;rsquo;\rangle $$&lt;/p&gt;
+
+&lt;p&gt;and $m&amp;rsquo;$ is $m-1$ or $m+1$, depending on the operator you applied on $|j, m\rangle$.&lt;/p&gt;
+
+&lt;p&gt;One can easily verify that the last two equations are equivalent to the original formulas.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
+      <link>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to genereate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+
+&lt;p&gt;Today when I am tring PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
+
+&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some parameters are needed when hyperref is used with dvips:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvips,breaklinks]{hyperref}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;But, why not use XeLaTeX to compile the source file?&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example of differences between compilers</title>
+      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
+#include &amp;quot;stdio.h&amp;quot;
+int main(int argc, char const *argv[]) {
+    int a = 1;
+    int c = (a=a * 2) + (a = a + 3);
+    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the biniary file and we will get:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, if I use &lt;code&gt;clang&lt;/code&gt; to compile the codes, there will be a warning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run the generated file:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>brew with a socks5 proxy</title>
+      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;set a socks proxy with git for the http transport&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;set a socks proxy for curl: jsut add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
