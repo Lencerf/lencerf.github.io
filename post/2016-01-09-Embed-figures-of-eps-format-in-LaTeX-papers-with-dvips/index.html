@@ -52,9 +52,9 @@
     </header>
   
     <div class="entry" id="article-content">
-      <p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embeding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to genereate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
+      <p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to generate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple way to solve this problem. But what if we need them two simultaneously?</p>
 
-<p>Today when I am tring PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
+<p>Today when I am trying PSTricks, I find <code>dvipdfmx</code> is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
 
 <p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat">this question</a> on stackexchange. Some parameters are needed when hyperref is used with dvips:</p>
 

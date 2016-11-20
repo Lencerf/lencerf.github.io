@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the biniary file and we will get:&lt;/p&gt;
+&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the binary file and we will get:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;a = 5, c = 10.&lt;/p&gt;
