@@ -14,7 +14,9 @@
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
-      <description>&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho_(x,y)$ 的不均匀板的质量 $m$。显然，
 $$m=\iint_S\rho(x,y)dxdy,$$
@@ -65,7 +67,7 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
       <guid>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
-      <description>&lt;p&gt;经典热力学中一个很重要的模型是卡诺热机（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot_heat_engine&#34;&gt;Carnot engine&lt;/a&gt;），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)&#34;&gt;Carnot&amp;rsquo;s theorem&lt;/a&gt;，引自[1]）&lt;/p&gt;
+      <description>&lt;p&gt;经典热力学中一个很重要的模型是卡诺热机（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot_heat_engine&#34;&gt;Carnot engine&lt;/a&gt;），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:carnot&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:carnot&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)&#34;&gt;Carnot&amp;rsquo;s theorem&lt;/a&gt;）&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.&lt;/p&gt;
@@ -108,10 +110,15 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
 &lt;p&gt;总结一下，在这个问题中有机个概念需要区分，&lt;strong&gt;可逆过程&lt;/strong&gt;、&lt;strong&gt;可逆机&lt;/strong&gt;和气体经历的&lt;strong&gt;可逆变化&lt;/strong&gt;并不是一回事。感想就是，把想法都写下来，对理清思路有很大帮助。想通了这些问题后，再回过头看看写下的东西，似乎全是废话，给读者见笑。但是自己没开窍前还是相当困惑的，写下来防止以后再一次忘记。&lt;/p&gt;
 
 &lt;p&gt;如果读者有什么见解和想法，欢迎在留言区指正和一起讨论。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
 
-&lt;p&gt;参考&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;[1] &lt;em&gt;Concepts in Thermal Physics, 2nd Edition&lt;/em&gt;, Stephen J.Blundell &amp;amp; Katherine M.Blundell.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:carnot&#34;&gt;&lt;em&gt;Concepts in Thermal Physics, 2nd Edition&lt;/em&gt;, Stephen J.Blundell &amp;amp; Katherine M.Blundell.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:carnot&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
