@@ -373,7 +373,7 @@ article .entry code {
 article .entry pre {
   background: #eee;
   border: 1px solid #ddd;
-  margin-top: 15px;
+  margin-bottom: 15px;
   overflow: auto;
   padding: 7px 15px;
   -webkit-border-radius: 2px;
