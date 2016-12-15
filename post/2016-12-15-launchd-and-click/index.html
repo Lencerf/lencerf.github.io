@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.17" />
+<link rel="canonical" href="https://lencerf.github.io/">
+<link rel="stylesheet" href="/css/styles.css">
+
+<title>launchd 和 click - Lencerf&#39;s Walk</title>
+<meta property='og:title' content="launchd 和 click - Lencerf&#39;s Walk">
+<meta property="og:type" content="article">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<meta property="og:url" content="https://lencerf.github.io/post/2016-12-15-launchd-and-click/">
+
+</head>
+
+<body>
+	<header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
+	<div class="alignleft" style="margin-left: 30px">
+	  <h1 style="font-style: italic;">Lencerf&#39;s Walk</h1>
+	  <h2>stay simple, stay naïve</h2>
+	</div>
+	<nav id="main-nav" class="alignright">
+	  <ul>
+	  
+	      <li><a href="/archives/archives">BLOG</a></li>
+	  
+	      <li><a href="/archives/en">EN</a></li>
+	  
+	      <li><a href="/">HOME</a></li>
+	  
+	  	    
+	  </ul>
+	  <div class="clearfix"></div>
+	</nav>
+	<div class="clearfix"></div>
+</div>
+</header>
+	
+	<div id="content" class="inner">
+	    <div id="main-col" class="alignleft">
+		    <div id="wrapper"><article class="post">
+  <div class="post-content">
+  
+    <header>
+      <h1 class="title">launchd 和 click</h1>
+      
+      <div style="margin-top:5px">
+      <time itemprop="datePublished" pubdate="pubdate" datetime="2016-12-15T10:16:18-05:00">December 15, 2016</time>
+      </div>
+      
+    </header>
+  
+    <div class="entry" id="article-content">
+      <p>起因是看了这篇介绍 Beancount 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+  &lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;lencerf.fava&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+      &lt;string&gt;/usr/local/bin/fava&lt;/string&gt;
+      &lt;string&gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>然而 <code>launchctl load fava.plist</code> 后在浏览器里访问 <code>http://localhost:5000/</code> 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 <code>/usr/local/bin/fava</code> 换成 <code>/usr/local/bin/bean-web</code> 后访问 <code>http://localhost:8080/</code>，可以打开 bean-web 页面，说明问题在 fava 身上。</p>
+
+<p>但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，<a href="http://serverfault.com/questions/183589/how-do-i-activate-launchd-logging-on-os-x">这个页面</a>上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：</p>
+
+<pre><code>&lt;key&gt;StandardOutPath&lt;/key&gt;
+&lt;string&gt;/path/to/logfile.log&lt;/string&gt;
+&lt;key&gt;StandardErrorPath&lt;/key&gt;
+&lt;string&gt;/path/to/error.log&lt;/string&gt;
+</code></pre>
+
+<p>于是当我打开再次 <code>launchd load fava.plist</code> 后，在 error.log 中看到了大量这样的输出：</p>
+
+<pre><code>Traceback (most recent call last):   File &quot;/usr/local/bin/fava&quot;, line 11, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.5/site-packages/click/core.py&quot;, line 716, in __call__
+    return self.main(*args, **kwargs)
+  File &quot;/usr/local/lib/python3.5/site-packages/click/core.py&quot;, line 675, in main
+    _verify_python3_env()
+  File &quot;/usr/local/lib/python3.5/site-packages/click/_unicodefun.py&quot;, line 119, in _verify_python3_env
+    'mitigation steps.' + extra)
+RuntimeError: Click will abort further execution because Python 3 was configured to use ASCII as encoding for the environment.  Either run this under Python 2 or consult http://click.pocoo.org/python3/ for mitigation steps.
+
+This system lists a couple of UTF-8 supporting locales that
+you can pick from.  The following suitable locales where
+discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_CZ.UTF-8, da_DK.UTF-8, de_AT.UTF-8, de_CH.UTF-8, de_DE.UTF-8, el_GR.UTF-8, en_AU.UTF-8, en_CA.UTF-8, en_GB.UTF-8, en_IE.UTF-8, en_NZ.UTF-8, en_US.UTF-8, es_ES.UTF-8, et_EE.UTF-8, eu_ES.UTF-8, fi_FI.UTF-8, fr_BE.UTF-8, fr_CA.UTF-8, fr_CH.UTF-8, fr_FR.UTF-8, he_IL.UTF-8, hr_HR.UTF-8, hu_HU.UTF-8, hy_AM.UTF-8, is_IS.UTF-8, it_CH.UTF-8, it_IT.UTF-8, ja_JP.UTF-8, kk_KZ.UTF-8, ko_KR.UTF-8, lt_LT.UTF-8, nl_BE.UTF-8, nl_NL.UTF-8, no_NO.UTF-8, pl_PL.UTF-8, pt_BR.UTF-8, pt_PT.UTF-8, ro_RO.UTF-8, ru_RU.UTF-8, sk_SK.UTF-8, sl_SI.UTF-8, sr_YU.UTF-8, sv_SE.UTF-8, tr_TR.UTF-8, uk_UA.UTF-8, zh_CN.UTF-8, zh_HK.UTF-8, zh_TW.UTF-8
+</code></pre>
+
+<p>看上去和 click 这个 Python 包有点关系，搜索了一番，看了看这个 <a href="https://github.com/madjar/nox/issues/19">issue</a>，猜想可能和没有指定语言有关系，看来需要想办法在 fava.plist 中指定相关的环境变量，</p>
+
+<pre><code>&lt;key&gt;EnvironmentVariables&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;LANG&lt;/key&gt;
+    &lt;string&gt;en_US.UTF-8&lt;/string&gt;
+&lt;/dict&gt;
+</code></pre>
+
+<p>再次加载，成功！</p>
+
+<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 bgm38。</p>
+
+    </div>
+    <footer>
+    
+    <span class="tags">
+    <a href="https://lencerf.github.io/tags/launchd">launchd</a>,  
+    <a href="https://lencerf.github.io/tags/python">python</a>,  
+      </span>
+    
+
+    
+    <span class="categories">
+    <a href="https://lencerf.github.io/categories/technique">Technique</a>
+      </span>
+    
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h2 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<script type="text/javascript">
+var disqus_shortname = "changyuanme";
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+</div>
+		</div>
+		<aside id="sidebar" class="alignright">
+
+
+
+<div class="widget tag">
+  <h3 class="title">RECENT POSTS</h3>
+  <ul class="entry">
+    
+      <li>▪ <a href="/post/2016-12-15-launchd-and-click/">launchd 和 click</a></li>
+    
+      <li>▪ <a href="/post/2016-08-31-August-review/">八月小结</a></li>
+    
+      <li>▪ <a href="/post/2016-07-11-notes-on-surface-integral/">曲面积分复习跳坑笔记</a></li>
+    
+      <li>▪ <a href="/post/2016-06-29-the-feature-of-carnot-engine/">卡诺热机的特别之处</a></li>
+    
+      <li>▪ <a href="/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/">Install Arch Linux with Plasma in Paralles Desktop</a></li>
+    
+      <li>▪ <a href="/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a></li>
+    
+      <li>▪ <a href="/post/2016-01-03-an-example-of-differences-between-compilers/">An example of differences between compilers</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+
+<div class="widget tag">
+  <h3 class="title">CATEGORIES</h3>
+  <ul class="entry">
+    
+      <li><a href="/categories/technique">Technique</a> (8)</li>
+    
+      <li><a href="/categories/academic">Academic</a> (7)</li>
+    
+      <li><a href="/categories/life">Life</a> (1)</li>
+    
+  </ul>
+</div>
+
+<div class="widget tag">
+  <h3 class="title">TAGS</h3>
+  <ul class="entry">
+    
+      <span><a href="/tags/automator">#Automator</a> </span>
+    
+      <span><a href="/tags/c">#C</a> </span>
+    
+      <span><a href="/tags/latex">#LaTeX</a> </span>
+    
+      <span><a href="/tags/linux">#Linux</a> </span>
+    
+      <span><a href="/tags/mac">#Mac</a> </span>
+    
+      <span><a href="/tags/mathematica">#Mathematica</a> </span>
+    
+      <span><a href="/tags/os-x">#OS X</a> </span>
+    
+      <span><a href="/tags/sublime-text-3">#Sublime Text 3</a> </span>
+    
+      <span><a href="/tags/calculus">#calculus</a> </span>
+    
+      <span><a href="/tags/homebrew">#homebrew</a> </span>
+    
+      <span><a href="/tags/launchd">#launchd</a> </span>
+    
+      <span><a href="/tags/python">#python</a> </span>
+    
+      <span><a href="/tags/socks5">#socks5</a> </span>
+    
+      <span><a href="/tags/thermodynamics">#thermodynamics</a> </span>
+    
+      <span><a href="/tags/%E6%8A%98%E8%85%BE">#折腾</a> </span>
+    
+  </ul>
+</div>
+
+
+
+</aside>
+	    <div class="clearfix"></div>
+	</div>
+	
+<footer id="footer" class="inner">
+<div style="text-align:center">
+	&copy; 2016 Lencerf&#39;s Walk | Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a> | <a href="/index.xml" target="_blank"> <span style="font-family:FontAwesome"></span></a>
+</div>
+<div class="clearfix"></div>
+</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<script src="https://lencerf.github.io/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({  
+  showMathMenu: false,
+  tex2jax: {
+    inlineMath: [['$','$']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  },
+  TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] },
+  messageStyle: "none",
+  "HTML-CSS": {
+    preferredFont: "TeX",
+    styles: {".MathJax_Display": {
+        margin: "0.5em 0em", 
+        "overflow-x": "scroll",
+        "overflow-y": "hidden" }
+    },
+    }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+
+
+<script >hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script> 
+<script type="text/javascript">
+var host = "lencerf.github.io";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script> 
+</body>
+</html>
