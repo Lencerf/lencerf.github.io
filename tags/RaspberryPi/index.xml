@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>raspberrypi on Lencerf&#39;s Walk</title>
+    <link>https://lencerf.github.io/tags/raspberrypi/index.xml</link>
+    <description>Recent content in raspberrypi on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://lencerf.github.io/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>用树莓派3搭一个简易的 NAS</title>
+      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
+      
+      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <description>
+
+&lt;p&gt;先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。&lt;/p&gt;
+
+&lt;p&gt;在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。&lt;/p&gt;
+
+&lt;p&gt;材料：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;树莓派 Raspberry Pi 3 Model B 及电源线和适配器&lt;/li&gt;
+&lt;li&gt;Micro SD Card&lt;/li&gt;
+&lt;li&gt;移动硬盘&lt;/li&gt;
+&lt;li&gt;带独立供电的 USB Hub&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。&lt;/p&gt;
+
+&lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
+
+&lt;p&gt;首先安装官网上的&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;指引&lt;/a&gt;，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。&lt;/p&gt;
+
+&lt;h2 id=&#34;配置-raspbian&#34;&gt;配置 Raspbian&lt;/h2&gt;
+
+&lt;p&gt;把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 &lt;code&gt;sudo raspy-config&lt;/code&gt; 可以配置，有这么几个必须进行的操作：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。&lt;/li&gt;
+&lt;li&gt;修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。&lt;/li&gt;
+&lt;li&gt;修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见&lt;a href=&#34;http://henson.github.io/post/raspberrypi4/&#34;&gt;这篇文章&lt;/a&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;修改用户-pi-的-uid&#34;&gt;修改用户 pi 的 uid&lt;/h2&gt;
+
+&lt;p&gt;需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。&lt;/p&gt;
+
+&lt;p&gt;在 macOS 上执行 &lt;code&gt;id&lt;/code&gt; 命令可以查看自己的 uid，如果不是 501，那么下面的命令里应该换成正确的数值。&lt;/p&gt;
+
+&lt;p&gt;修改用户 pi 的 uid 需要注销并登陆到 root 账户上去改，树莓派默认又是锁定了 root 账户的。首先为 root 账户设置密码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd root
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后解锁 root 账户&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd --unlock root
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;之后去 raspi-config 里面把启动选项改成 Console，重启树莓派登入 root 账户并修改 uid：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;usermod -u 501 pi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后再去 raspi-config 里把启动选项改回 Desktop Autologin，返回 pi 账户进行下一步操作。&lt;/p&gt;
+
+&lt;h2 id=&#34;开启文件共享&#34;&gt;开启文件共享&lt;/h2&gt;
+
+&lt;p&gt;安装 netatalk 和 avahi-daemon&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update; sudo apt-get upgrade; sudo apt-get install netatalk avahi-daemon
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完后，如果笔记本和树莓派连接到同一无线局域网，应该就能在 Finder 的侧栏看到树莓派了，用 pi 用户登陆可以访问 Home Directory，也就是 Raspbian 上 pi 用户的主文件夹。当然我需要的是访问移动硬盘。把移动硬盘通过 USB Hub 接上树莓派。首先确认在 Raspbian 系统下能够正常读写移动硬盘，如果移动硬盘采用了 HFS+ 或者 NTFS 之类的文件格式，还需要安装相应的软件包。对于 HFS+ 格式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install hfsprogs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后修改 netatalk 的共享设置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/netatalk/AppleVolumes.default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以看到里面已经默认共享了用户主目录。加上共享移动硬盘：&lt;code&gt;/media/pi/mydrive “mydrive”&lt;/code&gt;。重启 netatalk:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service netatalk restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;硬盘睡眠&#34;&gt;硬盘睡眠&lt;/h2&gt;
+
+&lt;p&gt;最后，硬盘不工作时应当让它进入睡眠，我就不啰嗦了，直接看&lt;a href=&#34;http://mkitby.com/2016/05/15/raspberry-pi-nas-manage-hdd-power/&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+
+&lt;p&gt;从树莓派里下载文件大概是 1MB/s，看个普通的视频足够了，凑合用吧。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

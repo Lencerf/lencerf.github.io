@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lencerf.github.io/</loc>
+    <loc>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</loc>
     <lastmod>2016-12-15T10:16:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</loc>
-    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <loc>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</loc>
+    <lastmod>2016-12-06T21:48:10-05:00</lastmod>
   </url>
   
   <url>
@@ -88,6 +88,170 @@
   
   <url>
     <loc>https://lencerf.github.io/page/anime-list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/post/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/categories/academic/</loc>
+    <lastmod>2016-07-11T01:05:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/archives/archives/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/automator/</loc>
+    <lastmod>2015-06-02T00:32:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/c/</loc>
+    <lastmod>2016-01-03T23:40:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/calculus/</loc>
+    <lastmod>2016-07-11T01:05:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/archives/en/</loc>
+    <lastmod>2016-01-09T17:08:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/homebrew/</loc>
+    <lastmod>2015-10-03T22:47:28+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/latex/</loc>
+    <lastmod>2016-01-09T17:08:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/launchd/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/categories/life/</loc>
+    <lastmod>2016-08-31T21:05:13-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/linux/</loc>
+    <lastmod>2016-06-09T17:08:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/mac/</loc>
+    <lastmod>2016-01-09T17:08:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/mathematica/</loc>
+    <lastmod>2015-02-25T17:22:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/nas/</loc>
+    <lastmod>2016-12-06T21:48:10-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/os-x/</loc>
+    <lastmod>2015-09-23T19:11:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/python/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/raspberrypi/</loc>
+    <lastmod>2016-12-06T21:48:10-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/socks5/</loc>
+    <lastmod>2015-10-03T22:47:28+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/sublime-text-3/</loc>
+    <lastmod>2014-11-20T23:32:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/categories/technique/</loc>
+    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/thermodynamics/</loc>
+    <lastmod>2016-06-29T01:05:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lencerf.github.io/tags/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2014-11-20T23:32:35+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
