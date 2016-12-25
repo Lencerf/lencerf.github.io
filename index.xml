@@ -917,7 +917,7 @@ ps2pdf paper.ps
 &lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Skim：&lt;code&gt;Command-Shift-J&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Skim：&lt;code&gt;Command-Shift-单击&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
