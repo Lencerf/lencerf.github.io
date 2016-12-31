@@ -120,6 +120,7 @@ body {
 	-webkit-transition: 0.25s ease-out;
 	-moz-transition: 0.25s ease-out;
 	transition: 0.25s ease-out;
+	font-size: 85%;
 }
 
 /*** Columns ***/
@@ -200,27 +201,22 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	font-size: 1.5rem;
 }
 
 h3 {
 	font-size: 20px;
-	font-size: 1.25rem;
 }
 
 h4 {
 	font-size: 18px;
-	font-size: 1.125rem;
 }
 
 h5 {
 	font-size: 16px;
-	font-size: 1rem;
 }
 
 h6 {
 	font-size: 14px;
-	font-size: 0.875rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -559,10 +555,13 @@ select {
 	vertical-align: middle;
 }
 
+.entry-header .entry-title {
+	border-bottom: 1px dotted #ebebeb;
+	padding-bottom: 10px;
+}
+
 .entry-meta {
-	margin-top: 10px;
 	padding: 5px 10px;
-	border-top: 1px dotted #ebebeb;
 	border-bottom: 1px dotted #ebebeb;
 }
 
@@ -645,12 +644,12 @@ select {
 
 .mr-loop-item {
 	padding-bottom: 2px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	border-bottom: 1px solid #ebebeb;
 }
 
 .mr-loop-header {
-	margin-bottom: 10px;
+	margin-bottom: 2px;
 }
 
 .mr-loop-meta {
@@ -1323,7 +1322,6 @@ textarea {
 
 	.mr-header-title, .entry-title {
 		font-size: 24px;
-		font-size: 1.5rem;
 	}
 
 	.mr-sidebar {
@@ -1340,7 +1338,6 @@ textarea {
 
 	.mr-mobile .mr-custom-posts-small-title {
 		font-size: 14px;
-		font-size: 0.875rem;
 	}
 
 	.mr-mobile .mr-posts-focus-wrap {
@@ -1351,7 +1348,6 @@ textarea {
 
 	.mr-mobile .mr-posts-focus-title-small {
 		font-size: 20px;
-		font-size: 1.25rem;
 	}
 
 	.mr-mobile .mr-posts-focus-item {
@@ -1376,7 +1372,6 @@ textarea {
 
 	.mr-mobile .mr-posts-focus-title-large {
 		font-size: 24px;
-		font-size: 1.5rem;
 	}
 }
 
@@ -1391,7 +1386,7 @@ textarea {
 		margin: 0;
 	}
 
-	.entry-meta-categories, .entry-meta-comments {
+	.entry-meta-tags, .entry-meta-comments {
 		display: none;
 	}
 
@@ -1435,7 +1430,7 @@ textarea {
 	}
 
 	.mr-loop-title, .mr-mobile .mr-posts-focus-title-small {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	.mr-loop-meta, .mr-custom-posts-content .mr-meta,
