@@ -6,8 +6,57 @@
     <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Dec 2016 10:16:18 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2016 14:03:51 -0500</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>再见 2016</title>
+      <link>/post/2016-12-31-see-you-2016/</link>
+      <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
+      
+      <guid>/post/2016-12-31-see-you-2016/</guid>
+      <description>&lt;p&gt;虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。&lt;/p&gt;
+
+&lt;p&gt;按流水账来——&lt;/p&gt;
+
+&lt;p&gt;年初刚交完所有研究生院校的神情资料，待在家坐立不安等结果。到了二月份，申请结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信。不过后来拒信也收得麻木了，毕竟有保底不至于失学。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。&lt;/p&gt;
+
+&lt;p&gt;到了三月，据信一一到来。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了&lt;a href=&#34;http://www.learnyouahaskell.com&#34;&gt;《Learn You a Haskell for Great Good!》&lt;/a&gt; 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。&lt;/p&gt;
+
+&lt;p&gt;这四月里还尝试自己学习算法和数据结构，做 leetcode 题，&lt;strong&gt;举步维艰&lt;/strong&gt;。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。&lt;/p&gt;
+
+&lt;p&gt;五六两月继续处理毕业事宜和出国手续。中途去&lt;a href=&#34;https://www.instagram.com/p/BFP9TvPDNlA/?taken-by=lencerf&#34;&gt;重庆&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BFP9ok0jNli/?taken-by=lencerf&#34;&gt;成都&lt;/a&gt;玩了一趟，看到了&lt;a href=&#34;https://www.instagram.com/p/BFJsgu1DNml/?taken-by=lencerf&#34;&gt;可爱的大熊猫&lt;/a&gt;。但是玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。&lt;/p&gt;
+
+&lt;p&gt;八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的&lt;a href=&#34;/post/2016-08-31-August-review/&#34;&gt;日志&lt;/a&gt;里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。&lt;/p&gt;
+
+&lt;p&gt;到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。&lt;/p&gt;
+
+&lt;p&gt;十二月初去应英语老师邀请，去她家吃了一次圣诞级别的&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/?taken-by=lencerf&#34;&gt;早饭&lt;/a&gt;，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。&lt;/p&gt;
+
+&lt;div align=center style=&#34;margin-bottom:25px&#34;&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-version=&#34;7&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:400px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:8px;&#34;&gt; &lt;div style=&#34; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&#34;&gt; &lt;div style=&#34; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;_blank&#34;&gt;A photo posted by Alden (@lencerf)&lt;/a&gt; on &lt;time style=&#34; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&#34; datetime=&#34;2016-12-08T18:21:16+00:00&#34;&gt;Dec 8, 2016 at 10:21am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async defer src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。&lt;/p&gt;
+
+&lt;p&gt;流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。&lt;/p&gt;
+
+&lt;p&gt;这一年的主要收获大概就是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习；&lt;/li&gt;
+&lt;li&gt;大学顺利毕业，吃老本的本科毕业论文拿了省级优秀；&lt;/li&gt;
+&lt;li&gt;研究生申请不算太失败，拿到了一个一般学校的全额 Fellowship；&lt;/li&gt;
+&lt;li&gt;申请到了人生第一张真正的信用卡 Discover It，薅了一点羊毛；&lt;/li&gt;
+&lt;li&gt;学会了做&lt;a href=&#34;https://www.instagram.com/p/BNIXBifht1Z/?taken-by=lencerf&#34;&gt;土豆烧猪肉&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BOh6o-7B7h1/?taken-by=lencerf&#34;&gt;红烧鱼&lt;/a&gt;等家常菜，能满足自己的味蕾了；&lt;/li&gt;
+&lt;li&gt;研究生第一学期顺利结束，英语通过考核可以申请助教了；&lt;/li&gt;
+&lt;li&gt;年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。&lt;/p&gt;
+
+&lt;p&gt;希望2017年，静下心认真做学术研究、闲暇时学习技术，不要沉溺于对过去的缅怀和对未来的恐慌之中。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>launchd 和 click</title>
@@ -875,51 +924,6 @@ ps2pdf paper.ps
 
 \end{document}
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
-      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
-      
-      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;View -&amp;gt; Show Console，打开终端界面，将 Package Control &lt;a href=&#34;https://sublime.wbond.net/installation&#34;&gt;官网&lt;/a&gt;给出的代码复制粘贴进终端，回车完成 Package Control 的安装。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Command-Shift-P&lt;/code&gt;调出命令窗口，输入&lt;code&gt;Install&lt;/code&gt;，等待一会，之后输入&lt;code&gt;LaTeXTools&lt;/code&gt;，回车完成安装，时常取决于网络。&lt;/li&gt;
-&lt;li&gt;安装 &lt;a href=&#34;http://skim-app.sourceforge.net/&#34;&gt;Skim&lt;/a&gt;，用于预览编译好的PDF文件。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;初始设置&#34;&gt;初始设置&lt;/h2&gt;
-
-&lt;h3 id=&#34;latextools&#34;&gt;LaTeXTools&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;初始化：按下&lt;code&gt;Command-Shift-P&lt;/code&gt;，输入&amp;rdquo;latextools&amp;rdquo;，选择&amp;rdquo;LaTeXTools:Reconfigure&amp;hellip;&amp;ldquo;，回车。
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg&#34; alt=&#34;LaTeXTools 的初始化&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;设置编译时输出详细日志：前往&lt;code&gt;~/Library/Application Support/Sublime Text 3/Packages/User/&lt;/code&gt;，打开&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;，将&lt;code&gt;&amp;quot;display_log&amp;quot; : false,&lt;/code&gt;改为&lt;code&gt;&amp;quot;display_log&amp;quot; : true,&lt;/code&gt;。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;设置默认使用 XeLaTeX 编译文件：虽然可以去修改&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;,不过最简单安全的方法还是在自己的 TeX 源文件开头加上&lt;code&gt;%!TEX program = xelatex&lt;/code&gt;，修改一下自己的模板就一劳永逸了，难道每次都从输入&lt;code&gt;\begin{document}&lt;/code&gt;开始？&lt;/p&gt;
-
-&lt;h3 id=&#34;skim&#34;&gt;Skim&lt;/h3&gt;
-
-&lt;p&gt;在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg&#34; alt=&#34;Skim 设置&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Skim：&lt;code&gt;Command-Shift-单击&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>
