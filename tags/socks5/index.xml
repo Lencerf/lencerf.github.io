@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>socks5 on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/socks5/index.xml</link>
+    <link>/tags/socks5/index.xml</link>
     <description>Recent content in socks5 on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/tags/socks5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/socks5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -25,7 +25,7 @@
 
 &lt;p&gt;set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
 </description>
     </item>
     

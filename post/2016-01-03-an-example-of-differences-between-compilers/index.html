@@ -1,60 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.18" />
-<link rel="canonical" href="https://lencerf.github.io/">
-<link rel="stylesheet" href="/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="/">
 
 <title>An example of differences between compilers - Lencerf&#39;s Walk</title>
 <meta property='og:title' content="An example of differences between compilers - Lencerf&#39;s Walk">
 <meta property="og:type" content="article">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
-<meta property="og:url" content="https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/">
+<meta name="description" content="to hit the marked point">
+<meta name="generator" content="Hugo 0.18.1" />
 
+<script type="text/javascript" async>
+var host = "lencerf.github.io";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script> 
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css">
+<script type="text/javascript" src="/js/scripts.js"></script>
+<!--[if lt IE 9]>
+	<script src="/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="https://use.fontawesome.com/d7386f0a12.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="/js/gallery.js" defer></script>
 </head>
 
-<body>
-	<header id="header" class="inner" style="min-height:80px"><div class="inner" style="margin-top:10px;padding-top: 35px;">
-	<div class="alignleft" style="margin-left: 30px">
-	  <h1 style="font-style: italic;">Lencerf&#39;s Walk</h1>
-	  <h2>stay simple, stay naïve</h2>
+<body class="home blog mr-right-sb mr-mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div class="mr-container mr-container-outer">
+	<div class="mr-header-mobile-nav clearfix"></div>
+	<header class="mr-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<div class="mr-container mr-container-inner mr-row clearfix">
+		<div class="mr-custom-header clearfix">
+			<div class="mr-site-identity">
+				<div class="mr-site-logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<div class="mr-header-text">
+						<a class="mr-header-text-link" href="/" title="Lencerf&#39;s Walk" rel="home">
+							<h1 class="mr-header-title">Lencerf&#39;s Walk</h1>
+							<h2 class="mr-header-tagline">stay simple, stay naïve</h2>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<nav id="main-nav" class="alignright">
-	  <ul>
-	  
-	      <li><a href="/archives/archives">BLOG</a></li>
-	  
-	      <li><a href="/archives/en">EN</a></li>
-	  
-	      <li><a href="/">HOME</a></li>
-	  
-	  	    
-	  </ul>
-	  <div class="clearfix"></div>
-	</nav>
-	<div class="clearfix"></div>
-</div>
+	<div class="mr-main-nav-wrap">
+		<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		
+		
+		
+			<li class="menu__item "><a class="menu__link" href="/archives/archives">BLOG</a></li>
+		
+			<li class="menu__item "><a class="menu__link" href="/archives/en">EN</a></li>
+		
+			<li class="menu__item "><a class="menu__link" href="/">HOME</a></li>
+		
+		
+	</ul>
+</nav>
+	</div>
 </header>
-	
-	<div id="content" class="inner">
-	    <div id="main-col" class="alignleft">
-		    <div id="wrapper"><article class="post">
-  <div class="post-content">
-  
-    <header>
-      <h1 class="title">An example of differences between compilers</h1>
-      
-      <div style="margin-top:5px">
-      <time itemprop="datePublished" pubdate="pubdate" datetime="2016-01-03T23:40:04&#43;08:00">January 3, 2016</time>
-      </div>
-      
-    </header>
-  
-    <div class="entry" id="article-content">
-      <p>For the code fragment below,</p>
+	<div class="mr-wrapper clearfix">
+		<div class="main-content mr-content" role="main" itemprop="mainContentOfPage">
+			<article class="post">
+				<header class="entry-header clearfix">
+					<h1 class="entry-title">An example of differences between compilers</h1>
+					<p class="mr-meta entry-meta">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						<time class="entry-meta-date updated" datetime="2016-01-03 23:40:04 &#43;0800 &#43;0800"> January 03, 2016</time>
+						<span></span>
+						<span class="entry-meta-categories">
+							
+							
+							<i class="fa fa-folder-o" aria-hidden="true"></i>
+							<a class="meta-categories" href="/categories/technique" rel="category">Technique</a>
+							
+						</span>
+						<span class="entry-meta-categories">
+							
+							<i class="fa fa-tag" aria-hidden="true"></i>
+							
+							
+							
+							<a class="meta-categories" href="/tags/c/" rel="tag">C</a>
+							
+						</span>
+					</p>
+				</header>
+				<div class="entry-content entry clearfix">
+					
+					<p>For the code fragment below,</p>
 
 <pre><code class="language-cpp">//ch1.c
 #include &quot;stdio.h&quot;
@@ -86,24 +135,12 @@ int main(int argc, char const *argv[]) {
 
 <p>Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!</p>
 
-    </div>
-    <footer>
-    
-    <span class="tags">
-    <a href="https://lencerf.github.io/tags/c">C</a>,  
-      </span>
-    
-
-    
-    <span class="categories">
-    <a href="https://lencerf.github.io/categories/technique">Technique</a>
-      </span>
-    
-    </footer>
-  </div>
-</article>
-
-
+				</div>
+			</article>
+			
+			
+			<div class="clearfix" style="margin-bottom: 30px"></div>
+			
 <section id="comment">
   <h2 class="title">Comments</h1>
   <div id="disqus_thread">
@@ -121,106 +158,118 @@ var disqus_shortname = "changyuanme";
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
-</div>
+
 		</div>
-		<aside id="sidebar" class="alignright">
+		<aside class="mr-sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+	
+	
+<div class="mr-widget widget_recent_entries">
+	<h4 class="mr-widget-title"><span class="mr-widget-title-inner">Recent Posts</span></h4>
+	<ul>
+		
+		<li><a href="/post/2016-12-15-launchd-and-click/">launchd 和 click</a></li>
+		
+		<li><a href="/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/">用树莓派3搭一个简易的 NAS</a></li>
+		
+		<li><a href="/post/2016-08-31-August-review/">八月小结</a></li>
+		
+		<li><a href="/post/2016-07-11-notes-on-surface-integral/">曲面积分复习跳坑笔记</a></li>
+		
+		<li><a href="/post/2016-06-29-the-feature-of-carnot-engine/">卡诺热机的特别之处</a></li>
+		
+		<li><a href="/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/">Install Arch Linux with Plasma in Paralles Desktop</a></li>
+		
+		<li><a href="/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a></li>
+		
+		<li><a href="/post/2016-01-03-an-example-of-differences-between-compilers/">An example of differences between compilers</a></li>
+		
+		<li><a href="/post/2015-10-03-brew-with-a-socks5-proxy/">brew with a socks5 proxy</a></li>
+		
+		<li><a href="/post/2015-09-23-watch-video-using-bilidan/">Watch Video on Bilibili via bilidan.py on OS X</a></li>
+		
+	</ul>
+</div>
 
 
+	
 
-<div class="widget tag">
-  <h3 class="title">RECENT POSTS</h3>
-  <ul class="entry">
-    
-      <li>▪ <a href="/post/2016-12-15-launchd-and-click/">launchd 和 click</a></li>
-    
-      <li>▪ <a href="/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/">用树莓派3搭一个简易的 NAS</a></li>
-    
-      <li>▪ <a href="/post/2016-08-31-August-review/">八月小结</a></li>
-    
-      <li>▪ <a href="/post/2016-07-11-notes-on-surface-integral/">曲面积分复习跳坑笔记</a></li>
-    
-      <li>▪ <a href="/post/2016-06-29-the-feature-of-carnot-engine/">卡诺热机的特别之处</a></li>
-    
-      <li>▪ <a href="/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/">Install Arch Linux with Plasma in Paralles Desktop</a></li>
-    
-      <li>▪ <a href="/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a></li>
-    
-  </ul>
+
+<div class="mr-widget widget_categories">
+	<h4 class="mr-widget-title"><span class="mr-widget-title-inner">Categories</span></h4>
+	<ul>
+		
+		<li class="cat-item"><a href="/categories/academic">Academic</a></li>
+		
+		<li class="cat-item"><a href="/categories/life">Life</a></li>
+		
+		<li class="cat-item"><a href="/categories/technique">Technique</a></li>
+		
+	</ul>
 </div>
 
 
 
+	
 
 
-<div class="widget tag">
-  <h3 class="title">CATEGORIES</h3>
-  <ul class="entry">
-    
-      <li><a href="/categories/technique">Technique</a> (9)</li>
-    
-      <li><a href="/categories/academic">Academic</a> (7)</li>
-    
-      <li><a href="/categories/life">Life</a> (1)</li>
-    
-  </ul>
-</div>
-
-<div class="widget tag">
-  <h3 class="title">TAGS</h3>
-  <ul class="entry">
-    
-      <span><a href="/tags/automator">#Automator</a> </span>
-    
-      <span><a href="/tags/c">#C</a> </span>
-    
-      <span><a href="/tags/latex">#LaTeX</a> </span>
-    
-      <span><a href="/tags/linux">#Linux</a> </span>
-    
-      <span><a href="/tags/mac">#Mac</a> </span>
-    
-      <span><a href="/tags/mathematica">#Mathematica</a> </span>
-    
-      <span><a href="/tags/nas">#NAS</a> </span>
-    
-      <span><a href="/tags/os-x">#OS X</a> </span>
-    
-      <span><a href="/tags/raspberrypi">#RaspberryPi</a> </span>
-    
-      <span><a href="/tags/sublime-text-3">#Sublime Text 3</a> </span>
-    
-      <span><a href="/tags/calculus">#calculus</a> </span>
-    
-      <span><a href="/tags/homebrew">#homebrew</a> </span>
-    
-      <span><a href="/tags/launchd">#launchd</a> </span>
-    
-      <span><a href="/tags/python">#python</a> </span>
-    
-      <span><a href="/tags/socks5">#socks5</a> </span>
-    
-      <span><a href="/tags/thermodynamics">#thermodynamics</a> </span>
-    
-      <span><a href="/tags/%E6%8A%98%E8%85%BE">#折腾</a> </span>
-    
-  </ul>
+<div class="mr-widget widget_tag_cloud">
+	<h4 class="mr-widget-title"><span class="mr-widget-title-inner">Tags</span></h4>
+	<div class="tagcloud">
+		
+			<a href="/tags/automator" class="tag-link" title="Automator" style="font-size: 12px;">#Automator</a>
+		
+			<a href="/tags/c" class="tag-link" title="C" style="font-size: 12px;">#C</a>
+		
+			<a href="/tags/latex" class="tag-link" title="LaTeX" style="font-size: 12px;">#LaTeX</a>
+		
+			<a href="/tags/linux" class="tag-link" title="Linux" style="font-size: 12px;">#Linux</a>
+		
+			<a href="/tags/mac" class="tag-link" title="Mac" style="font-size: 12px;">#Mac</a>
+		
+			<a href="/tags/mathematica" class="tag-link" title="Mathematica" style="font-size: 12px;">#Mathematica</a>
+		
+			<a href="/tags/nas" class="tag-link" title="NAS" style="font-size: 12px;">#NAS</a>
+		
+			<a href="/tags/os-x" class="tag-link" title="OS X" style="font-size: 12px;">#OS X</a>
+		
+			<a href="/tags/raspberrypi" class="tag-link" title="RaspberryPi" style="font-size: 12px;">#RaspberryPi</a>
+		
+			<a href="/tags/sublime-text-3" class="tag-link" title="Sublime Text 3" style="font-size: 12px;">#Sublime Text 3</a>
+		
+			<a href="/tags/calculus" class="tag-link" title="calculus" style="font-size: 12px;">#calculus</a>
+		
+			<a href="/tags/homebrew" class="tag-link" title="homebrew" style="font-size: 12px;">#homebrew</a>
+		
+			<a href="/tags/launchd" class="tag-link" title="launchd" style="font-size: 12px;">#launchd</a>
+		
+			<a href="/tags/python" class="tag-link" title="python" style="font-size: 12px;">#python</a>
+		
+			<a href="/tags/socks5" class="tag-link" title="socks5" style="font-size: 12px;">#socks5</a>
+		
+			<a href="/tags/thermodynamics" class="tag-link" title="thermodynamics" style="font-size: 12px;">#thermodynamics</a>
+		
+			<a href="/tags/%e6%8a%98%e8%85%be" class="tag-link" title="折腾" style="font-size: 12px;">#折腾</a>
+		
+	</div>
 </div>
 
 
 
 </aside>
-	    <div class="clearfix"></div>
-	</div>
-	
-<footer id="footer" class="inner">
-<div style="text-align:center">
-	&copy; 2016 Lencerf&#39;s Walk | Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a> | <a href="/index.xml" target="_blank"> <span style="font-family:FontAwesome"></span></a>
+		<div class="clearfix"></div>
+		<div class="mr-copyright-wrap mr-meta">
+	&copy; 2016 Lencerf&#39;s Walk | Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a> | <a href="/index.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
 </div>
-<div class="clearfix"></div>
-</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
-<script src="https://lencerf.github.io/js/gallery.js"></script>
+	</div>
+</div>
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+
+
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({  
@@ -260,23 +309,12 @@ MathJax.Hub.Config({
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+<script defer>hljs.initHighlightingOnLoad();</script>
 
-
-<script >hljs.initHighlightingOnLoad();</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" defer>
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
-</script> 
-<script type="text/javascript">
-var host = "lencerf.github.io";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
 </script> 
 </body>
 </html>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>raspberrypi on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/raspberrypi/index.xml</link>
+    <link>/tags/raspberrypi/index.xml</link>
     <description>Recent content in raspberrypi on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>
 
 &lt;p&gt;先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。&lt;/p&gt;

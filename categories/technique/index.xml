@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>technique on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/categories/technique/index.xml</link>
+    <link>/categories/technique/index.xml</link>
     <description>Recent content in technique on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/technique/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>launchd 和 click</title>
-      <link>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
+      <link>/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
+      <guid>/post/2016-12-15-launchd-and-click/</guid>
       <description>&lt;p&gt;起因是看了这篇介绍 Beancount 的&lt;a href=&#34;https://wzyboy.im/post/1063.html&#34;&gt;博文&lt;/a&gt;后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 &lt;a href=&#34;https://github.com/beancount/fava&#34;&gt;fava&lt;/a&gt; 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
@@ -77,10 +77,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>
 
 &lt;p&gt;先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。&lt;/p&gt;
@@ -169,10 +169,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
+      <link>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
+      <guid>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
       <description>
 
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
@@ -408,10 +408,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>An example of differences between compilers</title>
-      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <link>/post/2016-01-03-an-example-of-differences-between-compilers/</link>
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <guid>/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
       <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
@@ -448,10 +448,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -463,16 +463,16 @@ int main(int argc, char const *argv[]) {
 
 &lt;p&gt;set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Watch Video on Bilibili via bilidan.py on OS X</title>
-      <link>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</link>
+      <link>/post/2015-09-23-watch-video-using-bilidan/</link>
       <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-09-23-watch-video-using-bilidan/</guid>
+      <guid>/post/2015-09-23-watch-video-using-bilidan/</guid>
       <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
@@ -508,10 +508,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -532,10 +532,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
 
 &lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
@@ -548,10 +548,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;

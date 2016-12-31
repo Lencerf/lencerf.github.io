@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>academic on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/categories/academic/index.xml</link>
+    <link>/categories/academic/index.xml</link>
     <description>Recent content in academic on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/categories/academic/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/academic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -63,10 +63,10 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>&lt;p&gt;经典热力学中一个很重要的模型是卡诺热机（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot_heat_engine&#34;&gt;Carnot engine&lt;/a&gt;），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:carnot&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:carnot&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)&#34;&gt;Carnot&amp;rsquo;s theorem&lt;/a&gt;）&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -95,11 +95,11 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
 
 &lt;p&gt;用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/carnot-engine/workflow.svg&#34; alt=&#34;图1 正过程和“逆过程”&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/workflow.svg&#34; alt=&#34;图1 正过程和“逆过程”&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;再画出对应的净效果：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/carnot-engine/pureEffect.svg&#34; alt=&#34;图2 正过程和“逆过程”的净效果&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/pureEffect.svg&#34; alt=&#34;图2 正过程和“逆过程”的净效果&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;图1左边的过程中气体经历的每一步都是&lt;strong&gt;可逆变化&lt;/strong&gt;，但是构造出来的热机却不是&lt;strong&gt;可逆热机&lt;/strong&gt;，原因在于，第1步中气体的等容加热需要和高温热源 $T_2$ 接触才能完成，这是一个单纯的热量流动过程，热力学第二定律的克劳修斯表述禁止了其逆过程的发生：在没有额外辅助的条件下，气体不可能与高温热源 $T_2$ 接触的同时放热等容降温。但是气体本身经历的是一个可逆变化，只要气体再去和另一个低温热源接触，就能放热等容降温回到原来的状态。退一步说，如果一定要热机逆着循环运行（图1右），那么这一步中气体必须和低温热源 $T_1$ 接触，对应到图2中就是右边 $Q_1$ 的箭头只能指向 $T_1$ 而不可能指向 $T_2$。把图2和卡诺热机的正逆运行图对比，就能知道这种热机不可逆了。&lt;/p&gt;
 
@@ -124,11 +124,11 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <link>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <guid>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
 
 &lt;p&gt;Today when I am trying PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
@@ -143,10 +143,10 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
+      <link>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
+      <guid>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
       <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
 
 &lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
@@ -182,10 +182,10 @@ ps2pdf paper.ps
     
     <item>
       <title>a template of beamer</title>
-      <link>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
       <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -288,10 +288,10 @@ ps2pdf paper.ps
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>https://lencerf.github.io/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</link>
+      <link>/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</guid>
+      <guid>/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</guid>
       <description>&lt;p&gt;Bose 气体满足 Bose-Einstein 分布
 $$
 \begin{equation}
@@ -341,10 +341,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 

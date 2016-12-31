@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/linux/index.xml</link>
+    <link>/tags/linux/index.xml</link>
     <description>Recent content in linux on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
+      <link>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
+      <guid>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
       <description>
 
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;

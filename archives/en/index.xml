@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>en on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/archives/en/index.xml</link>
+    <link>/archives/en/index.xml</link>
     <description>Recent content in en on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/archives/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/archives/en/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <link>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;https://lencerf.github.io/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <guid>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
 
 &lt;p&gt;Today when I am trying PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
@@ -29,10 +29,10 @@
     
     <item>
       <title>An example of differences between compilers</title>
-      <link>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</link>
+      <link>/post/2016-01-03-an-example-of-differences-between-compilers/</link>
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
+      <guid>/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
       <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
@@ -69,10 +69,10 @@ int main(int argc, char const *argv[]) {
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -84,7 +84,7 @@ int main(int argc, char const *argv[]) {
 
 &lt;p&gt;set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Too much time have been wasted because of the poor network.&lt;/p&gt;
+&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
 </description>
     </item>
     

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>calculus on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/calculus/index.xml</link>
+    <link>/tags/calculus/index.xml</link>
     <description>Recent content in calculus on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
 &lt;/blockquote&gt;

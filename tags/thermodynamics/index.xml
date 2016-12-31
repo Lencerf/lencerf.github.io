@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>thermodynamics on Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/tags/thermodynamics/index.xml</link>
+    <link>/tags/thermodynamics/index.xml</link>
     <description>Recent content in thermodynamics on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://lencerf.github.io/tags/thermodynamics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/thermodynamics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>&lt;p&gt;经典热力学中一个很重要的模型是卡诺热机（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot_heat_engine&#34;&gt;Carnot engine&lt;/a&gt;），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:carnot&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:carnot&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)&#34;&gt;Carnot&amp;rsquo;s theorem&lt;/a&gt;）&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -42,11 +42,11 @@
 
 &lt;p&gt;用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/carnot-engine/workflow.svg&#34; alt=&#34;图1 正过程和“逆过程”&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/workflow.svg&#34; alt=&#34;图1 正过程和“逆过程”&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;再画出对应的净效果：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://lencerf.github.io/img/carnot-engine/pureEffect.svg&#34; alt=&#34;图2 正过程和“逆过程”的净效果&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/pureEffect.svg&#34; alt=&#34;图2 正过程和“逆过程”的净效果&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;图1左边的过程中气体经历的每一步都是&lt;strong&gt;可逆变化&lt;/strong&gt;，但是构造出来的热机却不是&lt;strong&gt;可逆热机&lt;/strong&gt;，原因在于，第1步中气体的等容加热需要和高温热源 $T_2$ 接触才能完成，这是一个单纯的热量流动过程，热力学第二定律的克劳修斯表述禁止了其逆过程的发生：在没有额外辅助的条件下，气体不可能与高温热源 $T_2$ 接触的同时放热等容降温。但是气体本身经历的是一个可逆变化，只要气体再去和另一个低温热源接触，就能放热等容降温回到原来的状态。退一步说，如果一定要热机逆着循环运行（图1右），那么这一步中气体必须和低温热源 $T_1$ 接触，对应到图2中就是右边 $Q_1$ 的箭头只能指向 $T_1$ 而不可能指向 $T_2$。把图2和卡诺热机的正逆运行图对比，就能知道这种热机不可逆了。&lt;/p&gt;
 
@@ -71,10 +71,10 @@
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>https://lencerf.github.io/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</link>
+      <link>/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</guid>
+      <guid>/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</guid>
       <description>&lt;p&gt;Bose 气体满足 Bose-Einstein 分布
 $$
 \begin{equation}
