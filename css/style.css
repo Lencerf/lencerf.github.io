@@ -1386,6 +1386,9 @@ textarea {
 		margin: 0;
 	}
 
+	.mr-widget li {
+		font-size: 100%;
+	}
 	.entry-meta-tags, .entry-meta-comments {
 		display: none;
 	}
