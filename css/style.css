@@ -547,8 +547,7 @@ select {
 }
 
 .mr-meta span {
-	margin-right: 6px;
-	margin-left: 3px;
+	margin-left: 15px;
 }
 
 .meta-categories, .entry-meta-date, .mr-meta-date {
@@ -973,7 +972,7 @@ textarea {
 
 .mr-widget-title {
 	position: relative;
-	font-size: 16px;
+	font-size: 110%;
 	padding-bottom: 5px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
