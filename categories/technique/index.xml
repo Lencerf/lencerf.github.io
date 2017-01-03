@@ -468,45 +468,6 @@ int main(int argc, char const *argv[]) {
     </item>
     
     <item>
-      <title>Watch Video on Bilibili via bilidan.py on OS X</title>
-      <link>/post/2015-09-23-watch-video-using-bilidan/</link>
-      <pubDate>Wed, 23 Sep 2015 19:11:25 +0800</pubDate>
-      
-      <guid>/post/2015-09-23-watch-video-using-bilidan/</guid>
-      <description>&lt;p&gt;Install &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Install &lt;code&gt;python3&lt;/code&gt;, &lt;code&gt;ffmpeg&lt;/code&gt; and &lt;code&gt;mpv&lt;/code&gt; using &lt;code&gt;homebrew&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install python3 ffmpeg Caskroom/cask/mpv
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Get the python script bilidan.py&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/m13253/BiliDan.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Let &lt;code&gt;bilidan.py&lt;/code&gt; executable&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;chmod u+x BiliDan/bilidan.py
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Open the terminal and run the following codes:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;BiliDan/bilidan.py http://www.bilibili.com/video/av715519/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we can watch the video without Flash Player!&lt;/p&gt;
-
-&lt;p&gt;Tips: you may need to wait the mpv player for some minutes the first time you run the codes above. Just be patient.&lt;/p&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&#34;https://github.com/m13253&#34;&gt;m13253&lt;/a&gt; for the projects &lt;a href=&#34;https://github.com/m13253/BiliDan&#34;&gt;BiliDan&lt;/a&gt; and &lt;a href=&#34;https://github.com/m13253/danmaku2ass&#34;&gt;danmaku2ass&lt;/a&gt;!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Make unix2doc a system service of OS X</title>
       <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>

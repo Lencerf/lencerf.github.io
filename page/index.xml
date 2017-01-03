@@ -9,6 +9,66 @@
     <atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>About</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description>
+
+&lt;h3 id=&#34;programming-languages-i-know-a-little-bit-about&#34;&gt;Programming Languages I know a little bit about&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C/C++/Objective-C&lt;/li&gt;
+&lt;li&gt;Swift&lt;/li&gt;
+&lt;li&gt;C#&lt;/li&gt;
+&lt;li&gt;Python (I mean Python 3, instead of &lt;a href=&#34;http://carreau.github.io/posts/planning-an-early-death-for-python-2.html&#34;&gt;Legacy Python&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Mathematica (if it can be counted as a kind of programming language)&lt;/li&gt;
+&lt;li&gt;Haskell&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;paper-i-have-published&#34;&gt;Paper I have published&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Localization in Quantum Walks on a Honeycomb Network&lt;/em&gt;.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Phys. Rev. A &lt;strong&gt;92&lt;/strong&gt;, &lt;a href=&#34;http://journals.aps.org/pra/abstract/10.1103/PhysRevA.92.052305&#34;&gt;052305&lt;/a&gt; (2015).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;devices-i-am-using&#34;&gt;Devices I am using&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MacBook Pro (13&amp;rdquo;, Mid 2012)&lt;/li&gt;
+&lt;li&gt;iPhone 6s&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 3 Model B&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;software-i-am-using-personally&#34;&gt;Software I am using personally&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OS X El Capitan: my old MacBook Pro (13&amp;rsquo;, mid 2012) overheated when it run Sierra.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt;: the entrance to any other applications.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/spark-love-your-email-again/id1176895641?mt=12&#34;&gt;Spark&lt;/a&gt;: a Gmail client.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httsp://geogebra.org&#34;&gt;GeoGebra&lt;/a&gt;: helps me draw geometrical graphics.&lt;/li&gt;
+&lt;li&gt;LaTeX: for writing papers and making slides.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://brew/sh&#34;&gt;Homebrew&lt;/a&gt;: a package manager for macOS.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mpv.io&#34;&gt;mpv&lt;/a&gt;: the best and simple media player I have ever found.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://1password.com&#34;&gt;1Password&lt;/a&gt;: manages your passwords and saves your time.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://macvim-dev.github.io/macvim/&#34;&gt;MacVim&lt;/a&gt;: I am still learning it.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pilotmoon.com/popclip/&#34;&gt;PopClip&lt;/a&gt;: an iOS-styled pop-up menu.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;: Double Entry Accounting, which makes me finacially well-organized.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;There was an error in the PRA copy and we have corrected it in a &lt;a href=&#34;https://arxiv.org/abs/1509.03919&#34;&gt;newer version&lt;/a&gt; on arXiv.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Anime List</title>
       <link>/page/anime-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
