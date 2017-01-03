@@ -188,6 +188,40 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
         </div>
       </article>
       
+      <article class="mr-loop-item post type-post hentry clearfix">
+        
+        <div class="mr-loop-content clearfix">
+          <header class="mr-loop-header">
+            <h3 class="entry-title mr-loop-title">
+              <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/" rel="bookmark">Embed figures of eps format in LaTeX papers</a>
+            </h3>
+            <div class="mr-meta mr-loop-meta">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time class="mr-meta-date updated" datetime="2015-05-17 09:07:14 &#43;0800 &#43;0800">2015-05-17</time>
+                <span>
+                
+                
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
+                <a class="meta-categories" href="/categories/academic" rel="category">Academic</a>
+                
+                </span>
+                <span class="entry-meta-tags">
+                  
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  
+                  
+                  <a class="meta-categories" href="/tags/latex/" rel="tag">LaTeX</a>
+                  
+                  , 
+                  <a class="meta-categories" href="/tags/mac/" rel="tag">Mac</a>
+                  
+                </span>
+            </div>
+          </header>
+        </div>
+      </article>
+      
       
 
     </div>
@@ -327,10 +361,12 @@ MathJax.Hub.Config({
   messageStyle: "none",
   "HTML-CSS": {
     preferredFont: "TeX",
-    styles: {".MathJax_Display": {
-        margin: "0.5em 0em", 
-        "overflow-x": "scroll",
-        "overflow-y": "hidden" }
+    styles: {
+        ".MathJax_Display": {
+            margin: "0.5em 0em", 
+            "overflow-x": "auto",
+            "overflow-y": "hidden" 
+        }
     },
     }
 });
