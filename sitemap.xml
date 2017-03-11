@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/post/2017-03-10-vscode-beancount/</loc>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2016-12-31-see-you-2016/</loc>
     <lastmod>2016-12-31T14:03:51-05:00</lastmod>
   </url>
@@ -87,60 +92,20 @@
   </url>
   
   <url>
-    <loc>/page/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/page/anime-list/</loc>
-  </url>
-  
-  <url>
-    <loc>/archives/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2016-12-31T14:03:51-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2016-12-31T14:03:51-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/academic/</loc>
     <lastmod>2016-07-11T01:05:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/archives/archives/</loc>
-    <lastmod>2016-12-31T14:03:51-05:00</lastmod>
+    <loc>/tags/automator/</loc>
+    <lastmod>2015-06-02T00:32:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/automator/</loc>
-    <lastmod>2015-06-02T00:32:49+08:00</lastmod>
+    <loc>/tags/beancount/</loc>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,8 +122,7 @@
   </url>
   
   <url>
-    <loc>/archives/en/</loc>
-    <lastmod>2016-01-09T17:08:08+08:00</lastmod>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
@@ -177,6 +141,12 @@
   <url>
     <loc>/tags/launchd/</loc>
     <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -217,6 +187,12 @@
   </url>
   
   <url>
+    <loc>/post/</loc>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/python/</loc>
     <lastmod>2016-12-15T10:16:18-05:00</lastmod>
     <priority>0</priority>
@@ -235,20 +211,31 @@
   </url>
   
   <url>
-    <loc>/tags/sublime-text-3/</loc>
+    <loc>/tags/sublime-text/</loc>
     <lastmod>2014-11-20T23:32:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/technique/</loc>
-    <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/thermodynamics/</loc>
     <lastmod>2016-06-29T01:05:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/vscode/</loc>
+    <lastmod>2017-03-11T04:22:39+00:00</lastmod>
     <priority>0</priority>
   </url>
   

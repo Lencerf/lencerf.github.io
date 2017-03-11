@@ -5,9 +5,38 @@
     <link>/post/index.xml</link>
     <description>Recent content in Posts on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2016 14:03:51 -0500</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Mar 2017 04:22:39 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VSCode extension for Beancount</title>
+      <link>/post/2017-03-10-vscode-beancount/</link>
+      <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
+      
+      <guid>/post/2017-03-10-vscode-beancount/</guid>
+      <description>
+
+&lt;h3 id=&#34;lencerf-vscode-beancount-https-github-com-lencerf-vscode-beancount&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Syntax highlight (syntax file from &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;draug3n/sublime-beancount&lt;/a&gt;),&lt;/li&gt;
+&lt;li&gt;Decimal point alignment,&lt;/li&gt;
+&lt;li&gt;Current time quick insertion,&lt;/li&gt;
+&lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I wish to thank Chris for &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;elaborating how to programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
+
+&lt;p&gt;I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of &lt;a href=&#34;https://github.com/poooi/poi&#34;&gt;POI&lt;/a&gt; for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &amp;ldquo;cool&amp;rdquo;(literally) and its &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.python&#34;&gt;Python&lt;/a&gt; extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.&lt;/p&gt;
+
+&lt;p&gt;But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That&amp;rsquo;s why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.&lt;/p&gt;
+
+&lt;p&gt;VSCode changes my opinions of Electron Apps, Javascript, and Microsoft. Actually now I think my bad impression on Javascript may just come from the fact that I have never written any Javascript codes by myself.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>再见 2016</title>
@@ -885,51 +914,6 @@ ps2pdf paper.ps
 
 \end{document}
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
-      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
-      
-      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;View -&amp;gt; Show Console，打开终端界面，将 Package Control &lt;a href=&#34;https://sublime.wbond.net/installation&#34;&gt;官网&lt;/a&gt;给出的代码复制粘贴进终端，回车完成 Package Control 的安装。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Command-Shift-P&lt;/code&gt;调出命令窗口，输入&lt;code&gt;Install&lt;/code&gt;，等待一会，之后输入&lt;code&gt;LaTeXTools&lt;/code&gt;，回车完成安装，时常取决于网络。&lt;/li&gt;
-&lt;li&gt;安装 &lt;a href=&#34;http://skim-app.sourceforge.net/&#34;&gt;Skim&lt;/a&gt;，用于预览编译好的PDF文件。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;初始设置&#34;&gt;初始设置&lt;/h2&gt;
-
-&lt;h3 id=&#34;latextools&#34;&gt;LaTeXTools&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;初始化：按下&lt;code&gt;Command-Shift-P&lt;/code&gt;，输入&amp;rdquo;latextools&amp;rdquo;，选择&amp;rdquo;LaTeXTools:Reconfigure&amp;hellip;&amp;ldquo;，回车。
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg&#34; alt=&#34;LaTeXTools 的初始化&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;设置编译时输出详细日志：前往&lt;code&gt;~/Library/Application Support/Sublime Text 3/Packages/User/&lt;/code&gt;，打开&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;，将&lt;code&gt;&amp;quot;display_log&amp;quot; : false,&lt;/code&gt;改为&lt;code&gt;&amp;quot;display_log&amp;quot; : true,&lt;/code&gt;。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;设置默认使用 XeLaTeX 编译文件：虽然可以去修改&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;,不过最简单安全的方法还是在自己的 TeX 源文件开头加上&lt;code&gt;%!TEX program = xelatex&lt;/code&gt;，修改一下自己的模板就一劳永逸了，难道每次都从输入&lt;code&gt;\begin{document}&lt;/code&gt;开始？&lt;/p&gt;
-
-&lt;h3 id=&#34;skim&#34;&gt;Skim&lt;/h3&gt;
-
-&lt;p&gt;在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg&#34; alt=&#34;Skim 设置&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Skim：&lt;code&gt;Command-Shift-单击&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

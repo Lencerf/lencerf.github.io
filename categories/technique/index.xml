@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>technique on Lencerf&#39;s Walk</title>
+    <title>Technique on Lencerf&#39;s Walk</title>
     <link>/categories/technique/index.xml</link>
-    <description>Recent content in technique on Lencerf&#39;s Walk</description>
+    <description>Recent content in Technique on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <atom:link href="/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VSCode extension for Beancount</title>
+      <link>/post/2017-03-10-vscode-beancount/</link>
+      <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
+      
+      <guid>/post/2017-03-10-vscode-beancount/</guid>
+      <description>
+
+&lt;h3 id=&#34;lencerf-vscode-beancount-https-github-com-lencerf-vscode-beancount&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Syntax highlight (syntax file from &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;draug3n/sublime-beancount&lt;/a&gt;),&lt;/li&gt;
+&lt;li&gt;Decimal point alignment,&lt;/li&gt;
+&lt;li&gt;Current time quick insertion,&lt;/li&gt;
+&lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I wish to thank Chris for &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;elaborating how to programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
+
+&lt;p&gt;I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of &lt;a href=&#34;https://github.com/poooi/poi&#34;&gt;POI&lt;/a&gt; for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &amp;ldquo;cool&amp;rdquo;(literally) and its &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.python&#34;&gt;Python&lt;/a&gt; extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.&lt;/p&gt;
+
+&lt;p&gt;But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That&amp;rsquo;s why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.&lt;/p&gt;
+
+&lt;p&gt;VSCode changes my opinions of Electron Apps, Javascript, and Microsoft. Actually now I think my bad impression on Javascript may just come from the fact that I have never written any Javascript codes by myself.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>launchd 和 click</title>
