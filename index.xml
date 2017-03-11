@@ -21,12 +21,12 @@
 
 &lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Syntax highlight (syntax file from &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;draug3n/sublime-beancount&lt;/a&gt;),&lt;/li&gt;
 &lt;li&gt;Decimal point alignment,&lt;/li&gt;
 &lt;li&gt;Current time quick insertion,&lt;/li&gt;
 &lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;I wish to thank Chris for &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;elaborating how to programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
 

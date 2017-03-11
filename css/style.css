@@ -251,6 +251,10 @@ span {
     font-weight: inherit
 }
 
+span.comma {
+    margin-left: -5px;
+}
+
 strong {
     color: #222324;
     font-weight: 700
@@ -841,7 +845,8 @@ article+article {
 
 .section {
     background-color: #fff;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px
 }
@@ -1156,7 +1161,8 @@ article+article {
 }
 
 .content p:not(:last-child),.content ol:not(:last-child),.content ul:not(:last-child),.content pre:not(:last-child),.content table:not(:last-child) {
-    margin-bottom: 0.5em
+    margin-bottom: 0.4em;
+    margin-top:0.4em
 }
 
 .content table td,.content table th {
