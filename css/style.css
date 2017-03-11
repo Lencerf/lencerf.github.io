@@ -1058,10 +1058,6 @@ article+article {
     border-bottom: 1px solid #d3d6db
 }
 
-.content a:not(.button):visited {
-    color: #847bb9
-}
-
 .content a:not(.button):hover {
     border-bottom-color: #2077b2
 }
