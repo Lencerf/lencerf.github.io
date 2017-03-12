@@ -235,7 +235,20 @@ hr {
 }
 
 img {
+    display: block;
+    margin: auto;
     max-width: 100%
+}
+
+.entry .caption {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  color: #999;
+  position: relative;
+  font-size: 0.9em;
+  text-align: center;
+  font-style: italic;
 }
 
 input[type="checkbox"],input[type="radio"] {

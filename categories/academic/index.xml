@@ -128,16 +128,16 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
       <guid>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple solution to this problem. But what if we do need them two simultaneously?&lt;/p&gt;
 
-&lt;p&gt;Today when I am trying PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
+&lt;p&gt;Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able. I guess that PSTricks needs the postscript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
-&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some parameters are needed when hyperref is used with dvips:&lt;/p&gt;
+&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some extra parameters are needed when hyperref is used with dvips:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvips,breaklinks]{hyperref}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;But, why not use XeLaTeX to compile the source file?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;However, why do we insist on latex? why not switch to xelatex?&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -147,7 +147,7 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
       <guid>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
-      <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
+      <description>&lt;p&gt;Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.&lt;/p&gt;
 
 &lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
 
@@ -158,14 +158,14 @@ latex paper;
 dvipdfmx paper.dvi
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Another problem is about the figure. APS recommend eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to transform eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning struggle with the horrible blanks.&lt;/p&gt;
+&lt;p&gt;But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.&lt;/p&gt;
 
-&lt;p&gt;Installing Ghostscript is easy, just brew it:&lt;/p&gt;
+&lt;p&gt;Installing Ghostscript is easy, just use &lt;a href=&#34;https://brew.sh&#34;&gt;homebrew&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install ghostscript
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if package hyperref is used.&lt;/p&gt;
+&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if the package hyperref is used.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvipdfmx]{hyperref}
 &lt;/code&gt;&lt;/pre&gt;
@@ -181,7 +181,7 @@ ps2pdf paper.ps
     </item>
     
     <item>
-      <title>a template of beamer</title>
+      <title>A template of beamer</title>
       <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       

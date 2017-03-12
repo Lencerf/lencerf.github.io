@@ -1,11 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <script type="text/javascript" async>
-var host = "";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
-</script>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="keyword 1, keyword 2, keyword 3" name="keywords">
@@ -14,13 +10,26 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 <meta property="og:url" content="/post/2016-06-29-the-feature-of-carnot-engine/">
 <meta property="og:description" content="Your description here">
 <meta property="og:type" content="website" />
+<script type="text/javascript" async>
+var host = "";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
 <title>卡诺热机的特别之处 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
-<link rel="shortcut icon" href="//wave.ico"><link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="/js/gallery.js" defer></script>
+</head>
 
 <section class="section">
   <div class="container">
@@ -71,7 +80,7 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
       
     </span>
     </div>
-    <div class="content">
+    <div class="content entry-content entry clearfix">
       <p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
 
 <blockquote>
@@ -153,11 +162,6 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
    <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
   </div> 
 </section>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/dockerfile.min.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
 
@@ -170,6 +174,13 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
 
+<script defer>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" defer>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script> >
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 

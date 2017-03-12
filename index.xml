@@ -15,14 +15,12 @@
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/post/2017-03-10-vscode-beancount/</guid>
-      <description>
-
-&lt;h3 id=&#34;lencerf-vscode-beancount-https-github-com-lencerf-vscode-beancount&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/h3&gt;
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Syntax highlight (syntax file from &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;draug3n/sublime-beancount&lt;/a&gt;),&lt;/li&gt;
+&lt;li&gt;Syntax highlight,&lt;/li&gt;
 &lt;li&gt;Decimal point alignment,&lt;/li&gt;
 &lt;li&gt;Current time quick insertion,&lt;/li&gt;
 &lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
@@ -657,16 +655,16 @@ systemctl start shadowsocks-libev@config
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
       <guid>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple way to solve this problem. But what if we need them two simultaneously?&lt;/p&gt;
+      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple solution to this problem. But what if we do need them two simultaneously?&lt;/p&gt;
 
-&lt;p&gt;Today when I am trying PSTricks, I find &lt;code&gt;dvipdfmx&lt;/code&gt; is unable to generate correct figures, while dvips is able. I suspect that PSTricks needs the PostScript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
+&lt;p&gt;Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able. I guess that PSTricks needs the postscript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
 
-&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some parameters are needed when hyperref is used with dvips:&lt;/p&gt;
+&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some extra parameters are needed when hyperref is used with dvips:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvips,breaklinks]{hyperref}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;But, why not use XeLaTeX to compile the source file?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;However, why do we insist on latex? why not switch to xelatex?&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -688,13 +686,13 @@ int main(int argc, char const *argv[]) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;if &lt;code&gt;gcc&lt;/code&gt; is used to compile it, there are no errors or warnings. Run the binary file and we will get:&lt;/p&gt;
+&lt;p&gt;if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;a = 5, c = 10.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;However, if I use &lt;code&gt;clang&lt;/code&gt; to compile the codes, there will be a warning:&lt;/p&gt;
+&lt;p&gt;However, if I use clang to compile the codes, I get a warning:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
@@ -716,16 +714,18 @@ int main(int argc, char const *argv[]) {
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 
-&lt;p&gt;set a socks proxy with git for the http transport&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let http requests of git go through a socks5 proxy&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Since homebrew doanloads files using curl, set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
 </description>
@@ -737,22 +737,27 @@ int main(int argc, char const *argv[]) {
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Revising academic papers is really a hard work. What makes things worse is that WinEdit used by my mentor is only able to open .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>&lt;p&gt;Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
 
-&lt;p&gt;Unix, on which OS X is based, uses &lt;code&gt;LF&lt;/code&gt; as the default line break, different from Windows. Although I can use TextWrangle.app to convert text files between the two formats, but I really don&amp;rsquo;t like TextWrangle. (Sublime Text is wonderful!!!)&lt;/p&gt;
-
-&lt;p&gt;So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. With Automator, the problem can be better solved.&lt;/p&gt;
+&lt;p&gt;Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. And with Automator, I get a better solution.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Install unix2dos
-&lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create a new service in Automator as follow
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1etdcio105aj20h00dfwht.jpg&#34; alt=&#34;Automator script&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;Have a try!
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1etdcmh4mmtj207c06cdg5.jpg&#34; alt=&#34;unix2dos in the context menu&#34; /&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;li&gt;&lt;p&gt;Install unix2dos: &lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;for f in &amp;quot;$@&amp;quot;
+do 
+unix2dos &amp;quot;$f&amp;quot;
+done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
+&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;Automator script&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -761,7 +766,7 @@ int main(int argc, char const *argv[]) {
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
       <guid>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
-      <description>&lt;p&gt;Usually, I use XeLaTeX to write articles instead of LaTeX, since the former is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use LaTeX again, since LaTeX is preferred by APS. Luckily, academic papers often contains no Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package.&lt;/p&gt;
+      <description>&lt;p&gt;Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.&lt;/p&gt;
 
 &lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
 
@@ -772,14 +777,14 @@ latex paper;
 dvipdfmx paper.dvi
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Another problem is about the figure. APS recommend eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to transform eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning struggle with the horrible blanks.&lt;/p&gt;
+&lt;p&gt;But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.&lt;/p&gt;
 
-&lt;p&gt;Installing Ghostscript is easy, just brew it:&lt;/p&gt;
+&lt;p&gt;Installing Ghostscript is easy, just use &lt;a href=&#34;https://brew.sh&#34;&gt;homebrew&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install ghostscript
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if package hyperref is used.&lt;/p&gt;
+&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if the package hyperref is used.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvipdfmx]{hyperref}
 &lt;/code&gt;&lt;/pre&gt;
@@ -811,7 +816,7 @@ ps2pdf paper.ps
     </item>
     
     <item>
-      <title>a template of beamer</title>
+      <title>A template of beamer</title>
       <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       

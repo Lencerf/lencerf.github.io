@@ -14,16 +14,18 @@
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
 
-&lt;p&gt;set a socks proxy with git for the http transport&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let http requests of git go through a socks5 proxy&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Since homebrew doanloads files using curl, set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
 </description>
