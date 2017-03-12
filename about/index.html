@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="programming, physics, life" name="keywords">
 <meta content="Lencerf" name="author">
-<meta property="og:title" content="A template of beamer - Lencerf&#39;s Walk">
-<meta property="og:url" content="/post/2014-12-01-a-beamer-template/">
+<meta property="og:title" content="About - Lencerf&#39;s Walk">
+<meta property="og:url" content="/about/">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website" />
 <script type="text/javascript" async>
@@ -15,7 +15,7 @@ var host = "";
 if ((host == window.location.host) && (window.location.protocol != "https:"))
     window.location.protocol = "https";
 </script>
-<title>A template of beamer | Lencerf&#39;s Walk</title>
+<title>About | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -55,145 +55,23 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
 <section class="section">
   <div class="container">
-    <h1 class="title">A template of beamer</h1>
+    <h1 class="title">About</h1>
     
-    <time class="meta single">December 1, 2014</time>
     
     <div class="meta">
-    <span class="tag">
-      
-      
-      <i class="fa fa-folder-o" aria-hidden="true"></i>
-      <a href="/categories/academic" rel="category">Academic</a>
-      
-    </span>
-    <span class="tag">
-      
-      <i class="fa fa-tag" aria-hidden="true"></i>
-      
-      <a href="/tags/latex/" rel="tag">LaTeX</a>
-      
-    </span>
     </div>
     <div class="content entry-content entry clearfix">
-      <p>Just a template of beamer</p>
+      <p>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.</p>
 
-<p></p>
+<p>Previously I had suffered from the question that whether I should continue studying physics or switch to becoming a programmer, especially considering the fact that I was only admitted into a mediocre physics Ph.D. program. But finally I am determined to get the degree and complete my childhood dream, even if I may have to leave academia after graduation.</p>
 
-<pre><code class="language-tex">%!Mode:: &quot;TeX:UTF-8&quot;
-%!TEX program = xelatex
-\documentclass[10pt]{beamer}
-%[]中加t可以使内容从顶部开始
+<p>Most of the contents on this site are about techniques, as well as physics and my daily life. The title of this site contains my net ID &ldquo;lencerf&rdquo; and a word &ldquo;walk&rdquo;, which comes from my first physics research <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.92.052305">project</a> on <a href="https://en.wikipedia.org/wiki/Quantum_walk">quantum walk</a>. By the way, &ldquo;lencerf&rdquo; is an inverse of the name of a French physicist <a href="https://en.wikipedia.org/wiki/Augustin-Jean_Fresnel">Augustin-Jean Fresnel</a>. But &ldquo;lenserf&rdquo; has been used by someone, so I changed &ldquo;s&rdquo; into &ldquo;c&rdquo;. It is really not paraphrased as &ldquo;Lancer&rsquo;s luck value is F&rdquo; if you have watched <a href="http://typemoon.wikia.com/wiki/Fate_series">Fate series</a> before.</p>
 
-%英文字体
-\usepackage{booktabs}
-\usepackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
-\setmonofont[Scale=MatchLowercase]{Courier}
+<p>Nice to meet you! You can find my codes on <a href="https://github.com/Lencerf">GitHub</a>, chat with me on <a href="https://telegram.me/Lencerf">Telegram</a>, and get my GPG public key on <a href="https://keybase.io/lencerf">keybase</a>.</p>
 
-%中文设置
-\usepackage[slantfont,boldfont]{xeCJK}
-\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Song}{AdobeSongStd-Light}
-\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
-\setCJKfamilyfont{Hupo}{STHupo}
-\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
-\XeTeXlinebreaklocale &quot;zh&quot; %中文断行用
-
-%beamer配置
-\usetheme{Luebeck}%
-\setbeamertemplate{headline}{}
-\setbeamertemplate{navigation symbols}{} %去掉导航条
-\usefonttheme{serif}
-%加上sectionpage
-\AtBeginSection[]{
-\begin{frame}
-\begin{center}
-\begin{beamercolorbox}[sep=8pt,center]{part title}
-\usebeamerfont{part title}{\large \insertsection}
-\end{beamercolorbox}
-\end{center}
-\end{frame}
-}
-
-%数学设置
-\usepackage{amssymb}
-\usepackage{amsmath}
-
-%插图
-\usepackage{graphicx}
-
-%作图
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows}
-
-\title[简略标题]{titlepage上显示的完整标题}
-\author[作者]{titlepage上显示的完整作者信息，可以包括邮件地址}
-\institute[简略机构]{titlepage上要显示的完整机构}
-\date{2014.mm.dd}
-
-\begin{document}
-%标题页
-\frame{\titlepage}
-%outline
-\section[Outline]{}
-\frame{
-\frametitle{主要内容}
-\tableofcontents
-}
-%正文
-\section{章节1}
-\frame   %[allowframebreaks]似乎与\pause冲突
-{\frametitle{页标题}
-		\begin{itemize}
-		\item 信息1
-		\pause
-		\item 信息2
-		\only&lt;3&gt;{
-		\item 信息3}
-		\item 信息4
-		\end{itemize}
-}
-
-\section{章节2}
-\frame[allowframebreaks]{
-\frametitle{页标题}
-}
-
-%感谢页
-\frame{
- \begin{center}
- \begin{beamercolorbox}[sep=8pt,center]{part title}
-\usebeamerfont{part title}{\huge Thank You!}
-\end{beamercolorbox}
- \end{center}
-}
-
-\end{document}
-</code></pre>
     </div>
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container">
-    <aside><div id="disqus_thread"></div></aside>
-    <script type="text/javascript">
-      var disqus_shortname = 'changyuanme';
-      (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-
 
 
 <section class="section">
