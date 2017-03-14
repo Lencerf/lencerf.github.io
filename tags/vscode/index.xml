@@ -14,7 +14,11 @@
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/post/2017-03-10-vscode-beancount/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Homepage: &lt;strong&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount&#34;&gt;Beancount on Marketplace&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Installation: &lt;code&gt;ext install beancount&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Source Code: &lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
 
