@@ -1,84 +1,85 @@
-
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="programming, physics, life" name="keywords">
 <meta content="Lencerf" name="author">
 <meta property="og:title" content="launchd 和 click - Lencerf&#39;s Walk">
-<meta property="og:url" content="/post/2016-12-15-launchd-and-click/">
 <meta property="og:description" content="to hit the marked point">
-<meta property="og:type" content="website" />
-<script type="text/javascript" async>
-var host = "";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
-</script>
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.19" />
 <title>launchd 和 click | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+ 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script src="/js/gallery.js" defer></script>
+
 </head>
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="/"><h1 class="title is-4">Lencerf&#39;s Walk</h1></a>
+  <body>
+        <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/index.xml" target="_blank">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <article class="section">
+      <h1 class="title">launchd 和 click</h1>
+        
+        <time class="meta">March 11, 2017</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/technique" rel="category">Technique</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/launchd/" rel="tag">launchd</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="/tags/python/" rel="tag">python</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="/tags/beancount/" rel="tag">beancount</a>
+            
+          </span>
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/index.xml" target="_blank">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h1 class="title">launchd 和 click</h1>
-    
-    <time class="meta single">December 15, 2016</time>
-    
-    <div class="meta">
-    <span class="tag">
-      
-      
-      <i class="fa fa-folder-o" aria-hidden="true"></i>
-      <a href="/categories/technique" rel="category">Technique</a>
-      
-    </span>
-    <span class="tag">
-      
-      <i class="fa fa-tags" aria-hidden="true"></i>
-      
-      <a href="/tags/launchd/" rel="tag">launchd</a>
-      <span class="comma">, </span><a href="/tags/python/" rel="tag">python</a>
-      <span class="comma">, </span><a href="/tags/beancount/" rel="tag">beancount</a>
-      
-    </span>
-    </div>
-    <div class="content entry-content entry clearfix">
-      <p>起因是看了这篇介绍 Beancount 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
+      <main class="content entry-content entry clearfix">
+          <p>起因是看了这篇介绍 Beancount 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
@@ -137,11 +138,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 bgm38。</p>
 
-    </div>
-  </div>
-</section>
-
-
+      </main>
+    </article>
+    
+    
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
@@ -158,17 +158,17 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 </section>
 
 
-
-<section class="section">
+    
+    <footer class="section">
   <div class="container has-text-centered">
-   &copy; 2014-2017 Lencerf&#39;s Walk
+    &copy; 
+            -2017 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
-   <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
-  </div> 
-</section>
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
 
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 <script>
@@ -179,46 +179,16 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
 
-<script defer>hljs.initHighlightingOnLoad();</script>
-
-<script type="text/javascript" defer>
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({  
-  showMathMenu: false,
-  tex2jax: {
-    inlineMath: [['$','$']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  },
-  TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] },
-  messageStyle: "none",
-  "HTML-CSS": {
-    preferredFont: "TeX",
-    styles: {
-        ".MathJax_Display": {
-            margin: "0.5em 0em", 
-            "overflow-x": "auto",
-            "overflow-y": "hidden" 
-        }
-    },
-    }
-});
-</script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
 
-
-
-
-
-
+  </body>
+</html>

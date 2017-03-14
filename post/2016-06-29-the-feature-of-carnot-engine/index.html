@@ -1,82 +1,75 @@
-
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="programming, physics, life" name="keywords">
 <meta content="Lencerf" name="author">
 <meta property="og:title" content="卡诺热机的特别之处 - Lencerf&#39;s Walk">
-<meta property="og:url" content="/post/2016-06-29-the-feature-of-carnot-engine/">
 <meta property="og:description" content="to hit the marked point">
-<meta property="og:type" content="website" />
-<script type="text/javascript" async>
-var host = "";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
-</script>
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.19" />
 <title>卡诺热机的特别之处 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+ 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script src="/js/gallery.js" defer></script>
+
 </head>
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="/"><h1 class="title is-4">Lencerf&#39;s Walk</h1></a>
+  <body>
+        <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/index.xml" target="_blank">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <article class="section">
+      <h1 class="title">卡诺热机的特别之处</h1>
+        
+        <time class="meta">March 11, 2017</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/academic" rel="category">Academic</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tag" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/thermodynamics/" rel="tag">thermodynamics</a>
+            
+          </span>
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/index.xml" target="_blank">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h1 class="title">卡诺热机的特别之处</h1>
-    
-    <time class="meta single">June 29, 2016</time>
-    
-    <div class="meta">
-    <span class="tag">
-      
-      
-      <i class="fa fa-folder-o" aria-hidden="true"></i>
-      <a href="/categories/academic" rel="category">Academic</a>
-      
-    </span>
-    <span class="tag">
-      
-      <i class="fa fa-tag" aria-hidden="true"></i>
-      
-      <a href="/tags/thermodynamics/" rel="tag">thermodynamics</a>
-      
-    </span>
-    </div>
-    <div class="content entry-content entry clearfix">
-      <p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
+      <main class="content entry-content entry clearfix">
+          <p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
 
 <blockquote>
 <p>Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.</p>
@@ -129,11 +122,10 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 </ol>
 </div>
 
-    </div>
-  </div>
-</section>
-
-
+      </main>
+    </article>
+    
+    
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
@@ -150,17 +142,17 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 </section>
 
 
-
-<section class="section">
+    
+    <footer class="section">
   <div class="container has-text-centered">
-   &copy; 2014-2017 Lencerf&#39;s Walk
+    &copy; 
+            -2017 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
-   <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
-  </div> 
-</section>
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
 
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 <script>
@@ -171,17 +163,18 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
 
-<script defer>hljs.initHighlightingOnLoad();</script>
 
-<script type="text/javascript" defer>
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({  
   showMathMenu: false,
@@ -208,9 +201,7 @@ MathJax.Hub.Config({
 });
 </script>
 
+  
 
-
-
-
-
-
+  </body>
+</html>

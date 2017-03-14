@@ -1,102 +1,96 @@
-
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="programming, physics, life" name="keywords">
 <meta content="Lencerf" name="author">
 <meta property="og:title" content="brew with a socks5 proxy - Lencerf&#39;s Walk">
-<meta property="og:url" content="/post/2015-10-03-brew-with-a-socks5-proxy/">
 <meta property="og:description" content="to hit the marked point">
-<meta property="og:type" content="website" />
-<script type="text/javascript" async>
-var host = "";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
-</script>
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.19" />
 <title>brew with a socks5 proxy | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/swift.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/tex.min.js"></script>  
+ 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script src="/js/gallery.js" defer></script>
+
 </head>
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="/"><h1 class="title is-4">Lencerf&#39;s Walk</h1></a>
+  <body>
+        <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/index.xml" target="_blank">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <article class="section">
+      <h1 class="title">brew with a socks5 proxy</h1>
+        
+        <time class="meta">March 11, 2017</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/technique" rel="category">Technique</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/socks5/" rel="tag">socks5</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="/tags/homebrew/" rel="tag">homebrew</a>
+            
+          </span>
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/index.xml" target="_blank">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h1 class="title">brew with a socks5 proxy</h1>
-    
-    <time class="meta single">October 3, 2015</time>
-    
-    <div class="meta">
-    <span class="tag">
-      
-      
-      <i class="fa fa-folder-o" aria-hidden="true"></i>
-      <a href="/categories/technique" rel="category">Technique</a>
-      
-    </span>
-    <span class="tag">
-      
-      <i class="fa fa-tags" aria-hidden="true"></i>
-      
-      <a href="/tags/socks5/" rel="tag">socks5</a>
-      <span class="comma">, </span><a href="/tags/homebrew/" rel="tag">homebrew</a>
-      
-    </span>
-    </div>
-    <div class="content entry-content entry clearfix">
-      <p>Finally, I find the right way to use homebrew.</p>
+      <main class="content entry-content entry clearfix">
+          <p>Finally, I find the right way to use homebrew.</p>
 
 <ol>
-<li>Let http requests of git go through a socks5 proxy</li>
-</ol>
+<li><p>Let http requests of git go through a socks5 proxy</p>
 
 <pre><code class="language-shell">git config --global http.proxy 'socks5://127.0.0.1:1081'
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li>Since homebrew doanloads files using curl, set a socks proxy for curl: just add <code>proxy=socks5://127.0.0.1:1081</code> to <code>~/.curlrc</code>.</li>
+<li><p>Since homebrew doanloads files using curl, set a socks proxy for curl: just add <code>proxy=socks5://127.0.0.1:1081</code> to <code>~/.curlrc</code>.</p></li>
 </ol>
 
 <p>Too much time has been wasted because of the poor network.</p>
 
-    </div>
-  </div>
-</section>
-
-
+      </main>
+    </article>
+    
+    
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
@@ -113,17 +107,17 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 </section>
 
 
-
-<section class="section">
+    
+    <footer class="section">
   <div class="container has-text-centered">
-   &copy; 2014-2017 Lencerf&#39;s Walk
+    &copy; 
+            -2017 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
-   <a href="http://creativecommons.org/licenses/by-nc/4.0/"> License</a>
-  </div> 
-</section>
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
 
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 <script>
@@ -134,46 +128,16 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
 
-<script defer>hljs.initHighlightingOnLoad();</script>
-
-<script type="text/javascript" defer>
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({  
-  showMathMenu: false,
-  tex2jax: {
-    inlineMath: [['$','$']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  },
-  TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] },
-  messageStyle: "none",
-  "HTML-CSS": {
-    preferredFont: "TeX",
-    styles: {
-        ".MathJax_Display": {
-            margin: "0.5em 0em", 
-            "overflow-x": "auto",
-            "overflow-y": "hidden" 
-        }
-    },
-    }
-});
-</script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
 
-
-
-
-
-
+  </body>
+</html>
