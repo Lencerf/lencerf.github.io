@@ -1,6 +1,6 @@
 html {
     text-rendering: optimizeLegibility;
-    font-family: 'PingFang SC', 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
@@ -19,9 +19,8 @@ article.section {
     padding-bottom: 20px;
 }
 
-header {
-    background-color: #fff;
-    margin: 0px auto
+header.section {
+    padding-top: 20px;
 }
 
 h1.page-title {
@@ -59,14 +58,12 @@ nav {
 
 a {
     color: #2077b2;
-    cursor: pointer;
     text-decoration: none;
-    -webkit-transition: none 86ms ease-out;
-    transition: none 86ms ease-out
+    transition: color linear 0.2s;
 }
 
 a:hover {
-    color: #222324
+    color:black;
 }
 
 h1.title {
@@ -137,7 +134,7 @@ h2.list-title {
 }
 
 .content a:not(.button) {
-    border-bottom: 1px solid #d3d6db;
+    border-bottom: 1px dashed #BBB;
 }
 
 .content h2,.content h3,.content h4,.content h5,.content h6 {
@@ -168,35 +165,35 @@ ul.list {
 }
 
 code {
-   font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace; 
-  background: #eee;
-  color: #666;
-  padding: 0 5px;
-  margin: 0 2px;
-  font-size: 0.9em;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  word-wrap: normal
+    font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace; 
+    background: #eee;
+    color: #666;
+    padding: 0 5px;
+    margin: 0 2px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    word-wrap: normal
 }
 pre {
-  background: #eee;
-  margin-bottom: 15px;
-  padding: 7px 15px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  white-space: pre;
+    background: #eee;
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    white-space: pre;
 }
 article pre code {
-  background: none;
-  overflow-x: auto;
-  display: block;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  word-break: normal;
+    background: none;
+    overflow-x: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    word-break: normal;
 }
 
 img {
@@ -207,13 +204,13 @@ img {
 
 .caption {
     display: block;
-margin-top: 2px;
-margin-bottom: 3px;
-color: #999;
-position: relative;
-font-size: 0.9em;
-text-align: center;
-font-style: italic;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    color: #999;
+    position: relative;
+    font-size: 0.9em;
+    text-align: center;
+    font-style: italic;
 }
 
 .content blockquote {

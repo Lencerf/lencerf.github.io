@@ -513,14 +513,14 @@ int main(int argc, char const *argv[]) {
 
 &lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;for f in &amp;quot;$@&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;for f in &amp;quot;$@&amp;quot;
 do 
 unix2dos &amp;quot;$f&amp;quot;
 done
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
-&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;Automator script&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
