@@ -78,11 +78,16 @@ time {
 }
 
 time.meta.list {
-    min-width: 100px;
-    display: inline-block;
-    margin: 0;
+    margin-bottom: 0px;
     padding: 0;
     font-size: 1em;
+}
+
+div.time {
+    text-align: right;
+    min-width: 105px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .meta {
