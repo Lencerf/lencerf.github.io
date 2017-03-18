@@ -9,6 +9,106 @@
     <atom:link href="/categories/academic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>LaTeX Best Practices</title>
+      <link>/post/2017-03-17-latex-best-practices/</link>
+      <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
+      
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
+      <description>
+
+&lt;h2 id=&#34;equations-and-numbering&#34;&gt;Equations and Numbering&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Insert one equation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{equation}
+\label{eq:massEnergyRelation}
+E=mc^2
+\end{equation}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;code&gt;equation&lt;/code&gt; with &lt;code&gt;equation*&lt;/code&gt; if numbering is not necessary.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Insert multiple equations&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{align}
+E=&amp;amp;\hbar\Omega\\
+\vec p =&amp;amp; \hbar\vec k
+\end{align}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;code&gt;align&lt;/code&gt; with &lt;code&gt;align*&lt;/code&gt; if numbering is not necessary.&lt;br /&gt;
+multiple equations with sub numbers&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{subequations}
+\begin{align}
+\nonumber\dod{p_j}{t}&amp;amp;=-\dpd{\mathcal H}{q_j}\\
+\dod{q_j}{t}&amp;amp;=+\dpd{\mathcal H}{p_j}
+\end{align}
+\end{subequations}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In both cases, put &lt;code&gt;\nonumber&lt;/code&gt; before an equation if that equation does not need to be numbered and use &lt;code&gt;&amp;amp;&lt;/code&gt; to align equations.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;derivatives&#34;&gt;Derivatives&lt;/h2&gt;
+
+&lt;p&gt;Use packages &lt;a href=&#34;https://www.ctan.org/pkg/physics?lang=en&#34;&gt;physics&lt;/a&gt; and &lt;a href=&#34;https://www.ctan.org/pkg/esdiff&#34;&gt;esdiff&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;% those commands are from package physics
+\dd x % differential
+\dd[n] x % higher order differential
+\dv{f}{x} % derivative df/dx
+\dv[n]{f}{x} % higher order derivative
+\pdv{f}{x} % partial derivative
+\pdv[n]{f}{x} % higher order partial derivative
+\pdf{f}{x}{y} % mixed partial  derivative
+% the command below is from package esdiff
+\diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;figures&#34;&gt;Figures&lt;/h2&gt;
+
+&lt;p&gt;Insert a single figure&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
+    \caption{$U/t=0.1$}
+    \label{fig:y=x+0.1}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Insert multiple figures with subcaptions respectively&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
+\usepackage{subcaption} % should be put in the preamble
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
+        \caption{Analytical Results}
+        \label{fig:analyticalResults}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
+        \caption{Image From Experiments}
+        \label{fig:experimentalFigure}
+    \end{subfigure}
+    \label{fig:analyticalAndExperimental}
+    \caption{Analytical and experimental results.}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The file name of images should be written as &lt;code&gt;{filename}.eps&lt;/code&gt; if the original filename is &lt;code&gt;filename.eps&lt;/code&gt; in case there are some special characaters, like &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>曲面积分复习跳坑笔记</title>
       <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>

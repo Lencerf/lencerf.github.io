@@ -6,8 +6,108 @@
     <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Mar 2017 04:22:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Mar 2017 17:00:59 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LaTeX Best Practices</title>
+      <link>/post/2017-03-17-latex-best-practices/</link>
+      <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
+      
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
+      <description>
+
+&lt;h2 id=&#34;equations-and-numbering&#34;&gt;Equations and Numbering&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Insert one equation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{equation}
+\label{eq:massEnergyRelation}
+E=mc^2
+\end{equation}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;code&gt;equation&lt;/code&gt; with &lt;code&gt;equation*&lt;/code&gt; if numbering is not necessary.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Insert multiple equations&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{align}
+E=&amp;amp;\hbar\Omega\\
+\vec p =&amp;amp; \hbar\vec k
+\end{align}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace &lt;code&gt;align&lt;/code&gt; with &lt;code&gt;align*&lt;/code&gt; if numbering is not necessary.&lt;br /&gt;
+multiple equations with sub numbers&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{subequations}
+\begin{align}
+\nonumber\dod{p_j}{t}&amp;amp;=-\dpd{\mathcal H}{q_j}\\
+\dod{q_j}{t}&amp;amp;=+\dpd{\mathcal H}{p_j}
+\end{align}
+\end{subequations}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In both cases, put &lt;code&gt;\nonumber&lt;/code&gt; before an equation if that equation does not need to be numbered and use &lt;code&gt;&amp;amp;&lt;/code&gt; to align equations.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;derivatives&#34;&gt;Derivatives&lt;/h2&gt;
+
+&lt;p&gt;Use packages &lt;a href=&#34;https://www.ctan.org/pkg/physics?lang=en&#34;&gt;physics&lt;/a&gt; and &lt;a href=&#34;https://www.ctan.org/pkg/esdiff&#34;&gt;esdiff&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;% those commands are from package physics
+\dd x % differential
+\dd[n] x % higher order differential
+\dv{f}{x} % derivative df/dx
+\dv[n]{f}{x} % higher order derivative
+\pdv{f}{x} % partial derivative
+\pdv[n]{f}{x} % higher order partial derivative
+\pdf{f}{x}{y} % mixed partial  derivative
+% the command below is from package esdiff
+\diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;figures&#34;&gt;Figures&lt;/h2&gt;
+
+&lt;p&gt;Insert a single figure&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
+    \caption{$U/t=0.1$}
+    \label{fig:y=x+0.1}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Insert multiple figures with subcaptions respectively&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
+\usepackage{subcaption} % should be put in the preamble
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
+        \caption{Analytical Results}
+        \label{fig:analyticalResults}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
+        \caption{Image From Experiments}
+        \label{fig:experimentalFigure}
+    \end{subfigure}
+    \label{fig:analyticalAndExperimental}
+    \caption{Analytical and experimental results.}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The file name of images should be written as &lt;code&gt;{filename}.eps&lt;/code&gt; if the original filename is &lt;code&gt;filename.eps&lt;/code&gt; in case there are some special characaters, like &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>VSCode extension for Beancount</title>
@@ -813,112 +913,6 @@ ps2pdf paper.ps
 
 &lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1eplqnlb507j20l80gxju9.jpg&#34; alt=&#34;设置全局放大&#34; /&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>A template of beamer</title>
-      <link>/post/2014-12-01-a-beamer-template/</link>
-      <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
-      
-      <guid>/post/2014-12-01-a-beamer-template/</guid>
-      <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;%!Mode:: &amp;quot;TeX:UTF-8&amp;quot;
-%!TEX program = xelatex
-\documentclass[10pt]{beamer}
-%[]中加t可以使内容从顶部开始
-
-%英文字体
-\usepackage{booktabs}
-\usepackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
-\setmonofont[Scale=MatchLowercase]{Courier}
-
-%中文设置
-\usepackage[slantfont,boldfont]{xeCJK}
-\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Song}{AdobeSongStd-Light}
-\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
-\setCJKfamilyfont{Hupo}{STHupo}
-\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
-\XeTeXlinebreaklocale &amp;quot;zh&amp;quot; %中文断行用
-
-%beamer配置
-\usetheme{Luebeck}%
-\setbeamertemplate{headline}{}
-\setbeamertemplate{navigation symbols}{} %去掉导航条
-\usefonttheme{serif}
-%加上sectionpage
-\AtBeginSection[]{
-\begin{frame}
-\begin{center}
-\begin{beamercolorbox}[sep=8pt,center]{part title}
-\usebeamerfont{part title}{\large \insertsection}
-\end{beamercolorbox}
-\end{center}
-\end{frame}
-}
-
-%数学设置
-\usepackage{amssymb}
-\usepackage{amsmath}
-
-%插图
-\usepackage{graphicx}
-
-%作图
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows}
-
-\title[简略标题]{titlepage上显示的完整标题}
-\author[作者]{titlepage上显示的完整作者信息，可以包括邮件地址}
-\institute[简略机构]{titlepage上要显示的完整机构}
-\date{2014.mm.dd}
-
-\begin{document}
-%标题页
-\frame{\titlepage}
-%outline
-\section[Outline]{}
-\frame{
-\frametitle{主要内容}
-\tableofcontents
-}
-%正文
-\section{章节1}
-\frame   %[allowframebreaks]似乎与\pause冲突
-{\frametitle{页标题}
-		\begin{itemize}
-		\item 信息1
-		\pause
-		\item 信息2
-		\only&amp;lt;3&amp;gt;{
-		\item 信息3}
-		\item 信息4
-		\end{itemize}
-}
-
-\section{章节2}
-\frame[allowframebreaks]{
-\frametitle{页标题}
-}
-
-%感谢页
-\frame{
- \begin{center}
- \begin{beamercolorbox}[sep=8pt,center]{part title}
-\usebeamerfont{part title}{\huge Thank You!}
-\end{beamercolorbox}
- \end{center}
-}
-
-\end{document}
-&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

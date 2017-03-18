@@ -1,0 +1,249 @@
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="LaTeX Best Practices - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.19" />
+<title>LaTeX Best Practices | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/tex.min.js"></script>
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="/js/gallery.js" defer></script>
+
+</head>
+  <body>
+        <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/index.xml" target="_blank">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <article class="section">
+      <h1 class="title">LaTeX Best Practices</h1>
+        
+        <time class="meta">March 17, 2017</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/academic" rel="category">Academic</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tag" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/latex/" rel="tag">LaTeX</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+          
+
+<h2 id="equations-and-numbering">Equations and Numbering</h2>
+
+<ol>
+<li><p>Insert one equation</p>
+
+<pre><code class="language-tex">\begin{equation}
+\label{eq:massEnergyRelation}
+E=mc^2
+\end{equation}
+</code></pre>
+
+<p>Replace <code>equation</code> with <code>equation*</code> if numbering is not necessary.</p></li>
+
+<li><p>Insert multiple equations</p>
+
+<pre><code class="language-tex">\begin{align}
+E=&amp;\hbar\Omega\\
+\vec p =&amp; \hbar\vec k
+\end{align}
+</code></pre>
+
+<p>Replace <code>align</code> with <code>align*</code> if numbering is not necessary.<br />
+multiple equations with sub numbers</p>
+
+<pre><code class="language-tex">\begin{subequations}
+\begin{align}
+\nonumber\dod{p_j}{t}&amp;=-\dpd{\mathcal H}{q_j}\\
+\dod{q_j}{t}&amp;=+\dpd{\mathcal H}{p_j}
+\end{align}
+\end{subequations}
+</code></pre>
+
+<p>In both cases, put <code>\nonumber</code> before an equation if that equation does not need to be numbered and use <code>&amp;</code> to align equations.</p></li>
+</ol>
+
+<h2 id="derivatives">Derivatives</h2>
+
+<p>Use packages <a href="https://www.ctan.org/pkg/physics?lang=en">physics</a> and <a href="https://www.ctan.org/pkg/esdiff">esdiff</a>.</p>
+
+<pre><code class="language-tex">% those commands are from package physics
+\dd x % differential
+\dd[n] x % higher order differential
+\dv{f}{x} % derivative df/dx
+\dv[n]{f}{x} % higher order derivative
+\pdv{f}{x} % partial derivative
+\pdv[n]{f}{x} % higher order partial derivative
+\pdf{f}{x}{y} % mixed partial  derivative
+% the command below is from package esdiff
+\diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
+</code></pre>
+
+<h2 id="figures">Figures</h2>
+
+<p>Insert a single figure</p>
+
+<pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
+    \caption{$U/t=0.1$}
+    \label{fig:y=x+0.1}
+\end{figure}
+</code></pre>
+
+<p>Insert multiple figures with subcaptions respectively</p>
+
+<pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
+\usepackage{subcaption} % should be put in the preamble
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
+        \caption{Analytical Results}
+        \label{fig:analyticalResults}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
+        \caption{Image From Experiments}
+        \label{fig:experimentalFigure}
+    \end{subfigure}
+    \label{fig:analyticalAndExperimental}
+    \caption{Analytical and experimental results.}
+\end{figure}
+</code></pre>
+
+<p>The file name of images should be written as <code>{filename}.eps</code> if the original filename is <code>filename.eps</code> in case there are some special characaters, like <code>.</code>.</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 
+            
+                2014-2017 Lencerf
+    | Powered by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-60772880-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({  
+  showMathMenu: false,
+  tex2jax: {
+    inlineMath: [['$','$']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  },
+  TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] },
+  messageStyle: "none",
+  "HTML-CSS": {
+    preferredFont: "TeX",
+    styles: {
+        ".MathJax_Display": {
+            margin: "0.5em 0em", 
+            "overflow-x": "auto",
+            "overflow-y": "hidden" 
+        }
+    },
+    }
+});
+</script>
+
+  
+
+  </body>
+</html>
