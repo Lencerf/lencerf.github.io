@@ -9,8 +9,8 @@
 <meta name="generator" content="Hugo 0.19" />
 <title>曲面积分复习跳坑笔记 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Marck+Script|Noto+Sans|Noto+Serif" rel="stylesheet">
 
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
@@ -69,11 +69,9 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          <blockquote>
-<p>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。</p>
-</blockquote>
+          <p>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。</p>
 
-<p>首先从普通<strong>二重积分</strong>出发。设想物理场景：求一块面密度为 $\rho_(x,y)$ 的不均匀板的质量 $m$。显然，
+<p>首先从普通<strong>二重积分</strong>出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然，
 $$m=\iint_S\rho(x,y)dxdy,$$
 $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
 $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$

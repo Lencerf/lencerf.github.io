@@ -14,11 +14,9 @@
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
 
-&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho_(x,y)$ 的不均匀板的质量 $m$。显然，
+&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然，
 $$m=\iint_S\rho(x,y)dxdy,$$
 $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
 $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$

@@ -115,11 +115,11 @@ multiple equations with sub numbers&lt;/p&gt;
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/post/2017-03-10-vscode-beancount/</guid>
-      <description>&lt;p&gt;Homepage: &lt;strong&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount&#34;&gt;Beancount on Marketplace&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Homepage: &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount&#34;&gt;Beancount on Marketplace&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Installation: &lt;code&gt;ext install beancount&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Source Code: &lt;strong&gt;&lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Source Code: &lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
 
@@ -130,7 +130,7 @@ multiple equations with sub numbers&lt;/p&gt;
 &lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I wish to thank Chris for &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;elaborating how to programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
+&lt;p&gt;I wish to thank Chris for elaborating how to &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
 
 &lt;p&gt;I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of &lt;a href=&#34;https://github.com/poooi/poi&#34;&gt;POI&lt;/a&gt; for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &amp;ldquo;cool&amp;rdquo;(literally) and its &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.python&#34;&gt;Python&lt;/a&gt; extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.&lt;/p&gt;
 
@@ -404,11 +404,9 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
 
-&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho_(x,y)$ 的不均匀板的质量 $m$。显然，
+&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然，
 $$m=\iint_S\rho(x,y)dxdy,$$
 $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
 $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$

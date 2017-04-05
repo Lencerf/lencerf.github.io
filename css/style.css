@@ -1,6 +1,6 @@
 html {
     text-rendering: optimizeLegibility;
-    font-family: 'PingFang SC', Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-family: 'Noto Sans','PingFang SC', "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", sans-serif;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
@@ -24,8 +24,8 @@ header.section {
 }
 
 h1.page-title {
-    font-size: 35px;
-    font-family: 'Merienda', cursive;
+    font-size: 44px;
+    font-family: 'Marck Script', cursive;
     margin: 0px;
     font-weight: 300;
 }
@@ -67,10 +67,9 @@ a:hover {
 }
 
 h1.title {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 5px 0px;
     font-weight: 400;
-    text-transform: capitalize;
 }
 
 time {
@@ -98,11 +97,11 @@ div.time {
 
 span.metagroup {
     margin-left: 5px;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 span#tagcomma {
-    margin-left: -5px
+    margin-left: -3px
 }
 
 .meta a {
@@ -110,23 +109,23 @@ span#tagcomma {
 }
 
 .content h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 h2.list-title {
-    margin: 10px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
 }
 
 .content h3 {
-    font-size: 1.25em
+    font-size: 1.3em
 }
 
 .content h4 {
-    font-size: 1.125em
+    font-size: 1.2em
 }
 
 .content h5 {
-    font-size: 1em
+    font-size: 1.1em
 }
 
 .content h6 {
@@ -178,7 +177,6 @@ code {
     margin: 0 2px;
     font-size: 0.9em;
     border: 1px solid #ddd;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     word-wrap: normal
 }
@@ -227,5 +225,5 @@ img {
 
 footer {
     text-align: center;
-    font-size: 90%;
+    font-size: 0.8em;
 }
