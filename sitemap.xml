@@ -27,7 +27,7 @@
   </url>
   
   <url>
-    <loc>/post/2016-08-31-August-review/</loc>
+    <loc>/post/2016-08-31-august-review/</loc>
     <lastmod>2016-08-31T21:05:13-05:00</lastmod>
   </url>
   
@@ -42,12 +42,12 @@
   </url>
   
   <url>
-    <loc>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</loc>
+    <loc>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</loc>
     <lastmod>2016-06-09T17:08:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</loc>
+    <loc>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</loc>
     <lastmod>2016-01-09T17:08:08+08:00</lastmod>
   </url>
   
@@ -67,7 +67,7 @@
   </url>
   
   <url>
-    <loc>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</loc>
+    <loc>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</loc>
     <lastmod>2015-05-17T09:07:14+08:00</lastmod>
   </url>
   
@@ -87,7 +87,7 @@
   </url>
   
   <url>
-    <loc>/post/2014-08-26-no-BEC-in-2D-ideal-bose-gases-without-outfields/</loc>
+    <loc>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</loc>
     <lastmod>2014-08-26T01:04:48+08:00</lastmod>
   </url>
   
@@ -133,6 +133,7 @@
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2017-03-17T17:00:59-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,6 +229,7 @@
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2015-06-02T00:32:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   

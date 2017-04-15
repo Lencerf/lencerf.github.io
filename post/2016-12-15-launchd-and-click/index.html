@@ -6,11 +6,11 @@
 <meta property="og:title" content="launchd 和 click - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.19" />
+<meta name="generator" content="Hugo 0.20.1" />
 <title>launchd 和 click | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Marck+Script|Noto+Sans|Source+Code+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Marck+Script|Noto+Sans|Source+Code+Pro|Crimson+Text" rel="stylesheet">
 
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
@@ -79,7 +79,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          <p>起因是看了这篇介绍 Beancount 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
+          <p>起因是看了一篇介绍 <a href="http://furius.ca/beancount/">Beancount</a> 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
@@ -102,7 +102,7 @@
 
 <p>但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，<a href="http://serverfault.com/questions/183589/how-do-i-activate-launchd-logging-on-os-x">这个页面</a>上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：</p>
 
-<pre><code>&lt;key&gt;StandardOutPath&lt;/key&gt;
+<pre><code class="language-xml">&lt;key&gt;StandardOutPath&lt;/key&gt;
 &lt;string&gt;/path/to/logfile.log&lt;/string&gt;
 &lt;key&gt;StandardErrorPath&lt;/key&gt;
 &lt;string&gt;/path/to/error.log&lt;/string&gt;
@@ -110,7 +110,7 @@
 
 <p>于是当我打开再次 <code>launchd load fava.plist</code> 后，在 error.log 中看到了大量这样的输出：</p>
 
-<pre><code>Traceback (most recent call last):   File &quot;/usr/local/bin/fava&quot;, line 11, in &lt;module&gt;
+<pre><code class="language-shelloutput">Traceback (most recent call last):   File &quot;/usr/local/bin/fava&quot;, line 11, in &lt;module&gt;
     sys.exit(main())
   File &quot;/usr/local/lib/python3.5/site-packages/click/core.py&quot;, line 716, in __call__
     return self.main(*args, **kwargs)
@@ -127,7 +127,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>看上去和 click 这个 Python 包有点关系，搜索了一番，看了看这个 <a href="https://github.com/madjar/nox/issues/19">issue</a>，猜想可能和没有指定语言有关系，看来需要想办法在 fava.plist 中指定相关的环境变量，</p>
 
-<pre><code>&lt;key&gt;EnvironmentVariables&lt;/key&gt;
+<pre><code class="language-xml">&lt;key&gt;EnvironmentVariables&lt;/key&gt;
 &lt;dict&gt;
     &lt;key&gt;LANG&lt;/key&gt;
     &lt;string&gt;en_US.UTF-8&lt;/string&gt;
@@ -136,7 +136,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>再次加载，成功！</p>
 
-<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 bgm38。</p>
+<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 <a href="http://bgm.tv/img/smiles/tv/15.gif">bgm38</a>。</p>
 
       </main>
     </article>

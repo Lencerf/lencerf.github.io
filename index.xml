@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lencerf&#39;s Walk</title>
-    <link>/index.xml</link>
+    <link>/</link>
     <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Mar 2017 17:00:59 -0400</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>LaTeX Best Practices</title>
@@ -15,98 +17,8 @@
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
       <guid>/post/2017-03-17-latex-best-practices/</guid>
-      <description>
-
-&lt;h2 id=&#34;equations-and-numbering&#34;&gt;Equations and Numbering&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Insert one equation&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{equation}
-\label{eq:massEnergyRelation}
-E=mc^2
-\end{equation}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Replace &lt;code&gt;equation&lt;/code&gt; with &lt;code&gt;equation*&lt;/code&gt; if numbering is not necessary.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Insert multiple equations&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{align}
-E=&amp;amp;\hbar\Omega\\
-\vec p =&amp;amp; \hbar\vec k
-\end{align}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Replace &lt;code&gt;align&lt;/code&gt; with &lt;code&gt;align*&lt;/code&gt; if numbering is not necessary.&lt;br /&gt;
-multiple equations with sub numbers&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\begin{subequations}
-\begin{align}
-\nonumber\dod{p_j}{t}&amp;amp;=-\dpd{\mathcal H}{q_j}\\
-\dod{q_j}{t}&amp;amp;=+\dpd{\mathcal H}{p_j}
-\end{align}
-\end{subequations}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In both cases, put &lt;code&gt;\nonumber&lt;/code&gt; before an equation if that equation does not need to be numbered and use &lt;code&gt;&amp;amp;&lt;/code&gt; to align equations.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;derivatives&#34;&gt;Derivatives&lt;/h2&gt;
-
-&lt;p&gt;Use packages &lt;a href=&#34;https://www.ctan.org/pkg/physics?lang=en&#34;&gt;physics&lt;/a&gt; and &lt;a href=&#34;https://www.ctan.org/pkg/esdiff&#34;&gt;esdiff&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;% those commands are from package physics
-\dd x % differential
-\dd[n] x % higher order differential
-\dv{f}{x} % derivative df/dx
-\dv[n]{f}{x} % higher order derivative
-\pdv{f}{x} % partial derivative
-\pdv[n]{f}{x} % higher order partial derivative
-\pdf{f}{x}{y} % mixed partial  derivative
-% the command below is from package esdiff
-\diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;figures&#34;&gt;Figures&lt;/h2&gt;
-
-&lt;p&gt;Insert a single figure&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
-    \caption{$U/t=0.1$}
-    \label{fig:y=x+0.1}
-\end{figure}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Insert multiple figures with subcaptions respectively&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage{graphicx} % should be put in the preamble
-\usepackage{subcaption} % should be put in the preamble
-\begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
-        \caption{Analytical Results}
-        \label{fig:analyticalResults}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
-        \caption{Image From Experiments}
-        \label{fig:experimentalFigure}
-    \end{subfigure}
-    \label{fig:analyticalAndExperimental}
-    \caption{Analytical and experimental results.}
-\end{figure}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The file name of images should be written as &lt;code&gt;{filename}.eps&lt;/code&gt; if the original filename is &lt;code&gt;filename.eps&lt;/code&gt; in case there are some special characaters, like &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Equations and Numbering Simply speaking:
+ use the environment align instead of equation and eqnarray to display equations. put align blocks inside a subequations environment if subnumbers are required. use aligned to break a single long equation with a single number into multiple lines. put \nonumber before an equation if that equation does not need to be numbered. use align* if no equations need to be numbered.  Environments align and aligned are defined in package amsmath.</description>
     </item>
     
     <item>
@@ -115,29 +27,12 @@ multiple equations with sub numbers&lt;/p&gt;
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/post/2017-03-10-vscode-beancount/</guid>
-      <description>&lt;p&gt;Homepage: &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount&#34;&gt;Beancount on Marketplace&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Installation: &lt;code&gt;ext install beancount&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Source Code: &lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Syntax highlight,&lt;/li&gt;
-&lt;li&gt;Decimal point alignment,&lt;/li&gt;
-&lt;li&gt;Current time quick insertion,&lt;/li&gt;
-&lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I wish to thank Chris for elaborating how to &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
-
-&lt;p&gt;I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of &lt;a href=&#34;https://github.com/poooi/poi&#34;&gt;POI&lt;/a&gt; for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &amp;ldquo;cool&amp;rdquo;(literally) and its &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.python&#34;&gt;Python&lt;/a&gt; extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.&lt;/p&gt;
-
-&lt;p&gt;But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That&amp;rsquo;s why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.&lt;/p&gt;
-
-&lt;p&gt;VSCode changes my opinions of Electron Apps, Javascript, and Microsoft. Actually now I think my bad impression on Javascript may just come from the fact that I have never written any Javascript codes by myself.&lt;/p&gt;
-</description>
+      <description>Homepage: Beancount on Marketplace
+Installation: ext install beancount
+Source Code: Lencerf/vscode-beancount
+This is a simple VSCode extension for Beancount, with the following features:
+ Syntax highlight, Decimal point alignment, Current time quick insertion, Auto indent for a new posting record.  I wish to thank Chris for elaborating how to programmatically modify document contents and Martin for sharing the Beancount sytax file with me.
+I started making this extension after I tried VSCode for one day.</description>
     </item>
     
     <item>
@@ -146,47 +41,20 @@ multiple equations with sub numbers&lt;/p&gt;
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
       <guid>/post/2016-12-31-see-you-2016/</guid>
-      <description>&lt;p&gt;虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。&lt;/p&gt;
-
-&lt;p&gt;按流水账来——&lt;/p&gt;
-
-&lt;p&gt;年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。&lt;/p&gt;
-
-&lt;p&gt;到了三月，本来期盼的几所学校一一送来拒信。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了&lt;a href=&#34;http://www.learnyouahaskell.com&#34;&gt;《Learn You a Haskell for Great Good!》&lt;/a&gt; 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。&lt;/p&gt;
-
-&lt;p&gt;这四月里还尝试自己学习算法和数据结构，做 leetcode 题，&lt;strong&gt;举步维艰&lt;/strong&gt;。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。&lt;/p&gt;
-
-&lt;p&gt;五六两月继续处理毕业事宜和出国手续。中途去&lt;a href=&#34;https://www.instagram.com/p/BFP9TvPDNlA/?taken-by=lencerf&#34;&gt;重庆&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BFP9ok0jNli/?taken-by=lencerf&#34;&gt;成都&lt;/a&gt;玩了一趟，看到了&lt;a href=&#34;https://www.instagram.com/p/BFJsgu1DNml/?taken-by=lencerf&#34;&gt;可爱的大熊猫&lt;/a&gt;。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。&lt;/p&gt;
-
-&lt;p&gt;八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的&lt;a href=&#34;/post/2016-08-31-August-review/&#34;&gt;日志&lt;/a&gt;里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。&lt;/p&gt;
-
-&lt;p&gt;到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。&lt;/p&gt;
-
-&lt;p&gt;十二月初去应英语老师邀请，去她家吃了一次圣诞级别的&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/?taken-by=lencerf&#34;&gt;早饭&lt;/a&gt;，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。&lt;/p&gt;
-
-&lt;div align=center style=&#34;margin-bottom:25px&#34;&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-version=&#34;7&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:400px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:8px;&#34;&gt; &lt;div style=&#34; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&#34;&gt; &lt;div style=&#34; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;_blank&#34;&gt;A photo posted by Alden (@lencerf)&lt;/a&gt; on &lt;time style=&#34; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&#34; datetime=&#34;2016-12-08T18:21:16+00:00&#34;&gt;Dec 8, 2016 at 10:21am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async defer src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
-
-&lt;p&gt;寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。&lt;/p&gt;
-
-&lt;p&gt;流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。&lt;/p&gt;
-
-&lt;p&gt;这一年的主要收获大概就是：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习；&lt;/li&gt;
-&lt;li&gt;大学顺利毕业，吃老本的本科毕业论文拿了省级优秀；&lt;/li&gt;
-&lt;li&gt;研究生申请不算完败，拿到了一个一般学校的全额 Fellowship；&lt;/li&gt;
-&lt;li&gt;申请到了人生第一张真正的信用卡 DiscoverIt，薅了一点羊毛；&lt;/li&gt;
-&lt;li&gt;学会了做&lt;a href=&#34;https://www.instagram.com/p/BNIXBifht1Z/?taken-by=lencerf&#34;&gt;土豆烧猪肉&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BOh6o-7B7h1/?taken-by=lencerf&#34;&gt;红烧鱼&lt;/a&gt;等家常菜，能满足自己的味蕾了；&lt;/li&gt;
-&lt;li&gt;研究生第一学期顺利结束，英语通过考核可以申请助教了；&lt;/li&gt;
-&lt;li&gt;年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。&lt;/p&gt;
-
-&lt;p&gt;希望2017年，静下心认真做学术研究、闲暇时学习技术，不要沉溺于对过去的缅怀和对未来的恐慌之中。&lt;/p&gt;
-</description>
+      <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
+按流水账来——
+年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
+到了三月，本来期盼的几所学校一一送来拒信。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了《Learn You a Haskell for Great Good!》 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。
+这四月里还尝试自己学习算法和数据结构，做 leetcode 题，举步维艰。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。
+五六两月继续处理毕业事宜和出国手续。中途去重庆、成都玩了一趟，看到了可爱的大熊猫。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。
+八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的日志里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。
+到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。
+十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
+A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
+  寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
+流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。
+这一年的主要收获大概就是：
+ 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的全额 Fellowship； 申请到了人生第一张真正的信用卡 DiscoverIt，薅了一点羊毛； 学会了做土豆烧猪肉、红烧鱼等家常菜，能满足自己的味蕾了； 研究生第一学期顺利结束，英语通过考核可以申请助教了； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。</description>
     </item>
     
     <item>
@@ -195,65 +63,10 @@ multiple equations with sub numbers&lt;/p&gt;
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
       <guid>/post/2016-12-15-launchd-and-click/</guid>
-      <description>&lt;p&gt;起因是看了这篇介绍 Beancount 的&lt;a href=&#34;https://wzyboy.im/post/1063.html&#34;&gt;博文&lt;/a&gt;后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 &lt;a href=&#34;https://github.com/beancount/fava&#34;&gt;fava&lt;/a&gt; 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
-&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
-&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
-  &amp;lt;dict&amp;gt;
-    &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt;
-    &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
-    &amp;lt;array&amp;gt;
-      &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt;
-      &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt;
-    &amp;lt;/array&amp;gt;
-    &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
-    &amp;lt;true/&amp;gt;
-  &amp;lt;/dict&amp;gt;
-&amp;lt;/plist&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然而 &lt;code&gt;launchctl load fava.plist&lt;/code&gt; 后在浏览器里访问 &lt;code&gt;http://localhost:5000/&lt;/code&gt; 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 &lt;code&gt;/usr/local/bin/fava&lt;/code&gt; 换成 &lt;code&gt;/usr/local/bin/bean-web&lt;/code&gt; 后访问 &lt;code&gt;http://localhost:8080/&lt;/code&gt;，可以打开 bean-web 页面，说明问题在 fava 身上。&lt;/p&gt;
-
-&lt;p&gt;但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，&lt;a href=&#34;http://serverfault.com/questions/183589/how-do-i-activate-launchd-logging-on-os-x&#34;&gt;这个页面&lt;/a&gt;上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt;
-&amp;lt;string&amp;gt;/path/to/logfile.log&amp;lt;/string&amp;gt;
-&amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt;
-&amp;lt;string&amp;gt;/path/to/error.log&amp;lt;/string&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;于是当我打开再次 &lt;code&gt;launchd load fava.plist&lt;/code&gt; 后，在 error.log 中看到了大量这样的输出：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Traceback (most recent call last):   File &amp;quot;/usr/local/bin/fava&amp;quot;, line 11, in &amp;lt;module&amp;gt;
-    sys.exit(main())
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/core.py&amp;quot;, line 716, in __call__
-    return self.main(*args, **kwargs)
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/core.py&amp;quot;, line 675, in main
-    _verify_python3_env()
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/_unicodefun.py&amp;quot;, line 119, in _verify_python3_env
-    &#39;mitigation steps.&#39; + extra)
-RuntimeError: Click will abort further execution because Python 3 was configured to use ASCII as encoding for the environment.  Either run this under Python 2 or consult http://click.pocoo.org/python3/ for mitigation steps.
-
-This system lists a couple of UTF-8 supporting locales that
-you can pick from.  The following suitable locales where
-discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_CZ.UTF-8, da_DK.UTF-8, de_AT.UTF-8, de_CH.UTF-8, de_DE.UTF-8, el_GR.UTF-8, en_AU.UTF-8, en_CA.UTF-8, en_GB.UTF-8, en_IE.UTF-8, en_NZ.UTF-8, en_US.UTF-8, es_ES.UTF-8, et_EE.UTF-8, eu_ES.UTF-8, fi_FI.UTF-8, fr_BE.UTF-8, fr_CA.UTF-8, fr_CH.UTF-8, fr_FR.UTF-8, he_IL.UTF-8, hr_HR.UTF-8, hu_HU.UTF-8, hy_AM.UTF-8, is_IS.UTF-8, it_CH.UTF-8, it_IT.UTF-8, ja_JP.UTF-8, kk_KZ.UTF-8, ko_KR.UTF-8, lt_LT.UTF-8, nl_BE.UTF-8, nl_NL.UTF-8, no_NO.UTF-8, pl_PL.UTF-8, pt_BR.UTF-8, pt_PT.UTF-8, ro_RO.UTF-8, ru_RU.UTF-8, sk_SK.UTF-8, sl_SI.UTF-8, sr_YU.UTF-8, sv_SE.UTF-8, tr_TR.UTF-8, uk_UA.UTF-8, zh_CN.UTF-8, zh_HK.UTF-8, zh_TW.UTF-8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;看上去和 click 这个 Python 包有点关系，搜索了一番，看了看这个 &lt;a href=&#34;https://github.com/madjar/nox/issues/19&#34;&gt;issue&lt;/a&gt;，猜想可能和没有指定语言有关系，看来需要想办法在 fava.plist 中指定相关的环境变量，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;key&amp;gt;EnvironmentVariables&amp;lt;/key&amp;gt;
-&amp;lt;dict&amp;gt;
-    &amp;lt;key&amp;gt;LANG&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;en_US.UTF-8&amp;lt;/string&amp;gt;
-&amp;lt;/dict&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再次加载，成功！&lt;/p&gt;
-
-&lt;p&gt;（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 bgm38。&lt;/p&gt;
-</description>
+      <description>起因是看了一篇介绍 Beancount 的博文后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 fava 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  然而 launchctl load fava.plist 后在浏览器里访问 http://localhost:5000/ 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 /usr/local/bin/fava 换成 /usr/local/bin/bean-web 后访问 http://localhost:8080/，可以打开 bean-web 页面，说明问题在 fava 身上。
+但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，这个页面上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：
+&amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/logfile.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/error.log&amp;lt;/string&amp;gt;  于是当我打开再次 launchd load fava.</description>
     </item>
     
     <item>
@@ -262,140 +75,31 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
       <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
-      <description>
-
-&lt;p&gt;先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。&lt;/p&gt;
-
-&lt;p&gt;在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。&lt;/p&gt;
-
-&lt;p&gt;材料：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;树莓派 Raspberry Pi 3 Model B 及电源线和适配器&lt;/li&gt;
-&lt;li&gt;Micro SD Card&lt;/li&gt;
-&lt;li&gt;移动硬盘&lt;/li&gt;
-&lt;li&gt;带独立供电的 USB Hub&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。&lt;/p&gt;
-
-&lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
-
-&lt;p&gt;首先安装官网上的&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;指引&lt;/a&gt;，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。&lt;/p&gt;
-
-&lt;h2 id=&#34;配置-raspbian&#34;&gt;配置 Raspbian&lt;/h2&gt;
-
-&lt;p&gt;把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 &lt;code&gt;sudo raspy-config&lt;/code&gt; 可以配置，有这么几个必须进行的操作：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。&lt;/li&gt;
-&lt;li&gt;修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。&lt;/li&gt;
-&lt;li&gt;修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见&lt;a href=&#34;http://henson.github.io/post/raspberrypi4/&#34;&gt;这篇文章&lt;/a&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;修改用户-pi-的-uid&#34;&gt;修改用户 pi 的 uid&lt;/h2&gt;
-
-&lt;p&gt;需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。&lt;/p&gt;
-
-&lt;p&gt;在 macOS 上执行 &lt;code&gt;id&lt;/code&gt; 命令可以查看自己的 uid，如果不是 501，那么下面的命令里应该换成正确的数值。&lt;/p&gt;
-
-&lt;p&gt;修改用户 pi 的 uid 需要注销并登陆到 root 账户上去改，树莓派默认又是锁定了 root 账户的。首先为 root 账户设置密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后解锁 root 账户&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd --unlock root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;之后去 raspi-config 里面把启动选项改成 Console，重启树莓派登入 root 账户并修改 uid：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;usermod -u 501 pi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后再去 raspi-config 里把启动选项改回 Desktop Autologin，返回 pi 账户进行下一步操作。&lt;/p&gt;
-
-&lt;h2 id=&#34;开启文件共享&#34;&gt;开启文件共享&lt;/h2&gt;
-
-&lt;p&gt;安装 netatalk 和 avahi-daemon&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update; sudo apt-get upgrade; sudo apt-get install netatalk avahi-daemon
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完后，如果笔记本和树莓派连接到同一无线局域网，应该就能在 Finder 的侧栏看到树莓派了，用 pi 用户登陆可以访问 Home Directory，也就是 Raspbian 上 pi 用户的主文件夹。当然我需要的是访问移动硬盘。把移动硬盘通过 USB Hub 接上树莓派。首先确认在 Raspbian 系统下能够正常读写移动硬盘，如果移动硬盘采用了 HFS+ 或者 NTFS 之类的文件格式，还需要安装相应的软件包。对于 HFS+ 格式：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install hfsprogs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后修改 netatalk 的共享设置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/netatalk/AppleVolumes.default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以看到里面已经默认共享了用户主目录。加上共享移动硬盘：&lt;code&gt;/media/pi/mydrive “mydrive”&lt;/code&gt;。重启 netatalk:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service netatalk restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;硬盘睡眠&#34;&gt;硬盘睡眠&lt;/h2&gt;
-
-&lt;p&gt;最后，硬盘不工作时应当让它进入睡眠，我就不啰嗦了，直接看&lt;a href=&#34;http://mkitby.com/2016/05/15/raspberry-pi-nas-manage-hdd-power/&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
-
-&lt;p&gt;从树莓派里下载文件大概是 1MB/s，看个普通的视频足够了，凑合用吧。&lt;/p&gt;
-</description>
+      <description>先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。
+在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。
+材料：
+ 树莓派 Raspberry Pi 3 Model B 及电源线和适配器 Micro SD Card 移动硬盘 带独立供电的 USB Hub  此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。
+系统安装 首先安装官网上的指引，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。
+配置 Raspbian 把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 sudo raspy-config 可以配置，有这么几个必须进行的操作：
+ 开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。 修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。 修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见这篇文章。  修改用户 pi 的 uid 需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。</description>
     </item>
     
     <item>
       <title>八月小结</title>
-      <link>/post/2016-08-31-August-review/</link>
+      <link>/post/2016-08-31-august-review/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>/post/2016-08-31-August-review/</guid>
-      <description>
-
-&lt;p&gt;向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。&lt;/p&gt;
-
-&lt;h2 id=&#34;心态&#34;&gt;心态&lt;/h2&gt;
-
-&lt;p&gt;近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。&lt;/p&gt;
-
-&lt;p&gt;庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的&lt;a href=&#34;http://i.imgur.com/3PB1Goz.png&#34;&gt;话语&lt;/a&gt;分量真的很重。&lt;/p&gt;
-
-&lt;p&gt;虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。&lt;/p&gt;
-
-&lt;p&gt;虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。&lt;/p&gt;
-
-&lt;h2 id=&#34;学习&#34;&gt;学习&lt;/h2&gt;
-
-&lt;p&gt;由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。&lt;/p&gt;
-
-&lt;p&gt;另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。&lt;/p&gt;
-
-&lt;p&gt;真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）&lt;/p&gt;
-
-&lt;h2 id=&#34;项目&#34;&gt;项目&lt;/h2&gt;
-
-&lt;p&gt;生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 &lt;a href=&#34;https://github.com/m13253/BiliDan&#34;&gt;bilidan&lt;/a&gt; 的源码，并尝试用我喜欢的 Swift 重写了一遍。（不是我不愿意付费看正版，但是 crunchyroll 到现在还是 flash 播放器，人家 bilibili 的 HTML5 还带弹幕的播放器不知道比你高到哪里去了！）然而就在我出国那几天，B站把&lt;code&gt;X-Forwarded-For&lt;/code&gt;的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Lencerf/Danmaku&#34;&gt;Danmaku&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&amp;gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！&lt;/p&gt;
-
-&lt;p&gt;除了对各类编程语言的浅尝辄止外，我一直想点一两个真正的CS技能点，然而数据结构和算法始终是找不到门路。CS科班的室友给我推荐了&lt;a href=&#34;https://www.gitbook.com/book/nju-ics/ics2016-programming-assignment/details&#34;&gt;这个项目&lt;/a&gt;。目前希望能利用本学期的课余时间，按照指引认真做一遍，这样会对计算机系统有点更深刻的理解吧。&lt;/p&gt;
-
-&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
-
-&lt;p&gt;身处大农村，没车寸步难行。尤其是刚来几天，还算暑假，公交线路和班次都少，每天大概一个半小时耗在等公交上了。开学后住的公寓和学校间的直达公交开始运营了，感觉方便了很多。（然而去趟沃尔玛还是得等等等）&lt;/p&gt;
-
-&lt;p&gt;美国的饭菜真的不习惯。小时候把汉堡当人间美味，然而现在吃了真的美国汉堡和三明治，我表示再也不想吃了。最近都是自己做，从来没有像现在一样觉得米饭和炒包菜是人间美味过！课程紧张的那几天中午饭就靠 Soylent 搞定，感觉 Drink 2.0 味道蛮好的。&lt;/p&gt;
-
-&lt;p&gt;想写的还有很多，也许有空可以专门开一篇文章来写写我的一些见闻想法和思想观念的转变吧。&lt;/p&gt;
-</description>
+      <guid>/post/2016-08-31-august-review/</guid>
+      <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
+心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
+庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。
+虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。
+虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。
+学习 由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。
+另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。
+真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）
+项目 生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 bilidan 的源码，并尝试用我喜欢的 Swift 重写了一遍。（不是我不愿意付费看正版，但是 crunchyroll 到现在还是 flash 播放器，人家 bilibili 的 HTML5 还带弹幕的播放器不知道比你高到哪里去了！）然而就在我出国那几天，B站把X-Forwarded-For的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件
+ Danmaku  主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&amp;gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！</description>
     </item>
     
     <item>
@@ -404,49 +108,8 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
-      <description>&lt;p&gt;在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。&lt;/p&gt;
-
-&lt;p&gt;首先从普通&lt;strong&gt;二重积分&lt;/strong&gt;出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然，
-$$m=\iint_S\rho(x,y)dxdy,$$
-$S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
-$$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
-以 $u, v$ 为被积分参数，$m$ 的表达式为
-$$\begin{equation}\label{m}
-m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,
-\end{equation}$$
-$|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为
-$$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \newline \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$
-主要在于如何比较直观地理解雅可比行列式。看了知乎上&lt;a href=&#34;http://zhihu.com/question/29964930/answer/51632832&#34;&gt;这个回答&lt;/a&gt;后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式\ref{m}了。&lt;/p&gt;
-
-&lt;p&gt;比普通二重积分复杂一点的是&lt;strong&gt;第一型曲面积分&lt;/strong&gt;。简单地说，普通二重积分中的板是一块平板，所以我们可以直接在平板上建立平面直角坐标系；第一型曲线积分中的板是一块曲面板，我们只能在外部建立空间直角坐标系然后用方程去描述曲面的形状。具体的表达式是：
-$$m=\iint_S\rho(x,y,z)dS,$$
-其中 $dS$ 是曲面 $S$ 上的一块面元。现在假设曲面可以用参数方程描述：
-$$\begin{cases} x = x(u,v)\newline y = y(u,v)\newline z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
-$m$ 用对 $u, v$ 的积分表达为
-$$m=\int_a^b du\int_c^d\rho(x(u,v),y(u,v),z(u,v))\sqrt{A^2+B^2+C^2}dv$$
-式中的 $A, B, C$ 分别为
-$$A=\begin{vmatrix} \partial_uy &amp;amp; \partial_uz \newline \partial_vy &amp;amp; \partial_vz \end{vmatrix},B=\begin{vmatrix} \partial_uz &amp;amp; \partial_ux \newline \partial_vz &amp;amp; \partial_vx \end{vmatrix}, C=\begin{vmatrix} \partial_ux &amp;amp; \partial_uy \newline \partial_vx &amp;amp; \partial_vy \end{vmatrix},$$
-理解方式和前面是一样的，只是现在 $d\vec{u}$ 和 $d\vec{v}$ 是是三维矢量了，表达式分别是：
-$$d\vec{u} =(\frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}, \frac{\partial z}{\partial u})dv$$
-$$d\vec{v} =(\frac{\partial x}{\partial v}, \frac{\partial y}{\partial v}, \frac{\partial z}{\partial v})dv$$
-算一下 $|d\vec{u}\times d\vec{v}|$ 就能得到 $\sqrt{A^2+B^2+C^2}dudv$ 了。&lt;/p&gt;
-
-&lt;p&gt;最后是相对最复杂的&lt;strong&gt;第二型曲面积分&lt;/strong&gt;。我们得换一个物理场景了：考虑电流密度场 $\vec{j}(x,y,z)$ 空间中一个曲面 $C(x,y,z)=0$，求通过曲面的电流强度 $I$。$I$ 的表达式不难写出：
-$$I=\iint_C\vec{j}(x,y,z)\cdot d\vec{S},$$
-其中 $d\vec{S}=\vec{e}_ndS$，$dS$ 是曲面上的面元，$\vec{e}_n$ 代表这一点面元的法向单位矢量。事实上把 $d\vec{S}$ 代入积分式中就能把第二型曲面积分转化成第一型曲面积分
-$$I=\iint_C(\vec{j}(x,y,z)\cdot\vec{e}_n) dS,$$
-此时被积分函数就是 $\vec{j}(x,y,z)\cdot\vec{e}_n$。为了求出曲面上每一点处的法矢 $\vec{e}_n$ 的表达式，我们需要利用曲面 $C$ 的参数表达式
-$$\begin{cases} x = x(u,v)\newline y = y(u,v)\newline z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
-可以想象，曲面上某点 $(x,y,z)$ 处的法向单位矢量与该点对应的矢量 $d\vec{u}\times d\vec{v}$ 平行，但是有可能相同或相反，这个问题先放一边，我们可以把 $\vec{e}_n$ 写成
-$$\vec{e}_n=\epsilon\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|},$$
-$\epsilon$ 可为 $\pm 1$，用于矫正方向。然后，和上面第一型曲线积分的处理方法一样，$I$ 可以表达为对 $u, v$ 的积分式
-$$I=\iint_D(\epsilon\vec{j}(x,y,z)\cdot\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|})|d\vec{u}\times d\vec{v}|=\iint_D\epsilon\vec{j}(x,y,z)\cdot (d\vec{u}\times d\vec{v}),$$
-此时积分区域换成 $D$, 即 $u, v$ 的定义域，表明是对 $u, v$ 的积分。现在只剩确定 $\epsilon$ 的正负，这是个比较麻烦的问题。为了说清楚这一点，我们首先要注意一件事，二重积分在化为累次积分的过程中有一个问题，累次积分是多次单变量积分，单变量积分的结果与积分上下限的次序是有关的，交换积分上下限积分结果反号，而二重积分结果不应当与这种次序有关（从二重积分的定义就可以看出，二重积分中没有上下限次序这个概念）。或者说，单变量积分中，线元 $dx$ 可正可负，但是二重积分的面元 $dxdy$ 应当保证为正，所以事实上二重积分在化为累次积分的过程中默认要求积分上限比积分下限大。这个问题在第二型曲面积分中的体现就是 $\vec e_n$ 的指向，我们可以人为构造出曲面 $C$ 的两种参数表达式，使得算出来的 $d\vec{u}\times d\vec{v}$ 方向相反。为了避免这个问题就需要选合适的参数表达式，最保险的方案是，将曲面方程 $C(x,y,z)=0$ 中的一个变量反解出来，比如 $z$，将 $x, y$ 作为参数，曲面的参数式就是
-$$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
-这样求出来的 $d\vec{u}\times d\vec{v}$ 总是指向我们通常约定的曲面的正侧，因此 $\epsilon$ 就可以取为 1（当然如果实际问题中确实是要沿着负侧积分，$\epsilon$ 就应当是 -1）。如果取了其他参数式，可能需要小心地先检验一下 $d\vec{u}\times d\vec{v}$ 的方向。&lt;/p&gt;
-
-&lt;p&gt;最后，本文叙述中有些条件和前提略去了，比如 $x, y$ 和 $u, v$ 之间的变换应当满足的条件等等。不严谨之处，敬请见谅。&lt;/p&gt;
-</description>
+      <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
+首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$\begin{equation}\label{m} m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv, \end{equation}$$ $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \newline \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式\ref{m}了。</description>
     </item>
     
     <item>
@@ -455,317 +118,45 @@ $$\begin{cases} x = x\newline y = y\newline z=z(x,y)\end{cases}, $$
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
-      <description>&lt;p&gt;经典热力学中一个很重要的模型是卡诺热机（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot_heat_engine&#34;&gt;Carnot engine&lt;/a&gt;），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:carnot&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:carnot&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;（&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)&#34;&gt;Carnot&amp;rsquo;s theorem&lt;/a&gt;）&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;但是最近重看 &lt;em&gt;Concepts in Thermal Physics&lt;/em&gt; [1]时我对卡诺定理的&lt;a href=&#34;https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)#Proof&#34;&gt;证明过程&lt;/a&gt;产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。&lt;/p&gt;
-
-&lt;p&gt;直到我看到课本接下来介绍了一个卡诺定理的推论，&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。&lt;/p&gt;
-
-&lt;p&gt;只有卡诺热机才是可逆热机吗？“除了绝热和等温过程外，还有其它可逆过程，选一些可逆过程连接成一个可逆循环就能构成一个可逆热机！”我很快发现这个想法有问题。&lt;/p&gt;
-
-&lt;p&gt;首先明确热机逆过程的概念：保持其它配置不变，将能量流动箭头反向，吸热变放热，对外做功变成外部对热机做功。现在对 1mol 导热良好的理想气体，考察这样一个过程：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;从初态 $(p_1,V_1)$ 等容加热到 $(p_2, V_1)$；&lt;/li&gt;
-&lt;li&gt;从 $(p_2, V_1)$ 绝热膨胀到 $(p_3, V_2)$ ；&lt;/li&gt;
-&lt;li&gt;从 $(p_3, V_2)$ 等温压缩至 $(p_1, V_1)$ 。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/workflow.svg&#34; alt=&#34;图1 正过程和“逆过程”&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;再画出对应的净效果：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/img/carnot-engine/pureEffect.svg&#34; alt=&#34;图2 正过程和“逆过程”的净效果&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;图1左边的过程中气体经历的每一步都是&lt;strong&gt;可逆变化&lt;/strong&gt;，但是构造出来的热机却不是&lt;strong&gt;可逆热机&lt;/strong&gt;，原因在于，第1步中气体的等容加热需要和高温热源 $T_2$ 接触才能完成，这是一个单纯的热量流动过程，热力学第二定律的克劳修斯表述禁止了其逆过程的发生：在没有额外辅助的条件下，气体不可能与高温热源 $T_2$ 接触的同时放热等容降温。但是气体本身经历的是一个可逆变化，只要气体再去和另一个低温热源接触，就能放热等容降温回到原来的状态。退一步说，如果一定要热机逆着循环运行（图1右），那么这一步中气体必须和低温热源 $T_1$ 接触，对应到图2中就是右边 $Q_1$ 的箭头只能指向 $T_1$ 而不可能指向 $T_2$。把图2和卡诺热机的正逆运行图对比，就能知道这种热机不可逆了。&lt;/p&gt;
-
-&lt;p&gt;想清楚了上面这个例子后，再来看卡诺热机就不难理解为什么它是可逆的了。卡诺机和热源接触时经历的是等温过程，气体的温度和热源的温度是一样的，热力学第二定律只对有温度差时的热量流动方向做出了限制，但此处是等温的，只要把气体对外做功变成外部对气体做功，就能实现从吸热到放热的转变；而气体温度的变化是通过绝热过程完成的，绝热过程中没有熵变，也是可逆的。所以整个过程都是可逆的，卡诺机是一个可逆机。&lt;/p&gt;
-
-&lt;p&gt;回到开始的问题，是不是只有卡诺热机才是可逆机呢？为什么？回答：不是，但是可逆热机中的过程只能由等温过程和绝热过程组成。因为，热机逆运行受到热力学第二定律的制约，尤其是热量流动箭头能否反向。要么不存在热量流动，即绝热过程；要么热量在相同温度物体间流动，即等温过程。涉及到其它过程时，必须要修改热机的结构才能逆运行（比如例子中接触高温热源变成低温热源）。卡诺循环是最简单的满足条件的循环过程，当然也可以用更多绝热和等温过程去构造更复杂的可逆热机。&lt;/p&gt;
-
-&lt;p&gt;总结一下，在这个问题中有机个概念需要区分，&lt;strong&gt;可逆过程&lt;/strong&gt;、&lt;strong&gt;可逆机&lt;/strong&gt;和气体经历的&lt;strong&gt;可逆变化&lt;/strong&gt;并不是一回事。感想就是，把想法都写下来，对理清思路有很大帮助。想通了这些问题后，再回过头看看写下的东西，似乎全是废话，给读者见笑。但是自己没开窍前还是相当困惑的，写下来防止以后再一次忘记。&lt;/p&gt;
-
-&lt;p&gt;如果读者有什么见解和想法，欢迎在留言区指正和一起讨论。&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:carnot&#34;&gt;&lt;em&gt;Concepts in Thermal Physics, 2nd Edition&lt;/em&gt;, Stephen J.Blundell &amp;amp; Katherine M.Blundell.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:carnot&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
+ Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
+ 但是最近重看 Concepts in Thermal Physics [1]时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
+直到我看到课本接下来介绍了一个卡诺定理的推论，
+ All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.
+ 既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。
+只有卡诺热机才是可逆热机吗？“除了绝热和等温过程外，还有其它可逆过程，选一些可逆过程连接成一个可逆循环就能构成一个可逆热机！”我很快发现这个想法有问题。
+首先明确热机逆过程的概念：保持其它配置不变，将能量流动箭头反向，吸热变放热，对外做功变成外部对热机做功。现在对 1mol 导热良好的理想气体，考察这样一个过程：
+ 从初态 $(p_1,V_1)$ 等容加热到 $(p_2, V_1)$； 从 $(p_2, V_1)$ 绝热膨胀到 $(p_3, V_2)$ ； 从 $(p_3, V_2)$ 等温压缩至 $(p_1, V_1)$ 。  用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：</description>
     </item>
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
+      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
-      <description>
-
-&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;下载 Arch Linux &lt;a href=&#34;https://www.archlinux.org/download/&#34;&gt;镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;新建虚拟机。因为要安装 Plasma，建议内存至少1G。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;硬盘分区&#34;&gt;硬盘分区&lt;/h2&gt;
-
-&lt;p&gt;启动虚拟机，开始安装，&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/3siPvUb.png&#34; alt=&#34;由光盘镜像引导启动后的界面&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;首先需要对硬盘分区。输入命令 &lt;code&gt;cfdisk&lt;/code&gt; 可以打开半图形化的分区工具。首先&lt;code&gt;cfdisk&lt;/code&gt;会让选择分区表类型，选择第二种&lt;code&gt;dos&lt;/code&gt;。然后进入到分区界面，通过下面的菜单&lt;code&gt;New&lt;/code&gt;可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为&lt;code&gt;Bootable&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gZoKUgF.png&#34; alt=&#34;分区方案&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;完成后选择&lt;code&gt;Write&lt;/code&gt;将分区方案写入硬盘生效，然后&lt;code&gt;Quit&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;格式化硬盘分区&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.ext4 /dev/sda1
-mkfs.ext4 /dev/sda2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mount /dev/sda1 /mnt
-mkdir /mnt/home
-mount /dev/sda2 /mnt/home
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;安装-arch-linux&#34;&gt;安装 Arch Linux&lt;/h2&gt;
-
-&lt;p&gt;配置镜像源（country=你所在的地区代码）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;打开 mirrorlist，反注释掉想要使用的镜像源&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/pacman.d/mirrorlist
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装 Arch Linux&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacstrap /mnt base base-devel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/qkazApk.png&#34; alt=&#34;安装过程&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-chroot /mnt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;首先设置 Root 密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;passwd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;设置时区，可以通过&lt;code&gt;date&lt;/code&gt;命令测试时区是否设置正确&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-she&#34;&gt;ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;设置主机名&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;echo Archlinux-PD &amp;gt; /etc/hostname
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成语言配置。首先打开&lt;code&gt;/etc/locale.gen&lt;/code&gt;，反注释掉所需要的语言（en_US.UTF8、zh_CN.UTF8），然后执行命令&lt;code&gt;locale-gen&lt;/code&gt;。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/locale.gen
-locale-gen
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装启动引导 grub&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S grub
-grub-install /dev/sda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配置 grub&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hQt0Son.png&#34; alt=&#34;配置 grub&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;开启网络，然后退出新系统，回到&lt;code&gt;arch-root&lt;/code&gt;命令之前的界面。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl enable dhcpcd
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成 fstab&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;genfstab /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;umount 挂载的磁盘，重启虚拟机。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;umount /mnt/home
-umount /mnt
-reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;安装-plasma&#34;&gt;安装 Plasma&lt;/h2&gt;
-
-&lt;p&gt;如果一切顺利重启后可以看到 grub 启动菜单&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/zin9rgS.png&#34; alt=&#34;grub 启动菜单&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;进入新安装好的系统，以 root 用户登录，密码就是之前执行&lt;code&gt;passwd&lt;/code&gt;命令时输入的密码。&lt;/p&gt;
-
-&lt;p&gt;先测试一下网络连接情况&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ping -c 5 archlinux.org
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果连接不通，可以尝试手动开启网络&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl start dhcpcd
-ip addr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;更新一下软件包，然后开始安装 Plasma 和其它必要的软件包。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -Syu
-pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;解释一下，&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;xorg 是 X 窗口服务器，plasma 即是 KDE5&lt;/li&gt;
-&lt;li&gt;git 和 zsh 没什么好说的&lt;/li&gt;
-&lt;li&gt;konsole 是 KDE 下的默认终端模拟器，firefox是火狐浏览器，dolphin 是文件管理器&lt;/li&gt;
-&lt;li&gt;alsa-utils 是声音模块&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;安装完成后，配置一下 X（下面的命令注意 X 要大写）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Xorg -configure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上面的命令会生成一份配置模版&lt;code&gt;/root/xorg.conf.new&lt;/code&gt;，用编辑器打开。&lt;/p&gt;
-
-&lt;p&gt;因为我用的是非 retina 屏幕的 MBP 13， 所以在&lt;code&gt;Section &amp;quot;Screen&amp;quot;&lt;/code&gt;下的&lt;code&gt;Section &amp;quot;Display&amp;quot;&lt;/code&gt;中添加一行&lt;code&gt;Modes &amp;quot;1280x800&amp;quot;&lt;/code&gt;就好了。保存，将配置文件移动到合适的位置，然后启用&lt;code&gt;sddm&lt;/code&gt;服务。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mv /root/xorg.conf.new /etc/X11/xorg.conf
-systemctl enable sddm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加用户并设置密码，把 yourname 换成你喜欢的名字&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;useradd -m -G wheel -s /usr/bin/zsh yourname
-passwd yourname
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sudoers
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在末尾添加一行&lt;code&gt;yourname ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a yourname audio
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装一些不错的字体&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;移除没什么用的媒体中心&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo pacman -R plasma-mediacenter
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/6sIFdh5.png&#34; alt=&#34;Plasma 真漂亮啊！&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;其它&#34;&gt;其它&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;以上过程为本人安装成果的整理记录，可能有疏漏，不一定适用于读者的情况。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;字体的问题还没有完全解决，尤其是终端下的中文字体。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Parallels Tools 似乎和 Arch Linux 不太兼容的样子，虽然能安装上去，但是文件共享一直有问题。具体安装细节可能之后再补充。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;开启 ssh 服务&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S openssh
-systemctl enable sshd.service
-systemctl start sshd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;通过&lt;code&gt;ip route&lt;/code&gt;可以查看本机IP，必要时可以从 OS X 端 ssh 登陆到 Arch，也可以用&lt;code&gt;scp&lt;/code&gt;往虚拟机里传文件&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Last but maybe the most important, for some Asian users,&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S shadowsocks-libev
-nano /etc/shadowsocks/config.json
-systemctl enabnle shadowsocks-libev@config
-systemctl start shadowsocks-libev@config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cs.columbia.edu/~jae/4118-LAST/arch-setup-2015-1.html&#34;&gt;Setting up an Arch Linux VM in VirtualBox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=Wqh9AQt3nho&#34;&gt;How to Install Arch Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=okct6NwqF_Y&#34;&gt;How to Install Arch Linux 2016 + KDE Plasma 5 + Open-VM-Tools on VMware Player Free&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://yzalog.tk/ss-via-stunnel/&#34;&gt;Yza Log&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org&#34;&gt;ArchWiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linuxtoy.org/archives/archlinux-guide.html&#34;&gt;打造完美的 Linux 桌面 — Archlinux 2007.08-2 (电子版)
-&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <description>准备工作  下载 Arch Linux 镜像 新建虚拟机。因为要安装 Plasma，建议内存至少1G。  硬盘分区 启动虚拟机，开始安装，
+首先需要对硬盘分区。输入命令 cfdisk 可以打开半图形化的分区工具。首先cfdisk会让选择分区表类型，选择第二种dos。然后进入到分区界面，通过下面的菜单New可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为Bootable。
+完成后选择Write将分区方案写入硬盘生效，然后Quit。
+格式化硬盘分区
+mkfs.ext4 /dev/sda1 mkfs.ext4 /dev/sda2  挂载分区，sda1 挂载到/mnt，sda2 挂载到到/mnt/home
+mount /dev/sda1 /mnt mkdir /mnt/home mount /dev/sda2 /mnt/home  安装 Arch Linux 配置镜像源（country=你所在的地区代码）
+curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;  打开 mirrorlist，反注释掉想要使用的镜像源
+nano /etc/pacman.d/mirrorlist  安装 Arch Linux
+pacstrap /mnt base base-devel  完成后，进入新安装的系统进行配置
+arch-chroot /mnt  首先设置 Root 密码
+passwd  设置时区，可以通过date命令测试时区是否设置正确
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  设置主机名</description>
     </item>
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</link>
+      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-01-09-Embed-figures-of-eps-format-in-LaTeX-papers-with-dvips/</guid>
-      <description>&lt;p&gt;At the end of my earlier &lt;a href=&#34;/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/&#34;&gt;post&lt;/a&gt; on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if &lt;code&gt;dvips&lt;/code&gt; is used to generate the PDF file, which is caused by the package &lt;code&gt;hyperref&lt;/code&gt;. Certainly, removing &lt;code&gt;\usepackage{hyperref}&lt;/code&gt; is the most simple solution to this problem. But what if we do need them two simultaneously?&lt;/p&gt;
-
-&lt;p&gt;Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able. I guess that PSTricks needs the postscript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.&lt;/p&gt;
-
-&lt;p&gt;The problem is finally solved when I find &lt;a href=&#34;http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat&#34;&gt;this question&lt;/a&gt; on stackexchange. Some extra parameters are needed when hyperref is used with dvips:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvips,breaklinks]{hyperref}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;However, why do we insist on latex? why not switch to xelatex?&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <description>At the end of my earlier post on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to generate the PDF file, which is caused by the package hyperref. Certainly, removing \usepackage{hyperref} is the most simple solution to this problem. But what if we do need them two simultaneously?
+Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able.</description>
     </item>
     
     <item>
@@ -774,38 +165,9 @@ systemctl start shadowsocks-libev@config
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
       <guid>/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
-      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
-#include &amp;quot;stdio.h&amp;quot;
-int main(int argc, char const *argv[]) {
-    int a = 1;
-    int c = (a=a * 2) + (a = a + 3);
-    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;However, if I use clang to compile the codes, I get a warning:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Run the generated file:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
-</description>
+      <description>For the code fragment below,
+//ch1.c #include &amp;quot;stdio.h&amp;quot; int main(int argc, char const *argv[]) { int a = 1; int c = (a=a * 2) + (a = a + 3); printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c); return 0; }  if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:
+ a = 5, c = 10.</description>
     </item>
     
     <item>
@@ -814,19 +176,10 @@ int main(int argc, char const *argv[]) {
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Let http requests of git go through a socks5 proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Since homebrew doanloads files using curl, set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
-</description>
+      <description>Finally, I find the right way to use homebrew.
+ Let http requests of git go through a socks5 proxy
+git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
+  Too much time has been wasted because of the poor network.</description>
     </item>
     
     <item>
@@ -835,66 +188,17 @@ int main(int argc, char const *argv[]) {
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
-      <description>&lt;p&gt;Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
-
-&lt;p&gt;Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. And with Automator, I get a better solution.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install unix2dos: &lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;for f in &amp;quot;$@&amp;quot;
-do 
-unix2dos &amp;quot;$f&amp;quot;
-done
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
-&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
+Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</link>
+      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/</guid>
-      <description>&lt;p&gt;Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.&lt;/p&gt;
-
-&lt;p&gt;Now to generate a PDF format copy, the shell commands are&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;latex paper.tex;
-bibtex peper;
-latex peper;
-latex paper;
-dvipdfmx paper.dvi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&amp;rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.&lt;/p&gt;
-
-&lt;p&gt;Installing Ghostscript is easy, just use &lt;a href=&#34;https://brew.sh&#34;&gt;homebrew&lt;/a&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install ghostscript
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After that, parameter &lt;code&gt;[dvipdfmx]&lt;/code&gt; is indispensable if the package hyperref is used.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;\usepackage[dvipdfmx]{hyperref}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Certainly, PDF copy can be generated by other commands besides dvipdfmx. For example,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dvips paper.dvi
-ps2pdf paper.ps
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But you may get an ugly reference article list. :(&lt;/p&gt;
-</description>
+      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <description>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.</description>
     </item>
     
     <item>
@@ -903,14 +207,69 @@ ps2pdf paper.ps
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
       <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
-      <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
+      <description>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。
+在 Mathematica 的 Format-&amp;gt;Option Inspector 中以fontsize搜索Global Preference，修改12为16。但是，尝试多次，重启 Mathematica 也无效。要对 Mathematica 粉转黑了！
+最后，在 StackExchange 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把1修改为1.5或其他，即把整个 notebook 的显示全局放大。</description>
+    </item>
+    
+    <item>
+      <title>A template of beamer</title>
+      <link>/post/2014-12-01-a-beamer-template/</link>
+      <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
+      
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
+      <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
-&lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
+      
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;最后，在 &lt;a href=&#34;http://mathematica.stackexchange.com/questions/59283/changing-the-default-font-size&#34;&gt;StackExchange&lt;/a&gt; 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把&lt;code&gt;1&lt;/code&gt;修改为&lt;code&gt;1.5&lt;/code&gt;或其他，即把整个 notebook 的显示全局放大。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
+      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
+      
+      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <description>Bose 气体满足 Bose-Einstein 分布 $$ \begin{equation} \langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1} \end{equation}$$ 其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。
+二维情况下，气体的态密度为$$ \begin{equation} g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k \end{equation}$$ 非相对论情况下，粒子的能动量关系为$$ \begin{equation} E=\frac{\hbar k^2}{2m} \end{equation}$$ 所以可以将态密度改写为以能量为自变量$$ \begin{equation} g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E \end{equation}$$
+化学势 $\mu$ 与粒子数 $N$ 之间满足关系 $$ \begin{eqnarray} (2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;amp;=&amp;amp;N\newline \label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;amp;=&amp;amp;N \end{eqnarray}$$
+把 $\beta(E-\mu)$ 记为 $x$，式$\ref{化学势与粒子数关系}$可化为： $$ \begin{equation}\label{simplified} \frac1\beta\int_{-\mu\beta}^{\infty}{\frac{d x}{e^x-1}}=\frac{2\pi\hbar N}{(2S+1)Am} \end{equation}$$
+左侧的积分可以算出来 $$\begin{equation} \frac{1}{\beta}\int_{-\mu\beta}^{\infty}{\frac{dx}{e^x-1}}=\ln\frac{1}{(1-e^{\mu\beta})^{\frac1\beta}} \end{equation} $$</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.
+Previously I had suffered from the question that whether I should continue studying physics or switch to becoming a programmer, especially considering the fact that I was only admitted into a mediocre physics Ph.D. program. But finally I am determined to get the degree and complete my childhood dream, even if I may have to leave academia after graduation.</description>
+    </item>
+    
+    <item>
+      <title>OS X 上中文 LaTeX 环境的搭建</title>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1eplqnlb507j20l80gxju9.jpg&#34; alt=&#34;设置全局放大&#34; /&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

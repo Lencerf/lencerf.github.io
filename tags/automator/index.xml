@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automator on Lencerf&#39;s Walk</title>
-    <link>/tags/automator/index.xml</link>
+    <link>/tags/automator/</link>
     <description>Recent content in Automator on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="/tags/automator/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jun 2015 00:32:49 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/automator/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
@@ -14,27 +17,8 @@
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
-      <description>&lt;p&gt;Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
-
-&lt;p&gt;Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. And with Automator, I get a better solution.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install unix2dos: &lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;for f in &amp;quot;$@&amp;quot;
-do 
-unix2dos &amp;quot;$f&amp;quot;
-done
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
-&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
+Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
     </item>
     
   </channel>

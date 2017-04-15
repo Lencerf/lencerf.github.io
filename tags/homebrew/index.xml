@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homebrew on Lencerf&#39;s Walk</title>
-    <link>/tags/homebrew/index.xml</link>
+    <link>/tags/homebrew/</link>
     <description>Recent content in Homebrew on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2015 22:47:28 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>brew with a socks5 proxy</title>
@@ -14,19 +17,10 @@
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Let http requests of git go through a socks5 proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Since homebrew doanloads files using curl, set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
-</description>
+      <description>Finally, I find the right way to use homebrew.
+ Let http requests of git go through a socks5 proxy
+git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
+  Too much time has been wasted because of the poor network.</description>
     </item>
     
   </channel>

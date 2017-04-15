@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Lencerf&#39;s Walk</title>
-    <link>/categories/life/index.xml</link>
+    <link>/categories/life/</link>
     <description>Recent content in Life on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Dec 2016 14:03:51 -0500</lastBuildDate>
+    
+	<atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>再见 2016</title>
@@ -14,97 +17,38 @@
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
       <guid>/post/2016-12-31-see-you-2016/</guid>
-      <description>&lt;p&gt;虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。&lt;/p&gt;
-
-&lt;p&gt;按流水账来——&lt;/p&gt;
-
-&lt;p&gt;年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。&lt;/p&gt;
-
-&lt;p&gt;到了三月，本来期盼的几所学校一一送来拒信。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了&lt;a href=&#34;http://www.learnyouahaskell.com&#34;&gt;《Learn You a Haskell for Great Good!》&lt;/a&gt; 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。&lt;/p&gt;
-
-&lt;p&gt;这四月里还尝试自己学习算法和数据结构，做 leetcode 题，&lt;strong&gt;举步维艰&lt;/strong&gt;。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。&lt;/p&gt;
-
-&lt;p&gt;五六两月继续处理毕业事宜和出国手续。中途去&lt;a href=&#34;https://www.instagram.com/p/BFP9TvPDNlA/?taken-by=lencerf&#34;&gt;重庆&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BFP9ok0jNli/?taken-by=lencerf&#34;&gt;成都&lt;/a&gt;玩了一趟，看到了&lt;a href=&#34;https://www.instagram.com/p/BFJsgu1DNml/?taken-by=lencerf&#34;&gt;可爱的大熊猫&lt;/a&gt;。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。&lt;/p&gt;
-
-&lt;p&gt;八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的&lt;a href=&#34;/post/2016-08-31-August-review/&#34;&gt;日志&lt;/a&gt;里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。&lt;/p&gt;
-
-&lt;p&gt;到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。&lt;/p&gt;
-
-&lt;p&gt;十二月初去应英语老师邀请，去她家吃了一次圣诞级别的&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/?taken-by=lencerf&#34;&gt;早饭&lt;/a&gt;，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。&lt;/p&gt;
-
-&lt;div align=center style=&#34;margin-bottom:25px&#34;&gt;&lt;blockquote class=&#34;instagram-media&#34; data-instgrm-version=&#34;7&#34; style=&#34; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:400px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&#34;&gt;&lt;div style=&#34;padding:8px;&#34;&gt; &lt;div style=&#34; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&#34;&gt; &lt;div style=&#34; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&#34;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&#34;&gt;&lt;a href=&#34;https://www.instagram.com/p/BNxBnZRh4ir/&#34; style=&#34; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&#34; target=&#34;_blank&#34;&gt;A photo posted by Alden (@lencerf)&lt;/a&gt; on &lt;time style=&#34; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&#34; datetime=&#34;2016-12-08T18:21:16+00:00&#34;&gt;Dec 8, 2016 at 10:21am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async defer src=&#34;//platform.instagram.com/en_US/embeds.js&#34;&gt;&lt;/script&gt;&lt;/div&gt;
-
-&lt;p&gt;寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。&lt;/p&gt;
-
-&lt;p&gt;流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。&lt;/p&gt;
-
-&lt;p&gt;这一年的主要收获大概就是：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习；&lt;/li&gt;
-&lt;li&gt;大学顺利毕业，吃老本的本科毕业论文拿了省级优秀；&lt;/li&gt;
-&lt;li&gt;研究生申请不算完败，拿到了一个一般学校的全额 Fellowship；&lt;/li&gt;
-&lt;li&gt;申请到了人生第一张真正的信用卡 DiscoverIt，薅了一点羊毛；&lt;/li&gt;
-&lt;li&gt;学会了做&lt;a href=&#34;https://www.instagram.com/p/BNIXBifht1Z/?taken-by=lencerf&#34;&gt;土豆烧猪肉&lt;/a&gt;、&lt;a href=&#34;https://www.instagram.com/p/BOh6o-7B7h1/?taken-by=lencerf&#34;&gt;红烧鱼&lt;/a&gt;等家常菜，能满足自己的味蕾了；&lt;/li&gt;
-&lt;li&gt;研究生第一学期顺利结束，英语通过考核可以申请助教了；&lt;/li&gt;
-&lt;li&gt;年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。&lt;/p&gt;
-
-&lt;p&gt;希望2017年，静下心认真做学术研究、闲暇时学习技术，不要沉溺于对过去的缅怀和对未来的恐慌之中。&lt;/p&gt;
-</description>
+      <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
+按流水账来——
+年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
+到了三月，本来期盼的几所学校一一送来拒信。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了《Learn You a Haskell for Great Good!》 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。
+这四月里还尝试自己学习算法和数据结构，做 leetcode 题，举步维艰。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。
+五六两月继续处理毕业事宜和出国手续。中途去重庆、成都玩了一趟，看到了可爱的大熊猫。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。
+八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的日志里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。
+到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。
+十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
+A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
+  寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
+流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。
+这一年的主要收获大概就是：
+ 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的全额 Fellowship； 申请到了人生第一张真正的信用卡 DiscoverIt，薅了一点羊毛； 学会了做土豆烧猪肉、红烧鱼等家常菜，能满足自己的味蕾了； 研究生第一学期顺利结束，英语通过考核可以申请助教了； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。</description>
     </item>
     
     <item>
       <title>八月小结</title>
-      <link>/post/2016-08-31-August-review/</link>
+      <link>/post/2016-08-31-august-review/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>/post/2016-08-31-August-review/</guid>
-      <description>
-
-&lt;p&gt;向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。&lt;/p&gt;
-
-&lt;h2 id=&#34;心态&#34;&gt;心态&lt;/h2&gt;
-
-&lt;p&gt;近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。&lt;/p&gt;
-
-&lt;p&gt;庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的&lt;a href=&#34;http://i.imgur.com/3PB1Goz.png&#34;&gt;话语&lt;/a&gt;分量真的很重。&lt;/p&gt;
-
-&lt;p&gt;虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。&lt;/p&gt;
-
-&lt;p&gt;虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。&lt;/p&gt;
-
-&lt;h2 id=&#34;学习&#34;&gt;学习&lt;/h2&gt;
-
-&lt;p&gt;由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。&lt;/p&gt;
-
-&lt;p&gt;另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。&lt;/p&gt;
-
-&lt;p&gt;真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）&lt;/p&gt;
-
-&lt;h2 id=&#34;项目&#34;&gt;项目&lt;/h2&gt;
-
-&lt;p&gt;生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 &lt;a href=&#34;https://github.com/m13253/BiliDan&#34;&gt;bilidan&lt;/a&gt; 的源码，并尝试用我喜欢的 Swift 重写了一遍。（不是我不愿意付费看正版，但是 crunchyroll 到现在还是 flash 播放器，人家 bilibili 的 HTML5 还带弹幕的播放器不知道比你高到哪里去了！）然而就在我出国那几天，B站把&lt;code&gt;X-Forwarded-For&lt;/code&gt;的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Lencerf/Danmaku&#34;&gt;Danmaku&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&amp;gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！&lt;/p&gt;
-
-&lt;p&gt;除了对各类编程语言的浅尝辄止外，我一直想点一两个真正的CS技能点，然而数据结构和算法始终是找不到门路。CS科班的室友给我推荐了&lt;a href=&#34;https://www.gitbook.com/book/nju-ics/ics2016-programming-assignment/details&#34;&gt;这个项目&lt;/a&gt;。目前希望能利用本学期的课余时间，按照指引认真做一遍，这样会对计算机系统有点更深刻的理解吧。&lt;/p&gt;
-
-&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
-
-&lt;p&gt;身处大农村，没车寸步难行。尤其是刚来几天，还算暑假，公交线路和班次都少，每天大概一个半小时耗在等公交上了。开学后住的公寓和学校间的直达公交开始运营了，感觉方便了很多。（然而去趟沃尔玛还是得等等等）&lt;/p&gt;
-
-&lt;p&gt;美国的饭菜真的不习惯。小时候把汉堡当人间美味，然而现在吃了真的美国汉堡和三明治，我表示再也不想吃了。最近都是自己做，从来没有像现在一样觉得米饭和炒包菜是人间美味过！课程紧张的那几天中午饭就靠 Soylent 搞定，感觉 Drink 2.0 味道蛮好的。&lt;/p&gt;
-
-&lt;p&gt;想写的还有很多，也许有空可以专门开一篇文章来写写我的一些见闻想法和思想观念的转变吧。&lt;/p&gt;
-</description>
+      <guid>/post/2016-08-31-august-review/</guid>
+      <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
+心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
+庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。
+虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。
+虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。
+学习 由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。
+另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。
+真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）
+项目 生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 bilidan 的源码，并尝试用我喜欢的 Swift 重写了一遍。（不是我不愿意付费看正版，但是 crunchyroll 到现在还是 flash 播放器，人家 bilibili 的 HTML5 还带弹幕的播放器不知道比你高到哪里去了！）然而就在我出国那几天，B站把X-Forwarded-For的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件
+ Danmaku  主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&amp;gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！</description>
     </item>
     
   </channel>

@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technique on Lencerf&#39;s Walk</title>
-    <link>/categories/technique/index.xml</link>
+    <link>/categories/technique/</link>
     <description>Recent content in Technique on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2017 04:22:39 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>VSCode extension for Beancount</title>
@@ -14,29 +17,12 @@
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/post/2017-03-10-vscode-beancount/</guid>
-      <description>&lt;p&gt;Homepage: &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount&#34;&gt;Beancount on Marketplace&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Installation: &lt;code&gt;ext install beancount&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Source Code: &lt;a href=&#34;https://github.com/Lencerf/vscode-beancount&#34;&gt;Lencerf/vscode-beancount&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a simple VSCode extension for &lt;a href=&#34;http://furius.ca/beancount/&#34;&gt;Beancount&lt;/a&gt;, with the following features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Syntax highlight,&lt;/li&gt;
-&lt;li&gt;Decimal point alignment,&lt;/li&gt;
-&lt;li&gt;Current time quick insertion,&lt;/li&gt;
-&lt;li&gt;Auto indent for a new posting record.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I wish to thank Chris for elaborating how to &lt;a href=&#34;http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/&#34;&gt;programmatically modify document contents&lt;/a&gt; and Martin for sharing the Beancount &lt;a href=&#34;https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage&#34;&gt;sytax file&lt;/a&gt; with me.&lt;/p&gt;
-
-&lt;p&gt;I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of &lt;a href=&#34;https://github.com/poooi/poi&#34;&gt;POI&lt;/a&gt; for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &amp;ldquo;cool&amp;rdquo;(literally) and its &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.python&#34;&gt;Python&lt;/a&gt; extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.&lt;/p&gt;
-
-&lt;p&gt;But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That&amp;rsquo;s why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.&lt;/p&gt;
-
-&lt;p&gt;VSCode changes my opinions of Electron Apps, Javascript, and Microsoft. Actually now I think my bad impression on Javascript may just come from the fact that I have never written any Javascript codes by myself.&lt;/p&gt;
-</description>
+      <description>Homepage: Beancount on Marketplace
+Installation: ext install beancount
+Source Code: Lencerf/vscode-beancount
+This is a simple VSCode extension for Beancount, with the following features:
+ Syntax highlight, Decimal point alignment, Current time quick insertion, Auto indent for a new posting record.  I wish to thank Chris for elaborating how to programmatically modify document contents and Martin for sharing the Beancount sytax file with me.
+I started making this extension after I tried VSCode for one day.</description>
     </item>
     
     <item>
@@ -45,65 +31,10 @@
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
       <guid>/post/2016-12-15-launchd-and-click/</guid>
-      <description>&lt;p&gt;起因是看了这篇介绍 Beancount 的&lt;a href=&#34;https://wzyboy.im/post/1063.html&#34;&gt;博文&lt;/a&gt;后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 &lt;a href=&#34;https://github.com/beancount/fava&#34;&gt;fava&lt;/a&gt; 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
-&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
-&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
-  &amp;lt;dict&amp;gt;
-    &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt;
-    &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
-    &amp;lt;array&amp;gt;
-      &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt;
-      &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt;
-    &amp;lt;/array&amp;gt;
-    &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
-    &amp;lt;true/&amp;gt;
-  &amp;lt;/dict&amp;gt;
-&amp;lt;/plist&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然而 &lt;code&gt;launchctl load fava.plist&lt;/code&gt; 后在浏览器里访问 &lt;code&gt;http://localhost:5000/&lt;/code&gt; 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 &lt;code&gt;/usr/local/bin/fava&lt;/code&gt; 换成 &lt;code&gt;/usr/local/bin/bean-web&lt;/code&gt; 后访问 &lt;code&gt;http://localhost:8080/&lt;/code&gt;，可以打开 bean-web 页面，说明问题在 fava 身上。&lt;/p&gt;
-
-&lt;p&gt;但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，&lt;a href=&#34;http://serverfault.com/questions/183589/how-do-i-activate-launchd-logging-on-os-x&#34;&gt;这个页面&lt;/a&gt;上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt;
-&amp;lt;string&amp;gt;/path/to/logfile.log&amp;lt;/string&amp;gt;
-&amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt;
-&amp;lt;string&amp;gt;/path/to/error.log&amp;lt;/string&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;于是当我打开再次 &lt;code&gt;launchd load fava.plist&lt;/code&gt; 后，在 error.log 中看到了大量这样的输出：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Traceback (most recent call last):   File &amp;quot;/usr/local/bin/fava&amp;quot;, line 11, in &amp;lt;module&amp;gt;
-    sys.exit(main())
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/core.py&amp;quot;, line 716, in __call__
-    return self.main(*args, **kwargs)
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/core.py&amp;quot;, line 675, in main
-    _verify_python3_env()
-  File &amp;quot;/usr/local/lib/python3.5/site-packages/click/_unicodefun.py&amp;quot;, line 119, in _verify_python3_env
-    &#39;mitigation steps.&#39; + extra)
-RuntimeError: Click will abort further execution because Python 3 was configured to use ASCII as encoding for the environment.  Either run this under Python 2 or consult http://click.pocoo.org/python3/ for mitigation steps.
-
-This system lists a couple of UTF-8 supporting locales that
-you can pick from.  The following suitable locales where
-discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_CZ.UTF-8, da_DK.UTF-8, de_AT.UTF-8, de_CH.UTF-8, de_DE.UTF-8, el_GR.UTF-8, en_AU.UTF-8, en_CA.UTF-8, en_GB.UTF-8, en_IE.UTF-8, en_NZ.UTF-8, en_US.UTF-8, es_ES.UTF-8, et_EE.UTF-8, eu_ES.UTF-8, fi_FI.UTF-8, fr_BE.UTF-8, fr_CA.UTF-8, fr_CH.UTF-8, fr_FR.UTF-8, he_IL.UTF-8, hr_HR.UTF-8, hu_HU.UTF-8, hy_AM.UTF-8, is_IS.UTF-8, it_CH.UTF-8, it_IT.UTF-8, ja_JP.UTF-8, kk_KZ.UTF-8, ko_KR.UTF-8, lt_LT.UTF-8, nl_BE.UTF-8, nl_NL.UTF-8, no_NO.UTF-8, pl_PL.UTF-8, pt_BR.UTF-8, pt_PT.UTF-8, ro_RO.UTF-8, ru_RU.UTF-8, sk_SK.UTF-8, sl_SI.UTF-8, sr_YU.UTF-8, sv_SE.UTF-8, tr_TR.UTF-8, uk_UA.UTF-8, zh_CN.UTF-8, zh_HK.UTF-8, zh_TW.UTF-8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;看上去和 click 这个 Python 包有点关系，搜索了一番，看了看这个 &lt;a href=&#34;https://github.com/madjar/nox/issues/19&#34;&gt;issue&lt;/a&gt;，猜想可能和没有指定语言有关系，看来需要想办法在 fava.plist 中指定相关的环境变量，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;key&amp;gt;EnvironmentVariables&amp;lt;/key&amp;gt;
-&amp;lt;dict&amp;gt;
-    &amp;lt;key&amp;gt;LANG&amp;lt;/key&amp;gt;
-    &amp;lt;string&amp;gt;en_US.UTF-8&amp;lt;/string&amp;gt;
-&amp;lt;/dict&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再次加载，成功！&lt;/p&gt;
-
-&lt;p&gt;（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 bgm38。&lt;/p&gt;
-</description>
+      <description>起因是看了一篇介绍 Beancount 的博文后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 fava 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  然而 launchctl load fava.plist 后在浏览器里访问 http://localhost:5000/ 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 /usr/local/bin/fava 换成 /usr/local/bin/bean-web 后访问 http://localhost:8080/，可以打开 bean-web 页面，说明问题在 fava 身上。
+但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，这个页面上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：
+&amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/logfile.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/error.log&amp;lt;/string&amp;gt;  于是当我打开再次 launchd load fava.</description>
     </item>
     
     <item>
@@ -112,329 +43,33 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
       <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
-      <description>
-
-&lt;p&gt;先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。&lt;/p&gt;
-
-&lt;p&gt;在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。&lt;/p&gt;
-
-&lt;p&gt;材料：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;树莓派 Raspberry Pi 3 Model B 及电源线和适配器&lt;/li&gt;
-&lt;li&gt;Micro SD Card&lt;/li&gt;
-&lt;li&gt;移动硬盘&lt;/li&gt;
-&lt;li&gt;带独立供电的 USB Hub&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。&lt;/p&gt;
-
-&lt;h2 id=&#34;系统安装&#34;&gt;系统安装&lt;/h2&gt;
-
-&lt;p&gt;首先安装官网上的&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;指引&lt;/a&gt;，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。&lt;/p&gt;
-
-&lt;h2 id=&#34;配置-raspbian&#34;&gt;配置 Raspbian&lt;/h2&gt;
-
-&lt;p&gt;把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 &lt;code&gt;sudo raspy-config&lt;/code&gt; 可以配置，有这么几个必须进行的操作：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。&lt;/li&gt;
-&lt;li&gt;修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。&lt;/li&gt;
-&lt;li&gt;修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见&lt;a href=&#34;http://henson.github.io/post/raspberrypi4/&#34;&gt;这篇文章&lt;/a&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;修改用户-pi-的-uid&#34;&gt;修改用户 pi 的 uid&lt;/h2&gt;
-
-&lt;p&gt;需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。&lt;/p&gt;
-
-&lt;p&gt;在 macOS 上执行 &lt;code&gt;id&lt;/code&gt; 命令可以查看自己的 uid，如果不是 501，那么下面的命令里应该换成正确的数值。&lt;/p&gt;
-
-&lt;p&gt;修改用户 pi 的 uid 需要注销并登陆到 root 账户上去改，树莓派默认又是锁定了 root 账户的。首先为 root 账户设置密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后解锁 root 账户&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo passwd --unlock root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;之后去 raspi-config 里面把启动选项改成 Console，重启树莓派登入 root 账户并修改 uid：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;usermod -u 501 pi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后再去 raspi-config 里把启动选项改回 Desktop Autologin，返回 pi 账户进行下一步操作。&lt;/p&gt;
-
-&lt;h2 id=&#34;开启文件共享&#34;&gt;开启文件共享&lt;/h2&gt;
-
-&lt;p&gt;安装 netatalk 和 avahi-daemon&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get update; sudo apt-get upgrade; sudo apt-get install netatalk avahi-daemon
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完后，如果笔记本和树莓派连接到同一无线局域网，应该就能在 Finder 的侧栏看到树莓派了，用 pi 用户登陆可以访问 Home Directory，也就是 Raspbian 上 pi 用户的主文件夹。当然我需要的是访问移动硬盘。把移动硬盘通过 USB Hub 接上树莓派。首先确认在 Raspbian 系统下能够正常读写移动硬盘，如果移动硬盘采用了 HFS+ 或者 NTFS 之类的文件格式，还需要安装相应的软件包。对于 HFS+ 格式：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install hfsprogs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后修改 netatalk 的共享设置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/netatalk/AppleVolumes.default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以看到里面已经默认共享了用户主目录。加上共享移动硬盘：&lt;code&gt;/media/pi/mydrive “mydrive”&lt;/code&gt;。重启 netatalk:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service netatalk restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;硬盘睡眠&#34;&gt;硬盘睡眠&lt;/h2&gt;
-
-&lt;p&gt;最后，硬盘不工作时应当让它进入睡眠，我就不啰嗦了，直接看&lt;a href=&#34;http://mkitby.com/2016/05/15/raspberry-pi-nas-manage-hdd-power/&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
-
-&lt;p&gt;从树莓派里下载文件大概是 1MB/s，看个普通的视频足够了，凑合用吧。&lt;/p&gt;
-</description>
+      <description>先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。
+在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。
+材料：
+ 树莓派 Raspberry Pi 3 Model B 及电源线和适配器 Micro SD Card 移动硬盘 带独立供电的 USB Hub  此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。
+系统安装 首先安装官网上的指引，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。
+配置 Raspbian 把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 sudo raspy-config 可以配置，有这么几个必须进行的操作：
+ 开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。 修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。 修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见这篇文章。  修改用户 pi 的 uid 需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。</description>
     </item>
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</link>
+      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-06-09-Install-Archlinux-with-Plasma-in-ParallesDesktop/</guid>
-      <description>
-
-&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;下载 Arch Linux &lt;a href=&#34;https://www.archlinux.org/download/&#34;&gt;镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;新建虚拟机。因为要安装 Plasma，建议内存至少1G。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;硬盘分区&#34;&gt;硬盘分区&lt;/h2&gt;
-
-&lt;p&gt;启动虚拟机，开始安装，&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/3siPvUb.png&#34; alt=&#34;由光盘镜像引导启动后的界面&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;首先需要对硬盘分区。输入命令 &lt;code&gt;cfdisk&lt;/code&gt; 可以打开半图形化的分区工具。首先&lt;code&gt;cfdisk&lt;/code&gt;会让选择分区表类型，选择第二种&lt;code&gt;dos&lt;/code&gt;。然后进入到分区界面，通过下面的菜单&lt;code&gt;New&lt;/code&gt;可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为&lt;code&gt;Bootable&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gZoKUgF.png&#34; alt=&#34;分区方案&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;完成后选择&lt;code&gt;Write&lt;/code&gt;将分区方案写入硬盘生效，然后&lt;code&gt;Quit&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;格式化硬盘分区&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkfs.ext4 /dev/sda1
-mkfs.ext4 /dev/sda2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;挂载分区，sda1 挂载到&lt;code&gt;/mnt&lt;/code&gt;，sda2 挂载到到&lt;code&gt;/mnt/home&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mount /dev/sda1 /mnt
-mkdir /mnt/home
-mount /dev/sda2 /mnt/home
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;安装-arch-linux&#34;&gt;安装 Arch Linux&lt;/h2&gt;
-
-&lt;p&gt;配置镜像源（country=你所在的地区代码）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;打开 mirrorlist，反注释掉想要使用的镜像源&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/pacman.d/mirrorlist
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装 Arch Linux&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacstrap /mnt base base-devel
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/qkazApk.png&#34; alt=&#34;安装过程&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;完成后，进入新安装的系统进行配置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;arch-chroot /mnt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;首先设置 Root 密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;passwd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;设置时区，可以通过&lt;code&gt;date&lt;/code&gt;命令测试时区是否设置正确&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-she&#34;&gt;ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;设置主机名&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;echo Archlinux-PD &amp;gt; /etc/hostname
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成语言配置。首先打开&lt;code&gt;/etc/locale.gen&lt;/code&gt;，反注释掉所需要的语言（en_US.UTF8、zh_CN.UTF8），然后执行命令&lt;code&gt;locale-gen&lt;/code&gt;。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/locale.gen
-locale-gen
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装启动引导 grub&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S grub
-grub-install /dev/sda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配置 grub&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hQt0Son.png&#34; alt=&#34;配置 grub&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;开启网络，然后退出新系统，回到&lt;code&gt;arch-root&lt;/code&gt;命令之前的界面。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl enable dhcpcd
-exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成 fstab&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;genfstab /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;umount 挂载的磁盘，重启虚拟机。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;umount /mnt/home
-umount /mnt
-reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;安装-plasma&#34;&gt;安装 Plasma&lt;/h2&gt;
-
-&lt;p&gt;如果一切顺利重启后可以看到 grub 启动菜单&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/zin9rgS.png&#34; alt=&#34;grub 启动菜单&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;进入新安装好的系统，以 root 用户登录，密码就是之前执行&lt;code&gt;passwd&lt;/code&gt;命令时输入的密码。&lt;/p&gt;
-
-&lt;p&gt;先测试一下网络连接情况&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ping -c 5 archlinux.org
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果连接不通，可以尝试手动开启网络&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;systemctl start dhcpcd
-ip addr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;更新一下软件包，然后开始安装 Plasma 和其它必要的软件包。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -Syu
-pacman -S xorg plasma zsh git konsole firefox dolphin alsa-utils 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;解释一下，&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;xorg 是 X 窗口服务器，plasma 即是 KDE5&lt;/li&gt;
-&lt;li&gt;git 和 zsh 没什么好说的&lt;/li&gt;
-&lt;li&gt;konsole 是 KDE 下的默认终端模拟器，firefox是火狐浏览器，dolphin 是文件管理器&lt;/li&gt;
-&lt;li&gt;alsa-utils 是声音模块&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;安装完成后，配置一下 X（下面的命令注意 X 要大写）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Xorg -configure
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上面的命令会生成一份配置模版&lt;code&gt;/root/xorg.conf.new&lt;/code&gt;，用编辑器打开。&lt;/p&gt;
-
-&lt;p&gt;因为我用的是非 retina 屏幕的 MBP 13， 所以在&lt;code&gt;Section &amp;quot;Screen&amp;quot;&lt;/code&gt;下的&lt;code&gt;Section &amp;quot;Display&amp;quot;&lt;/code&gt;中添加一行&lt;code&gt;Modes &amp;quot;1280x800&amp;quot;&lt;/code&gt;就好了。保存，将配置文件移动到合适的位置，然后启用&lt;code&gt;sddm&lt;/code&gt;服务。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mv /root/xorg.conf.new /etc/X11/xorg.conf
-systemctl enable sddm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加用户并设置密码，把 yourname 换成你喜欢的名字&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;useradd -m -G wheel -s /usr/bin/zsh yourname
-passwd yourname
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;把自己添加到sudoer中&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;nano /etc/sudoers
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在末尾添加一行&lt;code&gt;yourname ALL=(ALL) ALL&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;把自己添加到audio用户组中，这样可以开启声音&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gpasswd -a yourname audio
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装一些不错的字体&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S ttf-arphic-uming ttf-arphic-ukai ttf-bitstream-vera adobe-source-han-sans-otc-fonts ttf-fira-sans
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;移除没什么用的媒体中心&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo pacman -R plasma-mediacenter
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/6sIFdh5.png&#34; alt=&#34;Plasma 真漂亮啊！&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;其它&#34;&gt;其它&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;以上过程为本人安装成果的整理记录，可能有疏漏，不一定适用于读者的情况。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;字体的问题还没有完全解决，尤其是终端下的中文字体。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Parallels Tools 似乎和 Arch Linux 不太兼容的样子，虽然能安装上去，但是文件共享一直有问题。具体安装细节可能之后再补充。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;开启 ssh 服务&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S openssh
-systemctl enable sshd.service
-systemctl start sshd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;通过&lt;code&gt;ip route&lt;/code&gt;可以查看本机IP，必要时可以从 OS X 端 ssh 登陆到 Arch，也可以用&lt;code&gt;scp&lt;/code&gt;往虚拟机里传文件&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Last but maybe the most important, for some Asian users,&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -S shadowsocks-libev
-nano /etc/shadowsocks/config.json
-systemctl enabnle shadowsocks-libev@config
-systemctl start shadowsocks-libev@config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cs.columbia.edu/~jae/4118-LAST/arch-setup-2015-1.html&#34;&gt;Setting up an Arch Linux VM in VirtualBox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=Wqh9AQt3nho&#34;&gt;How to Install Arch Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Youtube video: &lt;a href=&#34;https://www.youtube.com/watch?v=okct6NwqF_Y&#34;&gt;How to Install Arch Linux 2016 + KDE Plasma 5 + Open-VM-Tools on VMware Player Free&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://yzalog.tk/ss-via-stunnel/&#34;&gt;Yza Log&amp;rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org&#34;&gt;ArchWiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linuxtoy.org/archives/archlinux-guide.html&#34;&gt;打造完美的 Linux 桌面 — Archlinux 2007.08-2 (电子版)
-&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <description>准备工作  下载 Arch Linux 镜像 新建虚拟机。因为要安装 Plasma，建议内存至少1G。  硬盘分区 启动虚拟机，开始安装，
+首先需要对硬盘分区。输入命令 cfdisk 可以打开半图形化的分区工具。首先cfdisk会让选择分区表类型，选择第二种dos。然后进入到分区界面，通过下面的菜单New可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为Bootable。
+完成后选择Write将分区方案写入硬盘生效，然后Quit。
+格式化硬盘分区
+mkfs.ext4 /dev/sda1 mkfs.ext4 /dev/sda2  挂载分区，sda1 挂载到/mnt，sda2 挂载到到/mnt/home
+mount /dev/sda1 /mnt mkdir /mnt/home mount /dev/sda2 /mnt/home  安装 Arch Linux 配置镜像源（country=你所在的地区代码）
+curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;  打开 mirrorlist，反注释掉想要使用的镜像源
+nano /etc/pacman.d/mirrorlist  安装 Arch Linux
+pacstrap /mnt base base-devel  完成后，进入新安装的系统进行配置
+arch-chroot /mnt  首先设置 Root 密码
+passwd  设置时区，可以通过date命令测试时区是否设置正确
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  设置主机名</description>
     </item>
     
     <item>
@@ -443,38 +78,9 @@ systemctl start shadowsocks-libev@config
       <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
       
       <guid>/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
-      <description>&lt;p&gt;For the code fragment below,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;//ch1.c
-#include &amp;quot;stdio.h&amp;quot;
-int main(int argc, char const *argv[]) {
-    int a = 1;
-    int c = (a=a * 2) + (a = a + 3);
-    printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;a = 5, c = 10.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;However, if I use clang to compile the codes, I get a warning:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ch1.c:6:15: warning: multiple unsequenced modifications to &amp;lsquo;a&amp;rsquo; [-Wunsequenced]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Run the generated file:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;a = 5, c = 7.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Personally, I think clang is better than gcc in dealing this problem. But why I, the programmer, write such unreadable codes?!&lt;/p&gt;
-</description>
+      <description>For the code fragment below,
+//ch1.c #include &amp;quot;stdio.h&amp;quot; int main(int argc, char const *argv[]) { int a = 1; int c = (a=a * 2) + (a = a + 3); printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c); return 0; }  if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:
+ a = 5, c = 10.</description>
     </item>
     
     <item>
@@ -483,19 +89,10 @@ int main(int argc, char const *argv[]) {
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>&lt;p&gt;Finally, I find the right way to use homebrew.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Let http requests of git go through a socks5 proxy&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Since homebrew doanloads files using curl, set a socks proxy for curl: just add &lt;code&gt;proxy=socks5://127.0.0.1:1081&lt;/code&gt; to &lt;code&gt;~/.curlrc&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Too much time has been wasted because of the poor network.&lt;/p&gt;
-</description>
+      <description>Finally, I find the right way to use homebrew.
+ Let http requests of git go through a socks5 proxy
+git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
+  Too much time has been wasted because of the poor network.</description>
     </item>
     
     <item>
@@ -504,27 +101,8 @@ int main(int argc, char const *argv[]) {
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
-      <description>&lt;p&gt;Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
-
-&lt;p&gt;Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. And with Automator, I get a better solution.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install unix2dos: &lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;for f in &amp;quot;$@&amp;quot;
-do 
-unix2dos &amp;quot;$f&amp;quot;
-done
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
-&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
+Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -533,14 +111,9 @@ done
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
       <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
-      <description>&lt;p&gt;Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。&lt;/p&gt;
-
-&lt;p&gt;在 Mathematica 的 Format-&amp;gt;Option Inspector 中以&lt;code&gt;fontsize&lt;/code&gt;搜索&lt;code&gt;Global Preference&lt;/code&gt;，修改&lt;code&gt;12&lt;/code&gt;为&lt;code&gt;16&lt;/code&gt;。但是，尝试多次，重启 Mathematica 也无效。&lt;del&gt;要对 Mathematica 粉转黑了！&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;最后，在 &lt;a href=&#34;http://mathematica.stackexchange.com/questions/59283/changing-the-default-font-size&#34;&gt;StackExchange&lt;/a&gt; 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把&lt;code&gt;1&lt;/code&gt;修改为&lt;code&gt;1.5&lt;/code&gt;或其他，即把整个 notebook 的显示全局放大。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/eb7f99fcgw1eplqnlb507j20l80gxju9.jpg&#34; alt=&#34;设置全局放大&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。
+在 Mathematica 的 Format-&amp;gt;Option Inspector 中以fontsize搜索Global Preference，修改12为16。但是，尝试多次，重启 Mathematica 也无效。要对 Mathematica 粉转黑了！
+最后，在 StackExchange 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把1修改为1.5或其他，即把整个 notebook 的显示全局放大。</description>
     </item>
     
     <item>
@@ -553,39 +126,7 @@ done
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;安装-latextools&#34;&gt;安装 LaTeXTools&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;View -&amp;gt; Show Console，打开终端界面，将 Package Control &lt;a href=&#34;https://sublime.wbond.net/installation&#34;&gt;官网&lt;/a&gt;给出的代码复制粘贴进终端，回车完成 Package Control 的安装。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Command-Shift-P&lt;/code&gt;调出命令窗口，输入&lt;code&gt;Install&lt;/code&gt;，等待一会，之后输入&lt;code&gt;LaTeXTools&lt;/code&gt;，回车完成安装，时常取决于网络。&lt;/li&gt;
-&lt;li&gt;安装 &lt;a href=&#34;http://skim-app.sourceforge.net/&#34;&gt;Skim&lt;/a&gt;，用于预览编译好的PDF文件。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;初始设置&#34;&gt;初始设置&lt;/h2&gt;
-
-&lt;h3 id=&#34;latextools&#34;&gt;LaTeXTools&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;初始化：按下&lt;code&gt;Command-Shift-P&lt;/code&gt;，输入&amp;rdquo;latextools&amp;rdquo;，选择&amp;rdquo;LaTeXTools:Reconfigure&amp;hellip;&amp;ldquo;，回车。
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg&#34; alt=&#34;LaTeXTools 的初始化&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;设置编译时输出详细日志：前往&lt;code&gt;~/Library/Application Support/Sublime Text 3/Packages/User/&lt;/code&gt;，打开&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;，将&lt;code&gt;&amp;quot;display_log&amp;quot; : false,&lt;/code&gt;改为&lt;code&gt;&amp;quot;display_log&amp;quot; : true,&lt;/code&gt;。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;设置默认使用 XeLaTeX 编译文件：虽然可以去修改&lt;code&gt;LaTeXTools.sublime-settings&lt;/code&gt;,不过最简单安全的方法还是在自己的 TeX 源文件开头加上&lt;code&gt;%!TEX program = xelatex&lt;/code&gt;，修改一下自己的模板就一劳永逸了，难道每次都从输入&lt;code&gt;\begin{document}&lt;/code&gt;开始？&lt;/p&gt;
-
-&lt;h3 id=&#34;skim&#34;&gt;Skim&lt;/h3&gt;
-
-&lt;p&gt;在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg&#34; alt=&#34;Skim 设置&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;skim-与-sublime-text-之间的跳转按键&#34;&gt;Skim 与 Sublime Text 之间的跳转按键&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Skim：&lt;code&gt;Command-Shift-单击&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Sublime Text：&lt;code&gt;Command-L&lt;/code&gt;,松开&lt;code&gt;Command&lt;/code&gt;，迅速按下&lt;code&gt;J&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

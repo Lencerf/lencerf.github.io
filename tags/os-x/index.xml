@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Os X on Lencerf&#39;s Walk</title>
-    <link>/tags/os-x/index.xml</link>
+    <link>/tags/os-x/</link>
     <description>Recent content in Os X on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="/tags/os-x/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jun 2015 00:32:49 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/os-x/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
@@ -14,27 +17,8 @@
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
-      <description>&lt;p&gt;Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with &lt;code&gt;CRLF&lt;/code&gt; line breaks while TeXShop.app uses &lt;code&gt;LF&lt;/code&gt; as a line ending.&lt;/p&gt;
-
-&lt;p&gt;Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;. And with Automator, I get a better solution.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install unix2dos: &lt;code&gt;brew install unix2dos&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create a new service in Automator. Drag a &amp;ldquo;Run Shell Script&amp;rdquo; action from the Library and type in the following commands:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;for f in &amp;quot;$@&amp;quot;
-do 
-unix2dos &amp;quot;$f&amp;quot;
-done
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Make sure that choose &amp;ldquo;as argument&amp;rdquo; for the option &amp;ldquo;Pass input&amp;rdquo;.
-&lt;img src=&#34;http://i.imgur.com/vbDeBZr.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&amp;ldquo;unix2dos&amp;rdquo; will show up in the services when you right click on any text files.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
+Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -47,184 +31,7 @@ done
 &lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 
 &lt;p&gt;本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;　　众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
-在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。&lt;/p&gt;
-
-&lt;p&gt;　　首先安装 TeX 基本系统。上 &lt;a href=&#34;http://tug.org/mactex/&#34;&gt;MaxTeX 主页&lt;/a&gt;下载 TeXLive 发行版，建议下载&lt;a href=&#34;http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg&#34;&gt;基本包&lt;/a&gt;（&amp;lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 &lt;code&gt;apt-get&lt;/code&gt; 命令即可。
-事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。&lt;/p&gt;
-
-&lt;p&gt;　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：&lt;a href=&#34;http://pages.uoregon.edu/koch/texshop/texshop.html&#34;&gt;TeXShop&lt;/a&gt;！
-&lt;img src=&#34;https://i.imgur.com/B5LGj8n.png&#34; alt=&#34;TeXShop&#34; /&gt;
-　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
-在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样&lt;del&gt;奇奇怪怪&lt;/del&gt;的问题。
-在“排版”页的默认指令处选择“采用键入的指令”，输入&amp;rdquo;XeLaTeX&amp;rdquo;。&lt;/p&gt;
-
-&lt;p&gt;　　现在来测试一下吧，在TeXShop里输入&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\documentclass{article}
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun} %设置默认的中文字体为宋体
-\begin{document}
-Hello! 这是中文测试!
-\end{document}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后点击 TeXShop 工具栏上的“排版”按钮，应当就能顺利生成一个非常简单的中英文混排的文档了。
-&lt;img src=&#34;https://i.imgur.com/w1LJI5r.png&#34; alt=&#34;中文测试&#34; /&gt;
-看吧，中英文直接混排，别提多方便了。&lt;/p&gt;
-
-&lt;p&gt;　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\setCJKmainfont{&amp;lt;font name&amp;gt;} %设置默认字体
-\setCJKsansfont{&amp;lt;font name&amp;gt;} %设置中文sffamily字体
-\setCJKmonofont{&amp;lt;font name&amp;gt;} %设置中文ttfamily字体
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;也可以单独设置某字体，比如设置仿宋字体：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\setCJKfamilyfont{fangsong}{FangSong}     %使用仿宋字体，放在导言区
-\CJKfamily{fangsong} 仿宋字体测试。 %放在正文里面
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将&lt;code&gt;&amp;lt;font name&amp;gt;&lt;/code&gt;替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
-&lt;img src=&#34;https://i.imgur.com/3waQ0EU.png&#34; alt=&#34;OS X 字体册&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考&lt;a href=&#34;ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf&#34;&gt;《xeCJK宏包》&lt;/a&gt;（作者：孙文昌）。&lt;/p&gt;
-
-&lt;p&gt;　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
-&lt;img src=&#34;https://i.imgur.com/KIRqM0v.png&#34; alt=&#34;Daum Equation Editor&#34; /&gt;
-下载地址：&lt;a href=&#34;https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12&#34;&gt;Mac App Store&lt;/a&gt;。当然也可以在 Chrome 商店里面直接搜索。&lt;/p&gt;
-
-&lt;p&gt;　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)&lt;/p&gt;
-
-&lt;p&gt;　　以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;% !Mode:: &amp;quot;TeX:UTF-8&amp;quot;
-%!TEX program = xelatex
-\documentclass[12pt,a4paper]{article} 
-%常用宏包
-\usepackage{geometry}
-%\geometry{left=3cm,right=3cm,top=3cm,bottom=3.5cm} %页边距设置
-\usepackage{url}
-
-%英文字体
-\usepackage{booktabs}
-\usepackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
-\setmonofont[Scale=MatchLowercase]{Courier}
-
-%中文设置
-\usepackage[slantfont,boldfont]{xeCJK}
-\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Song}{AdobeSongStd-Light}
-\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
-\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
-\setCJKfamilyfont{Hupo}{STHupo}
-\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
-\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;%中文断行用
-\usepackage{indentfirst} %首行缩进
-
-%数学设置
-\usepackage{amssymb}
-\usepackage{amsmath}
-
-%插图
-\usepackage{graphicx}
-%\usepackage{subfig}
-
-%作图
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows}
-
-%定义关键词命令 
-\newcommand{\keywords}[1]{\textbf{Key words}: #1}
-%定义微分算符d和dbar、求导
-\newcommand{\dif}{\mathrm{d}}
-\newcommand{\dbar}{\mathrm{đ}}
-\newcommand{\der}[2]{\displaystyle\frac{\dif #1}{\dif #2}}
-\newcommand{\ket}[1]{|#1\rangle}
-\newcommand{\ketp}[1]{\ket{#1}_p}
-\newcommand{\bra}[1]{\langle #1|}
-
- %把 Reference 等换成中文
-\renewcommand{\contentsname}{目录}
-\renewcommand{\listfigurename}{插图目录}
-\renewcommand{\listtablename}{表格目录}
-\renewcommand{\refname}{参考文献} 
-\renewcommand{\abstractname}{摘要}
-\renewcommand{\indexname}{索引}
-\renewcommand{\tablename}{表}
-\renewcommand{\figurename}{图}
-\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
-\renewcommand{\keywords}[1]{\textbf{关键词}: #1}
-
-%让引用变成上标
-\makeatletter
-\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
-\makeatother
-
-\begin{document}
-\title{标题 Title}
-\author{作者 Author}
- \date{}   %去除标题的日期
- \maketitle
- 
- %摘要
-\begin{abstract}
-
-\end{abstract}
-
-%关键词
-\keywords{关键词}
-
-%论文主体
-\section{引言}
-\url{https://google.com}
-%定理
-%\theoremstyle{definition}
-\newtheorem{Theorem}{定理}
-\begin{Theorem}[最小做用量原理]
-\begin{equation}
-\delta S=\delta\int_{t_1}^{t_2}L(q,\dot{q},t)dt =0
-\end{equation}
-\end{Theorem}
-
-\begin{Theorem}[熵增原理]
-\begin{equation}
-dS&amp;gt;0
-\end{equation}
-\end{Theorem}
-
-%引理
-\newtheorem{lemma}{引理}
-\begin{lemma}[Riemann-Lebesgue 引理]\label{RL lemma}
-如果 $f(x) \in L^1([a,b])$, 则有
- \begin{equation*}
-   \lim\limits_{t \rightarrow \infty} \int_a ^b f(x) \cos{\left(tx \right)} \, \dif{x} = \lim\limits_{t \rightarrow \infty} \int_a ^b f(x)\sin{\left(tx \right)} \, \dif{x} = 0.
- \end{equation*}
-\end{lemma}
-
-%引用
-\begin{quote}\sl %斜体
-谈笑风生。
-\end{quote}
-
-\begin{figure}[htb]
-\centering
-\includegraphics{文件名.png}
-\caption{图片标题} \label{标签}
-\end{figure}
-
-%以下是参考文献
-\bibliographystyle{unsrt}
-\bibliography{文献}
-\nocite{*}
-\end{document}
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
