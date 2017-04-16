@@ -228,6 +228,10 @@ img {
     margin: 0.7em
 }
 
+.footnotes li {
+    font-size: 0.95em
+}
+
 footer {
     text-align: center;
     font-size: 0.8em;

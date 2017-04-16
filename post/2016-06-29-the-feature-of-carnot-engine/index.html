@@ -75,7 +75,7 @@
 <p>Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.</p>
 </blockquote>
 
-<p>但是最近重看 <em>Concepts in Thermal Physics</em> [1]时我对卡诺定理的<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)#Proof">证明过程</a>产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。</p>
+<p>但是最近重看 <em>Concepts in Thermal Physics</em> 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)#Proof">证明方法</a>是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。</p>
 
 <p>直到我看到课本接下来介绍了一个卡诺定理的推论，</p>
 
@@ -204,5 +204,25 @@ MathJax.Hub.Config({
 
   
 
+
+<script type="text/javascript" defer>
+function extractHostname(url) {
+    var hostname;
+    if (url.indexOf("://") > -1) {
+        hostname = url.split('/')[2];
+    }
+    else {
+        hostname = url.split('/')[0];
+    }
+    hostname = hostname.split(':')[0];
+    return hostname;
+}
+links = document.getElementsByTagName('a')
+for (var i = 0; i < links.length; i++) {
+    if (extractHostname(links[i].href) != window.location.hostname) {
+    links[i].setAttribute('target', '_blank');
+	}
+}
+</script>
   </body>
 </html>

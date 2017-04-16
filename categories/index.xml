@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Lencerf&#39;s Walk</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Mar 2017 17:00:59 -0400</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Academic</title>
+      <link>/categories/academic/</link>
+      <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
+      
+      <guid>/categories/academic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>/categories/life/</link>
+      <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
+      
+      <guid>/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technique</title>
+      <link>/categories/technique/</link>
+      <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
+      
+      <guid>/categories/technique/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

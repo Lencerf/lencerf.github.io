@@ -108,7 +108,7 @@
 &lt;string&gt;/path/to/error.log&lt;/string&gt;
 </code></pre>
 
-<p>于是当我打开再次 <code>launchd load fava.plist</code> 后，在 error.log 中看到了大量这样的输出：</p>
+<p>于是当我打开再次 <code>launchctl load fava.plist</code> 后，在 error.log 中看到了大量这样的输出：</p>
 
 <pre><code class="language-shelloutput">Traceback (most recent call last):   File &quot;/usr/local/bin/fava&quot;, line 11, in &lt;module&gt;
     sys.exit(main())
@@ -191,5 +191,25 @@ ga('send', 'pageview');
   </script>
   
 
+
+<script type="text/javascript" defer>
+function extractHostname(url) {
+    var hostname;
+    if (url.indexOf("://") > -1) {
+        hostname = url.split('/')[2];
+    }
+    else {
+        hostname = url.split('/')[0];
+    }
+    hostname = hostname.split(':')[0];
+    return hostname;
+}
+links = document.getElementsByTagName('a')
+for (var i = 0; i < links.length; i++) {
+    if (extractHostname(links[i].href) != window.location.hostname) {
+    links[i].setAttribute('target', '_blank');
+	}
+}
+</script>
   </body>
 </html>

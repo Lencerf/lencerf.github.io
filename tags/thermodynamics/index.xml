@@ -19,7 +19,7 @@
       <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
  Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
- 但是最近重看 Concepts in Thermal Physics [1]时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
+ 但是最近重看 Concepts in Thermal Physics 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
 直到我看到课本接下来介绍了一个卡诺定理的推论，
  All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.
  既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。
