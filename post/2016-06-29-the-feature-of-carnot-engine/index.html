@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
 <meta charset="UTF-8">
@@ -6,7 +7,7 @@
 <meta property="og:title" content="卡诺热机的特别之处 - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.20.1" />
+<meta name="generator" content="Hugo 0.21-DEV" />
 <title>卡诺热机的特别之处 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -22,6 +23,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script src="/js/gallery.js" defer></script>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
 
 </head>
   <body>
@@ -174,34 +181,13 @@ ga('send', 'pageview');
   })(jQuery);
   </script>
   
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({  
-  showMathMenu: false,
-  tex2jax: {
-    inlineMath: [['$','$']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  },
-  TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] },
-  messageStyle: "none",
-  "HTML-CSS": {
-    preferredFont: "TeX",
-    styles: {
-        ".MathJax_Display": {
-            margin: "0.5em 0em", 
-            "overflow-x": "auto",
-            "overflow-y": "hidden" 
-        }
-    },
-    }
-});
-</script>
-
+    <script type="text/javascript" defer>
+      renderMathInElement(document.body, {delimiters:[
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+    ]});</script>
   
 
 

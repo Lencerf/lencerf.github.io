@@ -6,10 +6,29 @@
     <description>Recent content in Posts on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Mar 2017 17:00:59 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 26 Apr 2017 15:47:39 -0400</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open a Fidelity Account as a Non-Resident Alien</title>
+      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
+      
+      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <description>Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation. A saving account may be the simplest solution to currency devaluation. However, most U.S. online banks require a client to be a U.S. person. Especially, Discover and Ally only accept U.S. citizens and permanent residents. Thus I gave up saving accounts and started searching for alternatives.</description>
+    </item>
+    
+    <item>
+      <title>Map a Double Well to a Spin System</title>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
+      
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
+Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
+    </item>
     
     <item>
       <title>LaTeX Best Practices</title>
@@ -109,7 +128,7 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
       
       <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
-首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\newline y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$\begin{equation}\label{m} m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv, \end{equation}$$ $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \newline \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，也就是最初的表达式\ref{m}了。</description>
+首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$  $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \\ \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</description>
     </item>
     
     <item>

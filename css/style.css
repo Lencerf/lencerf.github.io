@@ -157,6 +157,41 @@ h2.list-title {
     margin: 0.5em
 }
 
+.content table {
+    overflow: auto;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+.content table th {
+    font-weight: 600
+}
+
+.content table th, .content table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5
+}
+
+.content table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1
+}
+
+.content table tr:nth-child(2n) {
+    background-color: #f6f8fa
+}
+
+.content table img {
+    background-color: transparent
+}
+
+span.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
 li.post-item {
     list-style: none;
     padding: 0.1em 0em;
@@ -223,9 +258,18 @@ img {
 }
 
 .content blockquote {
+    font-style: italic;
     border-left: 5px solid #d3d6db;
-    padding: 0.3em 1em;
+    padding: 1px 1em;
     margin: 0.7em
+}
+
+.content blockquote p:first-child {
+    margin-top: 1px;
+}
+
+.content blockquote p:last-child {
+    margin-bottom: 1px;
 }
 
 .footnotes li {

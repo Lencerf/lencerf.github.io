@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</loc>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2017-04-19-map-a-double-well-to-a-spin-system/</loc>
+    <lastmod>2017-04-19T20:06:24-04:00</lastmod>
+  </url>
   
   <url>
     <loc>/post/2017-03-17-latex-best-practices/</loc>
@@ -103,7 +114,7 @@
   
   <url>
     <loc>/categories/academic/</loc>
-    <lastmod>2017-03-17T17:00:59-04:00</lastmod>
+    <lastmod>2017-04-19T20:06:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -133,13 +144,19 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2017-03-17T17:00:59-04:00</lastmod>
+    <lastmod>2017-04-19T20:06:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/homebrew/</loc>
     <lastmod>2015-10-03T22:47:28+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/invest/</loc>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,13 +174,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-03-17T17:00:59-04:00</lastmod>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/life/</loc>
-    <lastmod>2016-12-31T14:03:51-05:00</lastmod>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -199,13 +216,19 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-03-17T17:00:59-04:00</lastmod>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/python/</loc>
     <lastmod>2016-12-15T10:16:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/quantum/</loc>
+    <lastmod>2017-04-19T20:06:24-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,6 +245,12 @@
   </url>
   
   <url>
+    <loc>/tags/spin/</loc>
+    <lastmod>2017-04-19T20:06:24-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/sublime-text/</loc>
     <lastmod>2014-11-20T23:32:35+08:00</lastmod>
     <priority>0</priority>
@@ -230,6 +259,12 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2015-06-02T00:32:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tax/</loc>
+    <lastmod>2017-04-26T15:47:39-04:00</lastmod>
     <priority>0</priority>
   </url>
   
