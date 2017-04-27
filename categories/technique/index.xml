@@ -73,17 +73,6 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  设置主机名</descrip
     </item>
     
     <item>
-      <title>An example of differences between compilers</title>
-      <link>/post/2016-01-03-an-example-of-differences-between-compilers/</link>
-      <pubDate>Sun, 03 Jan 2016 23:40:04 +0800</pubDate>
-      
-      <guid>/post/2016-01-03-an-example-of-differences-between-compilers/</guid>
-      <description>For the code fragment below,
-//ch1.c #include &amp;quot;stdio.h&amp;quot; int main(int argc, char const *argv[]) { int a = 1; int c = (a=a * 2) + (a = a + 3); printf(&amp;quot;a = %d, c = %d.\n&amp;quot;, a, c); return 0; }  if gcc is used to compile it, there are no errors or warnings. Run the binary file and we will get:
- a = 5, c = 10.</description>
-    </item>
-    
-    <item>
       <title>brew with a socks5 proxy</title>
       <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
