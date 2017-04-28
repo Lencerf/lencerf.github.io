@@ -1,6 +1,19 @@
+@font-face {
+    font-family: NotoSans;
+    src: url(/css/NotoSans.ttf);
+}
+@font-face {
+    font-family: SourceCodePro;
+    src: url(/css/SourceCodePro.ttf);
+}
+@font-face {
+    font-family: MarckScript;
+    src: url(/css/MarckScript.ttf);
+}
+
 html {
     text-rendering: optimizeLegibility;
-    font-family: 'Noto Sans', 'Noto Sans CJK SC', 'PingFang SC', "Microsoft YaHei", sans-serif;
+    font-family: NotoSans, 'Noto Sans CJK SC', 'PingFang SC', "Microsoft YaHei", sans-serif;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
@@ -25,7 +38,7 @@ header.section {
 
 h1.page-title {
     font-size: 44px;
-    font-family: 'Marck Script', cursive;
+    font-family: MarckScript, cursive;
     margin: 0px;
     font-weight: 300;
 }
@@ -115,6 +128,10 @@ span#tagcomma {
 
 h2.list-title {
     margin: 15px 0px 0px 0px;
+}
+
+h2.list-title:first-child {
+    margin-top: 5px;
 }
 
 .content h3 {
@@ -210,7 +227,7 @@ ul.list {
 }
 
 code {
-    font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace; 
+    font-family: SourceCodePro, "Monaco", "Inconsolata", monospace; 
     background: #eee;
     color: #666;
     padding: 0 5px;

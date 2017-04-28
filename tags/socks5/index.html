@@ -11,14 +11,15 @@
 <title>Socks5 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Marck+Script|Noto+Sans|Source+Code+Pro|Crimson+Text" rel="stylesheet">
+
 
 
 
 
 </head>
   <body>
-          <header class="section">
+          <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
       <nav class="nav">
         <div class="nav-left">
           <h1 class="page-title">
@@ -80,23 +81,44 @@ ga('send', 'pageview');
 
 
 <script type="text/javascript" defer>
-function extractHostname(url) {
-    var hostname;
-    if (url.indexOf("://") > -1) {
-        hostname = url.split('/')[2];
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
     }
-    else {
-        hostname = url.split('/')[0];
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
     }
-    hostname = hostname.split(':')[0];
-    return hostname;
-}
-links = document.getElementsByTagName('a')
-for (var i = 0; i < links.length; i++) {
-    if (extractHostname(links[i].href) != window.location.hostname) {
-    links[i].setAttribute('target', '_blank');
-	}
-}
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+      console.log("ad");
+    
+    
+    
+    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
+    
+    console.log("body=", bodyHeight, "window=", window.innerHeight);
+    if (bodyHeight < window.innerHeight) {
+      
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+      
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
 </script> 
   </body>
 </html>
