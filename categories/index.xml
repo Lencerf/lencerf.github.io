@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Lencerf&#39;s Walk</title>
-    <link>/categories/</link>
+    <link>lencerf.github.io/categories/</link>
     <description>Recent content in Categories on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="lencerf.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Academic</title>
-      <link>/categories/academic/</link>
+      <link>lencerf.github.io/categories/academic/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>/categories/academic/</guid>
+      <guid>lencerf.github.io/categories/academic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>/categories/life/</link>
-      <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
+      <link>lencerf.github.io/categories/life/</link>
+      <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>/categories/life/</guid>
+      <guid>lencerf.github.io/categories/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Technique</title>
-      <link>/categories/technique/</link>
+      <link>lencerf.github.io/categories/technique/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>/categories/technique/</guid>
+      <guid>lencerf.github.io/categories/technique/</guid>
       <description></description>
     </item>
     

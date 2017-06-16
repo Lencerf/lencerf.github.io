@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Lencerf&#39;s Walk</title>
-    <link>/tags/linux/</link>
+    <link>lencerf.github.io/tags/linux/</link>
     <description>Recent content in Linux on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 09 Jun 2016 17:08:08 +0800</lastBuildDate>
     
-	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="lencerf.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
+      <link>lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <guid>lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
       <description>准备工作  下载 Arch Linux 镜像 新建虚拟机。因为要安装 Plasma，建议内存至少1G。  硬盘分区 启动虚拟机，开始安装，
 首先需要对硬盘分区。输入命令 cfdisk 可以打开半图形化的分区工具。首先cfdisk会让选择分区表类型，选择第二种dos。然后进入到分区界面，通过下面的菜单New可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为Bootable。
 完成后选择Write将分区方案写入硬盘生效，然后Quit。

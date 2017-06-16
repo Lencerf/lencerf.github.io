@@ -2,30 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Lencerf&#39;s Walk</title>
-    <link>/categories/life/</link>
+    <link>lencerf.github.io/categories/life/</link>
     <description>Recent content in Life on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Apr 2017 15:47:39 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jun 2017 16:02:49 -0400</lastBuildDate>
     
-	<atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="lencerf.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
+      <link>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</link>
+      <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
+      
+      <guid>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
+      <description>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&amp;rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&amp;rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 Discover 申请提额度，下单 256GB Silver。
+等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里:
+略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面了。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。#bgm38）
+设置完成后，查看系统信息：
+新老设备合照: 用了几天的，Retina 加上15吋屏确实太爽了，我终于从13吋普通屏里解放了出来；键盘手感诡异，一时适应不了，经常按错；Touch Bar 确实是鸡肋，调控音量和屏幕亮度都需要两步操作，不如实体键来得快。我现在用得最多的两个 Touch Bar 功能是：
+ 看视频的时候的进度条直接显示在 Touch Bar 上，这样全屏时就不用移动鼠标去看进度条了； 锁定屏幕的虚拟键。（虽然之前也可以通过屏幕四角来触发。）  另外，网页视频最大化、Safari 密码自动填充时会有卡顿，Sierra 果然还是打磨得不够。iStat Menus 目前也获取不到风扇和 CPU 温度的信息，只能等待适配了。
+最后，天国的 ESC 键和众多扩展接口（USB、HDMI&amp;hellip;）！</description>
+    </item>
+    
+    <item>
       <title>Open a Fidelity Account as a Non-Resident Alien</title>
-      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <link>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <guid>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
       <description>Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation. A saving account may be the simplest solution to currency devaluation. However, most U.S. online banks require a client to be a U.S. person. Especially, Discover and Ally only accept U.S. citizens and permanent residents. Thus I gave up saving accounts and started searching for alternatives.</description>
     </item>
     
     <item>
       <title>再见 2016</title>
-      <link>/post/2016-12-31-see-you-2016/</link>
+      <link>lencerf.github.io/post/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>/post/2016-12-31-see-you-2016/</guid>
+      <guid>lencerf.github.io/post/2016-12-31-see-you-2016/</guid>
       <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
 按流水账来——
 年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
@@ -34,20 +49,20 @@
 五六两月继续处理毕业事宜和出国手续。中途去重庆、成都玩了一趟，看到了可爱的大熊猫。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。
 八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的日志里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。
 到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。
-十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
 A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
-  寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
+  十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
+寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
 流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。
 这一年的主要收获大概就是：
- 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的全额 Fellowship； 申请到了人生第一张真正的信用卡 DiscoverIt，薅了一点羊毛； 学会了做土豆烧猪肉、红烧鱼等家常菜，能满足自己的味蕾了； 研究生第一学期顺利结束，英语通过考核可以申请助教了； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。</description>
+ 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的全额 Fellowship； 申请到了人生第一张真正的信用卡 Discover； 学会了做土豆烧猪肉、红烧鱼等家常菜，能满足自己的味蕾了； 研究生第一学期顺利结束，英语通过考核可以申请助教了； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。</description>
     </item>
     
     <item>
       <title>八月小结</title>
-      <link>/post/2016-08-31-the-first-august/</link>
+      <link>lencerf.github.io/post/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>/post/2016-08-31-the-first-august/</guid>
+      <guid>lencerf.github.io/post/2016-08-31-the-first-august/</guid>
       <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
 心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
 庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。
