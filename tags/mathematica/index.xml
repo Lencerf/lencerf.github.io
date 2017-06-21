@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematica on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/mathematica/</link>
+    <link>/tags/mathematica/</link>
     <description>Recent content in Mathematica on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Feb 2015 17:22:43 +0800</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。
 在 Mathematica 的 Format-&amp;gt;Option Inspector 中以fontsize搜索Global Preference，修改12为16。但是，尝试多次，重启 Mathematica 也无效。要对 Mathematica 粉转黑了！
 最后，在 StackExchange 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把1修改为1.5或其他，即把整个 notebook 的显示全局放大。</description>

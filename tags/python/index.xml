@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/python/</link>
+    <link>/tags/python/</link>
     <description>Recent content in Python on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 15 Dec 2016 10:16:18 -0500</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>launchd 和 click</title>
-      <link>lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
+      <link>/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
+      <guid>/post/2016-12-15-launchd-and-click/</guid>
       <description>起因是看了一篇介绍 Beancount 的博文后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 fava 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：
 &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  然而 launchctl load fava.plist 后在浏览器里访问 http://localhost:5000/ 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 /usr/local/bin/fava 换成 /usr/local/bin/bean-web 后访问 http://localhost:8080/，可以打开 bean-web 页面，说明问题在 fava 身上。
 但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，这个页面上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：

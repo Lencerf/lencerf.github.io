@@ -2,219 +2,219 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jun 2015 00:32:49 +0800</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Automator</title>
-      <link>lencerf.github.io/tags/automator/</link>
+      <link>/tags/automator/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/automator/</guid>
+      <guid>/tags/automator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beancount</title>
-      <link>lencerf.github.io/tags/beancount/</link>
+      <link>/tags/beancount/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>lencerf.github.io/tags/beancount/</guid>
+      <guid>/tags/beancount/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Calculus</title>
-      <link>lencerf.github.io/tags/calculus/</link>
+      <link>/tags/calculus/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/calculus/</guid>
+      <guid>/tags/calculus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Device</title>
-      <link>lencerf.github.io/tags/device/</link>
+      <link>/tags/device/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/device/</guid>
+      <guid>/tags/device/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Homebrew</title>
-      <link>lencerf.github.io/tags/homebrew/</link>
+      <link>/tags/homebrew/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/homebrew/</guid>
+      <guid>/tags/homebrew/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Invest</title>
-      <link>lencerf.github.io/tags/invest/</link>
+      <link>/tags/invest/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/invest/</guid>
+      <guid>/tags/invest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Latex</title>
-      <link>lencerf.github.io/tags/latex/</link>
+      <link>/tags/latex/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/latex/</guid>
+      <guid>/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Launchd</title>
-      <link>lencerf.github.io/tags/launchd/</link>
+      <link>/tags/launchd/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>lencerf.github.io/tags/launchd/</guid>
+      <guid>/tags/launchd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>lencerf.github.io/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mac</title>
-      <link>lencerf.github.io/tags/mac/</link>
+      <link>/tags/mac/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/mac/</guid>
+      <guid>/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematica</title>
-      <link>lencerf.github.io/tags/mathematica/</link>
+      <link>/tags/mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/mathematica/</guid>
+      <guid>/tags/mathematica/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nas</title>
-      <link>lencerf.github.io/tags/nas/</link>
+      <link>/tags/nas/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>lencerf.github.io/tags/nas/</guid>
+      <guid>/tags/nas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Os X</title>
-      <link>lencerf.github.io/tags/os-x/</link>
+      <link>/tags/os-x/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/os-x/</guid>
+      <guid>/tags/os-x/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>lencerf.github.io/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>lencerf.github.io/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantum</title>
-      <link>lencerf.github.io/tags/quantum/</link>
+      <link>/tags/quantum/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/quantum/</guid>
+      <guid>/tags/quantum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberrypi</title>
-      <link>lencerf.github.io/tags/raspberrypi/</link>
+      <link>/tags/raspberrypi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>lencerf.github.io/tags/raspberrypi/</guid>
+      <guid>/tags/raspberrypi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Socks5</title>
-      <link>lencerf.github.io/tags/socks5/</link>
+      <link>/tags/socks5/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/socks5/</guid>
+      <guid>/tags/socks5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spin</title>
-      <link>lencerf.github.io/tags/spin/</link>
+      <link>/tags/spin/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/spin/</guid>
+      <guid>/tags/spin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sublime Text</title>
-      <link>lencerf.github.io/tags/sublime-text/</link>
+      <link>/tags/sublime-text/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/sublime-text/</guid>
+      <guid>/tags/sublime-text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tax</title>
-      <link>lencerf.github.io/tags/tax/</link>
+      <link>/tags/tax/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>lencerf.github.io/tags/tax/</guid>
+      <guid>/tags/tax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Thermodynamics</title>
-      <link>lencerf.github.io/tags/thermodynamics/</link>
+      <link>/tags/thermodynamics/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/thermodynamics/</guid>
+      <guid>/tags/thermodynamics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vscode</title>
-      <link>lencerf.github.io/tags/vscode/</link>
+      <link>/tags/vscode/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>lencerf.github.io/tags/vscode/</guid>
+      <guid>/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>折腾</title>
-      <link>lencerf.github.io/tags/%E6%8A%98%E8%85%BE/</link>
+      <link>/tags/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>lencerf.github.io/tags/%E6%8A%98%E8%85%BE/</guid>
+      <guid>/tags/%E6%8A%98%E8%85%BE/</guid>
       <description></description>
     </item>
     

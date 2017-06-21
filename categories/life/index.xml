@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/categories/life/</link>
+    <link>/categories/life/</link>
     <description>Recent content in Life on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 16 Jun 2017 16:02:49 -0400</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
-      <link>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</link>
+      <link>/post/2017-06-16-macbook-pr-15-mid-2017/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
+      <guid>/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
       <description>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&amp;rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&amp;rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 Discover 申请提额度，下单 256GB Silver。
 等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里。以下图片用 iPhone 6s 在我的昏暗小房间里拍摄，就不要吐槽拍摄质量了。
 略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。#bgm38）
@@ -28,19 +28,19 @@
     
     <item>
       <title>Open a Fidelity Account as a Non-Resident Alien</title>
-      <link>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
       <description>Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation. A saving account may be the simplest solution to currency devaluation. However, most U.S. online banks require a client to be a U.S. person. Especially, Discover and Ally only accept U.S. citizens and permanent residents. Thus I gave up saving accounts and started searching for alternatives.</description>
     </item>
     
     <item>
       <title>再见 2016</title>
-      <link>lencerf.github.io/post/2016-12-31-see-you-2016/</link>
+      <link>/post/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-31-see-you-2016/</guid>
+      <guid>/post/2016-12-31-see-you-2016/</guid>
       <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
 按流水账来——
 年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
@@ -59,10 +59,10 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>八月小结</title>
-      <link>lencerf.github.io/post/2016-08-31-the-first-august/</link>
+      <link>/post/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-08-31-the-first-august/</guid>
+      <guid>/post/2016-08-31-the-first-august/</guid>
       <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
 心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
 庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。

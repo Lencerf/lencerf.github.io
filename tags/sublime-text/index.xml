@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sublime Text on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/sublime-text/</link>
+    <link>/tags/sublime-text/</link>
     <description>Recent content in Sublime Text on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 20 Nov 2014 23:32:35 +0800</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/sublime-text/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/sublime-text/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;

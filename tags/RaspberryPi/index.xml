@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raspberrypi on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/raspberrypi/</link>
+    <link>/tags/raspberrypi/</link>
     <description>Recent content in Raspberrypi on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 06 Dec 2016 21:48:10 -0500</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。
 在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。
 材料：

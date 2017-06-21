@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Academic on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/categories/academic/</link>
+    <link>/categories/academic/</link>
     <description>Recent content in Academic on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/categories/academic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/academic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Map a Double Well to a Spin System</title>
-      <link>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
       <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
 Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
     </item>
     
     <item>
       <title>LaTeX Best Practices</title>
-      <link>lencerf.github.io/post/2017-03-17-latex-best-practices/</link>
+      <link>/post/2017-03-17-latex-best-practices/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-03-17-latex-best-practices/</guid>
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
       <description>Equations and Numbering Simply speaking:
  use the environment align instead of equation and eqnarray to display equations. put align blocks inside a subequations environment if subnumbers are required. use aligned to break a single long equation with a single number into multiple lines. put \nonumber before an equation if that equation does not need to be numbered. use align* if no equations need to be numbered.  Environments align and aligned are defined in package amsmath.</description>
     </item>
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
 首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$  $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \\ \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</description>
     </item>
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
  Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
  但是最近重看 Concepts in Thermal Physics 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
@@ -60,29 +60,29 @@ Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
       <description>At the end of my earlier post on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to generate the PDF file, which is caused by the package hyperref. Certainly, removing \usepackage{hyperref} is the most simple solution to this problem. But what if we do need them two simultaneously?
 Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able.</description>
     </item>
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.</description>
     </item>
     
     <item>
       <title>A template of beamer</title>
-      <link>lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
       <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -90,10 +90,10 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
       <description>Bose 气体满足 Bose-Einstein 分布 $$ \begin{equation} \langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1} \end{equation}$$ 其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。
 二维情况下，气体的态密度为$$ \begin{equation} g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k \end{equation}$$ 非相对论情况下，粒子的能动量关系为$$ \begin{equation} E=\frac{\hbar k^2}{2m} \end{equation}$$ 所以可以将态密度改写为以能量为自变量$$ \begin{equation} g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E \end{equation}$$
 化学势 $\mu$ 与粒子数 $N$ 之间满足关系 $$ \begin{eqnarray} (2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;amp;=&amp;amp;N\newline \label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;amp;=&amp;amp;N \end{eqnarray}$$
@@ -103,10 +103,10 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 

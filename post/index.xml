@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 16 Jun 2017 16:02:49 -0400</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
-      <link>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</link>
+      <link>/post/2017-06-16-macbook-pr-15-mid-2017/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
+      <guid>/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
       <description>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&amp;rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&amp;rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 Discover 申请提额度，下单 256GB Silver。
 等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里。以下图片用 iPhone 6s 在我的昏暗小房间里拍摄，就不要吐槽拍摄质量了。
 略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。#bgm38）
@@ -28,39 +28,39 @@
     
     <item>
       <title>Open a Fidelity Account as a Non-Resident Alien</title>
-      <link>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
       <description>Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation. A saving account may be the simplest solution to currency devaluation. However, most U.S. online banks require a client to be a U.S. person. Especially, Discover and Ally only accept U.S. citizens and permanent residents. Thus I gave up saving accounts and started searching for alternatives.</description>
     </item>
     
     <item>
       <title>Map a Double Well to a Spin System</title>
-      <link>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
       <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
 Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
     </item>
     
     <item>
       <title>LaTeX Best Practices</title>
-      <link>lencerf.github.io/post/2017-03-17-latex-best-practices/</link>
+      <link>/post/2017-03-17-latex-best-practices/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-03-17-latex-best-practices/</guid>
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
       <description>Equations and Numbering Simply speaking:
  use the environment align instead of equation and eqnarray to display equations. put align blocks inside a subequations environment if subnumbers are required. use aligned to break a single long equation with a single number into multiple lines. put \nonumber before an equation if that equation does not need to be numbered. use align* if no equations need to be numbered.  Environments align and aligned are defined in package amsmath.</description>
     </item>
     
     <item>
       <title>VSCode extension for Beancount</title>
-      <link>lencerf.github.io/post/2017-03-10-vscode-beancount/</link>
+      <link>/post/2017-03-10-vscode-beancount/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>lencerf.github.io/post/2017-03-10-vscode-beancount/</guid>
+      <guid>/post/2017-03-10-vscode-beancount/</guid>
       <description>Homepage: Beancount on Marketplace
 Installation: ext install beancount
 Source Code: Lencerf/vscode-beancount
@@ -71,10 +71,10 @@ I started making this extension after I tried VSCode for one day.</description>
     
     <item>
       <title>再见 2016</title>
-      <link>lencerf.github.io/post/2016-12-31-see-you-2016/</link>
+      <link>/post/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-31-see-you-2016/</guid>
+      <guid>/post/2016-12-31-see-you-2016/</guid>
       <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
 按流水账来——
 年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
@@ -93,10 +93,10 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>launchd 和 click</title>
-      <link>lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
+      <link>/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
+      <guid>/post/2016-12-15-launchd-and-click/</guid>
       <description>起因是看了一篇介绍 Beancount 的博文后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 fava 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：
 &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  然而 launchctl load fava.plist 后在浏览器里访问 http://localhost:5000/ 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 /usr/local/bin/fava 换成 /usr/local/bin/bean-web 后访问 http://localhost:8080/，可以打开 bean-web 页面，说明问题在 fava 身上。
 但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，这个页面上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：
@@ -105,10 +105,10 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。
 在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。
 材料：
@@ -120,10 +120,10 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>八月小结</title>
-      <link>lencerf.github.io/post/2016-08-31-the-first-august/</link>
+      <link>/post/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>lencerf.github.io/post/2016-08-31-the-first-august/</guid>
+      <guid>/post/2016-08-31-the-first-august/</guid>
       <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
 心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
 庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。
@@ -138,20 +138,20 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
 首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$  $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \\ \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</description>
     </item>
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
  Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
  但是最近重看 Concepts in Thermal Physics 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
@@ -165,10 +165,10 @@ A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
+      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
       <description>准备工作  下载 Arch Linux 镜像 新建虚拟机。因为要安装 Plasma，建议内存至少1G。  硬盘分区 启动虚拟机，开始安装，
 首先需要对硬盘分区。输入命令 cfdisk 可以打开半图形化的分区工具。首先cfdisk会让选择分区表类型，选择第二种dos。然后进入到分区界面，通过下面的菜单New可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为Bootable。
 完成后选择Write将分区方案写入硬盘生效，然后Quit。
@@ -185,20 +185,20 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  设置主机名</descrip
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
       <description>At the end of my earlier post on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to generate the PDF file, which is caused by the package hyperref. Certainly, removing \usepackage{hyperref} is the most simple solution to this problem. But what if we do need them two simultaneously?
 Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able.</description>
     </item>
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>Finally, I find the right way to use homebrew.
  Let http requests of git go through a socks5 proxy
 git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
@@ -207,29 +207,29 @@ git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
 Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.</description>
     </item>
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。
 在 Mathematica 的 Format-&amp;gt;Option Inspector 中以fontsize搜索Global Preference，修改12为16。但是，尝试多次，重启 Mathematica 也无效。要对 Mathematica 粉转黑了！
 最后，在 StackExchange 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把1修改为1.5或其他，即把整个 notebook 的显示全局放大。</description>
@@ -237,10 +237,10 @@ Although I can use other applications like TextWrangle.app to convert text files
     
     <item>
       <title>A template of beamer</title>
-      <link>lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
       <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -248,10 +248,10 @@ Although I can use other applications like TextWrangle.app to convert text files
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又开始折腾了。。。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -261,10 +261,10 @@ Although I can use other applications like TextWrangle.app to convert text files
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
       <description>Bose 气体满足 Bose-Einstein 分布 $$ \begin{equation} \langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1} \end{equation}$$ 其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。
 二维情况下，气体的态密度为$$ \begin{equation} g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k \end{equation}$$ 非相对论情况下，粒子的能动量关系为$$ \begin{equation} E=\frac{\hbar k^2}{2m} \end{equation}$$ 所以可以将态密度改写为以能量为自变量$$ \begin{equation} g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E \end{equation}$$
 化学势 $\mu$ 与粒子数 $N$ 之间满足关系 $$ \begin{eqnarray} (2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;amp;=&amp;amp;N\newline \label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;amp;=&amp;amp;N \end{eqnarray}$$
@@ -274,10 +274,10 @@ Although I can use other applications like TextWrangle.app to convert text files
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
 

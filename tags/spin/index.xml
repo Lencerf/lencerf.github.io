@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spin on Lencerf&#39;s Walk</title>
-    <link>lencerf.github.io/tags/spin/</link>
+    <link>/tags/spin/</link>
     <description>Recent content in Spin on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-	<atom:link href="lencerf.github.io/tags/spin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/spin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Map a Double Well to a Spin System</title>
-      <link>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
       <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
 Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
     </item>
