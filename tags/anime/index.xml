@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anime on Lencerf&#39;s Walk</title>
+    <link>/tags/anime/</link>
+    <description>Recent content in Anime on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在平面上画一个四维的笛卡尔坐标系</title>
+      <link>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
+      <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
+      
+      <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
+      <description>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番《Dimension W》开头的某个画面：
+因为这张图太侮辱我的智商了，把X轴反向延长就成了第四次元轴W？我无法接受这么神棍的设定。这个画面使得我对本作第一印象极差，看完第一话后又没有发现任何别的吸引我的地方，于是弃番了。
+今天把线性代数作业写完以后，我又想起这件事，于是便琢磨起该怎样正确地在一张纸上画一个四维的笛卡尔坐标系。因为我从未去过四维空间，所以我的大脑是无法想象一个四维空间的，只能靠用笔计算了。方法并不难，就是在四维空间中找一个平面，然后把四个坐标轴都投影到这个平面上。
+四维空间中沿着四条坐标轴的基矢量是：$$\left\{\begin{matrix}e_x=(1,0,0,0)\\e_y=(0,1,0,0)\\e_z=(0,0,1,0)\\e_w=(0,0,0,1)\end{matrix}\right.$$  选取两个矢量$$\left\{\begin{matrix}a=(1,1,0,1)\\b=(0,1,1,2)\end{matrix}\right.$$  所在的平面作为投影平面 $m$。
+把 $a$ 和 $b$ 排成一个 $4\times 2$ 的矩阵 $A$，$$A=\left(\begin{array}{cc} 1 &amp;amp; 0 \\ 1 &amp;amp; 1 \\ 0 &amp;amp; 1 \\ 1 &amp;amp; 2 \end{array}\right)$$ 后面就是按部就班的计算了：$$(A^T A)^{-1}A=\frac{1}{3}\left(\begin{array}{cccc} 2 &amp;amp; 1 &amp;amp; -1 &amp;amp; 0 \\ -1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 \end{array}\right)$$  所以现在就知道，投影到 $m$ 上以后，$e_x$ 对应 $\frac{1}{3}(2a-b)$，以此类推。
+接着要把 $m$ 还有投影后的方向矢量在图上画出来。首先计算 $a$ 和 $b$ 的模长与夹角： $$||a|| = \sqrt{3},\ ||b||=\sqrt{6}$$ $$\cos\langle a, b\rangle = \frac{a\cdot b}{||a||||b||}=\frac{1}{\sqrt{2}}$$</description>
+    </item>
+    
+  </channel>
+</rss>

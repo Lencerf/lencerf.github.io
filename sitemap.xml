@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</loc>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2017-06-16-macbook-pr-15-mid-2017/</loc>
     <lastmod>2017-06-16T16:02:49-04:00</lastmod>
   </url>
@@ -119,6 +124,12 @@
   </url>
   
   <url>
+    <loc>/tags/anime/</loc>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/automator/</loc>
     <lastmod>2015-06-02T00:32:49+08:00</lastmod>
     <priority>0</priority>
@@ -174,13 +185,19 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-06-16T16:02:49-04:00</lastmod>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/life/</loc>
     <lastmod>2017-06-16T16:02:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linear-algebra/</loc>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -215,8 +232,14 @@
   </url>
   
   <url>
+    <loc>/categories/other/</loc>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2017-06-16T16:02:49-04:00</lastmod>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -258,7 +281,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-06-02T00:32:49+08:00</lastmod>
+    <lastmod>2017-07-14T23:06:51-04:00</lastmod>
     <priority>0</priority>
   </url>
   

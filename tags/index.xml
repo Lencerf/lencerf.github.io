@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jun 2015 00:32:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Anime</title>
+      <link>/tags/anime/</link>
+      <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
+      
+      <guid>/tags/anime/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Automator</title>
@@ -80,6 +89,15 @@
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
       <guid>/tags/launchd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>/tags/linear-algebra/</link>
+      <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
+      
+      <guid>/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
