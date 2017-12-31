@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lencerf&#39;s Walk</title>
+    <link>/</link>
+    <description>Recent content on Lencerf&#39;s Walk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Dec 2017 17:18:27 -0400</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>回顾 2017</title>
+      <link>/post/2017-12-30-2017-review/</link>
+      <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
+      
+      <guid>/post/2017-12-30-2017-review/</guid>
+      <description>今年过得相对去年比较单调，就不想写流水账了，想到什么写什么吧。
+物理学习和研究 上半年选了量子力学2和统计物理，完成了核心课程；下半年选了量子场论和冷原子引论。量子力学2大部分是学过的内容，当然更深入和系统一些。统计物理本该是对我很有用的课程，无奈任课老师实在教得太烂，没有学到新的内容，甚至也没达到系统复习一遍本科统计物理内容的效果。本以为量子场论课会对我的研究有帮助，再一次无奈，因为教量子场论的教授是做高能理论的，他的量子场论课偏重于高能，而且异常数学化，我根本无法从中看到物理图像，数学形式异常复杂，索然无味，直到最后我也没彻底弄清楚重整化、1PI 这些内容，怕是这辈子也搞不清楚了。好在这课没有考试，交了四次作业，水水过去了。冷原子引论课我也没有好好上，一来大量内容是关于实验技术的，二来不少核心的东西老师没有深入讲，就把数学过程跳过去了。总之今年算是充分体会了“上课纯属浪费时间”的道理。
+课程之外，从暑假开始尝试了好几次去读上田正仁所写的 Fundamentals and New Frontiers of Bose-Einstein Condensation，最后都因为各种原因没能坚持下去，但是每一次重新从头开始看有感觉有了新的理解。12月初开始读 Decoherence and the Quantum-To-Classical Transition，仿佛打开新世界的大门，终于第一次感觉自己在理解“为什么宏观世界没有薛定谔的猫”这个问题上有了进展，不禁感慨这才是真正的物理，同时也纠正了对一些概念的错误理解。
+自己研究也从今年年初正式开始起步。其实老师给我的是一个非常简单的双阱势模型，然而我终究还是缺乏经验，一开始迷失在数值模拟的海量数据中，完全看不到该往哪个方向努力。一直到四月初，导师突然对另一个问题感兴趣，于是搁置下双阱势问题，开始想那个问题。但是在那个问题上我更加是缺少经验和知识储备，期间五月份又回国，被很多事耽搁，最后导师把那个问题交给他新招的博后去做了。时间就到了六月初。因为我在双阱势问题上做了不少模拟计算，但并没有找到预期的现象，于是导师觉得可能这个课题可以结了，让我总结一下，并让我再试试解析。转机发生在此，我本想向做航天工程的一位同学请教频率叠加的计算方法，却突然在讨论中途开了窍，想到了一些很原始却有效的计算方法。于是势如破竹，很快就把解析结果找到了。但这之后又耽搁了，一方面我选了个凑学分的暑期课程，另一方面导师满世界参加会议去了。秋季学期开学后没多久，因为掌握了更多 Python 画图和动画的技术（主要是 matplotlib），我无意间又发现在双阱势问题里有 cat state 出现，这让我非常激动。九月十月基本都在想办法搞清楚 cat state 的来源。十一月初的时候，老师终于说这个课题可以结束了。
+除此之外，还为了做组会报告去了解了 time crystal、dynamical quantum phase transition 等课题。但说实话这两个课题让我觉得很无聊。
+回顾这一年的科研，觉得自己节奏还是太慢。首先被课程和其他事务占据了大量时间，自己也有拖延症，还有因为自己表达能力差，和导师的交流效率太低。
+生活  今年在 BGM NA 群里水得非常愉快，虽然大部分时间自己都是在潜水，但是群消息基本一些一条不落的看了，也和同校的两位群友顺利面基。 今年依然高度沉迷 Beancount，并走火入魔为之写了一个 VSCode 的插件。 《末日时在做什么？有没有空？可以来拯救吗？》与《来自风平浪静的明天》算是今年让我触动最多的两部动画。 从四月初开始入坑股市，从此沉迷刷新股价时的刺激感。然而年底算算，自己瞎折腾还是没跑赢 SPY。 下半年搬到了学校附近的公寓，可以步行去学校，感觉得到了很大的自由。然而有的时候晚上噪音很烦人。 读了刘震云先生《一句顶一万句》的前半部，觉得自己还是太贪婪。 拔了三颗智齿和一课烂牙根，植入了新假牙根，钱包爆炸。18年1月下旬应该就可以完全愈合了。 买了新的15英寸 MacBook Pro，生活幸福感大幅提升。钱包爆炸。  未来的路 2017年还有件大事自然是成功和导师摊牌，表明了自己不一定会走学术道路的想法，并且得到了导师的理解和支持。然而在那之后我却并没有横下一条心来利用这相对完好的环境去转 CS，想法持续摇摆不定，甚至在下半年一度想物理学术走到底，但同时我还是去计算机系选了研究生的算法课程并侥幸拿到了A+。不禁感叹自己还是贪婪：在觉得自己会被温水煮青蛙的时候整天想的是祈求上天给我一个转 CS 的渠道；在得到渠道后却又想着还是做科研 apply for professor 才能实现人生价值。
+大概正如我摊牌是导师和我说的一样，现在对于我来说思考三四年后甚至一生的计划还是太早了，专心科研、好好掌握技能才是第一要务。
+回想16年末的自己，似乎又感觉现在自己这个状态正式16年所渴求的。希望18年能快点确立自己的研究方向，找到自己感兴趣的课题，做出一些自己满意的成果，学到一些新的技术。</description>
+    </item>
+    
+    <item>
+      <title>在平面上画一个四维的笛卡尔坐标系</title>
+      <link>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
+      <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
+      
+      <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
+      <description>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番《Dimension W》开头的某个画面：
+因为这张图太侮辱我的智商了，把X轴反向延长就成了第四次元轴W？我无法接受这么神棍的设定。这个画面使得我对本作第一印象极差，看完第一话后又没有发现任何别的吸引我的地方，于是弃番了。
+今天把线性代数作业写完以后，我又想起这件事，于是便琢磨起该怎样正确地在一张纸上画一个四维的笛卡尔坐标系。因为我从未去过四维空间，所以我的大脑是无法想象一个四维空间的，只能靠用笔计算了。方法并不难，就是在四维空间中找一个平面，然后把四个坐标轴都投影到这个平面上。
+四维空间中沿着四条坐标轴的基矢量是：$$\left\{\begin{matrix}e_x=(1,0,0,0)\\e_y=(0,1,0,0)\\e_z=(0,0,1,0)\\e_w=(0,0,0,1)\end{matrix}\right.$$  选取两个矢量$$\left\{\begin{matrix}a=(1,1,0,1)\\b=(0,1,1,2)\end{matrix}\right.$$  所在的平面作为投影平面 $m$。
+把 $a$ 和 $b$ 排成一个 $4\times 2$ 的矩阵 $A$，$$A=\left(\begin{array}{cc} 1 &amp;amp; 0 \\ 1 &amp;amp; 1 \\ 0 &amp;amp; 1 \\ 1 &amp;amp; 2 \end{array}\right)$$ 后面就是按部就班的计算了：$$(A^T A)^{-1}A=\frac{1}{3}\left(\begin{array}{cccc} 2 &amp;amp; 1 &amp;amp; -1 &amp;amp; 0 \\ -1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 \end{array}\right)$$  所以现在就知道，投影到 $m$ 上以后，$e_x$ 对应 $\frac{1}{3}(2a-b)$，以此类推。
+接着要把 $m$ 还有投影后的方向矢量在图上画出来。首先计算 $a$ 和 $b$ 的模长与夹角： $$||a|| = \sqrt{3},\ ||b||=\sqrt{6}$$ $$\cos\langle a, b\rangle = \frac{a\cdot b}{||a||||b||}=\frac{1}{\sqrt{2}}$$</description>
+    </item>
+    
+    <item>
+      <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
+      <link>/post/2017-06-16-macbook-pr-15-mid-2017/</link>
+      <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
+      
+      <guid>/post/2017-06-16-macbook-pr-15-mid-2017/</guid>
+      <description>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&amp;rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&amp;rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 Discover 申请提额度，下单 256GB Silver。
+等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里。以下图片用 iPhone 6s 在我的昏暗小房间里拍摄，就不要吐槽拍摄质量了。
+略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。#bgm38）
+设置完成后，查看系统信息：
+新老设备合照: 用了几天的，Retina 加上15吋屏确实太爽了，我终于从13吋普通屏里解放了出来；键盘手感诡异，一时适应不了，经常按错；Touch Bar 确实是鸡肋，调控音量和屏幕亮度都需要两步操作，不如实体键来得快。我现在用得最多的两个 Touch Bar 功能是：
+ 看视频的时候的进度条直接显示在 Touch Bar 上，这样全屏时就不用移动鼠标去看进度条了； 锁定屏幕的虚拟键。（虽然之前也可以通过屏幕四角来触发。）  另外，网页视频最大化、Safari 密码自动填充时会有卡顿，Sierra 果然还是打磨得不够。iStat Menus 目前也获取不到风扇和 CPU 温度的信息，只能等待适配了。
+最后，天国的 ESC 键和众多扩展接口（USB、HDMI&amp;hellip;）！</description>
+    </item>
+    
+    <item>
+      <title>Open a Fidelity Account as a Non-Resident Alien</title>
+      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
+      
+      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <description>Disclaimer: This article and any content herein are general introduction for readers only, and shall not constitute nor be relied on as legal opinion or legal advice in any form. I assume no liability for anything herein. If you need help about tax, please talk to a tax, legal or accounting advisor immediately.
+Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation.</description>
+    </item>
+    
+    <item>
+      <title>Map a Double Well to a Spin System</title>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
+      
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
+Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
+    </item>
+    
+    <item>
+      <title>LaTeX Best Practices</title>
+      <link>/post/2017-03-17-latex-best-practices/</link>
+      <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
+      
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
+      <description>Equations and Numbering Simply speaking:
+ use the environment align instead of equation and eqnarray to display equations. put align blocks inside a subequations environment if subnumbers are required. use aligned to break a single long equation with a single number into multiple lines. put \nonumber before an equation if that equation does not need to be numbered. use align* if no equations need to be numbered.  Environments align and aligned are defined in package amsmath.</description>
+    </item>
+    
+    <item>
+      <title>VSCode extension for Beancount</title>
+      <link>/post/2017-03-10-vscode-beancount/</link>
+      <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
+      
+      <guid>/post/2017-03-10-vscode-beancount/</guid>
+      <description>Homepage: Beancount on Marketplace
+Installation: ext install beancount
+Source Code: Lencerf/vscode-beancount
+This is a simple VSCode extension for Beancount, with the following features:
+ Syntax highlight, Decimal point alignment, Current time quick insertion, Auto indent for a new posting record.  I wish to thank Chris for elaborating how to programmatically modify document contents and Martin for sharing the Beancount sytax file with me.
+I started making this extension after I tried VSCode for one day.</description>
+    </item>
+    
+    <item>
+      <title>再见 2016</title>
+      <link>/post/2016-12-31-see-you-2016/</link>
+      <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
+      
+      <guid>/post/2016-12-31-see-you-2016/</guid>
+      <description>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。
+按流水账来——
+年初刚交完所有研究生院校的申请资料，待在家坐立不安等结果。到了二月份，结果依次出来，先是收到了两个保底校的录取，后面就是几个顶尖学校的拒信，不过看到这几封拒信也很无所谓，毕竟顶尖学校哪有那么容易申请。等结果的这两个月为了转移紧张的心情，疯狂地在家写代码，心想着要是失学了就去找程序员的工作，没失学——那编程技能也是很有用的。先是看完了《Guide to Scientific Computing in C++》，然后又去回顾了遍 Cocoa 和 Objective-C。印象中除夕夜那天晚上我终于写出了一个够自己用的实用程序。
+到了三月，本来期盼的几所学校一一送来拒信。拿着 SCI 一作论文去申请，最后却败在 GPA 和英语上。现实与期望的巨大落差难以接受，一方面觉得学术前途无望，另一方面愈发沉迷于写程序，读了《Learn You a Haskell for Great Good!》 学了点函数式编程思想，每天刷刷 swift.org 看看 Swift 3.0 的消息。四月，基本尘埃落定，确认了现在这个学校的录取，然后就是准备文件手续，找室友租房，另一方面开始准备毕业论文。其他时间都窝在宿舍刷舰C的日常周常和月常。
+这四月里还尝试自己学习算法和数据结构，做 leetcode 题，举步维艰。我终于开始认识到自己只是个有点小聪明、偶尔运气比较好的普通人，被本科学校录取也是、发论文也是。
+五六两月继续处理毕业事宜和出国手续。中途去重庆、成都玩了一趟，看到了可爱的大熊猫。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。
+八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的日志里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。
+到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。
+十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
+寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
+流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。
+这一年的主要收获大概就是：
+ 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的 Fellowship； 申请到人生第一张真正的信用卡 Discover； 学会了做土豆烧猪肉、红烧鱼等家常菜，不会饿死； 研究生第一学期顺利结束，英语通过考核可以申请助教； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给他了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。
+希望2017年，静下心认真做学术研究、闲暇时学习技术，不要沉溺于对过去的缅怀和对未来的恐慌之中。</description>
+    </item>
+    
+    <item>
+      <title>launchd 和 click</title>
+      <link>/post/2016-12-15-launchd-and-click/</link>
+      <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
+      
+      <guid>/post/2016-12-15-launchd-and-click/</guid>
+      <description>起因是看了一篇介绍 Beancount 的博文后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 fava 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt; &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;lencerf.fava&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;string&amp;gt;/usr/local/bin/fava&amp;lt;/string&amp;gt; &amp;lt;string&amp;gt;/Users/Lencerf/Dropbox/Application Data/BeanCount/main.bean&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt; &amp;lt;true/&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/plist&amp;gt;  然而 launchctl load fava.plist 后在浏览器里访问 http://localhost:5000/ 却毫无反应。完全想不出问题出在哪里，本着控制变量的原则，我先尝试一下 bean-web。把 /usr/local/bin/fava 换成 /usr/local/bin/bean-web 后访问 http://localhost:8080/，可以打开 bean-web 页面，说明问题在 fava 身上。
+但是 fava.plist 加载之后 fava 运行在后台，看不到任何输出信息，如何 debug 呢？Google 之后找到了办法，这个页面上提供了几个解决办法，我采用的第二个办法，指定输出到文件，在上面的 plist 文件中加入几个键值：
+&amp;lt;key&amp;gt;StandardOutPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/logfile.log&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;StandardErrorPath&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;/path/to/error.log&amp;lt;/string&amp;gt;  于是当我打开再次 launchctl load fava.</description>
+    </item>
+    
+    <item>
+      <title>用树莓派3搭一个简易的 NAS</title>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
+      
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <description>先放结论：这个简易 NAS 真的非常简易，大概就是一个无线存储盘的效果。如果需要一个比较可靠的 NAS，多掏点银子买专业的吧。
+在升级 macOS Sierra 的当天晚上，我的 Mac 原配的 HDD 就坏了（绝对是库克干的好事），只剩下一块 120GB 的 SSD 作为唯一内置存储设备。我原本已经有一块 1TB 的移动硬盘，但是也已经塞满了。为了满足存储需要只能再去买了一块 2TB 的盘。两块盘同时插在机子上很麻烦，笔记本的可移动性大大降低了。于是我想到了用树莓派搭一个简易 NAS，把移动硬盘变成无线硬盘。
+材料：
+ 树莓派 Raspberry Pi 3 Model B 及电源线和适配器 Micro SD Card 移动硬盘 带独立供电的 USB Hub  此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。
+系统安装 首先安装官网上的指引，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。
+配置 Raspbian 把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 sudo raspy-config 可以配置，有这么几个必须进行的操作：
+ 开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。 修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。 修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见这篇文章。  修改用户 pi 的 uid 需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。</description>
+    </item>
+    
+    <item>
+      <title>八月小结</title>
+      <link>/post/2016-08-31-the-first-august/</link>
+      <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
+      
+      <guid>/post/2016-08-31-the-first-august/</guid>
+      <description>向春希菊苣学习，我也来尝试每月写一点总结吧，这样就知道自己和别人的差距怎么落下的了。
+心态 近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。
+庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的话语分量真的很重。
+虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。
+虽然前景依然堪忧，但是希望自己将来能够更开朗乐观一点。
+学习 由于心态一直在过山车，完全没什么心思学习了，而且刚来的那会每天都有很多事情要办，没什么空余时间。Orientation 第一天的 Ph.D. qualificaiton exam 在心态最爆炸的那几天、满脑子将来怎么找工作怎么转行的情况下考过去了（可见和顶级学校比起来真的是不难），因而也就不用去修那些补充课程了，直接开始上核心课，电动力学和量子力学。其实到目前为止的内容本科都学过了，所以差不多也就在复习的状态。
+另一个开学考试科目英语自然是没有通过（若是我英语好一点当初就不至于据信14连了吧），于是要去修强制的英语口语课程。虽然一开始觉得这很浪费时间，每周有四个小时的课程和一个半小时的课下一对一辅导，上了一个星期下来，感觉还是蛮值得，助教和老师都很认真地帮我在找我口语里的问题和给出建议。然而到目前为止我的口语还是很捉急。
+真正让我不爽的是助教培训课，其实我前两年是 fellowship，根本不用做助教的，也被要求去上了。这课感觉就是典型的美国课，上课的内容是讨论和做演讲，课本什么的都是回家自己看，每周要看很多，还要写笔记。感觉很费时间而且没什么收获。（我是来学习物理的不是来学习教育学的啊靠北！）
+项目 生活再怎么艰难，看番还是必须的，尤其是看番能缓解疲劳。于是在这种需求拉动下在认真地研究了海外看B站新番的方案，读了 bilidan 的源码，并尝试用我喜欢的 Swift 重写了一遍。（不是我不愿意付费看正版，但是 crunchyroll 到现在还是 flash 播放器，人家 bilibili 的 HTML5 还带弹幕的播放器不知道比你高到哪里去了！）然而就在我出国那几天，B站把X-Forwarded-For的方法封死了，一度认为自己七月份的成果全白费了。后来发现了 bilibilijj.com 这个网站，算是找到了解决方法。现在的方法是获取视频 cid，然后交给 bilibilijj.com 嗅探视频地址，解析 bilibilijj.com 网页，然后通过 Shadowsocks 把视频下载下来（防止 isp 起诉我下载版权视频），最后用 ffmpeg 连接 flv，用 mpv 观看。下面这个是把 xml 格式弹幕转换成 ass 的一个组件
+ Danmaku  主程序就不放源码了，毕竟目前 bug 不少，只能算是够用水平。等我修得差不多再放到 github 上献丑吧。写这个程序时踩了相当多 Swift 2-&amp;gt;3 的坑，感觉苹果再不把 Swift 稳定下来真的药丸啊！</description>
+    </item>
+    
+    <item>
+      <title>曲面积分复习跳坑笔记</title>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
+      <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
+      
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
+      <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
+首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$  $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \\ \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</description>
+    </item>
+    
+    <item>
+      <title>卡诺热机的特别之处</title>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
+      
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
+ Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
+ 但是最近重看 Concepts in Thermal Physics 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
+直到我看到课本接下来介绍了一个卡诺定理的推论，
+ All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.
+ 既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。
+只有卡诺热机才是可逆热机吗？“除了绝热和等温过程外，还有其它可逆过程，选一些可逆过程连接成一个可逆循环就能构成一个可逆热机！”我很快发现这个想法有问题。
+首先明确热机逆过程的概念：保持其它配置不变，将能量流动箭头反向，吸热变放热，对外做功变成外部对热机做功。现在对 1mol 导热良好的理想气体，考察这样一个过程：
+ 从初态 $(p_1,V_1)$ 等容加热到 $(p_2, V_1)$； 从 $(p_2, V_1)$ 绝热膨胀到 $(p_3, V_2)$ ； 从 $(p_3, V_2)$ 等温压缩至 $(p_1, V_1)$ 。  用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：</description>
+    </item>
+    
+    <item>
+      <title>Install Arch Linux with Plasma in Paralles Desktop</title>
+      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
+      <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
+      
+      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <description>准备工作  下载 Arch Linux 镜像 新建虚拟机。因为要安装 Plasma，建议内存至少1G。  硬盘分区 启动虚拟机，开始安装，
+首先需要对硬盘分区。输入命令 cfdisk 可以打开半图形化的分区工具。首先cfdisk会让选择分区表类型，选择第二种dos。然后进入到分区界面，通过下面的菜单New可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为Bootable。
+完成后选择Write将分区方案写入硬盘生效，然后Quit。
+格式化硬盘分区
+mkfs.ext4 /dev/sda1 mkfs.ext4 /dev/sda2  挂载分区，sda1 挂载到/mnt，sda2 挂载到到/mnt/home
+mount /dev/sda1 /mnt mkdir /mnt/home mount /dev/sda2 /mnt/home  安装 Arch Linux 配置镜像源（country=你所在的地区代码）
+curl -o /etc/pacman.d/mirrorlist &amp;quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;amp;protocol=http&amp;amp;ip_version=4&amp;quot;  打开 mirrorlist，反注释掉想要使用的镜像源
+nano /etc/pacman.d/mirrorlist  安装 Arch Linux
+pacstrap /mnt base base-devel  完成后，进入新安装的系统进行配置
+arch-chroot /mnt  首先设置 Root 密码
+passwd  设置时区，可以通过date命令测试时区是否设置正确
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  设置主机名</description>
+    </item>
+    
+    <item>
+      <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
+      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
+      
+      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <description>At the end of my earlier post on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to generate the PDF file, which is caused by the package hyperref. Certainly, removing \usepackage{hyperref} is the most simple solution to this problem. But what if we do need them two simultaneously?
+Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able.</description>
+    </item>
+    
+    <item>
+      <title>brew with a socks5 proxy</title>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
+      
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <description>Finally, I find the right way to use homebrew.
+ Let http requests of git go through a socks5 proxy
+git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
+  Too much time has been wasted because of the poor network.</description>
+    </item>
+    
+    <item>
+      <title>Make unix2doc a system service of OS X</title>
+      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
+      
+      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <description>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with CRLF line breaks while TeXShop.app uses LF as a line ending.
+Although I can use other applications like TextWrangle.app to convert text files between the two formats, I really do not want to open an extra window. So I find unix2dox, a command line tool that is developed to &amp;ldquo;convert text between DOS, UNIX, and Mac formats&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Embed figures of eps format in LaTeX papers</title>
+      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
+      
+      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <description>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.</description>
+    </item>
+    
+    <item>
+      <title>设置 Mathematica 的默认字号</title>
+      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
+      
+      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <description>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。
+在 Mathematica 的 Format-&amp;gt;Option Inspector 中以fontsize搜索Global Preference，修改12为16。但是，尝试多次，重启 Mathematica 也无效。要对 Mathematica 粉转黑了！
+最后，在 StackExchange 找到了一个曲线救国的方法：NotebookOptions-&amp;gt;Display Options-&amp;gt;Magnification，把1修改为1.5或其他，即把整个 notebook 的显示全局放大。</description>
+    </item>
+    
+    <item>
+      <title>A template of beamer</title>
+      <link>/post/2014-12-01-a-beamer-template/</link>
+      <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
+      
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
+      <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>配置 Sublime Text 的 LaTeX 写作环境</title>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
+      
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
+      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
+      
+      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <description>Bose 气体满足 Bose-Einstein 分布 $$ \begin{equation} \langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1} \end{equation}$$ 其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。
+二维情况下，气体的态密度为$$ \begin{equation} g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k \end{equation}$$ 非相对论情况下，粒子的能动量关系为$$ \begin{equation} E=\frac{\hbar k^2}{2m} \end{equation}$$ 所以可以将态密度改写为以能量为自变量$$ \begin{equation} g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E \end{equation}$$
+化学势 $\mu$ 与粒子数 $N$ 之间满足关系 $$ \begin{eqnarray} (2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;amp;=&amp;amp;N\newline \label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;amp;=&amp;amp;N \end{eqnarray}$$
+把 $\beta(E-\mu)$ 记为 $x$，式$\ref{化学势与粒子数关系}$可化为： $$ \begin{equation}\label{simplified} \frac1\beta\int_{-\mu\beta}^{\infty}{\frac{d x}{e^x-1}}=\frac{2\pi\hbar N}{(2S+1)Am} \end{equation}$$
+左侧的积分可以算出来 $$\begin{equation} \frac{1}{\beta}\int_{-\mu\beta}^{\infty}{\frac{dx}{e^x-1}}=\ln\frac{1}{(1-e^{\mu\beta})^{\frac1\beta}} \end{equation} $$</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.
+Previously I had suffered from the question that whether I should continue studying physics or switch to becoming a programmer, especially considering the fact that I was only admitted into a mediocre physics Ph.D. program. But finally I am determined to get the degree and complete my childhood dream, even if I may have to leave academia after graduation.</description>
+    </item>
+    
+    <item>
+      <title>OS X 上中文 LaTeX 环境的搭建</title>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
+
+&lt;p&gt;本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="Map a Double Well to a Spin System - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.31.1" />
+<title>Map a Double Well to a Spin System | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+
+</head>
+  <body>
+        <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/index.xml" target="_blank">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <article class="section">
+      <h1 class="title">Map a Double Well to a Spin System</h1>
+        
+        <time class="meta">April 19, 2017</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/academic" rel="category">Academic</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/spin/" rel="tag">spin</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="/tags/quantum/" rel="tag">quantum</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+          <p>Consider a very simple <a href="https://en.wikipedia.org/wiki/Double-well_potential">double well</a> model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are
+<span class="jsonly">
+                  
+        \(a_L^\dagger|0\rangle\)
+    
+</span> and <span class="jsonly">
+                  
+        \(a_R^\dagger|0\rangle\)
+    
+</span>, where <span class="jsonly">
+                  
+        \(|0\rangle\)
+    
+</span> is the vacuum state. If we have $2N$ particles, then all the Fork states are <span class="jsonly">
+     
+        $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$
+    
+</span></p>
+
+<p>Next, let us see what happens when the operator <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> hits on the ket: <span class="jsonly">
+     
+        $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&#43;1)(2N-n)}|n&#43;1, 2N-n-1\rangle.$$
+    
+</span>
+one particle is moved from the right well to the left well and the &ldquo;length&rdquo; of the state vector is also changed because of the boson enhancement.</p>
+
+<p>On the other hand, let us consider a spin-$N$ particle. It has $2N+1$ spin eigenstates: <span class="jsonly">
+     
+        $$|N,m\rangle_s,\: m=-N,\ldots,N.$$
+    
+</span></p>
+
+<p>We also have the ladder operator $S_+$ which increase the $z$ component of spin by $\hbar$: <span class="jsonly">
+     
+        $$\frac{S_&#43;}{\hbar}|N, m\rangle_s = \sqrt{(N&#43;m&#43;1)(N-m)}|N, m&#43;1\rangle_s$$
+    
+</span></p>
+
+<p>By taking the following map, <span class="jsonly">
+     
+        $$|n, 2N-n\rangle \mapsto |N,n-N\rangle_s$$
+    
+</span></p>
+
+<p>we will find that the two equations above have the same structure. Thus we know <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> is just like the ladder operator <span class="jsonly">
+                  
+        \(S_&#43;\)
+    
+</span> in the spin system. Similarly, their Hermintian conjugates, <span class="jsonly">
+                  
+        \(a_R^\dagger a_L\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_-\)
+    
+</span>, have the similar relationship.</p>
+
+<p>Now we can construct <span class="jsonly">
+                  
+        \(S_x\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y\)
+    
+</span> for the double well system. Since <span class="jsonly">
+                  
+        \(S_x = \frac{S_&#43; &#43; S_-}{2}\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y = \frac{S_&#43; - S_-}{2i}\)
+    
+</span> in the spin system, we thus have the following map
+<!--
+| Spin | Double Well |
+|:----:|-------------|
+|<span class="jsonly">
+                  
+        \(S_x\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)\)
+    
+</span>|
+|<span class="jsonly">
+                  
+        \(S_y\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)\)
+    
+</span>|
+--></p>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_x}{\hbar} \mapsto \dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_y}{\hbar} \mapsto \dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)$$
+    
+</span>
+
+<p>Finally, since
+<span class="jsonly">
+     
+        $$S_z|N, n-N\rangle_s = (n-N)|N,n-N\rangle_s = \frac{n-(2N-n)}{2}|N, n-N\rangle_s,$$
+    
+</span> we can map <span class="jsonly">
+                  
+        \(S_z\)
+    
+</span> to <span class="jsonly">
+                  
+        \(\frac{1}{2}(n_L-n_R)=\frac{1}{2}(a_L^\dagger a_L - a_R^\dagger a_R)\)
+    
+</span>. Those conclusions still hold if <span class="jsonly">
+                  
+        \(N\)
+    
+</span> is an integer or a half-integer.</p>
+
+<p>After established this map, we can consider the <a href="https://en.wikipedia.org/wiki/Bose–Hubbard_model">Bose–Hubbard model</a>. Assuming there are no interactions between the particles and this double well is perfectly symmetric, the Hamiltonian is then
+<span class="jsonly">
+     
+        $$H=-J(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+Now we see this is equivalent to putting a spin-$N$ particle in a magnetic field <span class="jsonly">
+                  
+        \(\mathbf B = \frac{4Jm}{g\hbar q}\mathbf e_x\)
+    
+</span>.</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 
+            
+                2014-2017 Lencerf
+    | Powered by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60772880-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+    <script type="text/javascript" defer>
+      renderMathInElement(document.body, {delimiters:[
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false}
+    ]});</script>
+  
+
+
+<script type="text/javascript" defer>
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
+    }
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
+    if (bodyHeight < window.innerHeight) {
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
+</script>
+    
+  </body>
+</html>
