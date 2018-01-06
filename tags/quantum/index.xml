@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-	<atom:link href="/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,159 @@
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
       <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
-      <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
-Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
+      <description>
+      
+      <![CDATA[<p>Consider a very simple <a href="https://en.wikipedia.org/wiki/Double-well_potential">double well</a> model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are
+<span class="jsonly">
+                  
+        \(a_L^\dagger|0\rangle\)
+    
+</span> and <span class="jsonly">
+                  
+        \(a_R^\dagger|0\rangle\)
+    
+</span>, where <span class="jsonly">
+                  
+        \(|0\rangle\)
+    
+</span> is the vacuum state. If we have $2N$ particles, then all the Fork states are <span class="jsonly">
+     
+        $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$
+    
+</span></p>
+
+<p>Next, let us see what happens when the operator <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> hits on the ket: <span class="jsonly">
+     
+        $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&#43;1)(2N-n)}|n&#43;1, 2N-n-1\rangle.$$
+    
+</span>
+one particle is moved from the right well to the left well and the &ldquo;length&rdquo; of the state vector is also changed because of the boson enhancement.</p>
+
+<p>On the other hand, let us consider a spin-$N$ particle. It has $2N+1$ spin eigenstates: <span class="jsonly">
+     
+        $$|N,m\rangle_s,\: m=-N,\ldots,N.$$
+    
+</span></p>
+
+<p>We also have the ladder operator $S_+$ which increase the $z$ component of spin by $\hbar$: <span class="jsonly">
+     
+        $$\frac{S_&#43;}{\hbar}|N, m\rangle_s = \sqrt{(N&#43;m&#43;1)(N-m)}|N, m&#43;1\rangle_s$$
+    
+</span></p>
+
+<p>By taking the following map, <span class="jsonly">
+     
+        $$|n, 2N-n\rangle \mapsto |N,n-N\rangle_s$$
+    
+</span></p>
+
+<p>we will find that the two equations above have the same structure. Thus we know <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> is just like the ladder operator <span class="jsonly">
+                  
+        \(S_&#43;\)
+    
+</span> in the spin system. Similarly, their Hermintian conjugates, <span class="jsonly">
+                  
+        \(a_R^\dagger a_L\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_-\)
+    
+</span>, have the similar relationship.</p>
+
+<p>Now we can construct <span class="jsonly">
+                  
+        \(S_x\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y\)
+    
+</span> for the double well system. Since <span class="jsonly">
+                  
+        \(S_x = \frac{S_&#43; &#43; S_-}{2}\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y = \frac{S_&#43; - S_-}{2i}\)
+    
+</span> in the spin system, we thus have the following map
+<!--
+| Spin | Double Well |
+|:----:|-------------|
+|<span class="jsonly">
+                  
+        \(S_x\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)\)
+    
+</span>|
+|<span class="jsonly">
+                  
+        \(S_y\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)\)
+    
+</span>|
+--></p>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_x}{\hbar} \mapsto \dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_y}{\hbar} \mapsto \dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)$$
+    
+</span>
+
+<p>Finally, since
+<span class="jsonly">
+     
+        $$S_z|N, n-N\rangle_s = (n-N)|N,n-N\rangle_s = \frac{n-(2N-n)}{2}|N, n-N\rangle_s,$$
+    
+</span> we can map <span class="jsonly">
+                  
+        \(S_z\)
+    
+</span> to <span class="jsonly">
+                  
+        \(\frac{1}{2}(n_L-n_R)=\frac{1}{2}(a_L^\dagger a_L - a_R^\dagger a_R)\)
+    
+</span>. Those conclusions still hold if <span class="jsonly">
+                  
+        \(N\)
+    
+</span> is an integer or a half-integer.</p>
+
+<p>After established this map, we can consider the <a href="https://en.wikipedia.org/wiki/Bose–Hubbard_model">Bose–Hubbard model</a>. Assuming there are no interactions between the particles and this double well is perfectly symmetric, the Hamiltonian is then
+<span class="jsonly">
+     
+        $$H=-J(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+Now we see this is equivalent to putting a spin-$N$ particle in a magnetic field <span class="jsonly">
+                  
+        \(\mathbf B = \frac{4Jm}{g\hbar q}\mathbf e_x\)
+    
+</span>.</p>
+]]>
+      
+      </description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Sat, 03 Oct 2015 22:47:28 +0800</lastBuildDate>
     
-	<atom:link href="/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,10 +17,23 @@
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
-      <description>Finally, I find the right way to use homebrew.
- Let http requests of git go through a socks5 proxy
-git config --global http.proxy &#39;socks5://127.0.0.1:1081&#39;  Since homebrew doanloads files using curl, set a socks proxy for curl: just add proxy=socks5://127.0.0.1:1081 to ~/.curlrc.
-  Too much time has been wasted because of the poor network.</description>
+      <description>
+      
+      <![CDATA[<p>Finally, I find the right way to use homebrew.</p>
+
+<ol>
+<li><p>Let http requests of git go through a socks5 proxy</p>
+
+<pre><code class="language-shell">git config --global http.proxy 'socks5://127.0.0.1:1081'
+</code></pre></li>
+
+<li><p>Since homebrew doanloads files using curl, set a socks proxy for curl: just add <code>proxy=socks5://127.0.0.1:1081</code> to <code>~/.curlrc</code>.</p></li>
+</ol>
+
+<p>Too much time has been wasted because of the poor network.</p>
+]]>
+      
+      </description>
     </item>
     
   </channel>

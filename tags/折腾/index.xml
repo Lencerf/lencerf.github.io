@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Thu, 20 Nov 2014 23:32:35 +0800</lastBuildDate>
     
-	<atom:link href="/tags/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,11 +17,47 @@
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
       <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;又开始折腾了。。。&lt;/p&gt;
-&lt;/blockquote&gt;
+      <description>
+      
+      <![CDATA[<blockquote>
+<p>又开始折腾了。。。</p>
+</blockquote>
 
-&lt;p&gt;&lt;/p&gt;</description>
+<p></p>
+
+<h2 id="安装-latextools">安装 LaTeXTools</h2>
+
+<ol>
+<li>View -&gt; Show Console，打开终端界面，将 Package Control <a href="https://sublime.wbond.net/installation">官网</a>给出的代码复制粘贴进终端，回车完成 Package Control 的安装。</li>
+<li><code>Command-Shift-P</code>调出命令窗口，输入<code>Install</code>，等待一会，之后输入<code>LaTeXTools</code>，回车完成安装，时常取决于网络。</li>
+<li>安装 <a href="http://skim-app.sourceforge.net/">Skim</a>，用于预览编译好的PDF文件。</li>
+</ol>
+
+<h2 id="初始设置">初始设置</h2>
+
+<h3 id="latextools">LaTeXTools</h3>
+
+<ol>
+<li>初始化：按下<code>Command-Shift-P</code>，输入&rdquo;latextools&rdquo;，选择&rdquo;LaTeXTools:Reconfigure&hellip;&ldquo;，回车。
+<img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg" alt="LaTeXTools 的初始化" /></li>
+<li>设置编译时输出详细日志：前往<code>~/Library/Application Support/Sublime Text 3/Packages/User/</code>，打开<code>LaTeXTools.sublime-settings</code>，将<code>&quot;display_log&quot; : false,</code>改为<code>&quot;display_log&quot; : true,</code>。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？</li>
+
+<li><p>设置默认使用 XeLaTeX 编译文件：虽然可以去修改<code>LaTeXTools.sublime-settings</code>,不过最简单安全的方法还是在自己的 TeX 源文件开头加上<code>%!TEX program = xelatex</code>，修改一下自己的模板就一劳永逸了，难道每次都从输入<code>\begin{document}</code>开始？</p>
+
+<h3 id="skim">Skim</h3>
+
+<p>在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
+<img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg" alt="Skim 设置" /></p></li>
+</ol>
+
+<h2 id="skim-与-sublime-text-之间的跳转按键">Skim 与 Sublime Text 之间的跳转按键</h2>
+
+<ul>
+<li>Skim：<code>Command-Shift-单击</code></li>
+<li>Sublime Text：<code>Command-L</code>,松开<code>Command</code>，迅速按下<code>J</code></li>
+</ul>]]>
+      
+      </description>
     </item>
     
   </channel>

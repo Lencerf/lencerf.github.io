@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
     
-	<atom:link href="/categories/other/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/other/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,12 +17,70 @@
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
       <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
-      <description>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番《Dimension W》开头的某个画面：
-因为这张图太侮辱我的智商了，把X轴反向延长就成了第四次元轴W？我无法接受这么神棍的设定。这个画面使得我对本作第一印象极差，看完第一话后又没有发现任何别的吸引我的地方，于是弃番了。
-今天把线性代数作业写完以后，我又想起这件事，于是便琢磨起该怎样正确地在一张纸上画一个四维的笛卡尔坐标系。因为我从未去过四维空间，所以我的大脑是无法想象一个四维空间的，只能靠用笔计算了。方法并不难，就是在四维空间中找一个平面，然后把四个坐标轴都投影到这个平面上。
-四维空间中沿着四条坐标轴的基矢量是：$$\left\{\begin{matrix}e_x=(1,0,0,0)\\e_y=(0,1,0,0)\\e_z=(0,0,1,0)\\e_w=(0,0,0,1)\end{matrix}\right.$$  选取两个矢量$$\left\{\begin{matrix}a=(1,1,0,1)\\b=(0,1,1,2)\end{matrix}\right.$$  所在的平面作为投影平面 $m$。
-把 $a$ 和 $b$ 排成一个 $4\times 2$ 的矩阵 $A$，$$A=\left(\begin{array}{cc} 1 &amp;amp; 0 \\ 1 &amp;amp; 1 \\ 0 &amp;amp; 1 \\ 1 &amp;amp; 2 \end{array}\right)$$ 后面就是按部就班的计算了：$$(A^T A)^{-1}A=\frac{1}{3}\left(\begin{array}{cccc} 2 &amp;amp; 1 &amp;amp; -1 &amp;amp; 0 \\ -1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 \end{array}\right)$$  所以现在就知道，投影到 $m$ 上以后，$e_x$ 对应 $\frac{1}{3}(2a-b)$，以此类推。
-接着要把 $m$ 还有投影后的方向矢量在图上画出来。首先计算 $a$ 和 $b$ 的模长与夹角： $$||a|| = \sqrt{3},\ ||b||=\sqrt{6}$$ $$\cos\langle a, b\rangle = \frac{a\cdot b}{||a||||b||}=\frac{1}{\sqrt{2}}$$</description>
+      <description>
+      
+      <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
+
+<p><img src="http://imgur.com/it4hpvJ.png" alt="截自第1话1分36秒处" /></p>
+
+<p>因为这张图太侮辱我的智商了，把X轴反向延长就成了第四次元轴W？我无法接受这么神棍的设定。这个画面使得我对本作第一印象极差，看完第一话后又没有发现任何别的吸引我的地方，于是弃番了。</p>
+
+<p>今天把线性代数作业写完以后，我又想起这件事，于是便琢磨起该怎样正确地在一张纸上画一个四维的笛卡尔坐标系。因为我从未去过四维空间，所以我的大脑是无法想象一个四维空间的，只能靠用笔计算了。方法并不难，就是在四维空间中找一个平面，然后把四个坐标轴都投影到这个平面上。</p>
+
+<p>四维空间中沿着四条坐标轴的基矢量是：<span class="jsonly">
+     
+        $$\left\{\begin{matrix}e_x=(1,0,0,0)\\e_y=(0,1,0,0)\\e_z=(0,0,1,0)\\e_w=(0,0,0,1)\end{matrix}\right.$$
+    
+</span>
+选取两个矢量<span class="jsonly">
+     
+        $$\left\{\begin{matrix}a=(1,1,0,1)\\b=(0,1,1,2)\end{matrix}\right.$$
+    
+</span>
+所在的平面作为投影平面 $m$。</p>
+
+<p>把 $a$ 和 $b$ 排成一个 $4\times 2$ 的矩阵 $A$，<span class="jsonly">
+     
+        $$A=\left(\begin{array}{cc} 1 &amp; 0 \\ 1 &amp; 1 \\ 0 &amp; 1 \\ 1 &amp; 2 \end{array}\right)$$
+    
+</span>后面就是按部就班的计算了：<span class="jsonly">
+     
+        $$(A^T A)^{-1}A=\frac{1}{3}\left(\begin{array}{cccc} 2 &amp; 1 &amp; -1 &amp; 0 \\ -1 &amp; 0 &amp; 1 &amp; 1 \end{array}\right)$$
+    
+</span>
+所以现在就知道，投影到 $m$ 上以后，$e_x$ 对应 $\frac{1}{3}(2a-b)$，以此类推。</p>
+
+<p>接着要把 $m$ 还有投影后的方向矢量在图上画出来。首先计算 $a$ 和 $b$ 的模长与夹角：
+$$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
+<span class="jsonly">
+     
+        $$\cos\langle a, b\rangle = \frac{a\cdot b}{||a||||b||}=\frac{1}{\sqrt{2}}$$
+    
+</span></p>
+
+<p>那么我们就可以在平面 $m$ 上建立一个新坐标系，并且把 $a$，$b$ 分别取为 $a=(\sqrt{3},0)$, $b=(\sqrt{3},\sqrt{3})$. 然后
+<span class="jsonly">
+     
+        $$\left(\begin{array}{cc} \sqrt{3} &amp; \sqrt{3} \\ 0 &amp; \sqrt{3} \end{array}\right)(A^T A)^{-1}A=\frac{1}{\sqrt{3}}\left(\begin{array}{cccc} 1 &amp; 1 &amp; 0 &amp; 1 \\ -1 &amp; 0 &amp; 1 &amp; 1 \end{array}\right)$$
+    
+</span>
+所以在新坐标系上，$e_x$ 的投影就是 $\frac{1}{\sqrt{3}}(1,-1)$，以此类推。</p>
+
+<p>最后画出来就是：
+<img src="/img/wxyz.svg" alt="投影到一个平面上的四维笛卡尔坐标系" /></p>
+
+<p>当然，到此为止我都只考虑了纯粹的数学投影，没有考虑人体视觉。比如，通常我们在纸上画一个<a href="https://zh.wikipedia.org/zh-cn/笛卡儿坐标系#/media/File:Cartesian_coordinates_3D.svg">三维坐标系时</a>，一般都会把某两个坐标系画成互相垂直，第三条坐标系夹在之间。然而用上面的方法可以证明，是不可能找到这样一个投影平面的。但这并不影响我们觉得画出来的坐标系很有立体感。</p>
+
+<p>所以说，你们动画制作者还要学习一个，探索 W 维度，那也要按照数学和物理的基本法啊，对不对？要按照线性代数的基本原则去作画，去生成&hellip;当然人体的视觉原理也是很重要的。<a href="http://bgm.tv/character/47">阿虚</a>有句名言，叫</p>
+
+<blockquote>
+<p><a href="https://www.zhihu.com/question/27549696">フィクションにリアリティを求める奴のほうがどうかしていると思うが。</a></p>
+</blockquote>
+
+<p>识得唔识得啊？</p>
+]]>
+      
+      </description>
     </item>
     
   </channel>

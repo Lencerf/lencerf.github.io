@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,11 @@
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
       <guid>/tags/anime/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -26,7 +30,11 @@
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/tags/automator/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -35,7 +43,11 @@
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/tags/beancount/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -44,7 +56,11 @@
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>/tags/calculus/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -53,7 +69,11 @@
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
       <guid>/tags/device/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -62,7 +82,11 @@
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/tags/homebrew/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -71,7 +95,11 @@
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
       <guid>/tags/invest/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -80,7 +108,11 @@
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
       <guid>/tags/latex/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -89,7 +121,11 @@
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
       <guid>/tags/launchd/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -98,7 +134,11 @@
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
       <guid>/tags/linear-algebra/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -107,7 +147,11 @@
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
       <guid>/tags/linux/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -116,7 +160,11 @@
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
       <guid>/tags/mac/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -125,7 +173,11 @@
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
       <guid>/tags/mathematica/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -134,7 +186,11 @@
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
       <guid>/tags/nas/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -143,7 +199,11 @@
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
       <guid>/tags/os-x/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -152,7 +212,11 @@
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
       <guid>/tags/python/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -161,7 +225,11 @@
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
       <guid>/tags/quantum/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -170,7 +238,11 @@
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
       <guid>/tags/raspberrypi/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -179,7 +251,11 @@
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
       <guid>/tags/socks5/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -188,7 +264,11 @@
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
       <guid>/tags/spin/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -197,7 +277,11 @@
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
       <guid>/tags/sublime-text/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -206,7 +290,11 @@
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
       <guid>/tags/tax/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -215,7 +303,11 @@
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
       <guid>/tags/thermodynamics/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -224,7 +316,11 @@
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
       <guid>/tags/vscode/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
     <item>
@@ -233,7 +329,11 @@
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
       <guid>/tags/%E6%8A%98%E8%85%BE/</guid>
-      <description></description>
+      <description>
+      
+      <![CDATA[]]>
+      
+      </description>
     </item>
     
   </channel>

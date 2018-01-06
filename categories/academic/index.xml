@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-	<atom:link href="/categories/academic/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/academic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,159 @@
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
       <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
-      <description>Consider a very simple double well model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are \(a_L^\dagger|0\rangle\)  and \(a_R^\dagger|0\rangle\) , where \(|0\rangle\)  is the vacuum state. If we have $2N$ particles, then all the Fork states are $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$ 
-Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the ket: $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&amp;#43;1)(2N-n)}|n&amp;#43;1, 2N-n-1\rangle.</description>
+      <description>
+      
+      <![CDATA[<p>Consider a very simple <a href="https://en.wikipedia.org/wiki/Double-well_potential">double well</a> model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are
+<span class="jsonly">
+                  
+        \(a_L^\dagger|0\rangle\)
+    
+</span> and <span class="jsonly">
+                  
+        \(a_R^\dagger|0\rangle\)
+    
+</span>, where <span class="jsonly">
+                  
+        \(|0\rangle\)
+    
+</span> is the vacuum state. If we have $2N$ particles, then all the Fork states are <span class="jsonly">
+     
+        $$|n, 2N-n\rangle = \frac{{a_L^\dagger}^n {a_R^\dagger}^{2N-n}}{\sqrt{n!(2N-n)!}}|0\rangle,\: n=0,1,\ldots,2N.$$
+    
+</span></p>
+
+<p>Next, let us see what happens when the operator <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> hits on the ket: <span class="jsonly">
+     
+        $$a_L^\dagger a_R |n, 2N-n\rangle = \sqrt{(n&#43;1)(2N-n)}|n&#43;1, 2N-n-1\rangle.$$
+    
+</span>
+one particle is moved from the right well to the left well and the &ldquo;length&rdquo; of the state vector is also changed because of the boson enhancement.</p>
+
+<p>On the other hand, let us consider a spin-$N$ particle. It has $2N+1$ spin eigenstates: <span class="jsonly">
+     
+        $$|N,m\rangle_s,\: m=-N,\ldots,N.$$
+    
+</span></p>
+
+<p>We also have the ladder operator $S_+$ which increase the $z$ component of spin by $\hbar$: <span class="jsonly">
+     
+        $$\frac{S_&#43;}{\hbar}|N, m\rangle_s = \sqrt{(N&#43;m&#43;1)(N-m)}|N, m&#43;1\rangle_s$$
+    
+</span></p>
+
+<p>By taking the following map, <span class="jsonly">
+     
+        $$|n, 2N-n\rangle \mapsto |N,n-N\rangle_s$$
+    
+</span></p>
+
+<p>we will find that the two equations above have the same structure. Thus we know <span class="jsonly">
+                  
+        \(a_L^\dagger a_R\)
+    
+</span> is just like the ladder operator <span class="jsonly">
+                  
+        \(S_&#43;\)
+    
+</span> in the spin system. Similarly, their Hermintian conjugates, <span class="jsonly">
+                  
+        \(a_R^\dagger a_L\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_-\)
+    
+</span>, have the similar relationship.</p>
+
+<p>Now we can construct <span class="jsonly">
+                  
+        \(S_x\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y\)
+    
+</span> for the double well system. Since <span class="jsonly">
+                  
+        \(S_x = \frac{S_&#43; &#43; S_-}{2}\)
+    
+</span> and <span class="jsonly">
+                  
+        \(S_y = \frac{S_&#43; - S_-}{2i}\)
+    
+</span> in the spin system, we thus have the following map
+<!--
+| Spin | Double Well |
+|:----:|-------------|
+|<span class="jsonly">
+                  
+        \(S_x\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)\)
+    
+</span>|
+|<span class="jsonly">
+                  
+        \(S_y\)
+    
+</span>|<span class="jsonly">
+                  
+        \(\dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)\)
+    
+</span>|
+--></p>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_x}{\hbar} \mapsto \dfrac{1}{2}(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+
+<span class="jsonly">
+     
+        $$\dfrac{S_y}{\hbar} \mapsto \dfrac{1}{2i}(a_L^\dagger a_R - a_R^\dagger a_L)$$
+    
+</span>
+
+<p>Finally, since
+<span class="jsonly">
+     
+        $$S_z|N, n-N\rangle_s = (n-N)|N,n-N\rangle_s = \frac{n-(2N-n)}{2}|N, n-N\rangle_s,$$
+    
+</span> we can map <span class="jsonly">
+                  
+        \(S_z\)
+    
+</span> to <span class="jsonly">
+                  
+        \(\frac{1}{2}(n_L-n_R)=\frac{1}{2}(a_L^\dagger a_L - a_R^\dagger a_R)\)
+    
+</span>. Those conclusions still hold if <span class="jsonly">
+                  
+        \(N\)
+    
+</span> is an integer or a half-integer.</p>
+
+<p>After established this map, we can consider the <a href="https://en.wikipedia.org/wiki/Bose–Hubbard_model">Bose–Hubbard model</a>. Assuming there are no interactions between the particles and this double well is perfectly symmetric, the Hamiltonian is then
+<span class="jsonly">
+     
+        $$H=-J(a_L^\dagger a_R &#43; a_R^\dagger a_L)$$
+    
+</span>
+Now we see this is equivalent to putting a spin-$N$ particle in a magnetic field <span class="jsonly">
+                  
+        \(\mathbf B = \frac{4Jm}{g\hbar q}\mathbf e_x\)
+    
+</span>.</p>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -27,8 +178,123 @@ Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
       <guid>/post/2017-03-17-latex-best-practices/</guid>
-      <description>Equations and Numbering Simply speaking:
- use the environment align instead of equation and eqnarray to display equations. put align blocks inside a subequations environment if subnumbers are required. use aligned to break a single long equation with a single number into multiple lines. put \nonumber before an equation if that equation does not need to be numbered. use align* if no equations need to be numbered.  Environments align and aligned are defined in package amsmath.</description>
+      <description>
+      
+      <![CDATA[
+
+<h2 id="equations-and-numbering">Equations and Numbering</h2>
+
+<p>Simply speaking:</p>
+
+<ul>
+<li>use the environment <code>align</code> instead of <code>equation</code> and <code>eqnarray</code> to display equations.</li>
+<li>put <code>align</code> blocks inside a <code>subequations</code> environment if subnumbers are required.</li>
+<li>use <code>aligned</code> to break a single long equation with a single number into multiple lines.</li>
+<li>put <code>\nonumber</code> before an equation if that equation does not need to be numbered. use <code>align*</code>
+if no equations need to be numbered.</li>
+</ul>
+
+<p>Environments <code>align</code> and <code>aligned</code> are defined in package <a href="https://www.ctan.org/pkg/amsmath?lang=en">amsmath</a>.</p>
+
+<p>Examples:</p>
+
+<ol>
+<li><p>A single equation</p>
+
+<pre><code class="language-tex">\begin{align}
+\label{eq:massEnergyRelation}
+E=mc^2
+\end{align}
+</code></pre></li>
+
+<li><p>multiple equations</p>
+
+<pre><code class="language-tex">\begin{align}
+E=&amp;\hbar\Omega\\
+\vec p =&amp; \hbar\vec k
+\end{align}
+</code></pre></li>
+
+<li><p>multiple equations with subnumbers</p>
+
+<pre><code class="language-tex">\begin{subequations}
+\begin{align}
+\nonumber\dod{p_j}{t}&amp;=-\dpd{\mathcal H}{q_j}\\
+\dod{q_j}{t}&amp;=+\dpd{\mathcal H}{p_j}
+\end{align}
+\end{subequations}
+</code></pre></li>
+
+<li><p>A long equation broken into two lines</p>
+
+<pre><code class="language-tex">\begin{align}
+\begin{aligned}
+M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
+  &amp;\sum_l e^{i (N/2-l)\theta}\ket{l}\bar{l}
+\end{aligned}
+\end{align}
+</code></pre></li>
+</ol>
+
+<h2 id="derivatives">Derivatives</h2>
+
+<p>Use packages <a href="https://www.ctan.org/pkg/physics?lang=en">physics</a> and <a href="https://www.ctan.org/pkg/esdiff">esdiff</a>.</p>
+
+<pre><code class="language-tex">% those commands are from package physics
+\dd x % differential
+\dd[n] x % higher order differential
+\dv{f}{x} % derivative df/dx
+\dv[n]{f}{x} % higher order derivative
+\pdv{f}{x} % partial derivative
+\pdv[n]{f}{x} % higher order partial derivative
+\pdf{f}{x}{y} % mixed partial  derivative
+% the command below is from package esdiff
+\diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
+</code></pre>
+
+<h2 id="figures">Figures</h2>
+
+<ol>
+<li><p>Insert a single figure</p>
+
+<pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
+\caption{$U/t=0.1$}
+\label{fig:y=x+0.1}
+\end{figure}
+</code></pre></li>
+
+<li><p>Insert multiple figures with subcaptions respectively</p>
+
+<pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
+\usepackage{subcaption} % should be put in the preamble
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
+    \caption{Analytical Results}
+    \label{fig:analyticalResults}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
+    \caption{Image From Experiments}
+    \label{fig:experimentalFigure}
+\end{subfigure}
+\caption{Analytical and experimental results.}
+\label{fig:analyticalAndExperimental}
+\end{figure}
+</code></pre>
+
+<p>File names of images should be written as <code>{filename}.eps</code> in case there are some special characaters, like <code>.</code>, in the <code>filename</code> part.</p></li>
+</ol>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -37,8 +303,55 @@ Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
-      <description>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。
-首先从普通二重积分出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然， $$m=\iint_S\rho(x,y)dxdy,$$ $S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换， $$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$ 以 $u, v$ 为被积分参数，$m$ 的表达式为 $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$  $|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为 $$J(u,v)=\begin{vmatrix} \partial_ux &amp;amp; \partial_vx \\ \partial_uy &amp;amp; \partial_vy \end{vmatrix},$$ 主要在于如何比较直观地理解雅可比行列式。看了知乎上这个回答后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</description>
+      <description>
+      
+      <![CDATA[<p>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。</p>
+
+<p>首先从普通<strong>二重积分</strong>出发。设想物理场景：求一块面密度为 $\rho(x,y)$ 的不均匀板的质量 $m$。显然，
+$$m=\iint_S\rho(x,y)dxdy,$$
+$S$ 代表板面。当然板不一定是矩形，所以这个积分不一定好算。假设存在变换，
+$$\begin{cases} x = x(u,v)\\ y = y(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+以 $u, v$ 为被积分参数，$m$ 的表达式为
+<span class="jsonly">
+     
+        $$m=\int_a^bdu\int_c^d\rho(x(u,v),y(u,v))|J(u,v)|dv,$$
+    
+</span>
+$|J(u,v)|$ 是雅可比行列式的绝对值，而雅可比行列式的定义为
+$$J(u,v)=\begin{vmatrix} \partial_ux &amp; \partial_vx \\ \partial_uy &amp; \partial_vy \end{vmatrix},$$
+主要在于如何比较直观地理解雅可比行列式。看了知乎上<a href="http://zhihu.com/question/29964930/answer/51632832">这个回答</a>后受到启发，现在的理解如下：在 $u, v$ 空间中，当 $u$ 从 $u_0$ 变化到 $u_0+du$ 时，$x, y$ 空间（下称“实空间”）中对应的点扫过一段弧长，这段弧长可以用向量 $d\vec{u}=(\frac{\partial x}{\partial u}du, \frac{\partial y}{\partial u}du)$ 来替代；同理 $v$ 从 $v_0$ 变化到 $v_0+dv$ 时对应实空间中的向量 $d\vec{v}=(\frac{\partial x}{\partial v}dv, \frac{\partial y}{\partial v}dv)$。因此 $u, v$ 空间中一个 $dudv$ 的面元对应了实空间中以 $d\vec{u}, d\vec{v}$ 这两个向量为邻边的平行四边形区域。当 $(u, v)$ 遍历其定义域时，这些小平行四边形能够覆盖 $x, y$ 的定义域。每个小平行四边形的面积是 $|d\vec{u}\times d\vec{v}|$，也就是 $|J|$，所以 $m$ 可以表达为：$$m \approx \sum\rho(x(u,v), y(u,v))|J|,$$ 求和变积分，就可以得到上面$m$的表达式了。</p>
+
+<p>比普通二重积分复杂一点的是<strong>第一型曲面积分</strong>。简单地说，普通二重积分中的板是一块平板，所以我们可以直接在平板上建立平面直角坐标系；第一型曲线积分中的板是一块曲面板，我们只能在外部建立空间直角坐标系然后用方程去描述曲面的形状。具体的表达式是：
+$$m=\iint_S\rho(x,y,z)dS,$$
+其中 $dS$ 是曲面 $S$ 上的一块面元。现在假设曲面可以用参数方程描述：
+$$\begin{cases} x = x(u,v)\\ y = y(u,v)\\ z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+$m$ 用对 $u, v$ 的积分表达为
+$$m=\int_a^b du\int_c^d\rho(x(u,v),y(u,v),z(u,v))\sqrt{A^2+B^2+C^2}dv$$
+式中的 $A, B, C$ 分别为
+$$A=\begin{vmatrix} \partial_uy &amp; \partial_uz \\ \partial_vy &amp; \partial_vz \end{vmatrix},B=\begin{vmatrix} \partial_uz &amp; \partial_ux \\ \partial_vz &amp; \partial_vx \end{vmatrix}, C=\begin{vmatrix} \partial_ux &amp; \partial_uy \\ \partial_vx &amp; \partial_vy \end{vmatrix},$$
+理解方式和前面是一样的，只是现在 $d\vec{u}$ 和 $d\vec{v}$ 是是三维矢量了，表达式分别是：
+$$d\vec{u} =(\frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}, \frac{\partial z}{\partial u})dv$$
+$$d\vec{v} =(\frac{\partial x}{\partial v}, \frac{\partial y}{\partial v}, \frac{\partial z}{\partial v})dv$$
+算一下 $|d\vec{u}\times d\vec{v}|$ 就能得到 $\sqrt{A^2+B^2+C^2}dudv$ 了。</p>
+
+<p>最后是相对最复杂的<strong>第二型曲面积分</strong>。我们得换一个物理场景了：考虑电流密度场 $\vec{j}(x,y,z)$ 空间中一个曲面 $C(x,y,z)=0$，求通过曲面的电流强度 $I$。$I$ 的表达式不难写出：
+$$I=\iint_C\vec{j}(x,y,z)\cdot d\vec{S},$$
+其中 $d\vec{S}=\vec{e}_ndS$，$dS$ 是曲面上的面元，$\vec{e}_n$ 代表这一点面元的法向单位矢量。事实上把 $d\vec{S}$ 代入积分式中就能把第二型曲面积分转化成第一型曲面积分
+$$I=\iint_C(\vec{j}(x,y,z)\cdot\vec{e}_n) dS,$$
+此时被积分函数就是 $\vec{j}(x,y,z)\cdot\vec{e}_n$。为了求出曲面上每一点处的法矢 $\vec{e}_n$ 的表达式，我们需要利用曲面 $C$ 的参数表达式
+$$\begin{cases} x = x(u,v)\\ y = y(u,v)\\ z=z(u,v)\end{cases}, u\in[a,b], v\in[c,d],$$
+可以想象，曲面上某点 $(x,y,z)$ 处的法向单位矢量与该点对应的矢量 $d\vec{u}\times d\vec{v}$ 平行，但是有可能相同或相反，这个问题先放一边，我们可以把 $\vec{e}_n$ 写成
+$$\vec{e}_n=\epsilon\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|},$$
+$\epsilon$ 可为 $\pm 1$，用于矫正方向。然后，和上面第一型曲线积分的处理方法一样，$I$ 可以表达为对 $u, v$ 的积分式
+$$I=\iint_D(\epsilon\vec{j}(x,y,z)\cdot\frac{d\vec{u}\times d\vec{v}}{|d\vec{u}\times d\vec{v}|})|d\vec{u}\times d\vec{v}|=\iint_D\epsilon\vec{j}(x,y,z)\cdot (d\vec{u}\times d\vec{v}),$$
+此时积分区域换成 $D$, 即 $u, v$ 的定义域，表明是对 $u, v$ 的积分。现在只剩确定 $\epsilon$ 的正负，这是个比较麻烦的问题。为了说清楚这一点，我们首先要注意一件事，二重积分在化为累次积分的过程中有一个问题，累次积分是多次单变量积分，单变量积分的结果与积分上下限的次序是有关的，交换积分上下限积分结果反号，而二重积分结果不应当与这种次序有关（从二重积分的定义就可以看出，二重积分中没有上下限次序这个概念）。或者说，单变量积分中，线元 $dx$ 可正可负，但是二重积分的面元 $dxdy$ 应当保证为正，所以事实上二重积分在化为累次积分的过程中默认要求积分上限比积分下限大。这个问题在第二型曲面积分中的体现就是 $\vec e_n$ 的指向，我们可以人为构造出曲面 $C$ 的两种参数表达式，使得算出来的 $d\vec{u}\times d\vec{v}$ 方向相反。为了避免这个问题就需要选合适的参数表达式，最保险的方案是，将曲面方程 $C(x,y,z)=0$ 中的一个变量反解出来，比如 $z$，将 $x, y$ 作为参数，曲面的参数式就是
+$$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
+这样求出来的 $d\vec{u}\times d\vec{v}$ 总是指向我们通常约定的曲面的正侧，因此 $\epsilon$ 就可以取为 1（当然如果实际问题中确实是要沿着负侧积分，$\epsilon$ 就应当是 -1）。如果取了其他参数式，可能需要小心地先检验一下 $d\vec{u}\times d\vec{v}$ 的方向。</p>
+
+<p>最后，本文叙述中有些条件和前提略去了，比如 $x, y$ 和 $u, v$ 之间的变换应当满足的条件等等。不严谨之处，敬请见谅。</p>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -47,15 +360,63 @@ Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
       <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
-      <description>经典热力学中一个很重要的模型是卡诺热机（Carnot engine），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理1（Carnot&amp;rsquo;s theorem）
- Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.
- 但是最近重看 Concepts in Thermal Physics 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的证明方法是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。
-直到我看到课本接下来介绍了一个卡诺定理的推论，
- All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.
- 既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。
-只有卡诺热机才是可逆热机吗？“除了绝热和等温过程外，还有其它可逆过程，选一些可逆过程连接成一个可逆循环就能构成一个可逆热机！”我很快发现这个想法有问题。
-首先明确热机逆过程的概念：保持其它配置不变，将能量流动箭头反向，吸热变放热，对外做功变成外部对热机做功。现在对 1mol 导热良好的理想气体，考察这样一个过程：
- 从初态 $(p_1,V_1)$ 等容加热到 $(p_2, V_1)$； 从 $(p_2, V_1)$ 绝热膨胀到 $(p_3, V_2)$ ； 从 $(p_3, V_2)$ 等温压缩至 $(p_1, V_1)$ 。  用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：</description>
+      <description>
+      
+      <![CDATA[<p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
+
+<blockquote>
+<p>Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.</p>
+</blockquote>
+
+<p>但是最近重看 <em>Concepts in Thermal Physics</em> 时我对卡诺定理的证明过程产生了很大的困惑。教材上和维基上的<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)#Proof">证明方法</a>是一致的，我不觉得这个证明方法有误，困惑在于，证明过程中似乎没有用到卡诺热机的特殊性质，没有哪里体现出一定要是卡诺热机，事实上用其它任意一个可逆热机放到这个证明过程中都可以证明该热机的效率是所有热机中最高的。</p>
+
+<p>直到我看到课本接下来介绍了一个卡诺定理的推论，</p>
+
+<blockquote>
+<p>All reversible engines working between two temperatures have the same efficiency $\eta_{Carnot}$.</p>
+</blockquote>
+
+<p>既然所有的可逆热机都可以达到卡诺热机的效率，是不是说明可逆热机只能是卡诺热机？或者可以通过某种变化等效为卡诺热机？。我搜寻脑海中的回忆，确定上新课时我没有得出过这个结论，必须仔细推敲一番。</p>
+
+<p>只有卡诺热机才是可逆热机吗？“除了绝热和等温过程外，还有其它可逆过程，选一些可逆过程连接成一个可逆循环就能构成一个可逆热机！”我很快发现这个想法有问题。</p>
+
+<p>首先明确热机逆过程的概念：保持其它配置不变，将能量流动箭头反向，吸热变放热，对外做功变成外部对热机做功。现在对 1mol 导热良好的理想气体，考察这样一个过程：</p>
+
+<ol>
+<li>从初态 $(p_1,V_1)$ 等容加热到 $(p_2, V_1)$；</li>
+<li>从 $(p_2, V_1)$ 绝热膨胀到 $(p_3, V_2)$ ；</li>
+<li>从 $(p_3, V_2)$ 等温压缩至 $(p_1, V_1)$ 。</li>
+</ol>
+
+<p>用这样一个过程可以构造一个热机，正过程和“逆过程”分别如下：</p>
+
+<p><img src="/img/carnot-engine/workflow.svg" alt="图1 正过程和“逆过程”" /></p>
+
+<p>再画出对应的净效果：</p>
+
+<p><img src="/img/carnot-engine/pureEffect.svg" alt="图2 正过程和“逆过程”的净效果" /></p>
+
+<p>图1左边的过程中气体经历的每一步都是<strong>可逆变化</strong>，但是构造出来的热机却不是<strong>可逆热机</strong>，原因在于，第1步中气体的等容加热需要和高温热源 $T_2$ 接触才能完成，这是一个单纯的热量流动过程，热力学第二定律的克劳修斯表述禁止了其逆过程的发生：在没有额外辅助的条件下，气体不可能与高温热源 $T_2$ 接触的同时放热等容降温。但是气体本身经历的是一个可逆变化，只要气体再去和另一个低温热源接触，就能放热等容降温回到原来的状态。退一步说，如果一定要热机逆着循环运行（图1右），那么这一步中气体必须和低温热源 $T_1$ 接触，对应到图2中就是右边 $Q_1$ 的箭头只能指向 $T_1$ 而不可能指向 $T_2$。把图2和卡诺热机的正逆运行图对比，就能知道这种热机不可逆了。</p>
+
+<p>想清楚了上面这个例子后，再来看卡诺热机就不难理解为什么它是可逆的了。卡诺机和热源接触时经历的是等温过程，气体的温度和热源的温度是一样的，热力学第二定律只对有温度差时的热量流动方向做出了限制，但此处是等温的，只要把气体对外做功变成外部对气体做功，就能实现从吸热到放热的转变；而气体温度的变化是通过绝热过程完成的，绝热过程中没有熵变，也是可逆的。所以整个过程都是可逆的，卡诺机是一个可逆机。</p>
+
+<p>回到开始的问题，是不是只有卡诺热机才是可逆机呢？为什么？回答：不是，但是可逆热机中的过程只能由等温过程和绝热过程组成。因为，热机逆运行受到热力学第二定律的制约，尤其是热量流动箭头能否反向。要么不存在热量流动，即绝热过程；要么热量在相同温度物体间流动，即等温过程。涉及到其它过程时，必须要修改热机的结构才能逆运行（比如例子中接触高温热源变成低温热源）。卡诺循环是最简单的满足条件的循环过程，当然也可以用更多绝热和等温过程去构造更复杂的可逆热机。</p>
+
+<p>总结一下，在这个问题中有机个概念需要区分，<strong>可逆过程</strong>、<strong>可逆机</strong>和气体经历的<strong>可逆变化</strong>并不是一回事。感想就是，把想法都写下来，对理清思路有很大帮助。想通了这些问题后，再回过头看看写下的东西，似乎全是废话，给读者见笑。但是自己没开窍前还是相当困惑的，写下来防止以后再一次忘记。</p>
+
+<p>如果读者有什么见解和想法，欢迎在留言区指正和一起讨论。</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:carnot"><em>Concepts in Thermal Physics, 2nd Edition</em>, Stephen J.Blundell &amp; Katherine M.Blundell.
+ <a class="footnote-return" href="#fnref:carnot"><sup>[return]</sup></a></li>
+</ol>
+</div>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -64,8 +425,21 @@ Next, let us see what happens when the operator \(a_L^\dagger a_R\)  hits on the
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
       <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
-      <description>At the end of my earlier post on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if dvips is used to generate the PDF file, which is caused by the package hyperref. Certainly, removing \usepackage{hyperref} is the most simple solution to this problem. But what if we do need them two simultaneously?
-Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able.</description>
+      <description>
+      
+      <![CDATA[<p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to generate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple solution to this problem. But what if we do need them two simultaneously?</p>
+
+<p>Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct figures, while dvips is able. I guess that PSTricks needs the postscript of the article, while dvipdfmx generates the PDF copy from the dvi copy directly.</p>
+
+<p>The problem is finally solved when I find <a href="http://tex.stackexchange.com/questions/121837/hyperref-wrong-dvi-mode-driver-option-dvips-hyperref-because-pdftex-or-luat">this question</a> on stackexchange. Some extra parameters are needed when hyperref is used with dvips:</p>
+
+<pre><code class="language-tex">\usepackage[dvips,breaklinks]{hyperref}
+</code></pre>
+
+<p><strong>However, why do we insist on latex? why not switch to xelatex?</strong></p>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -74,7 +448,41 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
       <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
-      <description>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&amp;rsquo;t need to use the terrible CJK package again.</description>
+      <description>
+      
+      <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
+
+<p>Now to generate a PDF format copy, the shell commands are</p>
+
+<pre><code class="language-sh">latex paper.tex;
+bibtex peper;
+latex peper;
+latex paper;
+dvipdfmx paper.dvi
+</code></pre>
+
+<p>But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.</p>
+
+<p>Installing Ghostscript is easy, just use <a href="https://brew.sh">homebrew</a>:</p>
+
+<pre><code class="language-sh">brew install ghostscript
+</code></pre>
+
+<p>After that, parameter <code>[dvipdfmx]</code> is indispensable if the package hyperref is used.</p>
+
+<pre><code class="language-tex">\usepackage[dvipdfmx]{hyperref}
+</code></pre>
+
+<p>Certainly, PDF copy can be generated by other commands besides dvipdfmx. For example,</p>
+
+<pre><code class="language-sh">dvips paper.dvi
+ps2pdf paper.ps
+</code></pre>
+
+<p>But you may get an ugly reference article list. :(</p>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -83,9 +491,108 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
       <guid>/post/2014-12-01-a-beamer-template/</guid>
-      <description>&lt;p&gt;Just a template of beamer&lt;/p&gt;
+      <description>
+      
+      <![CDATA[<p>Just a template of beamer</p>
 
-&lt;p&gt;&lt;/p&gt;</description>
+<p></p>
+
+<pre><code class="language-tex">%!Mode:: &quot;TeX:UTF-8&quot;
+%!TEX program = xelatex
+\documentclass[10pt]{beamer}
+%[]中加t可以使内容从顶部开始
+
+%英文字体
+\usepackage{booktabs}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Courier}
+
+%中文设置
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Song}{AdobeSongStd-Light}
+\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{Hupo}{STHupo}
+\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
+\XeTeXlinebreaklocale &quot;zh&quot; %中文断行用
+
+%beamer配置
+\usetheme{Luebeck}%
+\setbeamertemplate{headline}{}
+\setbeamertemplate{navigation symbols}{} %去掉导航条
+\usefonttheme{serif}
+%加上sectionpage
+\AtBeginSection[]{
+\begin{frame}
+\begin{center}
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+\usebeamerfont{part title}{\large \insertsection}
+\end{beamercolorbox}
+\end{center}
+\end{frame}
+}
+
+%数学设置
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%插图
+\usepackage{graphicx}
+
+%作图
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\title[简略标题]{titlepage上显示的完整标题}
+\author[作者]{titlepage上显示的完整作者信息，可以包括邮件地址}
+\institute[简略机构]{titlepage上要显示的完整机构}
+\date{2014.mm.dd}
+
+\begin{document}
+%标题页
+\frame{\titlepage}
+%outline
+\section[Outline]{}
+\frame{
+\frametitle{主要内容}
+\tableofcontents
+}
+%正文
+\section{章节1}
+\frame   %[allowframebreaks]似乎与\pause冲突
+{\frametitle{页标题}
+		\begin{itemize}
+		\item 信息1
+		\pause
+		\item 信息2
+		\only&lt;3&gt;{
+		\item 信息3}
+		\item 信息4
+		\end{itemize}
+}
+
+\section{章节2}
+\frame[allowframebreaks]{
+\frametitle{页标题}
+}
+
+%感谢页
+\frame{
+ \begin{center}
+ \begin{beamercolorbox}[sep=8pt,center]{part title}
+\usebeamerfont{part title}{\huge Thank You!}
+\end{beamercolorbox}
+ \end{center}
+}
+
+\end{document}
+</code></pre>]]>
+      
+      </description>
     </item>
     
     <item>
@@ -94,11 +601,55 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
       <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
-      <description>Bose 气体满足 Bose-Einstein 分布 $$ \begin{equation} \langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1} \end{equation}$$ 其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。
-二维情况下，气体的态密度为$$ \begin{equation} g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k \end{equation}$$ 非相对论情况下，粒子的能动量关系为$$ \begin{equation} E=\frac{\hbar k^2}{2m} \end{equation}$$ 所以可以将态密度改写为以能量为自变量$$ \begin{equation} g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E \end{equation}$$
-化学势 $\mu$ 与粒子数 $N$ 之间满足关系 $$ \begin{eqnarray} (2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;amp;=&amp;amp;N\newline \label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;amp;=&amp;amp;N \end{eqnarray}$$
-把 $\beta(E-\mu)$ 记为 $x$，式$\ref{化学势与粒子数关系}$可化为： $$ \begin{equation}\label{simplified} \frac1\beta\int_{-\mu\beta}^{\infty}{\frac{d x}{e^x-1}}=\frac{2\pi\hbar N}{(2S+1)Am} \end{equation}$$
-左侧的积分可以算出来 $$\begin{equation} \frac{1}{\beta}\int_{-\mu\beta}^{\infty}{\frac{dx}{e^x-1}}=\ln\frac{1}{(1-e^{\mu\beta})^{\frac1\beta}} \end{equation} $$</description>
+      <description>
+      
+      <![CDATA[<p>Bose 气体满足 Bose-Einstein 分布
+$$
+\begin{equation}
+\langle n_s \rangle=\dfrac{1}{e^{\beta(E_s-\mu)}-1}
+\end{equation}$$
+其中$\beta=\dfrac{1}{k_BT}$. 因为 $\langle n_s \rangle\geqslant0$，所以 $E_s-\mu\geqslant0$。如果基态能量取为0，则化学势需要满足$\mu\leqslant0$。</p>
+
+<p>二维情况下，气体的态密度为$$
+\begin{equation}
+g(k)d k=\frac{1}{4} \frac{2\pi kd k}{(\pi/L)^2}=\frac{L^2k}{2\pi}d k=\frac{Ak}{2\pi}d k
+\end{equation}$$
+非相对论情况下，粒子的能动量关系为$$
+\begin{equation}
+E=\frac{\hbar k^2}{2m}
+\end{equation}$$
+所以可以将态密度改写为以能量为自变量$$
+\begin{equation}
+g(E)d E=g(k)\frac{\partial k}{\partial E}d E=\frac{mL^2}{2\pi\hbar}d E
+\end{equation}$$</p>
+
+<p>化学势 $\mu$ 与粒子数 $N$ 之间满足关系
+$$
+\begin{eqnarray}
+(2S+1)\int_0^\infty{\langle n_s\rangle g(E)dE}&amp;=&amp;N\newline
+\label{化学势与粒子数关系}(2S+1)\frac{Am}{2\pi \hbar}\int_0^\infty{\frac{d E}{ e^{\beta(E-\mu)}-1}}&amp;=&amp;N
+\end{eqnarray}$$</p>
+
+<p>把 $\beta(E-\mu)$ 记为 $x$，式$\ref{化学势与粒子数关系}$可化为：
+$$
+\begin{equation}\label{simplified}
+\frac1\beta\int_{-\mu\beta}^{\infty}{\frac{d x}{e^x-1}}=\frac{2\pi\hbar N}{(2S+1)Am}
+\end{equation}$$</p>
+
+<p>左侧的积分可以算出来
+$$\begin{equation}
+\frac{1}{\beta}\int_{-\mu\beta}^{\infty}{\frac{dx}{e^x-1}}=\ln\frac{1}{(1-e^{\mu\beta})^{\frac1\beta}}
+\end{equation}
+$$</p>
+
+<p>代入式\ref{simplified}可以把 $\mu$ 表示出来$$
+\begin{equation}\label{mu}
+\mu=\frac1\beta\ln(1-e^{-c\beta}),c=\frac{2\pi\hbar N}{(2S+1)Am}
+\end{equation}$$
+从式\ref{mu}可以看出，$\mu$ 始终满足 $\mu\leqslant0$，当 $\beta \to \infty$ 即 $T\to 0$ 时，$\mu$ 从0的左侧趋向于0，所以可以说临界温度 $T_c=0K$，即 Bose-Einstein 凝聚不可能发生。</p>
+]]>
+      
+      </description>
     </item>
     
     <item>
@@ -107,11 +658,192 @@ Today when I am trying PSTricks, I find dvipdfmx is unable to generate correct f
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
       <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。&lt;/p&gt;
+      <description>
+      
+      <![CDATA[<blockquote>
+<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。</p>
 
-&lt;p&gt;本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+<p>本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。</p>
+</blockquote>
+
+<p>　　众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
+在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。</p>
+
+<p>　　首先安装 TeX 基本系统。上 <a href="http://tug.org/mactex/">MaxTeX 主页</a>下载 TeXLive 发行版，建议下载<a href="http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg">基本包</a>（&lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 <code>apt-get</code> 命令即可。
+事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。</p>
+
+<p>　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：<a href="http://pages.uoregon.edu/koch/texshop/texshop.html">TeXShop</a>！
+<img src="https://i.imgur.com/B5LGj8n.png" alt="TeXShop" />
+　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
+在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样<del>奇奇怪怪</del>的问题。
+在“排版”页的默认指令处选择“采用键入的指令”，输入&rdquo;XeLaTeX&rdquo;。</p>
+
+<p>　　现在来测试一下吧，在TeXShop里输入</p>
+
+<pre><code>\documentclass{article}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun} %设置默认的中文字体为宋体
+\begin{document}
+Hello! 这是中文测试!
+\end{document}
+</code></pre>
+
+<p>然后点击 TeXShop 工具栏上的“排版”按钮，应当就能顺利生成一个非常简单的中英文混排的文档了。
+<img src="https://i.imgur.com/w1LJI5r.png" alt="中文测试" />
+看吧，中英文直接混排，别提多方便了。</p>
+
+<p>　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体</p>
+
+<pre><code>\setCJKmainfont{&lt;font name&gt;} %设置默认字体
+\setCJKsansfont{&lt;font name&gt;} %设置中文sffamily字体
+\setCJKmonofont{&lt;font name&gt;} %设置中文ttfamily字体
+</code></pre>
+
+<p>也可以单独设置某字体，比如设置仿宋字体：</p>
+
+<pre><code>\setCJKfamilyfont{fangsong}{FangSong}     %使用仿宋字体，放在导言区
+\CJKfamily{fangsong} 仿宋字体测试。 %放在正文里面
+</code></pre>
+
+<p>　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将<code>&lt;font name&gt;</code>替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
+<img src="https://i.imgur.com/3waQ0EU.png" alt="OS X 字体册" /></p>
+
+<p>　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考<a href="ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf">《xeCJK宏包》</a>（作者：孙文昌）。</p>
+
+<p>　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
+<img src="https://i.imgur.com/KIRqM0v.png" alt="Daum Equation Editor" />
+下载地址：<a href="https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12">Mac App Store</a>。当然也可以在 Chrome 商店里面直接搜索。</p>
+
+<p>　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)</p>
+
+<p>　　以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)</p>
+
+<pre><code class="language-tex">% !Mode:: &quot;TeX:UTF-8&quot;
+%!TEX program = xelatex
+\documentclass[12pt,a4paper]{article} 
+%常用宏包
+\usepackage{geometry}
+%\geometry{left=3cm,right=3cm,top=3cm,bottom=3.5cm} %页边距设置
+\usepackage{url}
+
+%英文字体
+\usepackage{booktabs}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{TimesNewRomanPSMT}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Courier}
+
+%中文设置
+\usepackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Song}{AdobeSongStd-Light}
+\setCJKfamilyfont{Hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{Kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{Hupo}{STHupo}
+\setCJKfamilyfont{FS}{AdobeFangsongStd-Regular}
+\XeTeXlinebreaklocale &quot;zh&quot;%中文断行用
+\usepackage{indentfirst} %首行缩进
+
+%数学设置
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%插图
+\usepackage{graphicx}
+%\usepackage{subfig}
+
+%作图
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+%定义关键词命令 
+\newcommand{\keywords}[1]{\textbf{Key words}: #1}
+%定义微分算符d和dbar、求导
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\dbar}{\mathrm{đ}}
+\newcommand{\der}[2]{\displaystyle\frac{\dif #1}{\dif #2}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\ketp}[1]{\ket{#1}_p}
+\newcommand{\bra}[1]{\langle #1|}
+
+ %把 Reference 等换成中文
+\renewcommand{\contentsname}{目录}
+\renewcommand{\listfigurename}{插图目录}
+\renewcommand{\listtablename}{表格目录}
+\renewcommand{\refname}{参考文献} 
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\indexname}{索引}
+\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{图}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand{\keywords}[1]{\textbf{关键词}: #1}
+
+%让引用变成上标
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+\begin{document}
+\title{标题 Title}
+\author{作者 Author}
+ \date{}   %去除标题的日期
+ \maketitle
+ 
+ %摘要
+\begin{abstract}
+
+\end{abstract}
+
+%关键词
+\keywords{关键词}
+
+%论文主体
+\section{引言}
+\url{https://google.com}
+%定理
+%\theoremstyle{definition}
+\newtheorem{Theorem}{定理}
+\begin{Theorem}[最小做用量原理]
+\begin{equation}
+\delta S=\delta\int_{t_1}^{t_2}L(q,\dot{q},t)dt =0
+\end{equation}
+\end{Theorem}
+
+\begin{Theorem}[熵增原理]
+\begin{equation}
+dS&gt;0
+\end{equation}
+\end{Theorem}
+
+%引理
+\newtheorem{lemma}{引理}
+\begin{lemma}[Riemann-Lebesgue 引理]\label{RL lemma}
+如果 $f(x) \in L^1([a,b])$, 则有
+ \begin{equation*}
+   \lim\limits_{t \rightarrow \infty} \int_a ^b f(x) \cos{\left(tx \right)} \, \dif{x} = \lim\limits_{t \rightarrow \infty} \int_a ^b f(x)\sin{\left(tx \right)} \, \dif{x} = 0.
+ \end{equation*}
+\end{lemma}
+
+%引用
+\begin{quote}\sl %斜体
+谈笑风生。
+\end{quote}
+
+\begin{figure}[htb]
+\centering
+\includegraphics{文件名.png}
+\caption{图片标题} \label{标签}
+\end{figure}
+
+%以下是参考文献
+\bibliographystyle{unsrt}
+\bibliography{文献}
+\nocite{*}
+\end{document}
+</code></pre>]]>
+      
+      </description>
     </item>
     
   </channel>

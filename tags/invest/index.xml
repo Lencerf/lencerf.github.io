@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Wed, 26 Apr 2017 15:47:39 -0400</lastBuildDate>
     
-	<atom:link href="/tags/invest/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/invest/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,11 @@
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
       <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
-      <description>Disclaimer: This article and any content herein are general introduction for readers only, and shall not constitute nor be relied on as legal opinion or legal advice in any form. I assume no liability for anything herein. If you need help about tax, please talk to a tax, legal or accounting advisor immediately.
-Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation.</description>
+      <description>
+      
+      <![CDATA[<p>View the original webpage: /post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</p> ]]>
+      
+      </description>
     </item>
     
   </channel>
