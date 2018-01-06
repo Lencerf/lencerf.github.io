@@ -7,7 +7,7 @@
 <meta property="og:title" content="Life - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>Life | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -27,7 +27,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -48,8 +48,8 @@
                     <li class="groupby">2017</li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Apr 26, 2017</time></div>
-<a href="/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/">Open a Fidelity Account as a Non-Resident Alien</a>
+    <div class="time"><time class="meta list">Dec 30, 2017</time></div>
+<a href="/post/2017-12-30-2017-review/">回顾 2017</a>
 </li>
                     
                         <li class="post-item">
@@ -57,17 +57,22 @@
 <a href="/post/2017-06-16-macbook-pr-15-mid-2017/">MacBook Pro (15-inch, 2017) 开箱和使用感受</a>
 </li>
                     
+                        <li class="post-item">
+    <div class="time"><time class="meta list">Apr 26, 2017</time></div>
+<a href="/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/">Open a Fidelity Account as a Non-Resident Alien</a>
+</li>
+                    
                 
                     <li class="groupby">2016</li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Aug 31, 2016</time></div>
-<a href="/post/2016-08-31-the-first-august/">八月小结</a>
+    <div class="time"><time class="meta list">Dec 31, 2016</time></div>
+<a href="/post/2016-12-31-see-you-2016/">再见 2016</a>
 </li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Dec 31, 2016</time></div>
-<a href="/post/2016-12-31-see-you-2016/">再见 2016</a>
+    <div class="time"><time class="meta list">Aug 31, 2016</time></div>
+<a href="/post/2016-08-31-the-first-august/">八月小结</a>
 </li>
                     
                 
@@ -78,7 +83,7 @@
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -123,21 +128,34 @@
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-      console.log("ad");
-    
-    
-    
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    
-    console.log("body=", bodyHeight, "window=", window.innerHeight);
-    if (bodyHeight < window.innerHeight) {
-      
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
-      
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script> 
   </body>
 </html>

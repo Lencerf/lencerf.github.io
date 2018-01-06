@@ -7,7 +7,7 @@
 <meta property="og:title" content="LaTeX Best Practices - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>LaTeX Best Practices | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -39,7 +39,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -47,7 +47,9 @@
         </div>
       </nav>
     </header>
+    
     <article class="section">
+    
       <h1 class="title">LaTeX Best Practices</h1>
         
         <time class="meta">March 17, 2017</time>
@@ -75,7 +77,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          
+        
 
 <h2 id="equations-and-numbering">Equations and Numbering</h2>
 
@@ -192,7 +194,7 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     </article>
     
     
-<section class="section">
+<section class="section" id="disqus"  >
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
     <script type="text/javascript">
@@ -213,7 +215,7 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -291,13 +293,34 @@ MathJax.Hub.Config({
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    if (bodyHeight < window.innerHeight) {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script>
     
   </body>

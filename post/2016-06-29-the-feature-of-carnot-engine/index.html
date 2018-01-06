@@ -7,7 +7,7 @@
 <meta property="og:title" content="卡诺热机的特别之处 - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>卡诺热机的特别之处 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -41,7 +41,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -49,7 +49,9 @@
         </div>
       </nav>
     </header>
+    
     <article class="section">
+    
       <h1 class="title">卡诺热机的特别之处</h1>
         
         <time class="meta">June 29, 2016</time>
@@ -77,7 +79,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          <p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
+        <p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
 
 <blockquote>
 <p>Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.</p>
@@ -134,7 +136,7 @@
     </article>
     
     
-<section class="section">
+<section class="section" id="disqus"  >
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
     <script type="text/javascript">
@@ -155,7 +157,7 @@
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -217,13 +219,34 @@
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    if (bodyHeight < window.innerHeight) {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script>
     
   </body>

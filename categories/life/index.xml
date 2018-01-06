@@ -6,10 +6,28 @@
     <description>Recent content in Life on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Jun 2017 16:02:49 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2017 17:18:27 -0400</lastBuildDate>
     
 	<atom:link href="/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>回顾 2017</title>
+      <link>/post/2017-12-30-2017-review/</link>
+      <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
+      
+      <guid>/post/2017-12-30-2017-review/</guid>
+      <description>有剧透
+今年过得相对去年比较单调，就不想写流水账了，想到什么写什么吧。
+物理学习和研究 上半年选了量子力学2和统计物理，完成了核心课程；下半年选了量子场论和冷原子引论。量子力学2大部分是学过的内容，当然更深入和系统一些。统计物理本该是对我很有用的课程，无奈任课老师实在教得太烂，没有学到新的内容，甚至也没达到系统复习一遍本科统计物理内容的效果。本以为量子场论课会对我的研究有帮助，再一次无奈，因为教量子场论的教授是做高能理论的，他的量子场论课偏重于高能，而且异常数学化，我根本无法从中看到物理图像，数学形式异常复杂，索然无味，直到最后我也没彻底弄清楚重整化、1PI 这些内容，怕是这辈子也搞不清楚了。好在这课没有考试，交了四次作业，水水过去了。冷原子引论课我也没有好好上，一来大量内容是关于实验技术的，二来不少核心的东西老师没有深入讲，就把数学过程跳过去了。总之今年算是充分体会了“上课纯属浪费时间”的道理。
+课程之外，从暑假开始尝试了好几次去读上田正仁所写的 Fundamentals and New Frontiers of Bose-Einstein Condensation，最后都因为各种原因没能坚持下去，但是每一次重新从头开始看有感觉有了新的理解。12月初开始读 Decoherence and the Quantum-To-Classical Transition，仿佛打开新世界的大门，终于第一次感觉自己在理解“为什么宏观世界没有薛定谔的猫”这个问题上有了进展，不禁感慨这才是真正的物理，同时也纠正了对一些概念的错误理解。
+自己研究也从今年年初正式开始起步。其实老师给我的是一个非常简单的双阱势模型，然而我终究还是缺乏经验，一开始迷失在数值模拟的海量数据中，完全看不到该往哪个方向努力。一直到四月初，导师突然对另一个问题感兴趣，于是搁置下双阱势问题，开始想那个问题。但是在那个问题上我更加是缺少经验和知识储备，期间五月份又回国，被很多事耽搁，最后导师把那个问题交给他新招的博后去做了。时间就到了六月初。因为我在双阱势问题上做了不少模拟计算，但并没有找到预期的现象，于是导师觉得可能这个课题可以结了，让我总结一下，并让我再试试解析。转机发生在此，我本想向做航天工程的一位同学请教频率叠加的计算方法，却突然在讨论中途开了窍，想到了一些很原始却有效的计算方法。于是势如破竹，很快就把解析结果找到了。但这之后又耽搁了，一方面我选了个凑学分的暑期课程，另一方面导师满世界参加会议去了。秋季学期开学后没多久，因为掌握了更多 Python 画图和动画的技术（主要是 matplotlib），我无意间又发现在双阱势问题里有 cat state 出现，这让我非常激动。九月十月基本都在想办法搞清楚 cat state 的来源。十一月初的时候，老师终于说这个课题可以结束了。
+除此之外，还为了做组会报告去了解了 time crystal、dynamical quantum phase transition 等课题。但说实话这两个课题让我觉得很无聊。
+回顾这一年的科研，觉得自己节奏还是太慢。首先被课程和其他事务占据了大量时间，自己也有拖延症，还有因为自己表达能力差，和导师的交流效率太低。
+生活  今年在 BGM NA 群里水得非常愉快，虽然大部分时间自己都是在潜水，但是群消息基本一些一条不落的看了，也和同校的两位群友顺利面基。 今年依然高度沉迷 Beancount，并走火入魔为之写了一个 VSCode 的插件。 《末日时在做什么？有没有空？可以来拯救吗？》与《来自风平浪静的明天》算是今年让我触动最多的两部动画。 从四月初开始入坑股市，从此沉迷刷新股价时的刺激感。然而年底算算，自己瞎折腾还是没跑赢 SPY。 下半年搬到了学校附近的公寓，可以步行去学校，感觉得到了很大的自由。然而有的时候晚上噪音很烦人。 读了刘震云先生《一句顶一万句》的前半部，觉得自己还是太贪婪。 拔了三颗智齿和一课烂牙根，植入了新假牙根，钱包爆炸。18年1月下旬应该就可以完全愈合了。 买了新的15英寸 MacBook Pro，生活幸福感大幅提升。钱包爆炸。  未来的路 2017年还有件大事自然是成功和导师摊牌，表明了自己不一定会走学术道路的想法，并且得到了导师的理解和支持。然而在那之后我却并没有横下一条心来利用这相对完好的环境去转 CS，想法持续摇摆不定，甚至在下半年一度想物理学术走到底，但同时我还是去计算机系选了研究生的算法课程并侥幸拿到了A+。不禁感叹自己还是贪婪：在觉得自己会被温水煮青蛙的时候整天想的是祈求上天给我一个转 CS 的渠道；在得到渠道后却又想着还是做科研 apply for professor 才能实现人生价值。
+大概正如我摊牌是导师和我说的一样，现在对于我来说思考三四年后甚至一生的计划还是太早了，专心科研、好好掌握技能才是第一要务。
+回想16年末的自己，似乎又感觉现在自己这个状态正式16年所渴求的。希望18年能快点确立自己的研究方向，找到自己感兴趣的课题，做出一些自己满意的成果，学到一些新的技术。</description>
+    </item>
     
     <item>
       <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
@@ -32,8 +50,7 @@
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
       <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
-      <description>Disclaimer: This article and any content herein are general introduction for readers only, and shall not constitute nor be relied on as legal opinion or legal advice in any form. I assume no liability for anything herein. If you need help about tax, please talk to a tax, legal or accounting advisor immediately.
-Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation.</description>
+      <description>Inspired by my friends, I realized that it is not a good choice to put all assets in a checking account without interests, because of the inflation. A saving account may be the simplest solution to currency devaluation. However, most U.S. online banks require a client to be a U.S. person. Especially, Discover and Ally only accept U.S. citizens and permanent residents. Thus I gave up saving accounts and started searching for alternatives.</description>
     </item>
     
     <item>
@@ -50,12 +67,12 @@ Inspired by my friends, I realized that it is not a good choice to put all asset
 五六两月继续处理毕业事宜和出国手续。中途去重庆、成都玩了一趟，看到了可爱的大熊猫。但是其它大部分时间玩得不是很开心，因为我发现，自己和一起玩的高中同学早已不是一个世界的人，陪他们逛商城吃美食喝啤酒对我来说算是煎熬。蜀地回来后咸鱼通关舰C春活，与我的舰娘们作正式的告别。六月底和本科好友们一一告别、离校，结束了四年半的大学生涯。七月初收到研究生学校的通知，开学第一天就有 Ph.D Qualification Examination。伴随着焦躁的心情，七月份就宅在家白天写写程序看看动画，晚上复习四大力学做往年样题，夜里思考人生难以入眠。
 八月初和父母、亲友告别，乘 MU717 来到了这里。这个八月大概是目前人生过得最漫长的一个月了吧，不是“漫无止境的八月”那种漫长，而是煎熬与绝望、度日如年，详细的情况在之前的日志里也有描述。我想我这辈子也不会忘记8月9号那天下午经历的绝望，魔法少女与 Incubator 签订契约后发现被骗那种绝望。因此我特别感谢我现在的室友，没有他那天下午对我的开导以及之后对我喋喋不休抱怨絮叨的宽容，我大概很难从这一关走出来。
 到了九月，心态基本稳定。而且认识了不少新同学，遇到了三位很好的老师，逐渐觉得现状也没有想想得那么糟糕。另外，学习开始繁忙起来，我也没心思花在思考人生、忧虑未来上了。九月中旬和现在的导师见了面，领了文献回来看。就这样上上课、听听组会，繁忙又安逸的生活延续了到了期末。期间和导师讨论了三次文献，惨败告终，因为面对新领域预备知识的不足、混乱的逻辑，还有蹩脚的英语。
-A photo posted by Alden (@lencerf) on Dec 8, 2016 at 10:21am PST
-  十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
+十二月初去应英语老师邀请，去她家吃了一次圣诞级别的早饭，结束了英语课。过了几天考完物理课的期末考试，这学期就这么安稳地结束了。
 寒假到现在基本就是宅在家写写 Python 画画图，用 LaTeX 整理之前看文献的思路。两个室友都不在家，我大概也半个多月没和人说话了。朋友圈里都是同学们满世界游玩的照片，我一人宅在家也算自在。
 流水账理完了，大概对我来说，这一年是离开学校踏入社会的一年，研究生也算社会人了吧，毕竟和导师之间有劳资关系。刚进入大学时，满怀的是对物理学的向往、对大学生活的期盼，从来没有考虑过将来工作、生活的事；但是离开本科进入研究生院，这些问题接踵而来压得我喘不过气来，很庆幸最后走过来了。算是为将来真正踏入社会作了一次演习。
 这一年的主要收获大概就是：
- 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的全额 Fellowship； 申请到了人生第一张真正的信用卡 Discover； 学会了做土豆烧猪肉、红烧鱼等家常菜，能满足自己的味蕾了； 研究生第一学期顺利结束，英语通过考核可以申请助教了； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给之了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。</description>
+ 编程技术提高，Objective-C/Swift 和 C++ 熟练一些，会一点 Haskell，Python 还在学习； 大学顺利毕业，吃老本的本科毕业论文拿了省级优秀； 研究生申请不算完败，拿到了一个一般学校的 Fellowship； 申请到人生第一张真正的信用卡 Discover； 学会了做土豆烧猪肉、红烧鱼等家常菜，不会饿死； 研究生第一学期顺利结束，英语通过考核可以申请助教； 年初和年末写了两个小程序，为开源届做了一点微小的贡献，顺便学了下 git 和 vim。  学术上，十一月份的时候还有人发邮件来询问我论文里的推导细节，不过我已经把演算步骤发给他了。2017年就正式和原来的量子游走课题说再见，新领域是冷原子理论，目前觉得还是蛮有趣的。但是这一年太多时间浪费给了思考人生，没有在学术上取得进展，收获约等于零的一年。
+希望2017年，静下心认真做学术研究、闲暇时学习技术，不要沉溺于对过去的缅怀和对未来的恐慌之中。</description>
     </item>
     
     <item>

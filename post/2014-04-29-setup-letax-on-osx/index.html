@@ -7,7 +7,7 @@
 <meta property="og:title" content="OS X 上中文 LaTeX 环境的搭建 - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>OS X 上中文 LaTeX 环境的搭建 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -39,7 +39,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -47,7 +47,9 @@
         </div>
       </nav>
     </header>
+    
     <article class="section">
+    
       <h1 class="title">OS X 上中文 LaTeX 环境的搭建</h1>
         
         <time class="meta">April 29, 2014</time>
@@ -80,7 +82,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          <blockquote>
+        <blockquote>
 <p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。</p>
 
 <p>本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。</p>
@@ -266,7 +268,7 @@ dS&gt;0
     </article>
     
     
-<section class="section">
+<section class="section" id="disqus"  >
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
     <script type="text/javascript">
@@ -287,7 +289,7 @@ dS&gt;0
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -341,13 +343,34 @@ dS&gt;0
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    if (bodyHeight < window.innerHeight) {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script>
     
   </body>

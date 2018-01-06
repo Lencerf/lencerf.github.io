@@ -7,7 +7,7 @@
 <meta property="og:title" content="在平面上画一个四维的笛卡尔坐标系 - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>在平面上画一个四维的笛卡尔坐标系 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -41,7 +41,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -49,7 +49,9 @@
         </div>
       </nav>
     </header>
+    
     <article class="section">
+    
       <h1 class="title">在平面上画一个四维的笛卡尔坐标系</h1>
         
         <time class="meta">July 14, 2017</time>
@@ -82,7 +84,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-          <p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
+        <p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
 
 <p><img src="http://imgur.com/it4hpvJ.png" alt="截自第1话1分36秒处" /></p>
 
@@ -146,7 +148,7 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
     </article>
     
     
-<section class="section">
+<section class="section" id="disqus"  >
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
     <script type="text/javascript">
@@ -167,7 +169,7 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -229,13 +231,34 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    if (bodyHeight < window.innerHeight) {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script>
     
   </body>

@@ -7,7 +7,7 @@
 <meta property="og:title" content="Academic - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.32.2" />
 <title>Academic | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
@@ -27,7 +27,7 @@
           </h1>
         </div>
         <div class="nav-right">
-            <a class="level-item" href="/index.xml" target="_blank">
+            <a class="level-item" href="/post/index.xml" target="_blank">
               <span class="icon">
                 <i class="fa fa-rss"></i>
               </span>
@@ -48,21 +48,21 @@
                     <li class="groupby">2017</li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Mar 17, 2017</time></div>
-<a href="/post/2017-03-17-latex-best-practices/">LaTeX Best Practices</a>
+    <div class="time"><time class="meta list">Apr 19, 2017</time></div>
+<a href="/post/2017-04-19-map-a-double-well-to-a-spin-system/">Map a Double Well to a Spin System</a>
 </li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Apr 19, 2017</time></div>
-<a href="/post/2017-04-19-map-a-double-well-to-a-spin-system/">Map a Double Well to a Spin System</a>
+    <div class="time"><time class="meta list">Mar 17, 2017</time></div>
+<a href="/post/2017-03-17-latex-best-practices/">LaTeX Best Practices</a>
 </li>
                     
                 
                     <li class="groupby">2016</li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Jan 9, 2016</time></div>
-<a href="/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a>
+    <div class="time"><time class="meta list">Jul 11, 2016</time></div>
+<a href="/post/2016-07-11-notes-on-surface-integral/">曲面积分复习跳坑笔记</a>
 </li>
                     
                         <li class="post-item">
@@ -71,8 +71,8 @@
 </li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Jul 11, 2016</time></div>
-<a href="/post/2016-07-11-notes-on-surface-integral/">曲面积分复习跳坑笔记</a>
+    <div class="time"><time class="meta list">Jan 9, 2016</time></div>
+<a href="/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/">Embed figures of eps format in LaTeX papers -- with dvips</a>
 </li>
                     
                 
@@ -87,8 +87,8 @@
                     <li class="groupby">2014</li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Apr 29, 2014</time></div>
-<a href="/post/2014-04-29-setup-letax-on-osx/">OS X 上中文 LaTeX 环境的搭建</a>
+    <div class="time"><time class="meta list">Dec 1, 2014</time></div>
+<a href="/post/2014-12-01-a-beamer-template/">A template of beamer</a>
 </li>
                     
                         <li class="post-item">
@@ -97,8 +97,8 @@
 </li>
                     
                         <li class="post-item">
-    <div class="time"><time class="meta list">Dec 1, 2014</time></div>
-<a href="/post/2014-12-01-a-beamer-template/">A template of beamer</a>
+    <div class="time"><time class="meta list">Apr 29, 2014</time></div>
+<a href="/post/2014-04-29-setup-letax-on-osx/">OS X 上中文 LaTeX 环境的搭建</a>
 </li>
                     
                 
@@ -109,7 +109,7 @@
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2017 Lencerf
+                2014-2018 Lencerf
     | Powered by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
@@ -154,21 +154,34 @@
 </script>
 <script type="text/javascript" defer>
   var resize = function() {
-      console.log("ad");
-    
-    
-    
-    var bodyHeight = document.getElementsByTagName("body")[0].clientHeight;
-    
-    console.log("body=", bodyHeight, "window=", window.innerHeight);
-    if (bodyHeight < window.innerHeight) {
-      
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
       document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
-      
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
     }
   }
   resize();
   window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
 </script> 
   </body>
 </html>
