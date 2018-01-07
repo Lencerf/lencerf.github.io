@@ -272,6 +272,7 @@ code {
     padding: 0 5px;
     margin: 0 2px;
     font-size: 0.93em;
+    line-height: 120%;
     border: 1px solid #ddd;
     border-radius: 3px;
     word-wrap: normal
