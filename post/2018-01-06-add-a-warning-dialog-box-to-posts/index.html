@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="给文章加上一个剧透警示 - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<meta name="generator" content="Hugo 0.32.2" />
+<title>给文章加上一个剧透警示 | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>  
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+
+</head>
+  <body>
+        <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="/">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+            <a class="level-item" href="/post/index.xml" target="_blank" type="application/rss+xml">
+              <span class="icon">
+                <i class="fa fa-rss"></i>
+              </span>
+            </a>
+        </div>
+      </nav>
+    </header>
+    
+    <article class="section">
+    
+      <h1 class="title">给文章加上一个剧透警示</h1>
+        
+        <time class="meta">January 6, 2018</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="/categories/technique" rel="category">Technique</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="/tags/hugo/" rel="tag">Hugo</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="/tags/web/" rel="tag">web</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+        <p>最近玩了《<a href="http://store.steampowered.com/app/206440/To_the_Moon/">To the Moon</a>》这款游戏，很想写写玩后感，但是这样一款胜在剧情的游戏，写感想不可避免会剧透。文章还没动笔写，我先来折腾一下怎样给博客文章加上有效的剧透警示。</p>
+
+<p>基本思路是刚打开网页时，把文章正文盖住，并显示一个提示剧透的对话框，只有读者选择继续阅读以后，才显示文章内容。得益于 Hugo 强大的自定义能力，实现这个效果还是不难的。</p>
+
+<p>首先给含有剧透的文章加上一个<code>warning</code>属性，包含了警示对话框所提示的文字：</p>
+
+<pre><code>warning: &quot;以下内容含有《To the Moon》的剧透，如需继续阅读，点击下面的按钮。&quot;
+</code></pre>
+
+<p>之后修改 Hugo 的模版。文章正文包含在<code>article</code>标签里面，所以在渲染时，检查一下文章有没有<code>warning</code>属性，如果有，就默认加上模糊效果：</p>
+
+<pre><code class="language-html">{{ if .Params.warning }}
+&lt;article class=&quot;section&quot; style=&quot;filter:blur(8px);&quot;&gt;
+{{ else }}
+&lt;article class=&quot;section&quot;&gt;
+{{ end }}
+</code></pre>
+
+<p>然后，文章有剧透时，显示一个对话框，警示有剧透。</p>
+
+<pre><code class="language-html">{{ if .Params.warning }}
+&lt;div id=&quot;indicator&quot; align=&quot;center&quot;&gt;
+    &lt;div id=&quot;warning&quot;&gt;
+        &lt;p&gt;{{.Params.warning}}&lt;/p&gt;
+        &lt;a onclick=&quot;javascript:showContent();&quot; href=&quot;#&quot; class=&quot;button&quot; &gt;
+        &lt;i class=&quot;fa fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &gt;&gt;&gt; 
+        &lt;i class=&quot;fa fa-lock&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{{ end }}
+</code></pre>
+
+<p>对应的 CSS</p>
+
+<pre><code class="language-css">#indicator {
+    display: block;
+    position: fixed;
+    margin-top: 20%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+}
+#warning {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 720px;
+}
+</code></pre>
+
+<p>此外，在读者选择继续阅读以后，用 js 关闭对话框并去掉正文部分的模糊效果：</p>
+
+<pre><code class="language-js">var showContent = function() {
+    document.getElementsByTagName(&quot;article&quot;)[0].setAttribute(&quot;style&quot;, &quot;filter: none;&quot;);
+    document.getElementById(&quot;indicator&quot;).setAttribute(&quot;style&quot;, &quot;display: none;&quot;);
+}
+</code></pre>
+
+<p>当然这样是不够的，因为，如果有读者是通过订阅 RSS 阅读本文的，RSS 阅读器会直接把内容显示，屏蔽剧透就失效了。好吧我知道本站没什么人访问，更没什么人订阅 RSS，我自己都好几年没打开 RSS 阅读器了。出于精益求精的原则，我还是修改一下 Hugo 的<a href="https://gohugo.io/templates/rss/#the-embedded-rss-xml">默认 RSS 模版</a>，把读者引导到网页上。</p>
+
+<pre><code class="language-xml">&lt;description&gt;
+{{ if not .Params.warning }}
+{{ .Summary | html }}
+{{ else }}
+&lt;p&gt;View the original webpage: {{ .Permalink }}&lt;/p&gt;
+{{end}}
+&lt;/description&gt;
+</code></pre>
+
+<p>最终效果可见此文：<a href="/post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="http://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="http://0.0.0.0:1313/post/index.xml">rss</a> 。</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section" id="disqus"  >
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 
+            
+                2014-2018 Lencerf
+    | Powered by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60772880-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+
+
+<script type="text/javascript" defer>
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
+    }
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
+</script>
+    
+  </body>
+</html>
