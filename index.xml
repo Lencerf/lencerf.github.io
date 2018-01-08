@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lencerf&#39;s Walk</title>
-    <link>/</link>
+    <link>https://lencerf.github.io/</link>
     <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 06 Jan 2018 18:45:28 -0500</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>给文章加上一个剧透警示</title>
-      <link>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
+      <link>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
+      <guid>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
       <description>
       
       <![CDATA[<p>最近玩了《<a href="http://store.steampowered.com/app/206440/To_the_Moon/">To the Moon</a>》这款游戏，很想写写玩后感，但是这样一款胜在剧情的游戏，写感想不可避免会剧透。文章还没动笔写，我先来折腾一下怎样给博客文章加上有效的剧透警示。</p>
@@ -102,23 +102,23 @@
     
     <item>
       <title>《To the Moon》玩后感</title>
-      <link>/post/2018-01-05-to-the-moon-review/</link>
+      <link>https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</link>
       <pubDate>Fri, 05 Jan 2018 23:48:48 -0400</pubDate>
       
-      <guid>/post/2018-01-05-to-the-moon-review/</guid>
+      <guid>https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: /post/2018-01-05-to-the-moon-review/</p> ]]>
+      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>回顾 2017</title>
-      <link>/post/2017-12-30-2017-review/</link>
+      <link>https://lencerf.github.io/post/2017-12-30-2017-review/</link>
       <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
       
-      <guid>/post/2017-12-30-2017-review/</guid>
+      <guid>https://lencerf.github.io/post/2017-12-30-2017-review/</guid>
       <description>
       
       <![CDATA[
@@ -164,10 +164,10 @@
     
     <item>
       <title>在平面上画一个四维的笛卡尔坐标系</title>
-      <link>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
+      <link>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
-      <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
+      <guid>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
       <description>
       
       <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
@@ -236,10 +236,10 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
     
     <item>
       <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
-      <link>/post/2017-06-16-macbook-pro-15-mid-2017/</link>
+      <link>https://lencerf.github.io/post/2017-06-16-macbook-pro-15-mid-2017/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>/post/2017-06-16-macbook-pro-15-mid-2017/</guid>
+      <guid>https://lencerf.github.io/post/2017-06-16-macbook-pro-15-mid-2017/</guid>
       <description>
       
       <![CDATA[<p>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 <a href="http://refer.discover.com/s/tyfx6">Discover</a> 申请提额度，下单 256GB Silver。</p>
@@ -303,23 +303,23 @@ width: 525px;"></p>
     
     <item>
       <title>Open a Fidelity Account as a Non-Resident Alien</title>
-      <link>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
+      <link>https://lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
+      <guid>https://lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: /post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</p> ]]>
+      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2017-04-26-open-a-fidelity-account-as-a-non-resident-alien/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>Map a Double Well to a Spin System</title>
-      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <link>https://lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <guid>https://lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
       <description>
       
       <![CDATA[<p>Consider a very simple <a href="https://en.wikipedia.org/wiki/Double-well_potential">double well</a> model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are
@@ -477,10 +477,10 @@ Now we see this is equivalent to putting a spin-$N$ particle in a magnetic field
     
     <item>
       <title>LaTeX Best Practices</title>
-      <link>/post/2017-03-17-latex-best-practices/</link>
+      <link>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>/post/2017-03-17-latex-best-practices/</guid>
+      <guid>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</guid>
       <description>
       
       <![CDATA[
@@ -602,10 +602,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>VSCode extension for Beancount</title>
-      <link>/post/2017-03-10-vscode-beancount/</link>
+      <link>https://lencerf.github.io/post/2017-03-10-vscode-beancount/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>/post/2017-03-10-vscode-beancount/</guid>
+      <guid>https://lencerf.github.io/post/2017-03-10-vscode-beancount/</guid>
       <description>
       
       <![CDATA[<p>Homepage: <a href="https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount">Beancount on Marketplace</a></p>
@@ -637,10 +637,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>再见 2016</title>
-      <link>/post/2016-12-31-see-you-2016/</link>
+      <link>https://lencerf.github.io/post/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>/post/2016-12-31-see-you-2016/</guid>
+      <guid>https://lencerf.github.io/post/2016-12-31-see-you-2016/</guid>
       <description>
       
       <![CDATA[<p>虽然身处的时区还有几个小时，但是东八区2017新年已至，身处异乡心里终归还是惦记着故乡的时间。终究该回顾总结一下，和2016说再见了。</p>
@@ -687,10 +687,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>launchd 和 click</title>
-      <link>/post/2016-12-15-launchd-and-click/</link>
+      <link>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>/post/2016-12-15-launchd-and-click/</guid>
+      <guid>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
       <description>
       
       <![CDATA[<p>起因是看了一篇介绍 <a href="http://furius.ca/beancount/">Beancount</a> 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
@@ -758,10 +758,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>
       
       <![CDATA[
@@ -854,10 +854,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>八月小结</title>
-      <link>/post/2016-08-31-the-first-august/</link>
+      <link>https://lencerf.github.io/post/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>/post/2016-08-31-the-first-august/</guid>
+      <guid>https://lencerf.github.io/post/2016-08-31-the-first-august/</guid>
       <description>
       
       <![CDATA[
@@ -908,10 +908,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>
       
       <![CDATA[<p>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。</p>
@@ -965,10 +965,10 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>
       
       <![CDATA[<p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a rel="footnote" href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
@@ -1030,10 +1030,10 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
+      <link>https://lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <guid>https://lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
       <description>
       
       <![CDATA[
@@ -1273,10 +1273,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <link>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <guid>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
       <description>
       
       <![CDATA[<p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to generate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple solution to this problem. But what if we do need them two simultaneously?</p>
@@ -1296,10 +1296,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>
       
       <![CDATA[<p>Finally, I find the right way to use homebrew.</p>
@@ -1321,10 +1321,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>
       
       <![CDATA[<p>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with <code>CRLF</code> line breaks while TeXShop.app uses <code>LF</code> as a line ending.</p>
@@ -1354,10 +1354,10 @@ done
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <link>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <guid>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>
       
       <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
@@ -1397,10 +1397,10 @@ ps2pdf paper.ps
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>
       
       <![CDATA[<p>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。</p>
@@ -1417,10 +1417,10 @@ ps2pdf paper.ps
     
     <item>
       <title>A template of beamer</title>
-      <link>/post/2014-12-01-a-beamer-template/</link>
+      <link>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>/post/2014-12-01-a-beamer-template/</guid>
+      <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
       <description>
       
       <![CDATA[<p>Just a template of beamer</p>
@@ -1527,10 +1527,10 @@ ps2pdf paper.ps
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
       
       <![CDATA[<blockquote>
@@ -1576,10 +1576,10 @@ ps2pdf paper.ps
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <link>https://lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <guid>https://lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
       <description>
       
       <![CDATA[<p>Bose 气体满足 Bose-Einstein 分布
@@ -1633,10 +1633,10 @@ $$</p>
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://lencerf.github.io/about/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://lencerf.github.io/about/</guid>
       <description>
       
       <![CDATA[<p>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.</p>
@@ -1653,10 +1653,10 @@ $$</p>
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>
       
       <![CDATA[<blockquote>

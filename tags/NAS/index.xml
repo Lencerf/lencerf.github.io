@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nas on Lencerf&#39;s Walk</title>
-    <link>/tags/nas/</link>
+    <link>https://lencerf.github.io/tags/nas/</link>
     <description>Recent content in Nas on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 06 Dec 2016 21:48:10 -0500</lastBuildDate>
     
-        <atom:link href="/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/nas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>
       
       <![CDATA[

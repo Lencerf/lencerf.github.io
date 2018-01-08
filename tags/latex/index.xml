@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Latex on Lencerf&#39;s Walk</title>
-    <link>/tags/latex/</link>
+    <link>https://lencerf.github.io/tags/latex/</link>
     <description>Recent content in Latex on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Mar 2017 17:00:59 -0400</lastBuildDate>
     
-        <atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LaTeX Best Practices</title>
-      <link>/post/2017-03-17-latex-best-practices/</link>
+      <link>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>/post/2017-03-17-latex-best-practices/</guid>
+      <guid>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</guid>
       <description>
       
       <![CDATA[
@@ -138,10 +138,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <link>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <guid>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
       <description>
       
       <![CDATA[<p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to generate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple solution to this problem. But what if we do need them two simultaneously?</p>
@@ -161,10 +161,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <link>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <guid>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>
       
       <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
@@ -204,10 +204,10 @@ ps2pdf paper.ps
     
     <item>
       <title>A template of beamer</title>
-      <link>/post/2014-12-01-a-beamer-template/</link>
+      <link>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>/post/2014-12-01-a-beamer-template/</guid>
+      <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
       <description>
       
       <![CDATA[<p>Just a template of beamer</p>
@@ -314,10 +314,10 @@ ps2pdf paper.ps
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
       
       <![CDATA[<blockquote>
@@ -363,10 +363,10 @@ ps2pdf paper.ps
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>
       
       <![CDATA[<blockquote>

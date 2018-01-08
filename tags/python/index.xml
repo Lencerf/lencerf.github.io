@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Lencerf&#39;s Walk</title>
-    <link>/tags/python/</link>
+    <link>https://lencerf.github.io/tags/python/</link>
     <description>Recent content in Python on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 15 Dec 2016 10:16:18 -0500</lastBuildDate>
     
-        <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>launchd 和 click</title>
-      <link>/post/2016-12-15-launchd-and-click/</link>
+      <link>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>/post/2016-12-15-launchd-and-click/</guid>
+      <guid>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
       <description>
       
       <![CDATA[<p>起因是看了一篇介绍 <a href="http://furius.ca/beancount/">Beancount</a> 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>

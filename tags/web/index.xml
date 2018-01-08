@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Lencerf&#39;s Walk</title>
-    <link>/tags/web/</link>
+    <link>https://lencerf.github.io/tags/web/</link>
     <description>Recent content in Web on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 06 Jan 2018 18:45:28 -0500</lastBuildDate>
     
-        <atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>给文章加上一个剧透警示</title>
-      <link>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
+      <link>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
+      <guid>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
       <description>
       
       <![CDATA[<p>最近玩了《<a href="http://store.steampowered.com/app/206440/To_the_Moon/">To the Moon</a>》这款游戏，很想写写玩后感，但是这样一款胜在剧情的游戏，写感想不可避免会剧透。文章还没动笔写，我先来折腾一下怎样给博客文章加上有效的剧透警示。</p>

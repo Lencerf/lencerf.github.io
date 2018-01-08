@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Os X on Lencerf&#39;s Walk</title>
-    <link>/tags/os-x/</link>
+    <link>https://lencerf.github.io/tags/os-x/</link>
     <description>Recent content in Os X on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jun 2015 00:32:49 +0800</lastBuildDate>
     
-        <atom:link href="/tags/os-x/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/os-x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>
       
       <![CDATA[<p>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with <code>CRLF</code> line breaks while TeXShop.app uses <code>LF</code> as a line ending.</p>
@@ -46,10 +46,10 @@ done
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>
       
       <![CDATA[<blockquote>

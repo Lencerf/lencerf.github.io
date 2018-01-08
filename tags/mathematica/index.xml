@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematica on Lencerf&#39;s Walk</title>
-    <link>/tags/mathematica/</link>
+    <link>https://lencerf.github.io/tags/mathematica/</link>
     <description>Recent content in Mathematica on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Feb 2015 17:22:43 +0800</lastBuildDate>
     
-        <atom:link href="/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>
       
       <![CDATA[<p>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。</p>

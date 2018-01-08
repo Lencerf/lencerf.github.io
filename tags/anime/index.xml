@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anime on Lencerf&#39;s Walk</title>
-    <link>/tags/anime/</link>
+    <link>https://lencerf.github.io/tags/anime/</link>
     <description>Recent content in Anime on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
     
-        <atom:link href="/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在平面上画一个四维的笛卡尔坐标系</title>
-      <link>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
+      <link>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
-      <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
+      <guid>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
       <description>
       
       <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>

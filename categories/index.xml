@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Lencerf&#39;s Walk</title>
-    <link>/categories/</link>
+    <link>https://lencerf.github.io/categories/</link>
     <description>Recent content in Categories on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Apr 2017 20:06:24 -0400</lastBuildDate>
     
-        <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Academic</title>
-      <link>/categories/academic/</link>
+      <link>https://lencerf.github.io/categories/academic/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>/categories/academic/</guid>
+      <guid>https://lencerf.github.io/categories/academic/</guid>
       <description>
       
       <![CDATA[]]>
@@ -26,10 +26,10 @@
     
     <item>
       <title>Life</title>
-      <link>/categories/life/</link>
+      <link>https://lencerf.github.io/categories/life/</link>
       <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
       
-      <guid>/categories/life/</guid>
+      <guid>https://lencerf.github.io/categories/life/</guid>
       <description>
       
       <![CDATA[]]>
@@ -39,10 +39,10 @@
     
     <item>
       <title>Other</title>
-      <link>/categories/other/</link>
+      <link>https://lencerf.github.io/categories/other/</link>
       <pubDate>Fri, 05 Jan 2018 23:48:48 -0400</pubDate>
       
-      <guid>/categories/other/</guid>
+      <guid>https://lencerf.github.io/categories/other/</guid>
       <description>
       
       <![CDATA[]]>
@@ -52,10 +52,10 @@
     
     <item>
       <title>Technique</title>
-      <link>/categories/technique/</link>
+      <link>https://lencerf.github.io/categories/technique/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>/categories/technique/</guid>
+      <guid>https://lencerf.github.io/categories/technique/</guid>
       <description>
       
       <![CDATA[]]>

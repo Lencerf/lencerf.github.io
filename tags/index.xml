@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lencerf&#39;s Walk</title>
-    <link>/tags/</link>
+    <link>https://lencerf.github.io/tags/</link>
     <description>Recent content in Tags on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 14 Jul 2017 23:06:51 -0400</lastBuildDate>
     
-        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lencerf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Anime</title>
-      <link>/tags/anime/</link>
+      <link>https://lencerf.github.io/tags/anime/</link>
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
-      <guid>/tags/anime/</guid>
+      <guid>https://lencerf.github.io/tags/anime/</guid>
       <description>
       
       <![CDATA[]]>
@@ -26,10 +26,10 @@
     
     <item>
       <title>Automator</title>
-      <link>/tags/automator/</link>
+      <link>https://lencerf.github.io/tags/automator/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>/tags/automator/</guid>
+      <guid>https://lencerf.github.io/tags/automator/</guid>
       <description>
       
       <![CDATA[]]>
@@ -39,10 +39,10 @@
     
     <item>
       <title>Beancount</title>
-      <link>/tags/beancount/</link>
+      <link>https://lencerf.github.io/tags/beancount/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>/tags/beancount/</guid>
+      <guid>https://lencerf.github.io/tags/beancount/</guid>
       <description>
       
       <![CDATA[]]>
@@ -52,10 +52,10 @@
     
     <item>
       <title>Calculus</title>
-      <link>/tags/calculus/</link>
+      <link>https://lencerf.github.io/tags/calculus/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>/tags/calculus/</guid>
+      <guid>https://lencerf.github.io/tags/calculus/</guid>
       <description>
       
       <![CDATA[]]>
@@ -65,10 +65,10 @@
     
     <item>
       <title>Device</title>
-      <link>/tags/device/</link>
+      <link>https://lencerf.github.io/tags/device/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>/tags/device/</guid>
+      <guid>https://lencerf.github.io/tags/device/</guid>
       <description>
       
       <![CDATA[]]>
@@ -78,10 +78,10 @@
     
     <item>
       <title>Game</title>
-      <link>/tags/game/</link>
+      <link>https://lencerf.github.io/tags/game/</link>
       <pubDate>Fri, 05 Jan 2018 23:48:48 -0400</pubDate>
       
-      <guid>/tags/game/</guid>
+      <guid>https://lencerf.github.io/tags/game/</guid>
       <description>
       
       <![CDATA[]]>
@@ -91,10 +91,10 @@
     
     <item>
       <title>Homebrew</title>
-      <link>/tags/homebrew/</link>
+      <link>https://lencerf.github.io/tags/homebrew/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>/tags/homebrew/</guid>
+      <guid>https://lencerf.github.io/tags/homebrew/</guid>
       <description>
       
       <![CDATA[]]>
@@ -104,10 +104,10 @@
     
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://lencerf.github.io/tags/hugo/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>https://lencerf.github.io/tags/hugo/</guid>
       <description>
       
       <![CDATA[]]>
@@ -117,10 +117,10 @@
     
     <item>
       <title>Invest</title>
-      <link>/tags/invest/</link>
+      <link>https://lencerf.github.io/tags/invest/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>/tags/invest/</guid>
+      <guid>https://lencerf.github.io/tags/invest/</guid>
       <description>
       
       <![CDATA[]]>
@@ -130,10 +130,10 @@
     
     <item>
       <title>Latex</title>
-      <link>/tags/latex/</link>
+      <link>https://lencerf.github.io/tags/latex/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>/tags/latex/</guid>
+      <guid>https://lencerf.github.io/tags/latex/</guid>
       <description>
       
       <![CDATA[]]>
@@ -143,10 +143,10 @@
     
     <item>
       <title>Launchd</title>
-      <link>/tags/launchd/</link>
+      <link>https://lencerf.github.io/tags/launchd/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>/tags/launchd/</guid>
+      <guid>https://lencerf.github.io/tags/launchd/</guid>
       <description>
       
       <![CDATA[]]>
@@ -156,10 +156,10 @@
     
     <item>
       <title>Linear Algebra</title>
-      <link>/tags/linear-algebra/</link>
+      <link>https://lencerf.github.io/tags/linear-algebra/</link>
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
-      <guid>/tags/linear-algebra/</guid>
+      <guid>https://lencerf.github.io/tags/linear-algebra/</guid>
       <description>
       
       <![CDATA[]]>
@@ -169,10 +169,10 @@
     
     <item>
       <title>Linux</title>
-      <link>/tags/linux/</link>
+      <link>https://lencerf.github.io/tags/linux/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://lencerf.github.io/tags/linux/</guid>
       <description>
       
       <![CDATA[]]>
@@ -182,10 +182,10 @@
     
     <item>
       <title>Mac</title>
-      <link>/tags/mac/</link>
+      <link>https://lencerf.github.io/tags/mac/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>/tags/mac/</guid>
+      <guid>https://lencerf.github.io/tags/mac/</guid>
       <description>
       
       <![CDATA[]]>
@@ -195,10 +195,10 @@
     
     <item>
       <title>Mathematica</title>
-      <link>/tags/mathematica/</link>
+      <link>https://lencerf.github.io/tags/mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>/tags/mathematica/</guid>
+      <guid>https://lencerf.github.io/tags/mathematica/</guid>
       <description>
       
       <![CDATA[]]>
@@ -208,10 +208,10 @@
     
     <item>
       <title>Nas</title>
-      <link>/tags/nas/</link>
+      <link>https://lencerf.github.io/tags/nas/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>/tags/nas/</guid>
+      <guid>https://lencerf.github.io/tags/nas/</guid>
       <description>
       
       <![CDATA[]]>
@@ -221,10 +221,10 @@
     
     <item>
       <title>Os X</title>
-      <link>/tags/os-x/</link>
+      <link>https://lencerf.github.io/tags/os-x/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>/tags/os-x/</guid>
+      <guid>https://lencerf.github.io/tags/os-x/</guid>
       <description>
       
       <![CDATA[]]>
@@ -234,10 +234,10 @@
     
     <item>
       <title>Python</title>
-      <link>/tags/python/</link>
+      <link>https://lencerf.github.io/tags/python/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://lencerf.github.io/tags/python/</guid>
       <description>
       
       <![CDATA[]]>
@@ -247,10 +247,10 @@
     
     <item>
       <title>Quantum</title>
-      <link>/tags/quantum/</link>
+      <link>https://lencerf.github.io/tags/quantum/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>/tags/quantum/</guid>
+      <guid>https://lencerf.github.io/tags/quantum/</guid>
       <description>
       
       <![CDATA[]]>
@@ -260,10 +260,10 @@
     
     <item>
       <title>Raspberrypi</title>
-      <link>/tags/raspberrypi/</link>
+      <link>https://lencerf.github.io/tags/raspberrypi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>/tags/raspberrypi/</guid>
+      <guid>https://lencerf.github.io/tags/raspberrypi/</guid>
       <description>
       
       <![CDATA[]]>
@@ -273,10 +273,10 @@
     
     <item>
       <title>Socks5</title>
-      <link>/tags/socks5/</link>
+      <link>https://lencerf.github.io/tags/socks5/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>/tags/socks5/</guid>
+      <guid>https://lencerf.github.io/tags/socks5/</guid>
       <description>
       
       <![CDATA[]]>
@@ -286,10 +286,10 @@
     
     <item>
       <title>Spin</title>
-      <link>/tags/spin/</link>
+      <link>https://lencerf.github.io/tags/spin/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>/tags/spin/</guid>
+      <guid>https://lencerf.github.io/tags/spin/</guid>
       <description>
       
       <![CDATA[]]>
@@ -299,10 +299,10 @@
     
     <item>
       <title>Sublime Text</title>
-      <link>/tags/sublime-text/</link>
+      <link>https://lencerf.github.io/tags/sublime-text/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>/tags/sublime-text/</guid>
+      <guid>https://lencerf.github.io/tags/sublime-text/</guid>
       <description>
       
       <![CDATA[]]>
@@ -312,10 +312,10 @@
     
     <item>
       <title>Tax</title>
-      <link>/tags/tax/</link>
+      <link>https://lencerf.github.io/tags/tax/</link>
       <pubDate>Wed, 26 Apr 2017 15:47:39 -0400</pubDate>
       
-      <guid>/tags/tax/</guid>
+      <guid>https://lencerf.github.io/tags/tax/</guid>
       <description>
       
       <![CDATA[]]>
@@ -325,10 +325,10 @@
     
     <item>
       <title>Thermodynamics</title>
-      <link>/tags/thermodynamics/</link>
+      <link>https://lencerf.github.io/tags/thermodynamics/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>/tags/thermodynamics/</guid>
+      <guid>https://lencerf.github.io/tags/thermodynamics/</guid>
       <description>
       
       <![CDATA[]]>
@@ -338,10 +338,10 @@
     
     <item>
       <title>Vscode</title>
-      <link>/tags/vscode/</link>
+      <link>https://lencerf.github.io/tags/vscode/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>/tags/vscode/</guid>
+      <guid>https://lencerf.github.io/tags/vscode/</guid>
       <description>
       
       <![CDATA[]]>
@@ -351,10 +351,10 @@
     
     <item>
       <title>Web</title>
-      <link>/tags/web/</link>
+      <link>https://lencerf.github.io/tags/web/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>/tags/web/</guid>
+      <guid>https://lencerf.github.io/tags/web/</guid>
       <description>
       
       <![CDATA[]]>
@@ -364,10 +364,10 @@
     
     <item>
       <title>折腾</title>
-      <link>/tags/%E6%8A%98%E8%85%BE/</link>
+      <link>https://lencerf.github.io/tags/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>/tags/%E6%8A%98%E8%85%BE/</guid>
+      <guid>https://lencerf.github.io/tags/%E6%8A%98%E8%85%BE/</guid>
       <description>
       
       <![CDATA[]]>
