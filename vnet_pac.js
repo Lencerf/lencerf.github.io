@@ -99,18 +99,7 @@ function loopn(List, ip, Rex) {
 }
 
 function FindProxyForURL(url, host){
-        var L_LAN = [['10.0.0.0', '255.0.0.0'], ['172.16.0.0', '255.240.0.0'], ['192.168.0.0', '255.255.0.0']];
-
-    var D = 'DIRECT';
-    //ServerList
-    var P = 'HTTPS hsline-1.vnet.one:443;HTTPS hsline-1.vnet.one:465;HTTPS hsline-1.vnet.one:311;HTTPS hsline-1.vnet.one:321;HTTPS hsline-1.vnet.one:331;PROXY hsline-1.vnet.one:310;PROXY hsline-1.vnet.one:143;PROXY hsline-1.vnet.one:320;PROXY hsline-1.vnet.one:330;PROXY hsline-1.vnet.one:2048;';
-    
-    //Check-Tunnel
-    if(host==='check.vnet.one'){
-        return P;
-    }
-
-    var TOR = "SOCKS5 127.0.0.1:9050";
+    var TOR = "SOCKS5 127.0.0.1:9050; SOCKS 127.0.0.1:9050";
     var domains = [
         "dl.lux.bookfi.net",
         "sci-hub.tv",
@@ -122,7 +111,16 @@ function FindProxyForURL(url, host){
     		return TOR;
     	}
     }
+        var L_LAN = [['10.0.0.0', '255.0.0.0'], ['172.16.0.0', '255.240.0.0'], ['192.168.0.0', '255.255.0.0']];
 
+    var D = 'DIRECT';
+    //ServerList
+    var P = 'HTTPS hsline-1.vnet.one:443;HTTPS hsline-1.vnet.one:465;HTTPS hsline-1.vnet.one:311;HTTPS hsline-1.vnet.one:321;HTTPS hsline-1.vnet.one:331;PROXY hsline-1.vnet.one:310;PROXY hsline-1.vnet.one:143;PROXY hsline-1.vnet.one:320;PROXY hsline-1.vnet.one:330;PROXY hsline-1.vnet.one:2048;';
+    
+    //Check-Tunnel
+    if(host==='check.vnet.one'){
+        return P;
+    }
     
     //Preload-DirectGo
     var L_service_D = eval(base64decode('WyJnb29nbGUuY29tIiwiZ29vZ2xlLmNvLmpwIiwiZ29vZ2xlLmNvbS5oayIsImdzdGF0aWMuY29tIiwiZ29vZ2xldXNlcmNvbnRlbnRzLmNvbSIsImdvb2dsZXVzZXJjb250ZW50LmNvbSIsImdvb2dsZWFwaXMuY29tIiwieW91dHViZS5jb20iLCJ5dGltZy5jb20iLCJ2bmV0Lm9uZSIsInZuZXQubGluayIsInRhd2sudG8iLCJqc2RlbGl2ci5uZXQiLCJmYWNlYm9vay5jb20iLCJ0d2l0dGVyLmNvbSIsImdtYWlsLmNvbSIsImdvb2dsZXN5bmRpY2F0aW9uLmNvbSIsImdvb2dsZWFkc2VydmljZXMuY29tIiwiZ29vZ2xldGFnc2VydmljZXMuY29tIl0='));
