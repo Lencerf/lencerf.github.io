@@ -19,7 +19,7 @@
       <guid>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
       <description>
       
-      <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
+      <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="https://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
 
 <p><img src="http://imgur.com/it4hpvJ.png" alt="截自第1话1分36秒处" /></p>
 
@@ -71,7 +71,7 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
 
 <p>当然，到此为止我都只考虑了纯粹的数学投影，没有考虑人体视觉。比如，通常我们在纸上画一个<a href="https://zh.wikipedia.org/zh-cn/笛卡儿坐标系#/media/File:Cartesian_coordinates_3D.svg">三维坐标系时</a>，一般都会把某两个坐标系画成互相垂直，第三条坐标系夹在之间。然而用上面的方法可以证明，是不可能找到这样一个投影平面的。但这并不影响我们觉得画出来的坐标系很有立体感。</p>
 
-<p>所以说，你们动画制作者还要学习一个，探索 W 维度，那也要按照数学和物理的基本法啊，对不对？要按照线性代数的基本原则去作画，去生成&hellip;当然人体的视觉原理也是很重要的。<a href="http://bgm.tv/character/47">阿虚</a>有句名言，叫</p>
+<p>所以说，你们动画制作者还要学习一个，探索 W 维度，那也要按照数学和物理的基本法啊，对不对？要按照线性代数的基本原则去作画，去生成&hellip;当然人体的视觉原理也是很重要的。<a href="https://bgm.tv/character/47">阿虚</a>有句名言，叫</p>
 
 <blockquote>
 <p><a href="https://www.zhihu.com/question/27549696">フィクションにリアリティを求める奴のほうがどうかしていると思うが。</a></p>

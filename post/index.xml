@@ -94,7 +94,7 @@
 &lt;/description&gt;
 </code></pre>
 
-<p>最终效果可见此文：<a href="/post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="http://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="http://0.0.0.0:1313/post/index.xml">rss</a> 。</p>
+<p>最终效果可见此文：<a href="/post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="https://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="/post/index.xml">rss</a> 。</p>
 ]]>
       
       </description>
@@ -129,7 +129,7 @@
 
 <p>上半年选了量子力学2和统计物理，完成了核心课程；下半年选了量子场论和冷原子引论。量子力学2大部分是学过的内容，当然更深入和系统一些。统计物理本该是对我很有用的课程，无奈任课老师实在教得太烂，没有学到新的内容，甚至也没达到系统复习一遍本科统计物理内容的效果。本以为量子场论课会对我的研究有帮助，再一次无奈，因为教量子场论的教授是做高能理论的，他的量子场论课偏重于高能，而且异常数学化，我根本无法从中看到物理图像，数学形式异常复杂，索然无味，直到最后我也没彻底弄清楚重整化、1PI 这些内容，怕是这辈子也搞不清楚了。好在这课没有考试，交了四次作业，水水过去了。冷原子引论课我也没有好好上，一来大量内容是关于实验技术的，二来不少核心的东西老师没有深入讲，就把数学过程跳过去了。总之今年算是充分体会了“上课纯属浪费时间”的道理。</p>
 
-<p>课程之外，从暑假开始尝试了好几次去读<a href="http://cat.phys.s.u-tokyo.ac.jp/~ueda/">上田正仁</a>所写的 <a href="http://www.worldscientific.com/worldscibooks/10.1142/7216"><em>Fundamentals and New Frontiers of Bose-Einstein Condensation</em></a>，最后都因为各种原因没能坚持下去，但是每一次重新从头开始看有感觉有了新的理解。12月初开始读 <a href="http://www.springer.com/us/book/9783540357735"><em>Decoherence and the Quantum-To-Classical Transition</em></a>，仿佛打开新世界的大门，终于第一次感觉自己在理解“为什么宏观世界没有薛定谔的猫”这个问题上有了进展，不禁感慨这才是真正的物理，同时也纠正了对一些概念的错误理解。</p>
+<p>课程之外，从暑假开始尝试了好几次去读<a href="http://cat.phys.s.u-tokyo.ac.jp/~ueda/">上田正仁</a>所写的 <a href="http://www.worldscientific.com/worldscibooks/10.1142/7216"><em>Fundamentals and New Frontiers of Bose-Einstein Condensation</em></a>，最后都因为各种原因没能坚持下去，但是每一次重新从头开始看有感觉有了新的理解。12月初开始读 <a href="https://www.springer.com/us/book/9783540357735"><em>Decoherence and the Quantum-To-Classical Transition</em></a>，仿佛打开新世界的大门，终于第一次感觉自己在理解“为什么宏观世界没有薛定谔的猫”这个问题上有了进展，不禁感慨这才是真正的物理，同时也纠正了对一些概念的错误理解。</p>
 
 <p>自己研究也从今年年初正式开始起步。其实老师给我的是一个非常简单的双阱势模型，然而我终究还是缺乏经验，一开始迷失在数值模拟的海量数据中，完全看不到该往哪个方向努力。一直到四月初，导师突然对另一个问题感兴趣，于是搁置下双阱势问题，开始想那个问题。但是在那个问题上我更加是缺少经验和知识储备，期间五月份又回国，被很多事耽搁，最后导师把那个问题交给他新招的博后去做了。时间就到了六月初。因为我在双阱势问题上做了不少模拟计算，但并没有找到预期的现象，于是导师觉得可能这个课题可以结了，让我总结一下，并让我再试试解析。转机发生在此，我本想向做航天工程的一位同学请教频率叠加的计算方法，却突然在讨论中途开了窍，想到了一些很原始却有效的计算方法。于是势如破竹，很快就把解析结果找到了。但这之后又耽搁了，一方面我选了个凑学分的暑期课程，另一方面导师满世界参加会议去了。秋季学期开学后没多久，因为掌握了更多 Python 画图和动画的技术（主要是 matplotlib），我无意间又发现在双阱势问题里有 cat state 出现，这让我非常激动。九月十月基本都在想办法搞清楚 cat state 的来源。十一月初的时候，老师终于说这个课题可以结束了。</p>
 
@@ -142,7 +142,7 @@
 <ul>
 <li>今年在 <a href="https://bgm.tv/group/north_america/forum">BGM NA</a> 群里水得非常愉快，虽然大部分时间自己都是在潜水，但是群消息基本上一条不落地看了，也和同校的两位群友顺利面基。</li>
 <li>今年依然高度沉迷 <a href="http://furius.ca/beancount/">Beancount</a>，并走火入魔为之写了一个 VSCode 的<a href="https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount">插件</a>。</li>
-<li>《<a href="http://bgm.tv/subject/185943">末日时在做什么？有没有空？可以来拯救吗？</a>》与《<a href="http://bgm.tv/subject/47889">来自风平浪静的明天</a>》算是今年让我触动最多的两部动画。</li>
+<li>《<a href="https://bgm.tv/subject/185943">末日时在做什么？有没有空？可以来拯救吗？</a>》与《<a href="https://bgm.tv/subject/47889">来自风平浪静的明天</a>》算是今年让我触动最多的两部动画。</li>
 <li>读了刘震云先生《一句顶一万句》的前半部，觉得自己还是太贪婪。</li>
 <li>拔了三颗智齿和一课烂牙根，植入了新假牙根，钱包爆炸。18年1月下旬应该就可以完全愈合了。</li>
 <li>买了新的15英寸 <a href="/post/2017-06-16-macbook-pro-15-mid-2017/">MacBook Pro</a>，生活幸福感大幅提升。钱包爆炸。</li>
@@ -170,7 +170,7 @@
       <guid>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
       <description>
       
-      <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="http://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
+      <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="https://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
 
 <p><img src="http://imgur.com/it4hpvJ.png" alt="截自第1话1分36秒处" /></p>
 
@@ -222,7 +222,7 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
 
 <p>当然，到此为止我都只考虑了纯粹的数学投影，没有考虑人体视觉。比如，通常我们在纸上画一个<a href="https://zh.wikipedia.org/zh-cn/笛卡儿坐标系#/media/File:Cartesian_coordinates_3D.svg">三维坐标系时</a>，一般都会把某两个坐标系画成互相垂直，第三条坐标系夹在之间。然而用上面的方法可以证明，是不可能找到这样一个投影平面的。但这并不影响我们觉得画出来的坐标系很有立体感。</p>
 
-<p>所以说，你们动画制作者还要学习一个，探索 W 维度，那也要按照数学和物理的基本法啊，对不对？要按照线性代数的基本原则去作画，去生成&hellip;当然人体的视觉原理也是很重要的。<a href="http://bgm.tv/character/47">阿虚</a>有句名言，叫</p>
+<p>所以说，你们动画制作者还要学习一个，探索 W 维度，那也要按照数学和物理的基本法啊，对不对？要按照线性代数的基本原则去作画，去生成&hellip;当然人体的视觉原理也是很重要的。<a href="https://bgm.tv/character/47">阿虚</a>有句名言，叫</p>
 
 <blockquote>
 <p><a href="https://www.zhihu.com/question/27549696">フィクションにリアリティを求める奴のほうがどうかしていると思うが。</a></p>
@@ -244,31 +244,31 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
       
       <![CDATA[<p>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 <a href="http://refer.discover.com/s/tyfx6">Discover</a> 申请提额度，下单 256GB Silver。</p>
 
-<p><img src="http://i.imgur.com/lcFXy2v.png" alt="两个月的搬砖工钱 T_T" style="
+<p><img src="https://i.imgur.com/lcFXy2v.png" alt="两个月的搬砖工钱 T_T" style="
 width: 416px"></p>
 
 <p>等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里。以下图片用 iPhone 6s 在我的昏暗小房间里拍摄，就不要吐槽拍摄质量了。</p>
 
-<p><img src="http://i.imgur.com/IPu7Cd0.jpg" alt="包裹，签收时 UPS 大叔惯例一脸嫌弃" /></p>
+<p><img src="https://i.imgur.com/IPu7Cd0.jpg" alt="包裹，签收时 UPS 大叔惯例一脸嫌弃" /></p>
 
-<p><img src="http://i.imgur.com/W9ou7AQ.jpg" alt="拆开包裹" /></p>
+<p><img src="https://i.imgur.com/W9ou7AQ.jpg" alt="拆开包裹" /></p>
 
-<p><img src="http://i.imgur.com/5bAfHnj.jpg" alt="打开外壳的盖子" /></p>
+<p><img src="https://i.imgur.com/5bAfHnj.jpg" alt="打开外壳的盖子" /></p>
 
-<p><img src="http://i.imgur.com/fFhmziI.jpg" alt="取出 Mac 本体" /></p>
+<p><img src="https://i.imgur.com/fFhmziI.jpg" alt="取出 Mac 本体" /></p>
 
-<p><img src="http://i.imgur.com/fLqwyKK.jpg" alt="撕掉包装，掀开显示器，进行初始设置" /></p>
+<p><img src="https://i.imgur.com/fLqwyKK.jpg" alt="撕掉包装，掀开显示器，进行初始设置" /></p>
 
-<p>略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。<a href="http://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）</p>
+<p>略微意外的是，盖子一打开，Mac 自动就开机进入初始设置界面。我记得四年前买上一台 Mac 的时候是需要手动开机。（不过等我进入系统看了下 uptime 就十几分钟，看来不至于是发货途中一直处于睡眠状态了。<a href="https://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）</p>
 
 <p>设置完成后，查看系统信息：</p>
 
-<p><img src="http://i.imgur.com/xspBmjB.png" alt="" style="
+<p><img src="https://i.imgur.com/xspBmjB.png" alt="" style="
 width: 698px;"></p>
 
 <p>新老设备合照:
-<img src="http://i.imgur.com/3TSMYYG.jpg" alt="" />
-<img src="http://i.imgur.com/W6eJoO6.jpg" alt="确实薄了许多" /></p>
+<img src="https://i.imgur.com/3TSMYYG.jpg" alt="" />
+<img src="https://i.imgur.com/W6eJoO6.jpg" alt="确实薄了许多" /></p>
 
 <p>用了几天的，Retina 加上15吋屏确实太爽了，我终于从13吋普通屏里解放了出来；键盘手感诡异，一时适应不了，经常按错；Touch Bar 确实是鸡肋，调控音量和屏幕亮度都需要两步操作，不如实体键来得快。我现在用得最多的两个 Touch Bar 功能是：</p>
 
@@ -279,7 +279,7 @@ width: 698px;"></p>
 
 <p>另外，网页视频最大化、Safari 密码自动填充时会有卡顿，Sierra 果然还是打磨得不够。<a href="https://bjango.com/mac/istatmenus/">iStat Menus</a> 目前也获取不到风扇和 CPU 温度的信息，只能等待适配了。</p>
 
-<p><img src="http://i.imgur.com/OE3rSjl.png" alt="不能看 CPU 温度浑身难受" style="
+<p><img src="https://i.imgur.com/OE3rSjl.png" alt="不能看 CPU 温度浑身难受" style="
 width: 259px;"></p>
 
 <p>最后，天国的 ESC 键和众多扩展接口（USB、HDMI&hellip;）！</p>
@@ -290,9 +290,9 @@ width: 259px;"></p>
 
 <p>2016-06-21 更新：切换到新 Mac 以后一直觉得似乎屏幕字体变小了，直到在微博上看到有人<a href="http://weibo.com/1846569133/F8Pfshe4O">反馈</a>，才发现原来苹果把15吋的默认分辨率改成了 1690×1050。显示器的实际分辨率是 2880×1800，按照 Retina 2:1 缩放，应该默认 1440×900 才对。这就很坑了！</p>
 
-<p><img src="http://i.imgur.com/SmTKGOx.png" alt="rMBP mid 2017 显示器默认分辨率" style="
+<p><img src="https://i.imgur.com/SmTKGOx.png" alt="rMBP mid 2017 显示器默认分辨率" style="
 width: 525px;">
-<img src="http://i.imgur.com/whxKAbY.png" alt="同学的 rMBP mid 2015 默认显示器分辨率" style="
+<img src="https://i.imgur.com/whxKAbY.png" alt="同学的 rMBP mid 2015 默认显示器分辨率" style="
 width: 525px;"></p>
 
 <p>2017-07-14 更新：终于受不了 Safari 密码自动填充时的卡顿，上网寻找办法。根据 macpaw 的<a href="https://macpaw.com/how-to/fix-slow-safari">方法</a>，先完整地删除了 Safari 的所有缓存，然后删掉 ~/Library/Preferences/com.apple.Safari.plist，重启硬件。问题似乎解决，至少看不到明显的卡顿了。</p>
@@ -750,7 +750,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>再次加载，成功！</p>
 
-<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 <a href="http://bgm.tv/img/smiles/tv/15.gif">bgm38</a>。</p>
+<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 <a href="https://bgm.tv/img/smiles/tv/15.gif">bgm38</a>。</p>
 ]]>
       
       </description>
@@ -868,7 +868,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>近几个月大概是我这些年来心态波动最大的一个月了。初来美国念 Ph.D.，对美国社会的不适应、对读 Ph.D. 所需的心理准备不足、不靠谱学长的负面情绪渲染、以及外界的各种喧闹，合起来差点在八月中旬彻底把我击溃。基础学科学术界竞争的激烈性和工业界发展前景的不明朗是众所周知的事实，虽然我的专业物理暂且还没有生物、伪化学那么糟糕，但是也远远比不上数学和CS。当初申请时满腔热血认为自己能克服万难，然而当困难真的摆到自己面前时我却一下慌了阵脚（尤其是我的申请结果不好，来了一所偏保底的学校，hard 模式）。</p>
 
-<p>庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的<a href="http://i.imgur.com/3PB1Goz.png">话语</a>分量真的很重。</p>
+<p>庆幸的是我最终在家人朋友的鼓励下把心态调整过来了。人在异乡，孤身一人，有时候一行简单的<a href="https://i.imgur.com/3PB1Goz.png">话语</a>分量真的很重。</p>
 
 <p>虽然没办法在这个学校继续做量子信息方面的研究了，但是目前找到一个新来的导师做冷原子凝聚态，也算是我比较感兴趣的方向，和量子信息也有不少联系。在 Skype 上面试时觉得这个老师应该是比较勤奋的，希望不要太 push 吧，希望不要是个典型的变态“华人AP”。上课一个星期来也发现物理系老师都蛮友好的，尤其是教量子力学的教授，有一次还用中文和我说了句”谢谢“。</p>
 
@@ -1343,7 +1343,7 @@ done
 </code></pre>
 
 <p>Make sure that choose &ldquo;as argument&rdquo; for the option &ldquo;Pass input&rdquo;.
-<img src="http://i.imgur.com/vbDeBZr.png" alt="" /></p></li>
+<img src="https://i.imgur.com/vbDeBZr.png" alt="" /></p></li>
 
 <li><p>&ldquo;unix2dos&rdquo; will show up in the services when you right click on any text files.</p></li>
 </ol>

@@ -94,7 +94,7 @@
 &lt;/description&gt;
 </code></pre>
 
-<p>最终效果可见此文：<a href="/post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="http://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="http://0.0.0.0:1313/post/index.xml">rss</a> 。</p>
+<p>最终效果可见此文：<a href="/post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="https://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="/post/index.xml">rss</a> 。</p>
 ]]>
       
       </description>
@@ -200,7 +200,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 
 <p>再次加载，成功！</p>
 
-<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 <a href="http://bgm.tv/img/smiles/tv/15.gif">bgm38</a>。</p>
+<p>（实际解决问题的过程比这复杂多了，中间走了歪路差不多把 /usr/local/bin/fava 自己写了一遍。真是大大的 <a href="https://bgm.tv/img/smiles/tv/15.gif">bgm38</a>。</p>
 ]]>
       
       </description>
@@ -594,7 +594,7 @@ done
 </code></pre>
 
 <p>Make sure that choose &ldquo;as argument&rdquo; for the option &ldquo;Pass input&rdquo;.
-<img src="http://i.imgur.com/vbDeBZr.png" alt="" /></p></li>
+<img src="https://i.imgur.com/vbDeBZr.png" alt="" /></p></li>
 
 <li><p>&ldquo;unix2dos&rdquo; will show up in the services when you right click on any text files.</p></li>
 </ol>
