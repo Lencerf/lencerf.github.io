@@ -100,10 +100,16 @@ function loopn(List, ip, Rex) {
 
 function FindProxyForURL(url, host){
     var TOR = "SOCKS5 127.0.0.1:9050; SOCKS 127.0.0.1:9050";
+    var SSR = "SOCKS5 127.0.0.1:1082; SOCKS 127.0.0.1:1082";
+
     var domains = [
         "dl.lux.bookfi.net",
         "sci-hub.tv",
         "e-hentai.org"
+    ];
+
+    var domains2 = [
+        "bt.byr.cn"
     ];
 
     for (var i = domains.length - 1; i >= 0; i--) {
@@ -111,7 +117,14 @@ function FindProxyForURL(url, host){
     		return TOR;
     	}
     }
-        var L_LAN = [['10.0.0.0', '255.0.0.0'], ['172.16.0.0', '255.240.0.0'], ['192.168.0.0', '255.255.0.0']];
+
+    for (var i = domains2.length - 1; i >= 0; i--) {
+    	if (dnsDomainIs(host, domains2[i])) {
+    		return SSR;
+    	}
+    }
+
+    var L_LAN = [['10.0.0.0', '255.0.0.0'], ['172.16.0.0', '255.240.0.0'], ['192.168.0.0', '255.255.0.0']];
 
     var D = 'DIRECT';
     //ServerList
