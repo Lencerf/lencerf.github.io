@@ -15,7 +15,8 @@ function FindProxyForURL(url, host){
 	
 	var bili = [
 		"bangumi.bilibili.com",
-        "ankichina.net"
+        "ankichina.net",
+        "music.163.com"
 	];
 
     for (var i = domains.length - 1; i >= 0; i--) {
