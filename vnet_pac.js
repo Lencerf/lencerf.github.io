@@ -10,7 +10,8 @@ function FindProxyForURL(url, host){
     ];
 
     var domains2 = [
-        "bt.byr.cn"
+        "bt.byr.cn",
+	"schwab.com"
 	];
 	
 	var bili = [
