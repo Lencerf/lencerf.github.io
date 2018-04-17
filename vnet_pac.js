@@ -11,14 +11,17 @@ function FindProxyForURL(url, host){
     ];
 
     var domains2 = [
-        "bt.byr.cn",
-	"schwab.com"
+        "bt.byr.cn"
 	];
 	
 	var bili = [
 		"bangumi.bilibili.com",
         "music.163.com"
-	];
+    ];
+    
+    if(dnsDomainIs(host,"schwab.com") && myIpAddress().startsWith("10.186")) {
+        return SSR;
+    }
 
     for (var i = domains.length - 1; i >= 0; i--) {
     	if (dnsDomainIs(host, domains[i])) {
