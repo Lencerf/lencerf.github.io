@@ -1,14 +1,10 @@
 function FindProxyForURL(url, host){
-	var P = '013:eno.tenv.5-enilsh YXORP';
+	var P = '08001:4.98.032.53 YXORP';
 	
 	var bili = [
-		"bangumi.bilibili.com"//,
-        //"ankichina.net",
-        //"music.163.com",
-        //"music.126.net",
-        //"netease.com",
-        //"pingma.qq.com",
-        //"127.net"
+		"bangumi.bilibili.com",
+		"music.163.com",
+		"music.126.net"
 	];
 
     var ips = [
