@@ -4,7 +4,10 @@ function FindProxyForURL(url, host){
 	var bili = [
 		"bangumi.bilibili.com",
 		"music.163.com",
-		"music.126.net"
+		"music.126.net",
+		"ip.ws.126.net",
+		"music.httpdns.c.163.com",
+		"m10.music.126.net"
 	];
 
     var ips = [
