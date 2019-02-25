@@ -1338,8 +1338,6 @@ ps2pdf paper.ps
       
       <![CDATA[<p>Just a template of beamer</p>
 
-<p></p>
-
 <pre><code class="language-tex">%!Mode:: &quot;TeX:UTF-8&quot;
 %!TEX program = xelatex
 \documentclass[10pt]{beamer}
@@ -1449,8 +1447,6 @@ ps2pdf paper.ps
       <![CDATA[<blockquote>
 <p>又开始折腾了。。。</p>
 </blockquote>
-
-<p></p>
 
 <h2 id="安装-latextools">安装 LaTeXTools</h2>
 
@@ -1573,12 +1569,13 @@ $$</p>
       <description>
       
       <![CDATA[<blockquote>
-<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。</p>
+<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。
+   ds</p>
 
 <p>本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。</p>
 </blockquote>
 
-<p>　　众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
+<p>众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
 在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。</p>
 
 <p>　　首先安装 TeX 基本系统。上 <a href="http://tug.org/mactex/">MaxTeX 主页</a>下载 TeXLive 发行版，建议下载<a href="http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg">基本包</a>（&lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 <code>apt-get</code> 命令即可。
