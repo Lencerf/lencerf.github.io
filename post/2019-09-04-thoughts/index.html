@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="Lencerf" name="author">
-<meta property="og:title" content="给文章加上一个剧透警示 - Lencerf&#39;s Walk">
+<meta property="og:title" content="随感 - Lencerf&#39;s Walk">
 <meta property="og:description" content="to hit the marked point">
 <meta property="og:type" content="website">
 <meta name="generator" content="Hugo 0.57.2" />
-<title>给文章加上一个剧透警示 | Lencerf&#39;s Walk</title>
+<title>随感 | Lencerf&#39;s Walk</title>
 <link rel="stylesheet" href="../../css/style.css">
 <script src="https://kit.fontawesome.com/8455592b61.js"></script>
 
@@ -44,9 +44,9 @@
     
     <article class="section">
     
-      <h1 class="title">给文章加上一个剧透警示</h1>
+      <h1 class="title">随感</h1>
         
-        <time class="meta">January 6, 2018</time>
+        <time class="meta">September 4, 2019</time>
         
       <div class="meta">
         
@@ -54,104 +54,28 @@
             
             
             <i class="fa fa-folder-o" aria-hidden="true"></i>
-            <a href="../../categories/technique" rel="category">Technique</a>
+            <a href="../../categories/life" rel="category">Life</a>
             
           </span>
         
-        
-          <span class="metagroup">
-            
-              <i class="fa fa-tags" aria-hidden="true"></i>
-            
-            
-              
-              <a href="../../tags/hugo/" rel="tag">Hugo</a>
-            
-              
-                <span id="tagcomma">,</span>
-              
-              <a href="../../tags/web/" rel="tag">web</a>
-            
-          </span>
         
       </div>
       <main class="content entry-content entry clearfix">
-        <p>最近玩了《<a href="http://store.steampowered.com/app/206440/To_the_Moon/">To the Moon</a>》这款游戏，很想写写玩后感，但是这样一款胜在剧情的游戏，写感想不可避免会剧透。文章还没动笔写，我先来折腾一下怎样给博客文章加上有效的剧透警示。</p>
+        <p><center>（一）</center></p>
 
-<p>基本思路是刚打开网页时，把文章正文盖住，并显示一个提示剧透的对话框，只有读者选择继续阅读以后，才显示文章内容。得益于 Hugo 强大的自定义能力，实现这个效果还是不难的。</p>
+<p>上小学时，有一次姐姐买了个闹钟，到了点以后，会发出“宝宝起床、宝宝起床”的声音。我非常喜欢，于是奶奶也给我买了一个。</p>
 
-<p>首先给含有剧透的文章加上一个<code>warning</code>属性，包含了警示对话框所提示的文字：</p>
+<p>然而我买来的这个，到了点以后，发出的声音却是“懒虫起床、懒虫起床”。我跟奶奶说你听这个声音是“懒虫起床”，但是不知道是不是听力退化的原因，奶奶和爷爷均表示，明明是“宝宝起床”啊！我反复听了无数次都是“懒虫”，但无法说服爷爷奶奶。于是只能等到周末爸爸妈妈回来了以后，让他们当裁判。但让我失望的是，爸爸妈妈也表示是“宝宝起床”，并且搬出了我无法反对的理由：“懒虫”这两个字是骂人的话，闹钟设定一个骂人的声音哪里还卖得出去呢？</p>
 
-<pre><code>warning: &quot;以下内容含有《To the Moon》的剧透，如需继续阅读，点击下面的按钮。&quot;
-</code></pre>
+<p><center>（二）</center></p>
 
-<p>之后修改 Hugo 的模版。文章正文包含在<code>article</code>标签里面，所以在渲染时，检查一下文章有没有<code>warning</code>属性，如果有，就默认加上模糊效果：</p>
+<p>周一是劳工节，虽然还有一大堆工作没完成，但是黑人兄弟拉我去参加他们的 cookout party，想了想我还是去了。在现场认识了不少新的面孔，大家都需要相互介绍名字。果不其然，我需要耐心地教他们汉语里的 ü 这个音，毕竟英语里根本没有对应，一般只要对方发得大概有点接近，我就会说 Good 了，然而有个人总是发得差得很远，而且其他很容易发的音也偏得离谱。直到我教了他四五次以后，终于我的好朋友过来拍了拍那个人的头——原来这位一直读不准我名字的同学，平日里就不是一个“正经人”，总是喜欢开玩笑。他一直读不准我的名字，其实是在捉弄我。而我一直没意识到。</p>
 
-<pre><code class="language-html">{{ if .Params.warning }}
-&lt;article class=&quot;section&quot; style=&quot;filter:blur(8px);&quot;&gt;
-{{ else }}
-&lt;article class=&quot;section&quot;&gt;
-{{ end }}
-</code></pre>
+<p>排除文化差异和语言壁垒，我从来不太会判断别人哪些话是无恶意的玩笑、哪些是懂了真格。因为自己很难把握开玩笑的界线，所以我说话时会竭力避免可能引起误会的词和可能让别人不舒服的举动，比如略带戏谑的外号我是不会叫的，发带有别人的照片时，也一定会征求同意，哪怕照片里只拍到了对方一只手。另一方面，由于不会判断，我就干脆默认把别人的发言都认为是认真的发言。所以我得出那个同学确实还不会读我的名字的结论，然后一遍遍教他；所以可能如果我是西片，我早就和擅长捉弄同学的高木同学彻底翻脸了。</p>
 
-<p>然后，文章有剧透时，显示一个对话框，警示有剧透。</p>
+<p><center>（三）</center></p>
 
-<pre><code class="language-html">{{ if .Params.warning }}
-&lt;div id=&quot;indicator&quot; align=&quot;center&quot;&gt;
-    &lt;div id=&quot;warning&quot;&gt;
-        &lt;p&gt;{{.Params.warning}}&lt;/p&gt;
-        &lt;a onclick=&quot;javascript:showContent();&quot; href=&quot;#&quot; class=&quot;button&quot; &gt;
-        &lt;i class=&quot;fa fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-        &gt;&gt;&gt; 
-        &lt;i class=&quot;fa fa-lock&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-{{ end }}
-</code></pre>
-
-<p>对应的 CSS</p>
-
-<pre><code class="language-css">#indicator {
-    display: block;
-    position: fixed;
-    margin-top: 20%;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    left: 0em;
-    top: 0em;
-}
-#warning {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%;
-    max-width: 720px;
-}
-</code></pre>
-
-<p>此外，在读者选择继续阅读以后，用 js 关闭对话框并去掉正文部分的模糊效果：</p>
-
-<pre><code class="language-js">var showContent = function() {
-    document.getElementsByTagName(&quot;article&quot;)[0].setAttribute(&quot;style&quot;, &quot;filter: none;&quot;);
-    document.getElementById(&quot;indicator&quot;).setAttribute(&quot;style&quot;, &quot;display: none;&quot;);
-}
-</code></pre>
-
-<p>当然这样是不够的，因为，如果有读者是通过订阅 RSS 阅读本文的，RSS 阅读器会直接把内容显示，屏蔽剧透就失效了。好吧我知道本站没什么人访问，更没什么人订阅 RSS，我自己都好几年没打开 RSS 阅读器了。出于精益求精的原则，我还是修改一下 Hugo 的<a href="https://gohugo.io/templates/rss/#the-embedded-rss-xml">默认 RSS 模版</a>，把读者引导到网页上。</p>
-
-<pre><code class="language-xml">&lt;description&gt;
-{{ if not .Params.warning }}
-{{ .Summary | html }}
-{{ else }}
-&lt;p&gt;View the original webpage: {{ .Permalink }}&lt;/p&gt;
-{{end}}
-&lt;/description&gt;
-</code></pre>
-
-<p>最终效果可见此文：<a href="../../post/2018-01-05-to-the-moon-review">《〈To the Moon〉玩后感》</a>（如果显示404，说明我还没写完，或者坑了<a href="https://bgm.tv/img/smiles/tv/15.gif">#bgm38</a>）以及 <a href="../../post/index.xml">rss</a> 。</p>
+<p>今天晚上这两件事莫名突然一起出现在思绪里，忽然有点明白了什么。也许我一直清晰地记忆着说服爷奶父母失败的事情，并不是因为失败本身，而是因为，“&rsquo;懒虫&rsquo;这两个字是骂人的话”这句话，在当时还不太懂人情世故的我的心中，第一次给我划了一条开玩笑和动真格的界线（并且显然这条界线画得离正确的位置太远了），导致了我总是“一本正经”的状态。</p>
 
       </main>
     </article>
@@ -251,6 +175,14 @@
 
   });
 </script>
+    
+      <style type="text/css">
+      <!-- 
+        main p{
+          text-indent: 2em;
+        }
+      -->
+      </style>
     
   </body>
 </html>

@@ -1,22 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lencerf&#39;s Walk</title>
-    <link>https://lencerf.github.io/</link>
+    <link>/</link>
     <description>Recent content on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Mar 2018 17:50:11 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 00:14:19 -0400</lastBuildDate>
     
-        <atom:link href="https://lencerf.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>随感</title>
+      <link>/post/2019-09-04-thoughts/</link>
+      <pubDate>Wed, 04 Sep 2019 00:14:19 -0400</pubDate>
+      
+      <guid>/post/2019-09-04-thoughts/</guid>
+      <description>
+      
+      <![CDATA[<p><center>（一）</center></p>
+
+<p>上小学时，有一次姐姐买了个闹钟，到了点以后，会发出“宝宝起床、宝宝起床”的声音。我非常喜欢，于是奶奶也给我买了一个。</p>
+
+<p>然而我买来的这个，到了点以后，发出的声音却是“懒虫起床、懒虫起床”。我跟奶奶说你听这个声音是“懒虫起床”，但是不知道是不是听力退化的原因，奶奶和爷爷均表示，明明是“宝宝起床”啊！我反复听了无数次都是“懒虫”，但无法说服爷爷奶奶。于是只能等到周末爸爸妈妈回来了以后，让他们当裁判。但让我失望的是，爸爸妈妈也表示是“宝宝起床”，并且搬出了我无法反对的理由：“懒虫”这两个字是骂人的话，闹钟设定一个骂人的声音哪里还卖得出去呢？</p>
+
+<p><center>（二）</center></p>
+
+<p>周一是劳工节，虽然还有一大堆工作没完成，但是黑人兄弟拉我去参加他们的 cookout party，想了想我还是去了。在现场认识了不少新的面孔，大家都需要相互介绍名字。果不其然，我需要耐心地教他们汉语里的 ü 这个音，毕竟英语里根本没有对应，一般只要对方发得大概有点接近，我就会说 Good 了，然而有个人总是发得差得很远，而且其他很容易发的音也偏得离谱。直到我教了他四五次以后，终于我的好朋友过来拍了拍那个人的头——原来这位一直读不准我名字的同学，平日里就不是一个“正经人”，总是喜欢开玩笑。他一直读不准我的名字，其实是在捉弄我。而我一直没意识到。</p>
+
+<p>排除文化差异和语言壁垒，我从来不太会判断别人哪些话是无恶意的玩笑、哪些是懂了真格。因为自己很难把握开玩笑的界线，所以我说话时会竭力避免可能引起误会的词和可能让别人不舒服的举动，比如略带戏谑的外号我是不会叫的，发带有别人的照片时，也一定会征求同意，哪怕照片里只拍到了对方一只手。另一方面，由于不会判断，我就干脆默认把别人的发言都认为是认真的发言。所以我得出那个同学确实还不会读我的名字的结论，然后一遍遍教他；所以可能如果我是西片，我早就和擅长捉弄同学的高木同学彻底翻脸了。</p>
+
+<p><center>（三）</center></p>
+
+<p>今天晚上这两件事莫名突然一起出现在思绪里，忽然有点明白了什么。也许我一直清晰地记忆着说服爷奶父母失败的事情，并不是因为失败本身，而是因为，“&rsquo;懒虫&rsquo;这两个字是骂人的话”这句话，在当时还不太懂人情世故的我的心中，第一次给我划了一条开玩笑和动真格的界线（并且显然这条界线画得离正确的位置太远了），导致了我总是“一本正经”的状态。</p>
+]]>
+      
+      </description>
+    </item>
+    
+    <item>
       <title>写了个辅助背单词的脚本</title>
-      <link>https://lencerf.github.io/post/2018-03-04-a-script-for-helping-memorize-english-words/</link>
+      <link>/post/2018-03-04-a-script-for-helping-memorize-english-words/</link>
       <pubDate>Sun, 04 Mar 2018 17:50:11 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2018-03-04-a-script-for-helping-memorize-english-words/</guid>
+      <guid>/post/2018-03-04-a-script-for-helping-memorize-english-words/</guid>
       <description>
       
       <![CDATA[<p>说来丢人，来美一年半英语依旧很挫，除了熟练掌握在句子中任意部位插入“kind of”以外毫无长进。原因多种多样，社交圈太小、没当过TA，以及过于信奉“闷声发大财”，当然最主要的还是自己懒，没有主动去提高英语水平。前几天被导师训斥“You really should improve your communication skills!”，再加上最近一些大形势上的变化，让我愈发感受到提升英语的迫切性，不能再像 Ph.D. 申请时一样被英语挡住上升通道了。</p>
@@ -53,10 +80,10 @@
     
     <item>
       <title>给文章加上一个剧透警示</title>
-      <link>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
+      <link>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</link>
       <pubDate>Sat, 06 Jan 2018 18:45:28 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
+      <guid>/post/2018-01-06-add-a-warning-dialog-box-to-posts/</guid>
       <description>
       
       <![CDATA[<p>最近玩了《<a href="http://store.steampowered.com/app/206440/To_the_Moon/">To the Moon</a>》这款游戏，很想写写玩后感，但是这样一款胜在剧情的游戏，写感想不可避免会剧透。文章还没动笔写，我先来折腾一下怎样给博客文章加上有效的剧透警示。</p>
@@ -142,36 +169,36 @@
     
     <item>
       <title>《To the Moon》玩后感</title>
-      <link>https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</link>
+      <link>/post/2018-01-05-to-the-moon-review/</link>
       <pubDate>Fri, 05 Jan 2018 23:48:48 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</guid>
+      <guid>/post/2018-01-05-to-the-moon-review/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2018-01-05-to-the-moon-review/</p> ]]>
+      <![CDATA[<p>View the original webpage: /post/2018-01-05-to-the-moon-review/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>回顾 2017</title>
-      <link>https://lencerf.github.io/post/2017-12-30-2017-review/</link>
+      <link>/post/2017-12-30-2017-review/</link>
       <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-12-30-2017-review/</guid>
+      <guid>/post/2017-12-30-2017-review/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2017-12-30-2017-review/</p> ]]>
+      <![CDATA[<p>View the original webpage: /post/2017-12-30-2017-review/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>在平面上画一个四维的笛卡尔坐标系</title>
-      <link>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
+      <link>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</link>
       <pubDate>Fri, 14 Jul 2017 23:06:51 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
+      <guid>/post/2017-07-14-draw-a-4d-coordinate-on-a-plane/</guid>
       <description>
       
       <![CDATA[<p>前几天在群里吹水的时候，我狂喷了2016年的一部冬季番<a href="https://bgm.tv/subject/139221">《Dimension W》</a>开头的某个画面：</p>
@@ -240,10 +267,10 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
     
     <item>
       <title>MacBook Pro (15-inch, 2017) 开箱和使用感受</title>
-      <link>https://lencerf.github.io/post/2017-06-16-macbook-pro-15-mid-2017/</link>
+      <link>/post/2017-06-16-macbook-pro-15-mid-2017/</link>
       <pubDate>Fri, 16 Jun 2017 16:02:49 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-06-16-macbook-pro-15-mid-2017/</guid>
+      <guid>/post/2017-06-16-macbook-pro-15-mid-2017/</guid>
       <description>
       
       <![CDATA[<p>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 <a href="http://refer.discover.com/s/tyfx6">Discover</a> 申请提额度，下单 256GB Silver。</p>
@@ -307,10 +334,10 @@ width: 525px;"></p>
     
     <item>
       <title>Map a Double Well to a Spin System</title>
-      <link>https://lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
+      <link>/post/2017-04-19-map-a-double-well-to-a-spin-system/</link>
       <pubDate>Wed, 19 Apr 2017 20:06:24 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
+      <guid>/post/2017-04-19-map-a-double-well-to-a-spin-system/</guid>
       <description>
       
       <![CDATA[<p>Consider a very simple <a href="https://en.wikipedia.org/wiki/Double-well_potential">double well</a> model. We neglect the shape of the well and a particle only has two possible states: in the left well or the right well. Using creation operators, the two sates are
@@ -468,10 +495,10 @@ Now we see this is equivalent to putting a spin-$N$ particle in a magnetic field
     
     <item>
       <title>LaTeX Best Practices</title>
-      <link>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</link>
+      <link>/post/2017-03-17-latex-best-practices/</link>
       <pubDate>Fri, 17 Mar 2017 17:00:59 -0400</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-03-17-latex-best-practices/</guid>
+      <guid>/post/2017-03-17-latex-best-practices/</guid>
       <description>
       
       <![CDATA[
@@ -593,10 +620,10 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>VSCode extension for Beancount</title>
-      <link>https://lencerf.github.io/post/2017-03-10-vscode-beancount/</link>
+      <link>/post/2017-03-10-vscode-beancount/</link>
       <pubDate>Sat, 11 Mar 2017 04:22:39 +0000</pubDate>
       
-      <guid>https://lencerf.github.io/post/2017-03-10-vscode-beancount/</guid>
+      <guid>/post/2017-03-10-vscode-beancount/</guid>
       <description>
       
       <![CDATA[<p>Homepage: <a href="https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount">Beancount on Marketplace</a></p>
@@ -628,23 +655,23 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>再见 2016</title>
-      <link>https://lencerf.github.io/post/2016-12-31-see-you-2016/</link>
+      <link>/post/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-31-see-you-2016/</guid>
+      <guid>/post/2016-12-31-see-you-2016/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2016-12-31-see-you-2016/</p> ]]>
+      <![CDATA[<p>View the original webpage: /post/2016-12-31-see-you-2016/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>launchd 和 click</title>
-      <link>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</link>
+      <link>/post/2016-12-15-launchd-and-click/</link>
       <pubDate>Thu, 15 Dec 2016 10:16:18 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-15-launchd-and-click/</guid>
+      <guid>/post/2016-12-15-launchd-and-click/</guid>
       <description>
       
       <![CDATA[<p>起因是看了一篇介绍 <a href="http://furius.ca/beancount/">Beancount</a> 的<a href="https://wzyboy.im/post/1063.html">博文</a>后，我就变成了数豆狂魔，大概是心底某种控制欲被激发了出来，没事就喜欢打开 <a href="https://github.com/beancount/fava">fava</a> 研究自己那点生活补贴流向哪里了。每次开 fava 前都需要在终端里现开启之，有点麻烦，于是我就想让它一直运行在后台。在 macOS 上开启一个程序并让它一直运行在后台的方法自然是用 launchd，我很快就写好了配置文件：</p>
@@ -712,10 +739,10 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>用树莓派3搭一个简易的 NAS</title>
-      <link>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
+      <link>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</link>
       <pubDate>Tue, 06 Dec 2016 21:48:10 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
+      <guid>/post/2016-12-16-build-a-simple-nas-using-raspberry-pi/</guid>
       <description>
       
       <![CDATA[
@@ -808,23 +835,23 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>八月小结</title>
-      <link>https://lencerf.github.io/post/2016-08-31-the-first-august/</link>
+      <link>/post/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-08-31-the-first-august/</guid>
+      <guid>/post/2016-08-31-the-first-august/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: https://lencerf.github.io/post/2016-08-31-the-first-august/</p> ]]>
+      <![CDATA[<p>View the original webpage: /post/2016-08-31-the-first-august/</p> ]]>
       
       </description>
     </item>
     
     <item>
       <title>曲面积分复习跳坑笔记</title>
-      <link>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</link>
+      <link>/post/2016-07-11-notes-on-surface-integral/</link>
       <pubDate>Mon, 11 Jul 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-07-11-notes-on-surface-integral/</guid>
+      <guid>/post/2016-07-11-notes-on-surface-integral/</guid>
       <description>
       
       <![CDATA[<p>在复习曲面积分的时候发现对当年初学的真的没有怎么理解透，基本就是死背公式了，于是复习的时候踩了不少坑，特别是变换参数时雅可比行列式的理解。故将现在的理解记录下来以防忘记。</p>
@@ -878,10 +905,10 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
     
     <item>
       <title>卡诺热机的特别之处</title>
-      <link>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</link>
+      <link>/post/2016-06-29-the-feature-of-carnot-engine/</link>
       <pubDate>Wed, 29 Jun 2016 01:05:13 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-29-the-feature-of-carnot-engine/</guid>
+      <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>
       
       <![CDATA[<p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup class="footnote-ref" id="fnref:carnot"><a href="#fn:carnot">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
@@ -943,10 +970,10 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
     
     <item>
       <title>Install Arch Linux with Plasma in Paralles Desktop</title>
-      <link>https://lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
+      <link>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</link>
       <pubDate>Thu, 09 Jun 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
+      <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
       <description>
       
       <![CDATA[
@@ -1148,25 +1175,23 @@ passwd yourname
 
 <li><p>Parallels Tools 似乎和 Arch Linux 不太兼容的样子，虽然能安装上去，但是文件共享一直有问题。具体安装细节可能之后再补充。</p></li>
 
-<li><p>开启 ssh 服务</p></li>
-</ul>
+<li><p>开启 ssh 服务</p>
 
 <pre><code class="language-sh">pacman -S openssh
 systemctl enable sshd.service
 systemctl start sshd
-</code></pre>
+</code></pre></li>
 
-<ul>
 <li><p>通过<code>ip route</code>可以查看本机IP，必要时可以从 OS X 端 ssh 登陆到 Arch，也可以用<code>scp</code>往虚拟机里传文件</p></li>
 
-<li><p>Last but maybe the most important, for some Asian users,</p></li>
-</ul>
+<li><p>Last but maybe the most important, for some Asian users,</p>
 
 <pre><code class="language-sh">pacman -S shadowsocks-libev
 nano /etc/shadowsocks/config.json
 systemctl enabnle shadowsocks-libev@config
 systemctl start shadowsocks-libev@config
-</code></pre>
+</code></pre></li>
+</ul>
 
 <h3 id="参考资料">参考资料</h3>
 
@@ -1186,10 +1211,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>Embed figures of eps format in LaTeX papers -- with dvips</title>
-      <link>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
+      <link>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</link>
       <pubDate>Sat, 09 Jan 2016 17:08:08 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
+      <guid>/post/2016-01-09-embed-figures-of-eps-format-in-latex-papers-with-dvips/</guid>
       <description>
       
       <![CDATA[<p>At the end of my earlier <a href="/post/2015-05-17-Embed-figures-of-eps-format-in-LaTeX-files/">post</a> on embedding figures of eps format into LaTeX papers, I wrote that we may get an ugly reference article list if <code>dvips</code> is used to generate the PDF file, which is caused by the package <code>hyperref</code>. Certainly, removing <code>\usepackage{hyperref}</code> is the most simple solution to this problem. But what if we do need them two simultaneously?</p>
@@ -1209,10 +1234,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>brew with a socks5 proxy</title>
-      <link>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</link>
+      <link>/post/2015-10-03-brew-with-a-socks5-proxy/</link>
       <pubDate>Sat, 03 Oct 2015 22:47:28 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
+      <guid>/post/2015-10-03-brew-with-a-socks5-proxy/</guid>
       <description>
       
       <![CDATA[<p>Finally, I find the right way to use homebrew.</p>
@@ -1234,10 +1259,10 @@ systemctl start shadowsocks-libev@config
     
     <item>
       <title>Make unix2doc a system service of OS X</title>
-      <link>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</link>
+      <link>/post/2015-06-02-small-trick-unix2dos-as-service/</link>
       <pubDate>Tue, 02 Jun 2015 00:32:49 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
+      <guid>/post/2015-06-02-small-trick-unix2dos-as-service/</guid>
       <description>
       
       <![CDATA[<p>Revising an academic paper is really a hard work. What makes things worse is that WinEdit used by my advisor is only capable of handling .tex files with <code>CRLF</code> line breaks while TeXShop.app uses <code>LF</code> as a line ending.</p>
@@ -1267,10 +1292,10 @@ done
     
     <item>
       <title>Embed figures of eps format in LaTeX papers</title>
-      <link>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
+      <link>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</link>
       <pubDate>Sun, 17 May 2015 09:07:14 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
+      <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>
       
       <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
@@ -1310,10 +1335,10 @@ ps2pdf paper.ps
     
     <item>
       <title>设置 Mathematica 的默认字号</title>
-      <link>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
+      <link>/post/2015-02-25-set-default-fontsize-for-mathematica/</link>
       <pubDate>Wed, 25 Feb 2015 17:22:43 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
+      <guid>/post/2015-02-25-set-default-fontsize-for-mathematica/</guid>
       <description>
       
       <![CDATA[<p>Mathematica 的默认字体看起太小，尤其我的 MacBook 没有配 Retina 屏幕，看起来伤眼睛。</p>
@@ -1330,10 +1355,10 @@ ps2pdf paper.ps
     
     <item>
       <title>A template of beamer</title>
-      <link>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</link>
+      <link>/post/2014-12-01-a-beamer-template/</link>
       <pubDate>Mon, 01 Dec 2014 00:17:10 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-12-01-a-beamer-template/</guid>
+      <guid>/post/2014-12-01-a-beamer-template/</guid>
       <description>
       
       <![CDATA[<p>Just a template of beamer</p>
@@ -1438,10 +1463,10 @@ ps2pdf paper.ps
     
     <item>
       <title>配置 Sublime Text 的 LaTeX 写作环境</title>
-      <link>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</link>
+      <link>/post/2014-11-20-latex-with-sublime-text-3/</link>
       <pubDate>Thu, 20 Nov 2014 23:32:35 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-11-20-latex-with-sublime-text-3/</guid>
+      <guid>/post/2014-11-20-latex-with-sublime-text-3/</guid>
       <description>
       
       <![CDATA[<blockquote>
@@ -1485,10 +1510,10 @@ ps2pdf paper.ps
     
     <item>
       <title>无外场二维理想 Bose 系统不存在 BEC 的证明</title>
-      <link>https://lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
+      <link>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</link>
       <pubDate>Tue, 26 Aug 2014 01:04:48 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
+      <guid>/post/2014-08-26-no-bec-in-2d-ideal-bose-gases-without-outfields/</guid>
       <description>
       
       <![CDATA[<p>Bose 气体满足 Bose-Einstein 分布
@@ -1542,10 +1567,10 @@ $$</p>
     
     <item>
       <title>About</title>
-      <link>https://lencerf.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>
       
       <![CDATA[<p>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.</p>
@@ -1562,15 +1587,14 @@ $$</p>
     
     <item>
       <title>OS X 上中文 LaTeX 环境的搭建</title>
-      <link>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</link>
-      <pubDate>Tue, 29 Apr 2014 23:14:19 +0800</pubDate>
+      <link>/post/2014-04-29-setup-letax-on-osx/</link>
+      <pubDate>Tue, 29 Apr 2014 23:10:11 +0800</pubDate>
       
-      <guid>https://lencerf.github.io/post/2014-04-29-setup-letax-on-osx/</guid>
+      <guid>/post/2014-04-29-setup-letax-on-osx/</guid>
       <description>
       
       <![CDATA[<blockquote>
-<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。
-   ds</p>
+<p>又快进入论文季了，统计、数理、生物论文接踵而至。鉴于最近人品有点差，踢个毽球居然还把脚底伤了(囧)，遂来分享一下我个人在 OS Ｘ上摸索的 LaTeX 经验，权当攒人品。</p>
 
 <p>本文适用于 Mac OS X，使用 Linux 的同学应当可以类似地搭建，毕竟 *nix 世界都是相通的。至于使用 Windows 的同学，嗯，强烈建议你先安装个 Linux，Windows 的 GB18030 内码太蛋疼了(吐)。</p>
 </blockquote>
@@ -1578,16 +1602,16 @@ $$</p>
 <p>众所周知，Donald E. Knuth 大神当时发明 TeX 系统时并没有考虑多语言支持问题，所以原生的 LaTeX 是不支持中文的。之前流行的 CCT 和 CJK 宏包实际上是两种外挂，很容易出现比如 pdf 书签乱码之类的问题，是不得已的权益之计。
 在此介绍 XeTeX，从底层就支持各种文字包括中文，而且能够直接使用系统自带的字体，并且与原来的 TeX 相兼容。 XeLaTeX 则是与 XeTeX 相应的宏，再搭配上 xeCJK 宏包基本上处理中英文混排就完美了。</p>
 
-<p>　　首先安装 TeX 基本系统。上 <a href="http://tug.org/mactex/">MaxTeX 主页</a>下载 TeXLive 发行版，建议下载<a href="http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg">基本包</a>（&lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 <code>apt-get</code> 命令即可。
+<p>首先安装 TeX 基本系统。上 <a href="http://tug.org/mactex/">MaxTeX 主页</a>下载 TeXLive 发行版，建议下载<a href="http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg">基本包</a>（&lt;100M）就够了，完整包2G多。下载完后双击pkg一路next就OK。Linux 估计用 <code>apt-get</code> 命令即可。
 事实上到了这一步就算完成了，系统里面已经有了 XeLaTeX。随便找一个文本编辑器就可以开始写论文了。写一个.tex 文件，在终端用 xelatex 命令编译就可以生成 pdf 文档。</p>
 
-<p>　　当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：<a href="http://pages.uoregon.edu/koch/texshop/texshop.html">TeXShop</a>！
+<p>当然，这样比较繁琐，所以推荐一个类似 WinEdit 的集成环境：<a href="http://pages.uoregon.edu/koch/texshop/texshop.html">TeXShop</a>！
 <img src="https://i.imgur.com/B5LGj8n.png" alt="TeXShop" />
-　　TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
+TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
 在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样<del>奇奇怪怪</del>的问题。
 在“排版”页的默认指令处选择“采用键入的指令”，输入&rdquo;XeLaTeX&rdquo;。</p>
 
-<p>　　现在来测试一下吧，在TeXShop里输入</p>
+<p>现在来测试一下吧，在TeXShop里输入</p>
 
 <pre><code>\documentclass{article}
 \usepackage{xeCJK}
@@ -1601,7 +1625,7 @@ Hello! 这是中文测试!
 <img src="https://i.imgur.com/w1LJI5r.png" alt="中文测试" />
 看吧，中英文直接混排，别提多方便了。</p>
 
-<p>　　可以通过在导言区添加以下命令来指定文稿的默认各类中文字体</p>
+<p>可以通过在导言区添加以下命令来指定文稿的默认各类中文字体</p>
 
 <pre><code>\setCJKmainfont{&lt;font name&gt;} %设置默认字体
 \setCJKsansfont{&lt;font name&gt;} %设置中文sffamily字体
@@ -1614,18 +1638,18 @@ Hello! 这是中文测试!
 \CJKfamily{fangsong} 仿宋字体测试。 %放在正文里面
 </code></pre>
 
-<p>　　以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将<code>&lt;font name&gt;</code>替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
+<p>以上命令都只会对汉字生效，英文字符不受影响。以上设置命令中读者需要将<code>&lt;font name&gt;</code>替换为自己要使用的字体的 PostScript 名称，具体的某种字体的PostScript 名称可以在系统自带的字体册中查看。
 <img src="https://i.imgur.com/3waQ0EU.png" alt="OS X 字体册" /></p>
 
-<p>　　更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考<a href="ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf">《xeCJK宏包》</a>（作者：孙文昌）。</p>
+<p>更多有关 XeLaTeX 和 xeCJK 宏包的使用请参考<a href="ttp://www.tex.ac.uk/ctan/macros/xetex/latex/xecjk/xeCJK.pdf">《xeCJK宏包》</a>（作者：孙文昌）。</p>
 
-<p>　　编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
+<p>编写公式方面，推荐 Daum Equation Editor，原先只是 Chrome 的一个扩展，后来也单独在 App Store 上架了。
 <img src="https://i.imgur.com/KIRqM0v.png" alt="Daum Equation Editor" />
 下载地址：<a href="https://itunes.apple.com/us/app/daum-equation-editor/id540665783?mt=12">Mac App Store</a>。当然也可以在 Chrome 商店里面直接搜索。</p>
 
-<p>　　在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)</p>
+<p>在文末贴一下我个人在用的模板，导言区基本把平时要用的宏包都加进去了，在 Windows 编译可能很慢。(书呆子)</p>
 
-<p>　　以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)</p>
+<p>以上文字及以下代码纯属我个人敲键盘码出，如有雷同和疑问，请去问 Google。(喝茶)</p>
 
 <pre><code class="language-tex">% !Mode:: &quot;TeX:UTF-8&quot;
 %!TEX program = xelatex
@@ -1750,7 +1774,8 @@ dS&gt;0
 \bibliography{文献}
 \nocite{*}
 \end{document}
-</code></pre>]]>
+</code></pre>
+]]>
       
       </description>
     </item>
