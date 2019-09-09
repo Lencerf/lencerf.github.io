@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lencerf&#39;s Walk</title>
-    <link>/</link>
-    <description>Recent content on Lencerf&#39;s Walk</description>
+    <title>Dairies on Lencerf&#39;s Walk</title>
+    <link>/dairy/</link>
+    <description>Recent content in Dairies on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 04 Sep 2019 00:14:19 -0400</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/dairy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>随感</title>
-      <link>/diary/2019-09-04-thoughts/</link>
+      <link>/dairy/2019-09-04-thoughts/</link>
       <pubDate>Wed, 04 Sep 2019 00:14:19 -0400</pubDate>
       
-      <guid>/diary/2019-09-04-thoughts/</guid>
+      <guid>/dairy/2019-09-04-thoughts/</guid>
       <description>
       
       <![CDATA[<p><center>（一）</center></p>
@@ -182,13 +182,13 @@
     
     <item>
       <title>回顾 2017</title>
-      <link>/diary/2017-12-30-2017-review/</link>
+      <link>/dairy/2017-12-30-2017-review/</link>
       <pubDate>Sat, 30 Dec 2017 17:18:27 -0400</pubDate>
       
-      <guid>/diary/2017-12-30-2017-review/</guid>
+      <guid>/dairy/2017-12-30-2017-review/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: /diary/2017-12-30-2017-review/</p> ]]>
+      <![CDATA[<p>View the original webpage: /dairy/2017-12-30-2017-review/</p> ]]>
       
       </description>
     </item>
@@ -655,13 +655,13 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
     
     <item>
       <title>再见 2016</title>
-      <link>/diary/2016-12-31-see-you-2016/</link>
+      <link>/dairy/2016-12-31-see-you-2016/</link>
       <pubDate>Sat, 31 Dec 2016 14:03:51 -0500</pubDate>
       
-      <guid>/diary/2016-12-31-see-you-2016/</guid>
+      <guid>/dairy/2016-12-31-see-you-2016/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: /diary/2016-12-31-see-you-2016/</p> ]]>
+      <![CDATA[<p>View the original webpage: /dairy/2016-12-31-see-you-2016/</p> ]]>
       
       </description>
     </item>
@@ -835,13 +835,13 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
     
     <item>
       <title>八月小结</title>
-      <link>/diary/2016-08-31-the-first-august/</link>
+      <link>/dairy/2016-08-31-the-first-august/</link>
       <pubDate>Wed, 31 Aug 2016 21:05:13 -0500</pubDate>
       
-      <guid>/diary/2016-08-31-the-first-august/</guid>
+      <guid>/dairy/2016-08-31-the-first-august/</guid>
       <description>
       
-      <![CDATA[<p>View the original webpage: /diary/2016-08-31-the-first-august/</p> ]]>
+      <![CDATA[<p>View the original webpage: /dairy/2016-08-31-the-first-august/</p> ]]>
       
       </description>
     </item>
