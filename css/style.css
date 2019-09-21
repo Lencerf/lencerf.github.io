@@ -24,12 +24,13 @@ body {
 
 .section {
     margin: 0 auto;
-    max-width: 720px;
+    max-width: 760px;
     padding: 10px 10px
 }
 
 article.section {
     padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 header.section {
@@ -111,7 +112,7 @@ a.button:hover{
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
-    max-width: 720px;
+    max-width: 760px;
 }
 
 a:hover {
@@ -161,8 +162,8 @@ span#tagcomma {
 }
 
 .content h2 {
-    font-size: 1.4em;
-    margin: 0.83em 0 0.73 0
+    font-size: 1.5em;
+    margin: 1em 0 0.4em 0;
 }
 
 h2.list-title {
@@ -174,19 +175,24 @@ h2.list-title:first-child {
 }
 
 .content h3 {
-    font-size: 1.3em
+    font-size: 1.3em;
+    margin-top: 23px;
+    margin-bottom: 10px;
 }
 
 .content h4 {
-    font-size: 1.2em
+    font-size: 1.2em;
+    margin: 0em;
 }
 
 .content h5 {
-    font-size: 1.1em
+    font-size: 1.1em;
+    margin: 0em;
 }
 
 .content h6 {
-    font-size: 1em
+    font-size: 1em;
+    margin: 0em;
 }
 
 .content {

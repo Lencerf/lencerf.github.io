@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="Save the OpenGL rendering to an image file - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<title>Save the OpenGL rendering to an image file | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="../../css/style.css">
+<script src="https://kit.fontawesome.com/8455592b61.js"></script>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>  
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js"></script>
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="../../js/gallery.js" defer></script>
+
+
+
+
+</head>
+  <body>
+        <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="../../">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+          
+        </div>
+      </nav>
+    </header>
+    
+    <article class="section">
+    
+      <h1 class="title">Save the OpenGL rendering to an image file</h1>
+        
+        <time class="meta">September 20, 2019</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="../../categories/technology" rel="category">Technology</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="../../tags/opengl/" rel="tag">OpenGL</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="../../tags/image/" rel="tag">image</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+        
+
+<p>Recent homework of the graphic course requires saving the OpenGL rendering to an image file. Although there are a lot of online postings related to this topic, here I record what I have done in case it may help someone or myself in the future.</p>
+
+<h2 id="quick-answer">Quick answer</h2>
+
+<p>First we get the size of the window through <code>glfwGetFramebufferSize</code>, and allocate a buffer <code>buffer</code>. Then we read image data using <code>glReadPixels</code> and write the data to file using <code>stbi_write_png</code>.</p>
+
+<pre><code class="language-cpp">void saveImage(char* filepath, GLFWwindow* w) {
+    int width, height;
+    glfwGetFramebufferSize(w, &amp;width, &amp;height);
+    GLsizei nrChannels = 3;
+    GLsizei stride = nrChannels * width;
+    stride += (stride % 4) ? (4 - stride % 4) : 0;
+    GLsizei bufferSize = stride * height;
+    std::vector&lt;char&gt; buffer(bufferSize);
+    glPixelStorei(GL_PACK_ALIGNMENT, 4);
+    glReadBuffer(GL_FRONT);
+    glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+    stbi_flip_vertically_on_write(true);
+    stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
+}
+</code></pre>
+
+<p>I used <a href="https://www.glfw.org">GLFW</a> to create windows and <a href="https://github.com/nothings/stb">stb</a> to write image data to png files.</p>
+
+<h2 id="rome-remarks">Rome remarks</h2>
+
+<h3 id="obtain-window-size">Obtain window size</h3>
+
+<p>I see several options online. The first one is</p>
+
+<pre><code class="language-cpp">GLint pView[4];
+glGetIntegerv(GL_VIEWPORT, pView);
+</code></pre>
+
+<p>and we expect <code>pView[2]</code> and <code>pView[3]</code> to be the window width and height. This works if the window size is not adjusted by the user after the window is created. From what I have observed, if the window size is changed, on macOS, <code>pView</code> is updated to the latest window size automatically. However, <code>pView</code> remains unchanged on Windows 10. I have no idea why this is the case.</p>
+
+<p>The second option is</p>
+
+<pre><code class="language-cpp">glfwGetWindowSize(w, &amp;width, &amp;height);
+</code></pre>
+
+<p>this works on Windows but it does not go well with retina displays on macOS. The logical size (screen coordinate) of a window and the actual corresponding number of pixels may be different on macOS. <code>glfwGetWindowSize</code> gives the logical size but what we need is the size in pixels. For example, a 800x600 window in a retina display usually have <code>1800*1200</code> pixels.</p>
+
+<p>Although the instructor only requires the homework run on Windows, I eventually find the solution from OpenGL&rsquo;s <a href="https://www.glfw.org/docs/latest/group__window.html#gaeea7cbc03373a41fb51cfbf9f2a5d4c6">doc</a>: use <code>glfwGetFramebufferSize</code>, which gives the window size in pixels.</p>
+
+<h3 id="alignment-of-image-data">Alignment of image data</h3>
+
+<p>It seems that most most image file formats requires the number of bytes used to store a single row of an image to be a multiple of 4, such <a href="https://en.wikipedia.org/wiki/BMP_file_format#Pixel_storage">bmp</a>. As default, OpenG L also &ldquo;likes&rdquo; packing image data in this way since the default value of <code>GL_PACK_ALIGNMENT</code> is 4. My assumption is that this may enable OpenGL to do parallel computations more easily.</p>
+
+<p>Anyway let me just follow this practice: <code>stride += (stride % 4) ? (4 - stride % 4) : 0;</code> makes sure that <code>stride</code> is a multiple of 4.</p>
+
+<p>On the other hand, if I just do not want to follow this, then the following code also works:</p>
+
+<pre><code class="language-cpp">GLsizei stride = nrChannels * width;
+//stride += (stride % 4) ? (4 - stride % 4) : 0;
+GLsizei bufferSize = stride * height;
+std::vector&lt;char&gt; buffer(bufferSize);
+glPixelStorei(GL_PACK_ALIGNMENT, 1);
+glReadBuffer(GL_FRONT);
+glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+//...
+</code></pre>
+
+<h3 id="direction-of-y-axis">Direction of y-axis</h3>
+
+<p>The y-axis of OpenGL screen coordinate goes upward but usually the y-axis of an image file goes downward. Therefore, without <code>stbi_flip_vertically_on_write(true);</code>, the saved image file is flipped upside-down.</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section" id="disqus"  >
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 
+            
+                2014-2019 Lencerf
+    | Generated by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+
+
+<script type="text/javascript" defer>
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
+    }
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
+</script>
+    
+  </body>
+</html>
