@@ -44,7 +44,7 @@
 
 <p>I used <a href="https://www.glfw.org">GLFW</a> to create windows and <a href="https://github.com/nothings/stb">stb</a> to write image data to png files.</p>
 
-<h2 id="rome-remarks">Rome remarks</h2>
+<h2 id="some-remarks">Some remarks</h2>
 
 <h3 id="obtain-window-size">Obtain window size</h3>
 
