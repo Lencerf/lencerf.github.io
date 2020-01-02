@@ -18,8 +18,15 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+@media(prefers-color-scheme:dark) {
+    body {
+        background-color:black;
+        color: gainsboro;
+    }
+}
+
 body {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .section {
@@ -44,8 +51,16 @@ h1.page-title {
     font-weight: 300;
 }
 
-h1.page-title a {
-    color: black;
+@media(prefers-color-scheme:light) {
+    h1.page-title a {
+        color: black;
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    h1.page-title a {
+        color: gainsboro;
+    }
 }
 
 nav {
@@ -106,8 +121,20 @@ a.button:hover{
     left: 0em;
     top: 0em;
 }
+
+@media(prefers-color-scheme:light) {
+    #warning {
+        background-color: #fefefe;
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    #warning {
+        background-color:black;
+    }
+}
+
 #warning {
-    background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -115,8 +142,17 @@ a.button:hover{
     max-width: 760px;
 }
 
-a:hover {
-    color:black;
+@media(prefers-color-scheme:dark) {
+    a:hover {
+        color:black;
+    }
+    
+}
+
+@media(prefers-color-scheme:dark) {
+    a:hover {
+        color:white;
+    }    
 }
 
 h1.title {
@@ -195,10 +231,21 @@ h2.list-title:first-child {
     margin: 0em;
 }
 
+@media(prefers-color-scheme:light) {
+    .content {
+        color:  #222324;
+    }
+}
+
+@media(prefers-color-scheme:dark) {
+    .content {
+        color: gainsboro;
+    }
+}
+
 .content {
     line-height: 1.7;
     word-break: break-word;
-    color:  #222324;
 }
 
 .content a:not(.button) {
@@ -275,21 +322,21 @@ code {
     font-family: SourceCodePro, "Monaco", "Inconsolata", monospace; 
     word-wrap: normal
 }
+
 pre {
-    background: #eee;
     margin-bottom: 15px;
-    padding: 7px 15px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     white-space: pre;
 }
+
 article pre code {
     color: #666;
     font-size: 0.93em;
     background: none;
     overflow-x: auto;
     display: block;
-    padding: 0;
+    padding: 15px 15px;
     margin: 0;
     border: 0;
     -webkit-border-radius: 0;
