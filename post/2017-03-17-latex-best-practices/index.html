@@ -72,12 +72,8 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-        
-
-<h2 id="equations-and-numbering">Equations and Numbering</h2>
-
+        <h2 id="equations-and-numbering">Equations and Numbering</h2>
 <p>Simply speaking:</p>
-
 <ul>
 <li>use the environment <code>align</code> instead of <code>equation</code> and <code>eqnarray</code> to display equations.</li>
 <li>put <code>align</code> blocks inside a <code>subequations</code> environment if subnumbers are required.</li>
@@ -85,53 +81,46 @@
 <li>put <code>\nonumber</code> before an equation if that equation does not need to be numbered. use <code>align*</code>
 if no equations need to be numbered.</li>
 </ul>
-
 <p>Environments <code>align</code> and <code>aligned</code> are defined in package <a href="https://www.ctan.org/pkg/amsmath?lang=en">amsmath</a>.</p>
-
 <p>Examples:</p>
-
 <ol>
-<li><p>A single equation</p>
-
+<li>A single equation</li>
+</ol>
 <pre><code class="language-tex">\begin{align}
 \label{eq:massEnergyRelation}
 E=mc^2
 \end{align}
-</code></pre></li>
-
-<li><p>multiple equations</p>
-
+</code></pre>
+<ol start="2">
+<li>multiple equations</li>
+</ol>
 <pre><code class="language-tex">\begin{align}
-E=&amp;\hbar\Omega\\
-\vec p =&amp; \hbar\vec k
+    E=&amp;\hbar\Omega\\
+    \vec p =&amp; \hbar\vec k
 \end{align}
-</code></pre></li>
-
-<li><p>multiple equations with subnumbers</p>
-
+</code></pre>
+<ol start="3">
+<li>multiple equations with subnumbers</li>
+</ol>
 <pre><code class="language-tex">\begin{subequations}
 \begin{align}
-\nonumber\dod{p_j}{t}&amp;=-\dpd{\mathcal H}{q_j}\\
-\dod{q_j}{t}&amp;=+\dpd{\mathcal H}{p_j}
+    \nonumber\dod{p_j}{t}&amp;=-\dpd{\mathcal H}{q_j}\\
+    \dod{q_j}{t}&amp;=+\dpd{\mathcal H}{p_j}
 \end{align}
 \end{subequations}
-</code></pre></li>
-
-<li><p>A long equation broken into two lines</p>
-
+</code></pre>
+<ol start="4">
+<li>A long equation broken into two lines</li>
+</ol>
 <pre><code class="language-tex">\begin{align}
 \begin{aligned}
-M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
-  &amp;\sum_l e^{i (N/2-l)\theta}\ket{l}\bar{l}
+  M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
+      &amp;\sum_l e^{i (N/2-l)\theta}\ket{l}\bar{l}
 \end{aligned}
 \end{align}
-</code></pre></li>
-</ol>
-
+</code></pre>
 <h2 id="derivatives">Derivatives</h2>
-
 <p>Use packages <a href="https://www.ctan.org/pkg/physics?lang=en">physics</a> and <a href="https://www.ctan.org/pkg/esdiff">esdiff</a>.</p>
-
 <pre><code class="language-tex">% those commands are from package physics
 \dd x % differential
 \dd[n] x % higher order differential
@@ -143,47 +132,43 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
 % the command below is from package esdiff
 \diffp*{p}{V}{T} % partial derivative of p relative to V with T fixed.
 </code></pre>
-
 <h2 id="figures">Figures</h2>
-
 <ol>
-<li><p>Insert a single figure</p>
-
+<li>Insert a single figure</li>
+</ol>
 <pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
 \begin{figure}
-\centering
-\includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
-\caption{$U/t=0.1$}
-\label{fig:y=x+0.1}
+    \centering
+    \includegraphics[width=\textwidth]{{y=x+0.1}.pdf} % pay attention to the filename
+    \caption{$U/t=0.1$}
+    \label{fig:y=x+0.1}
 \end{figure}
-</code></pre></li>
-
-<li><p>Insert multiple figures with subcaptions respectively</p>
-
+</code></pre>
+<ol start="2">
+<li>Insert multiple figures with subcaptions respectively</li>
+</ol>
 <pre><code class="language-tex">\usepackage{graphicx} % should be put in the preamble
 \usepackage{subcaption} % should be put in the preamble
 \begin{figure}
-\centering
-\begin{subfigure}[b]{0.48\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
-    \caption{Analytical Results}
-    \label{fig:analyticalResults}
-\end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
-    \caption{Image From Experiments}
-    \label{fig:experimentalFigure}
-\end{subfigure}
-\caption{Analytical and experimental results.}
-\label{fig:analyticalAndExperimental}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{analyticalResults}.pdf}
+        \caption{Analytical Results}
+        \label{fig:analyticalResults}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{imageFromExperiments}.eps}
+        \caption{Image From Experiments}
+        \label{fig:experimentalFigure}
+    \end{subfigure}
+    \caption{Analytical and experimental results.}
+    \label{fig:analyticalAndExperimental}
 \end{figure}
 </code></pre>
-
-<p>File names of images should be written as <code>{filename}.eps</code> in case there are some special characaters, like <code>.</code>, in the <code>filename</code> part.</p></li>
-</ol>
+<p>File names of images should be written as <code>{filename}.eps</code> in case there are some special characaters, like <code>.</code>, in the <code>filename</code> part.</p>
 
       </main>
     </article>
@@ -210,7 +195,7 @@ M = &amp;\sum_n e^{in\theta}\ket{N-n, n}\bra{N-n, n} = \\
   <div class="container has-text-centered">
     &copy; 
             
-                2014-2019 Lencerf
+                2014-2020 Lencerf
     | Generated by 
    <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
    <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
