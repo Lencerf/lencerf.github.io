@@ -142,7 +142,7 @@ a.button:hover{
     max-width: 760px;
 }
 
-@media(prefers-color-scheme:dark) {
+@media(prefers-color-scheme:light) {
     a:hover {
         color:black;
     }
@@ -383,4 +383,10 @@ img {
 footer {
     text-align: center;
     font-size: 0.8em;
+}
+
+@media(prefers-color-scheme:dark) {
+    .fancybox-wrap .fancybox-skin {
+        background: black;
+    }
 }

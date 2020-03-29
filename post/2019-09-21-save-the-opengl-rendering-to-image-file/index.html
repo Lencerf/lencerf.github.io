@@ -74,20 +74,20 @@
       <main class="content entry-content entry clearfix">
         <p>Recent homework of the graphic course requires saving the OpenGL rendering to an image file. Although there are a lot of online postings related to this topic, here I record what I have done in case it may help someone or myself in the future.</p>
 <h2 id="quick-answer">Quick answer</h2>
-<p>First we get the size of the window through <code>glfwGetFramebufferSize</code>, and allocate a buffer <code>buffer</code>. Then we read image data using <code>glReadPixels</code> and write the data to file using <code>stbi_write_png</code>.</p>
+<p>First, we get the size of the window through <code>glfwGetFramebufferSize</code> and allocate a buffer <code>buffer</code>. Then we read image data using <code>glReadPixels</code> and write the data to file using <code>stbi_write_png</code>.</p>
 <pre><code class="language-cpp">void saveImage(char* filepath, GLFWwindow* w) {
-    int width, height;
-    glfwGetFramebufferSize(w, &amp;width, &amp;height);
-    GLsizei nrChannels = 3;
-    GLsizei stride = nrChannels * width;
-    stride += (stride % 4) ? (4 - stride % 4) : 0;
-    GLsizei bufferSize = stride * height;
-    std::vector&lt;char&gt; buffer(bufferSize);
-    glPixelStorei(GL_PACK_ALIGNMENT, 4);
-    glReadBuffer(GL_FRONT);
-    glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
-    stbi_flip_vertically_on_write(true);
-    stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
+ int width, height;
+ glfwGetFramebufferSize(w, &amp;width, &amp;height);
+ GLsizei nrChannels = 3;
+ GLsizei stride = nrChannels * width;
+ stride += (stride % 4) ? (4 - stride % 4) : 0;
+ GLsizei bufferSize = stride * height;
+ std::vector&lt;char&gt; buffer(bufferSize);
+ glPixelStorei(GL_PACK_ALIGNMENT, 4);
+ glReadBuffer(GL_FRONT);
+ glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+ stbi_flip_vertically_on_write(true);
+ stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
 }
 </code></pre>
 <p>I used <a href="https://www.glfw.org">GLFW</a> to create windows and <a href="https://github.com/nothings/stb">stb</a> to write image data to png files.</p>
@@ -101,10 +101,10 @@ glGetIntegerv(GL_VIEWPORT, pView);
 <p>The second option is</p>
 <pre><code class="language-cpp">glfwGetWindowSize(w, &amp;width, &amp;height);
 </code></pre>
-<p>this works on Windows but it does not go well with retina displays on macOS. The logical size (screen coordinate) of a window and the actual corresponding number of pixels may be different on macOS. <code>glfwGetWindowSize</code> gives the logical size but what we need is the size in pixels. For example, a 800x600 window in a retina display usually have <code>1800*1200</code> pixels.</p>
-<p>Although the instructor only requires the homework run on Windows, I eventually find the solution from OpenGL's <a href="https://www.glfw.org/docs/latest/group__window.html#gaeea7cbc03373a41fb51cfbf9f2a5d4c6">doc</a>: use <code>glfwGetFramebufferSize</code>, which gives the window size in pixels.</p>
+<p>this works on Windows but it does not go well with retina displays on macOS. The logical size (screen coordinate) of a window and the actual corresponding number of pixels may be different on macOS. <code>glfwGetWindowSize</code> gives the logical size but what we need is the size in pixels. For example, an 800x600 window in a retina display usually has <code>1800*1200</code> pixels.</p>
+<p>Although the instructor only requires the homework run on Windows, I eventually find the solution from OpenGL&rsquo;s <a href="https://www.glfw.org/docs/latest/group__window.html#gaeea7cbc03373a41fb51cfbf9f2a5d4c6">doc</a>: use <code>glfwGetFramebufferSize</code>, which gives the window size in pixels.</p>
 <h3 id="alignment-of-image-data">Alignment of image data</h3>
-<p>It seems that most most image file formats requires the number of bytes used to store a single row of an image to be a multiple of 4, such <a href="https://en.wikipedia.org/wiki/BMP_file_format#Pixel_storage">bmp</a>. As default, OpenG L also &ldquo;likes&rdquo; packing image data in this way since the default value of <code>GL_PACK_ALIGNMENT</code> is 4. My assumption is that this may enable OpenGL to do parallel computations more easily.</p>
+<p>It seems that most image file formats require the number of bytes used to store a single row of an image to be a multiple of 4, such <a href="https://en.wikipedia.org/wiki/BMP_file_format#Pixel_storage">bmp</a>. As a default, OpenG L also &ldquo;likes&rdquo; packing image data in this way since the default value of <code>GL_PACK_ALIGNMENT</code> is 4. I assume that this may enable OpenGL to do parallel computations more easily.</p>
 <p>Anyway let me just follow this practice: <code>stride += (stride % 4) ? (4 - stride % 4) : 0;</code> makes sure that <code>stride</code> is a multiple of 4.</p>
 <p>On the other hand, if I just do not want to follow this, then the following code also works:</p>
 <pre><code class="language-cpp">GLsizei stride = nrChannels * width;
@@ -116,8 +116,8 @@ glReadBuffer(GL_FRONT);
 glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
 //...
 </code></pre>
-<h3 id="direction-of-y-axis">Direction of y-axis</h3>
-<p>The y-axis of OpenGL screen coordinate goes upward but usually the y-axis of an image file goes downward. Therefore, without <code>stbi_flip_vertically_on_write(true);</code>, the saved image file is flipped upside-down.</p>
+<h3 id="direction-of-the-y-axis">Direction of the y-axis</h3>
+<p>The y-axis of the OpenGL screen coordinate goes upward but usually, the y-axis of an image file goes downward. Therefore, without <code>stbi_flip_vertically_on_write(true);</code>, the saved image file is flipped upside-down.</p>
 
       </main>
     </article>
@@ -155,7 +155,7 @@ glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
 <script>
   function changeCSS(media, link) {
     if(media.matches) {
-      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-cave-dark.min.css";
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
     } else {
       link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
     }

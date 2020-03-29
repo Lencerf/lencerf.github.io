@@ -72,7 +72,7 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-        <p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don't need to use the terrible CJK package again.</p>
+        <p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
 <p>Now to generate a PDF format copy, the shell commands are</p>
 <pre><code class="language-sh">latex paper.tex;
 bibtex peper;
@@ -80,7 +80,7 @@ latex peper;
 latex paper;
 dvipdfmx paper.dvi
 </code></pre>
-<p>But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper's PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.</p>
+<p>But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.</p>
 <p>Installing Ghostscript is easy, just use <a href="https://brew.sh">homebrew</a>:</p>
 <pre><code class="language-sh">brew install ghostscript
 </code></pre>
@@ -129,7 +129,7 @@ ps2pdf paper.ps
 <script>
   function changeCSS(media, link) {
     if(media.matches) {
-      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-cave-dark.min.css";
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
     } else {
       link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
     }

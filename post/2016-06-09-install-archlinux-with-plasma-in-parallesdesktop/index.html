@@ -67,12 +67,12 @@
         
       </div>
       <main class="content entry-content entry clearfix">
-        <h2 id="heading">准备工作</h2>
+        <h2 id="准备工作">准备工作</h2>
 <ul>
 <li>下载 Arch Linux <a href="https://www.archlinux.org/download/">镜像</a></li>
 <li>新建虚拟机。因为要安装 Plasma，建议内存至少1G。</li>
 </ul>
-<h2 id="heading-1">硬盘分区</h2>
+<h2 id="硬盘分区">硬盘分区</h2>
 <p>启动虚拟机，开始安装，</p>
 <p><img src="https://i.imgur.com/3siPvUb.png" alt="由光盘镜像引导启动后的界面"></p>
 <p>首先需要对硬盘分区。输入命令 <code>cfdisk</code> 可以打开半图形化的分区工具。首先<code>cfdisk</code>会让选择分区表类型，选择第二种<code>dos</code>。然后进入到分区界面，通过下面的菜单<code>New</code>可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为<code>Bootable</code>。</p>
@@ -87,7 +87,7 @@ mkfs.ext4 /dev/sda2
 mkdir /mnt/home
 mount /dev/sda2 /mnt/home
 </code></pre>
-<h2 id="-arch-linux">安装 Arch Linux</h2>
+<h2 id="安装-arch-linux">安装 Arch Linux</h2>
 <p>配置镜像源（country=你所在的地区代码）</p>
 <pre><code class="language-sh">curl -o /etc/pacman.d/mirrorlist &quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;protocol=http&amp;ip_version=4&quot;
 </code></pre>
@@ -135,7 +135,7 @@ exit
 umount /mnt
 reboot
 </code></pre>
-<h2 id="-plasma">安装 Plasma</h2>
+<h2 id="安装-plasma">安装 Plasma</h2>
 <p>如果一切顺利重启后可以看到 grub 启动菜单</p>
 <p><img src="https://i.imgur.com/zin9rgS.png" alt="grub 启动菜单"></p>
 <p>进入新安装好的系统，以 root 用户登录，密码就是之前执行<code>passwd</code>命令时输入的密码。</p>
@@ -184,7 +184,7 @@ passwd yourname
 </code></pre>
 <p>到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。</p>
 <p><img src="https://i.imgur.com/6sIFdh5.png" alt="Plasma 真漂亮啊！"></p>
-<h2 id="heading-2">其它</h2>
+<h2 id="其它">其它</h2>
 <ul>
 <li>
 <p>以上过程为本人安装成果的整理记录，可能有疏漏，不一定适用于读者的情况。</p>
@@ -216,12 +216,12 @@ nano /etc/shadowsocks/config.json
 systemctl enabnle shadowsocks-libev@config
 systemctl start shadowsocks-libev@config
 </code></pre>
-<h3 id="heading-3">参考资料</h3>
+<h3 id="参考资料">参考资料</h3>
 <ol>
 <li><a href="http://www.cs.columbia.edu/~jae/4118-LAST/arch-setup-2015-1.html">Setting up an Arch Linux VM in VirtualBox</a></li>
 <li>Youtube video: <a href="https://www.youtube.com/watch?v=Wqh9AQt3nho">How to Install Arch Linux</a></li>
 <li>Youtube video: <a href="https://www.youtube.com/watch?v=okct6NwqF_Y">How to Install Arch Linux 2016 + KDE Plasma 5 + Open-VM-Tools on VMware Player Free</a></li>
-<li><a href="https://yzalog.tk/ss-via-stunnel/">Yza Log's Blog</a></li>
+<li><a href="https://yzalog.tk/ss-via-stunnel/">Yza Log&rsquo;s Blog</a></li>
 <li><a href="https://wiki.archlinux.org">ArchWiki</a></li>
 <li><a href="https://linuxtoy.org/archives/archlinux-guide.html">打造完美的 Linux 桌面 — Archlinux 2007.08-2 (电子版)
 </a></li>
@@ -263,7 +263,7 @@ systemctl start shadowsocks-libev@config
 <script>
   function changeCSS(media, link) {
     if(media.matches) {
-      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-cave-dark.min.css";
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
     } else {
       link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
     }

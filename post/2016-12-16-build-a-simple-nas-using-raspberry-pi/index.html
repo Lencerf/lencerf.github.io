@@ -82,16 +82,16 @@
 <li>带独立供电的 USB Hub</li>
 </ol>
 <p>此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。</p>
-<h2 id="heading">系统安装</h2>
+<h2 id="系统安装">系统安装</h2>
 <p>首先安装官网上的<a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">指引</a>，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。</p>
-<h2 id="-raspbian">配置 Raspbian</h2>
+<h2 id="配置-raspbian">配置 Raspbian</h2>
 <p>把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 <code>sudo raspy-config</code> 可以配置，有这么几个必须进行的操作：</p>
 <ol>
 <li>开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。</li>
 <li>修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。</li>
 <li>修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见<a href="http://henson.github.io/post/raspberrypi4/">这篇文章</a>。</li>
 </ol>
-<h2 id="-pi--uid">修改用户 pi 的 uid</h2>
+<h2 id="修改用户-pi-的-uid">修改用户 pi 的 uid</h2>
 <p>需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。</p>
 <p>在 macOS 上执行 <code>id</code> 命令可以查看自己的 uid，如果不是 501，那么下面的命令里应该换成正确的数值。</p>
 <p>修改用户 pi 的 uid 需要注销并登陆到 root 账户上去改，树莓派默认又是锁定了 root 账户的。首先为 root 账户设置密码</p>
@@ -104,7 +104,7 @@
 <pre><code class="language-bash">usermod -u 501 pi
 </code></pre>
 <p>然后再去 raspi-config 里把启动选项改回 Desktop Autologin，返回 pi 账户进行下一步操作。</p>
-<h2 id="heading-1">开启文件共享</h2>
+<h2 id="开启文件共享">开启文件共享</h2>
 <p>安装 netatalk 和 avahi-daemon</p>
 <pre><code class="language-bash">sudo apt-get update; sudo apt-get upgrade; sudo apt-get install netatalk avahi-daemon
 </code></pre>
@@ -117,9 +117,9 @@
 <p>可以看到里面已经默认共享了用户主目录。加上共享移动硬盘：<code>/media/pi/mydrive “mydrive”</code>。重启 netatalk:</p>
 <pre><code class="language-bash">sudo service netatalk restart
 </code></pre>
-<h2 id="heading-2">硬盘睡眠</h2>
+<h2 id="硬盘睡眠">硬盘睡眠</h2>
 <p>最后，硬盘不工作时应当让它进入睡眠，我就不啰嗦了，直接看<a href="http://mkitby.com/2016/05/15/raspberry-pi-nas-manage-hdd-power/">这里</a>。</p>
-<h2 id="heading-3">效果</h2>
+<h2 id="效果">效果</h2>
 <p>从树莓派里下载文件大概是 1MB/s，看个普通的视频足够了，凑合用吧。</p>
 
       </main>
@@ -158,7 +158,7 @@
 <script>
   function changeCSS(media, link) {
     if(media.matches) {
-      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-cave-dark.min.css";
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
     } else {
       link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
     }

@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Lencerf&#39;s Walk</title>
+    <title>python on Lencerf&#39;s Walk</title>
     <link>/tags/python/</link>
-    <description>Recent content in Python on Lencerf&#39;s Walk</description>
+    <description>Recent content in python on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 04 Mar 2018 17:50:11 -0500</lastBuildDate>
@@ -19,11 +19,11 @@
       <description>
       
       <![CDATA[<p>过去的这两年可以说是我人生重要的转折点了，虽然18年末偷懒没有写总结，但我现在觉得很有必要把它补上。</p>
-<h2 id="heading">未来道路的选择</h2>
+<h2 id="未来道路的选择">未来道路的选择</h2>
 <p>科研还是转行的选择，经过这两年终于在我心中有了明确的答案。</p>
 <p>18年上半年轻松的研究生活和暑假在香港与同领域同学们的交流让我觉得继续做学术未尝不是一个好的选择。仅仅过了两个月，当我心中的答案就快要“尘埃落定”时，来自两个审稿人对我研究论文的负面反馈让我备受打击。我开始重新思考道路的选择，甚至思考“我会什么会感到备受打击”这件事本身。我得出结论，我并不具备足够强的自我驱动力，我是一个需要正面反馈的人，做研究时取得进展那一刻的短暂强刺激不足以让我面对别人批判我的研究成果时再度振作起来。</p>
 <p>19年的经历让我确认了“我不适合学术界，学术界也不适合我”的结论。</p>
-<h2 id="heading-1">博士研究进展</h2>
+<h2 id="博士研究进展">博士研究进展</h2>
 <ul>
 <li>18年暑假把做了一年多的结果投了出去，结果并没有获得审稿人的认可，至今仍在继续和审稿人较劲。</li>
 <li>18年下半年经过半年多的探索总算找到了新课题并算出了一些有意思的结果，在19年初写成了稿子，然而导师并不怎么看重，至今稿子还躺在邮箱里，可能最终连 arXiv 都上不了了。</li>
@@ -35,11 +35,11 @@
 <p>还为了做组会报告去了解了 time crystal、dynamical quantum phase transition 等课题。但说实话这两个课题让我觉得很无聊。</p>
 </blockquote>
 <p>结果2018年和2019年分别做了一个 dynamical quantum phase transition 和一个 time crystal 的文章。命运可真是喜欢拿人开玩笑啊。</p>
-<h2 id="heading-2">转行的准备</h2>
+<h2 id="转行的准备">转行的准备</h2>
 <p>18年下半年修了网络，19年上半年修了操作系统，19年下半年修了数据库和图形学。</p>
 <p>18年上半年偷懒没有上课。因为之前上完了算法课，我重新拾起信心开始挑战 LeetCode。从做easy磕磕碰碰到可以做medium，一点点取得进展还是很开心的事情。正如前文，我是一个信心不足、需要正反馈的人，而做题可以在短时间内收到正反馈，并且答案是机器验证的，而机器永远是对的，这给了我极大的精神鼓励。很长一段时间内，做题是我缓解内心焦虑的重要方式。</p>
 <p>18年尝试去找19年的暑期实习，但是因为准备匆忙+实力不济，最终全部死在了简历关，一个面试都没有拿到。19年九月再次挑战，经过各路好友帮忙改简历、内推，加上经过一年提升实力，总算拿到了两个公司的实习面试。从18年初开始坚持刷题一年半终于有了正面回报，两个公司的算法面试都轻松通过，最后经过煎熬的 team match，签了去做 Android 开发的实习。</p>
-<h2 id="2020">对2020的展望</h2>
+<h2 id="对2020的展望">对2020的展望</h2>
 <ul>
 <li>希望能把握好来之不易的实习机会，认真表现争取拿到 return offer。</li>
 <li>希望在卸下了重担以后，能抑制住内心的浮躁和焦虑，做一点自己满意的物理研究。</li>
@@ -60,20 +60,20 @@
       
       <![CDATA[<p>Recent homework of the graphic course requires saving the OpenGL rendering to an image file. Although there are a lot of online postings related to this topic, here I record what I have done in case it may help someone or myself in the future.</p>
 <h2 id="quick-answer">Quick answer</h2>
-<p>First we get the size of the window through <code>glfwGetFramebufferSize</code>, and allocate a buffer <code>buffer</code>. Then we read image data using <code>glReadPixels</code> and write the data to file using <code>stbi_write_png</code>.</p>
+<p>First, we get the size of the window through <code>glfwGetFramebufferSize</code> and allocate a buffer <code>buffer</code>. Then we read image data using <code>glReadPixels</code> and write the data to file using <code>stbi_write_png</code>.</p>
 <pre><code class="language-cpp">void saveImage(char* filepath, GLFWwindow* w) {
-    int width, height;
-    glfwGetFramebufferSize(w, &amp;width, &amp;height);
-    GLsizei nrChannels = 3;
-    GLsizei stride = nrChannels * width;
-    stride += (stride % 4) ? (4 - stride % 4) : 0;
-    GLsizei bufferSize = stride * height;
-    std::vector&lt;char&gt; buffer(bufferSize);
-    glPixelStorei(GL_PACK_ALIGNMENT, 4);
-    glReadBuffer(GL_FRONT);
-    glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
-    stbi_flip_vertically_on_write(true);
-    stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
+ int width, height;
+ glfwGetFramebufferSize(w, &amp;width, &amp;height);
+ GLsizei nrChannels = 3;
+ GLsizei stride = nrChannels * width;
+ stride += (stride % 4) ? (4 - stride % 4) : 0;
+ GLsizei bufferSize = stride * height;
+ std::vector&lt;char&gt; buffer(bufferSize);
+ glPixelStorei(GL_PACK_ALIGNMENT, 4);
+ glReadBuffer(GL_FRONT);
+ glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+ stbi_flip_vertically_on_write(true);
+ stbi_write_png(filepath, width, height, nrChannels, buffer.data(), stride);
 }
 </code></pre>
 <p>I used <a href="https://www.glfw.org">GLFW</a> to create windows and <a href="https://github.com/nothings/stb">stb</a> to write image data to png files.</p>
@@ -87,10 +87,10 @@ glGetIntegerv(GL_VIEWPORT, pView);
 <p>The second option is</p>
 <pre><code class="language-cpp">glfwGetWindowSize(w, &amp;width, &amp;height);
 </code></pre>
-<p>this works on Windows but it does not go well with retina displays on macOS. The logical size (screen coordinate) of a window and the actual corresponding number of pixels may be different on macOS. <code>glfwGetWindowSize</code> gives the logical size but what we need is the size in pixels. For example, a 800x600 window in a retina display usually have <code>1800*1200</code> pixels.</p>
-<p>Although the instructor only requires the homework run on Windows, I eventually find the solution from OpenGL's <a href="https://www.glfw.org/docs/latest/group__window.html#gaeea7cbc03373a41fb51cfbf9f2a5d4c6">doc</a>: use <code>glfwGetFramebufferSize</code>, which gives the window size in pixels.</p>
+<p>this works on Windows but it does not go well with retina displays on macOS. The logical size (screen coordinate) of a window and the actual corresponding number of pixels may be different on macOS. <code>glfwGetWindowSize</code> gives the logical size but what we need is the size in pixels. For example, an 800x600 window in a retina display usually has <code>1800*1200</code> pixels.</p>
+<p>Although the instructor only requires the homework run on Windows, I eventually find the solution from OpenGL&rsquo;s <a href="https://www.glfw.org/docs/latest/group__window.html#gaeea7cbc03373a41fb51cfbf9f2a5d4c6">doc</a>: use <code>glfwGetFramebufferSize</code>, which gives the window size in pixels.</p>
 <h3 id="alignment-of-image-data">Alignment of image data</h3>
-<p>It seems that most most image file formats requires the number of bytes used to store a single row of an image to be a multiple of 4, such <a href="https://en.wikipedia.org/wiki/BMP_file_format#Pixel_storage">bmp</a>. As default, OpenG L also &ldquo;likes&rdquo; packing image data in this way since the default value of <code>GL_PACK_ALIGNMENT</code> is 4. My assumption is that this may enable OpenGL to do parallel computations more easily.</p>
+<p>It seems that most image file formats require the number of bytes used to store a single row of an image to be a multiple of 4, such <a href="https://en.wikipedia.org/wiki/BMP_file_format#Pixel_storage">bmp</a>. As a default, OpenG L also &ldquo;likes&rdquo; packing image data in this way since the default value of <code>GL_PACK_ALIGNMENT</code> is 4. I assume that this may enable OpenGL to do parallel computations more easily.</p>
 <p>Anyway let me just follow this practice: <code>stride += (stride % 4) ? (4 - stride % 4) : 0;</code> makes sure that <code>stride</code> is a multiple of 4.</p>
 <p>On the other hand, if I just do not want to follow this, then the following code also works:</p>
 <pre><code class="language-cpp">GLsizei stride = nrChannels * width;
@@ -102,8 +102,8 @@ glReadBuffer(GL_FRONT);
 glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
 //...
 </code></pre>
-<h3 id="direction-of-y-axis">Direction of y-axis</h3>
-<p>The y-axis of OpenGL screen coordinate goes upward but usually the y-axis of an image file goes downward. Therefore, without <code>stbi_flip_vertically_on_write(true);</code>, the saved image file is flipped upside-down.</p>
+<h3 id="direction-of-the-y-axis">Direction of the y-axis</h3>
+<p>The y-axis of the OpenGL screen coordinate goes upward but usually, the y-axis of an image file goes downward. Therefore, without <code>stbi_flip_vertically_on_write(true);</code>, the saved image file is flipped upside-down.</p>
 ]]>
       
       </description>
@@ -649,7 +649,7 @@ E=mc^2
 </ul>
 <p>I wish to thank Chris for elaborating how to <a href="http://www.chrisstead.com/archives/1082/visual-studio-code-extensions-editing-the-document/">programmatically modify document contents</a> and Martin for sharing the Beancount <a href="https://github.com/draug3n/sublime-beancount/blob/master/beancount.tmLanguage">sytax file</a> with me.</p>
 <p>I started making this extension after I tried VSCode for one day. Previously I really did not like Electron Apps, perhaps because of <a href="https://github.com/poooi/poi">POI</a> for KanColle. POI slowed down my Mac and caused the fan spin fast. Certainly, KanColle is based on Flash. So my Mac became even hotter. I also tried <a href="http://atom.io">Atom</a> before. It also resulted in heats. Several days ago, after reading a post on VSCode, I downloaded it and found it is really good. At least, VSCode is fast and &ldquo;cool&rdquo;(literally) and its <a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.python">Python</a> extension made me surprised. Writing Python in VSCode is just as pleasant as writing C# in Visual Studio. I can not bear the response delay of MacVim plus YouCompleteMe any more. So I decide to switch to VSCode.</p>
-<p>But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That's why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.</p>
+<p>But I did not find any existing VSCode extensions for Beancount. Although the syntax of Beancount is very simple, I still want a function to automatically align decimal points of commodities. That&rsquo;s why I make this extension, although at the same time I much finish Quantum Mechanics 2 take-home midterm.</p>
 <p>VSCode changes my opinions of Electron Apps, Javascript, and Microsoft. Actually now I think my bad impression on Javascript may just come from the fact that I have never written any Javascript codes by myself.</p>
 ]]>
       
@@ -748,16 +748,16 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 <li>带独立供电的 USB Hub</li>
 </ol>
 <p>此外在配置过程中需要显示器、键盘和鼠标，没有这些设备的话理论上也行，但是会相当麻烦。</p>
-<h2 id="heading">系统安装</h2>
+<h2 id="系统安装">系统安装</h2>
 <p>首先安装官网上的<a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">指引</a>，下载 Raspbian 系统镜像并安装到 Micro SD Card 之上。</p>
-<h2 id="-raspbian">配置 Raspbian</h2>
+<h2 id="配置-raspbian">配置 Raspbian</h2>
 <p>把 Micor SD Card 插入树莓派，接上电源、显示器、鼠标、键盘，呈现在眼前的就如同一台普通的 Linux 计算机了。在终端里键入 <code>sudo raspy-config</code> 可以配置，有这么几个必须进行的操作：</p>
 <ol>
 <li>开启 ssh，这样今后进行一些简易维护就不需要显示器等设备了。</li>
 <li>修改密码。Raspbian 的默认用户名和密码分别是 pi 和 raspberry，改掉密码可以防止不怀好意的人登陆你的树莓派。</li>
 <li>修改键盘布局和语言。树莓派是英国的树莓派基金会所开发，所以默认键盘布局和语言都是英式。更换布局的具体步骤可参见<a href="http://henson.github.io/post/raspberrypi4/">这篇文章</a>。</li>
 </ol>
-<h2 id="-pi--uid">修改用户 pi 的 uid</h2>
+<h2 id="修改用户-pi-的-uid">修改用户 pi 的 uid</h2>
 <p>需要这一步操作的原因是我选择 HFS+ 作为移动硬盘的文件格式，由于这种文件格式的特性，简而言之，每个文件记录了它的拥有者的 uid，如果当前用户的 uid 和文件里记录的 uid 不一致，那么就无权访问。macOS 上第一个用户的 uid 是 501，而树莓派上默认用户 pi 的 uid 是一个四位数，所以要把 pi 的 uid 改成 501，这样读写就不会遇到麻烦了。</p>
 <p>在 macOS 上执行 <code>id</code> 命令可以查看自己的 uid，如果不是 501，那么下面的命令里应该换成正确的数值。</p>
 <p>修改用户 pi 的 uid 需要注销并登陆到 root 账户上去改，树莓派默认又是锁定了 root 账户的。首先为 root 账户设置密码</p>
@@ -770,7 +770,7 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 <pre><code class="language-bash">usermod -u 501 pi
 </code></pre>
 <p>然后再去 raspi-config 里把启动选项改回 Desktop Autologin，返回 pi 账户进行下一步操作。</p>
-<h2 id="heading-1">开启文件共享</h2>
+<h2 id="开启文件共享">开启文件共享</h2>
 <p>安装 netatalk 和 avahi-daemon</p>
 <pre><code class="language-bash">sudo apt-get update; sudo apt-get upgrade; sudo apt-get install netatalk avahi-daemon
 </code></pre>
@@ -783,9 +783,9 @@ discovered: af_ZA.UTF-8, am_ET.UTF-8, be_BY.UTF-8, bg_BG.UTF-8, ca_ES.UTF-8, cs_
 <p>可以看到里面已经默认共享了用户主目录。加上共享移动硬盘：<code>/media/pi/mydrive “mydrive”</code>。重启 netatalk:</p>
 <pre><code class="language-bash">sudo service netatalk restart
 </code></pre>
-<h2 id="heading-2">硬盘睡眠</h2>
+<h2 id="硬盘睡眠">硬盘睡眠</h2>
 <p>最后，硬盘不工作时应当让它进入睡眠，我就不啰嗦了，直接看<a href="http://mkitby.com/2016/05/15/raspberry-pi-nas-manage-hdd-power/">这里</a>。</p>
-<h2 id="heading-3">效果</h2>
+<h2 id="效果">效果</h2>
 <p>从树莓派里下载文件大概是 1MB/s，看个普通的视频足够了，凑合用吧。</p>
 ]]>
       
@@ -866,7 +866,7 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
       <guid>/post/2016-06-29-the-feature-of-carnot-engine/</guid>
       <description>
       
-      <![CDATA[<p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot's theorem</a>）</p>
+      <![CDATA[<p>经典热力学中一个很重要的模型是卡诺热机（<a href="https://en.wikipedia.org/wiki/Carnot_heat_engine">Carnot engine</a>），它工作在高温热源和低温热源之间，可以从高温热源吸收热量，然后输出功并在低温热源处释放热量；反过来也可以对卡诺热机输入功，达到将热量从低温热源搬运到高温热源的效果。因此卡诺机是可逆热机，并且是效率最高的热机，有如下卡诺定理<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>（<a href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)">Carnot&rsquo;s theorem</a>）</p>
 <blockquote>
 <p>Of all the heat engines working between two given temperatures, none is more efficient than a Carnot eigine.</p>
 </blockquote>
@@ -913,12 +913,12 @@ $$\begin{cases} x = x\\ y = y\\ z=z(x,y)\end{cases}, $$
       <guid>/post/2016-06-09-install-archlinux-with-plasma-in-parallesdesktop/</guid>
       <description>
       
-      <![CDATA[<h2 id="heading">准备工作</h2>
+      <![CDATA[<h2 id="准备工作">准备工作</h2>
 <ul>
 <li>下载 Arch Linux <a href="https://www.archlinux.org/download/">镜像</a></li>
 <li>新建虚拟机。因为要安装 Plasma，建议内存至少1G。</li>
 </ul>
-<h2 id="heading-1">硬盘分区</h2>
+<h2 id="硬盘分区">硬盘分区</h2>
 <p>启动虚拟机，开始安装，</p>
 <p><img src="https://i.imgur.com/3siPvUb.png" alt="由光盘镜像引导启动后的界面"></p>
 <p>首先需要对硬盘分区。输入命令 <code>cfdisk</code> 可以打开半图形化的分区工具。首先<code>cfdisk</code>会让选择分区表类型，选择第二种<code>dos</code>。然后进入到分区界面，通过下面的菜单<code>New</code>可以新建分区。我采用的分区方案如下，16G给系统，48G给文件，注意将系统区标记为<code>Bootable</code>。</p>
@@ -933,7 +933,7 @@ mkfs.ext4 /dev/sda2
 mkdir /mnt/home
 mount /dev/sda2 /mnt/home
 </code></pre>
-<h2 id="-arch-linux">安装 Arch Linux</h2>
+<h2 id="安装-arch-linux">安装 Arch Linux</h2>
 <p>配置镜像源（country=你所在的地区代码）</p>
 <pre><code class="language-sh">curl -o /etc/pacman.d/mirrorlist &quot;https://www.archlinux.org/mirrorlist/?country=CN&amp;protocol=http&amp;ip_version=4&quot;
 </code></pre>
@@ -981,7 +981,7 @@ exit
 umount /mnt
 reboot
 </code></pre>
-<h2 id="-plasma">安装 Plasma</h2>
+<h2 id="安装-plasma">安装 Plasma</h2>
 <p>如果一切顺利重启后可以看到 grub 启动菜单</p>
 <p><img src="https://i.imgur.com/zin9rgS.png" alt="grub 启动菜单"></p>
 <p>进入新安装好的系统，以 root 用户登录，密码就是之前执行<code>passwd</code>命令时输入的密码。</p>
@@ -1030,7 +1030,7 @@ passwd yourname
 </code></pre>
 <p>到此基本上就完成了，reboot 之后应该就能看到赏心悦目的 Plasma 界面了。</p>
 <p><img src="https://i.imgur.com/6sIFdh5.png" alt="Plasma 真漂亮啊！"></p>
-<h2 id="heading-2">其它</h2>
+<h2 id="其它">其它</h2>
 <ul>
 <li>
 <p>以上过程为本人安装成果的整理记录，可能有疏漏，不一定适用于读者的情况。</p>
@@ -1062,12 +1062,12 @@ nano /etc/shadowsocks/config.json
 systemctl enabnle shadowsocks-libev@config
 systemctl start shadowsocks-libev@config
 </code></pre>
-<h3 id="heading-3">参考资料</h3>
+<h3 id="参考资料">参考资料</h3>
 <ol>
 <li><a href="http://www.cs.columbia.edu/~jae/4118-LAST/arch-setup-2015-1.html">Setting up an Arch Linux VM in VirtualBox</a></li>
 <li>Youtube video: <a href="https://www.youtube.com/watch?v=Wqh9AQt3nho">How to Install Arch Linux</a></li>
 <li>Youtube video: <a href="https://www.youtube.com/watch?v=okct6NwqF_Y">How to Install Arch Linux 2016 + KDE Plasma 5 + Open-VM-Tools on VMware Player Free</a></li>
-<li><a href="https://yzalog.tk/ss-via-stunnel/">Yza Log's Blog</a></li>
+<li><a href="https://yzalog.tk/ss-via-stunnel/">Yza Log&rsquo;s Blog</a></li>
 <li><a href="https://wiki.archlinux.org">ArchWiki</a></li>
 <li><a href="https://linuxtoy.org/archives/archlinux-guide.html">打造完美的 Linux 桌面 — Archlinux 2007.08-2 (电子版)
 </a></li>
@@ -1160,7 +1160,7 @@ done
       <guid>/post/2015-05-17-embed-figures-of-eps-format-in-latex-files/</guid>
       <description>
       
-      <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don't need to use the terrible CJK package again.</p>
+      <![CDATA[<p>Usually, I use xelatex to compile LaTeX files instead of latex, since the former one is able to generate PDF files directly with a faster speed and an excellent support for Chinese characters. However, recently I have no choice but to use latex again, since it is preferred by APS. Luckily, academic papers often does not contain Chinese characters, thus I don&rsquo;t need to use the terrible CJK package again.</p>
 <p>Now to generate a PDF format copy, the shell commands are</p>
 <pre><code class="language-sh">latex paper.tex;
 bibtex peper;
@@ -1168,7 +1168,7 @@ latex peper;
 latex paper;
 dvipdfmx paper.dvi
 </code></pre>
-<p>But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper's PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.</p>
+<p>But a new problem, which is about figures, emerges. APS recommends eps format for the figure files. But dvipdfmx does not support eps format. So I got blanks at the positions where the figures should be placed. Although dvipdfmx can not directly handle eps files, it can temporarily call Ghostscript to convert eps files into PDF format when generating the paper&rsquo;s PDF copy. PDF format is supported by dvipdfmx. Unluckily, Ghostscript is generally not installed in OS X and I wasted a whole morning on struggling with the horrible blanks.</p>
 <p>Installing Ghostscript is easy, just use <a href="https://brew.sh">homebrew</a>:</p>
 <pre><code class="language-sh">brew install ghostscript
 </code></pre>
@@ -1320,13 +1320,13 @@ ps2pdf paper.ps
       <![CDATA[<blockquote>
 <p>又开始折腾了。。。</p>
 </blockquote>
-<h2 id="-latextools">安装 LaTeXTools</h2>
+<h2 id="安装-latextools">安装 LaTeXTools</h2>
 <ol>
 <li>View -&gt; Show Console，打开终端界面，将 Package Control <a href="https://sublime.wbond.net/installation">官网</a>给出的代码复制粘贴进终端，回车完成 Package Control 的安装。</li>
 <li><code>Command-Shift-P</code>调出命令窗口，输入<code>Install</code>，等待一会，之后输入<code>LaTeXTools</code>，回车完成安装，时常取决于网络。</li>
 <li>安装 <a href="http://skim-app.sourceforge.net/">Skim</a>，用于预览编译好的PDF文件。</li>
 </ol>
-<h2 id="heading">初始设置</h2>
+<h2 id="初始设置">初始设置</h2>
 <h3 id="latextools">LaTeXTools</h3>
 <ol>
 <li>初始化：按下<code>Command-Shift-P</code>，输入&quot;latextools&rdquo;，选择&quot;LaTeXTools:Reconfigure&hellip;&quot;，回车。
@@ -1337,7 +1337,7 @@ ps2pdf paper.ps
 <h3 id="skim">Skim</h3>
 <p>在 Skim 的选项-同步中，不要勾选“检查文件变化”，“同步支持”选择“Sumlime Text”
 <img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibc7nfn6j20f00bxmyg.jpg" alt="Skim 设置"></p>
-<h2 id="skim--sublime-text-">Skim 与 Sublime Text 之间的跳转按键</h2>
+<h2 id="skim-与-sublime-text-之间的跳转按键">Skim 与 Sublime Text 之间的跳转按键</h2>
 <ul>
 <li>Skim：<code>Command-Shift-单击</code></li>
 <li>Sublime Text：<code>Command-L</code>,松开<code>Command</code>，迅速按下<code>J</code></li>
@@ -1408,7 +1408,7 @@ $$</p>
       
       <![CDATA[<p>I am now a physics Ph.D. student working on ultracold atom theories. At the same time I am interested in computer science and software engineering.</p>
 <div style="display: none">Previously I had suffered from the question that whether I should continue studying physics or switch to becoming a programmer, especially considering the fact that I was only admitted into a mediocre physics Ph.D. program. But finally I am determined to get the degree and complete my childhood dream, even if I may have to leave academia after graduation.</div>
-<p>Most of the contents on this site are about techniques, as well as physics and my daily life. The title of this site contains my net ID &ldquo;lencerf&rdquo; and a word &ldquo;walk&rdquo;, which comes from my undergraduate physics research project on <a href="https://en.wikipedia.org/wiki/Quantum_walk">quantum walk</a>. By the way, &ldquo;lencerf&rdquo; is an inverse of the name of the famous French physicist <a href="https://en.wikipedia.org/wiki/Augustin-Jean_Fresnel">Augustin-Jean Fresnel</a>. But &ldquo;lenserf&rdquo; has been used by someone, so I changed &ldquo;s&rdquo; into &ldquo;c&rdquo;. It is really not paraphrased as &ldquo;Lancer's luck value is F&rdquo; if you have watched <a href="http://typemoon.wikia.com/wiki/Fate_series">Fate series</a> before.</p>
+<p>Most of the contents on this site are about techniques, as well as physics and my daily life. The title of this site contains my net ID &ldquo;lencerf&rdquo; and a word &ldquo;walk&rdquo;, which comes from my undergraduate physics research project on <a href="https://en.wikipedia.org/wiki/Quantum_walk">quantum walk</a>. By the way, &ldquo;lencerf&rdquo; is an inverse of the name of the famous French physicist <a href="https://en.wikipedia.org/wiki/Augustin-Jean_Fresnel">Augustin-Jean Fresnel</a>. But &ldquo;lenserf&rdquo; has been used by someone, so I changed &ldquo;s&rdquo; into &ldquo;c&rdquo;. It is really not paraphrased as &ldquo;Lancer&rsquo;s luck value is F&rdquo; if you have watched <a href="http://typemoon.wikia.com/wiki/Fate_series">Fate series</a> before.</p>
 <p>Nice to meet you! You can find my codes on <a href="https://github.com/Lencerf">GitHub</a>, chat with me on <a href="https://telegram.me/Lencerf">Telegram</a>, and get my GPG public key on <a href="https://keybase.io/lencerf">keybase</a>.</p>
 ]]>
       

@@ -10,6 +10,17 @@
      height="5.3747254969595835cm"
      viewBox="0 0 393 175"
      >
+<style>
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: white;
+      }
+      path {
+        stroke: white;
+      }
+    }
+</style>
+
 <title>
 
 </title>
