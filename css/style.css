@@ -332,13 +332,14 @@ pre {
 
 article pre code {
     color: #666;
-    font-size: 0.93em;
+    font-size: 0.9em;
     background: none;
     overflow-x: auto;
     display: block;
     padding: 15px 15px;
     margin: 0;
     border: 0;
+    line-height: 19.72px;
     -webkit-border-radius: 0;
     border-radius: 0;
     word-break: normal;

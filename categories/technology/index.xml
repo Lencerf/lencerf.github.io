@@ -5,10 +5,62 @@
     <description>Recent content in Technology on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Sep 2019 02:54:31 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 13:17:21 -0400</lastBuildDate>
     
         <atom:link href="/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introducing xhype: Virtual Machine Manager in Rust</title>
+      <link>/post/2020-08-30-introducing-xhype/</link>
+      <pubDate>Sun, 30 Aug 2020 13:17:21 -0400</pubDate>
+      
+      <guid>/post/2020-08-30-introducing-xhype/</guid>
+      <description>
+      
+      <![CDATA[<p>Homepage: <a href="https://github.com/akaros/vmm-akaros/tree/master/xhype/xhype">akaros/vmm-akaros</a></p>
+<p>xhype is a virtualization library on macOS written in Rust and based on the <a href="https://developer.apple.com/documentation/hypervisor">Hypervisor</a> framework. xhype requires at least macOS 10.15.</p>
+<h2 id="virtual-thread-model">Virtual thread model</h2>
+<p>xhype implements the virtual vthread model. The virtual thread model was proposed
+by Google engineers and first implemented in <a href="https://github.com/akaros/akaros">Akaros OS</a>,
+an experimental kernel from Berkeley. A slide introducing virtual threads can be found
+<a href="https://docs.google.com/presentation/d/1hViGuqqyFcg8KOWNpCPWUOLBIyNmsVQa5WP3cWeB6uQ/edit#slide=id.p">here</a>.</p>
+<p>In the virtual thread model, instead of a virtual machine being a special thing controlled by a device, as in Linux KVM, a VM, or a guest OS, is just some threads of the virtual machine manager. The physical memory address space a VM sees is the same as the virtual address space of the host process, thus a VM can easily share data with the host, which makes a VM’s IO more efficient.</p>
+<p><img src="/img/xhype/vthreads.svg" alt="virtual threads and pthreads"></p>
+<p>As we see, the host process has several pthreads and several virtual threads. A virthral thread is nothing special but a pthread executing a guest OS’s instructions. For example here virtual threads 1, 2, and 3 are executing codes of Guest OS 1. Virtual threads 4 and 5 are executing Guest OS 2. Let us take vthreads 4 and 5 as an example. From the point of view of guest 2, threads 4 and 5 are just two CPUs. Guest OS 2 might have its own threads (marked by green in the right panel), and it has its own kernel scheduler, which determines how its own threads are executed by vthread 4 and 5. Therefore effectively, a guest’s own threads are just green threads of the whole VMM process.</p>
+<p>A guest sees the same memory space as the host, therefore it can share data with the host very easily. They can even share codes with the host. Here I show a very simple example. We just use a function called <code>doubel_a</code> of the host process as the kennel of a VM and spawn a virtual thread. This tiny guest just doubles the global variable <code>NUM_A</code> of the host process. As we could see, in the vthread model, starting a vm is just as easy as creating a few threads.</p>
+<pre><code class="language-rust">use xhype::{vthread, VMManager};
+use std::sync::Arc;
+
+static mut NUM_A: i32 = 1;
+
+fn double_a() {
+    unsafe {
+        NUM_A &lt;&lt;= 1;
+    }
+}
+
+fn main() {
+    let original_a = unsafe { NUM_A };
+    let vmm = VMManager::new().unwrap();
+    let vm = Arc::new(vmm.create_vm(1, None).unwrap());
+    let handle1 = vthread::spawn(&amp;vm, double_a);
+    handle1.join().unwrap();
+    unsafe {
+        assert_eq!(NUM_A, 2 * original_a);
+    }
+}
+</code></pre>
+<h2 id="the-design-of-xhype">The design of xhype</h2>
+<p><img src="/img/xhype/xhype_design.svg" alt="xhype overview"></p>
+<p>So my goal for this summer is to bring this virtual thread model to macOS and develop a VMM based on Apple’s Hypervisor framework and intel’s VTx hardware virtualization.
+Here is the design of our VMM, we call it xhype. The VMM thread creates virtual machines, which contains the hardware provided to the guest OS.We implemented several kinds of Virtio hardware. The VMM spawns pthreads for hardware and virtual threads as virtual cpus. A virtual thread is either in the state of executing guest code or handling special requests of the guest OS. The interrupt from hardware to the virtual CPU is implemented with Rust channel.</p>
+<p>As of today, we have eight thousand lines of Rust code and a few C and objective C codes to interact with macOS api. We implemented MMIO based virtio net devices, block devices, and random number generators. We implemented a linux kernel loader and a multiboot compliant kernel loader. We successively booted LInux 5.5 flash kernel with a 1.8 megabyte vmm executable.</p>
+<p>In the future We might want to implement pci-based virti-io devices. We might want to use xhype as a tool to debug other OSes. We might also want to port xhype to other OSes or port it to ARM-based macOS. For sure in the current codebase, there are still several issues to be resolved.</p>
+]]>
+      
+      </description>
+    </item>
     
     <item>
       <title>2018 &amp; 2019 总结</title>
@@ -124,7 +176,7 @@ glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
 <p>周一是劳工节，虽然还有一大堆工作没完成，但是黑人兄弟拉我去参加他们的 cookout party，想了想我还是去了。在现场认识了不少新的面孔，大家都需要相互介绍名字。果不其然，我需要耐心地教他们汉语里的 ü 这个音，毕竟英语里根本没有对应，一般只要对方发得大概有点接近，我就会说 Good 了，然而有个人总是发得差得很远，而且其他很容易发的音也偏得离谱。直到我教了他四五次以后，终于我的好朋友过来拍了拍那个人的头——原来这位一直读不准我名字的同学，平日里就不是一个“正经人”，总是喜欢开玩笑。他一直读不准我的名字，其实是在捉弄我。而我一直没意识到。</p>
 <p>排除文化差异和语言壁垒，我从来不太会判断别人哪些话是无恶意的玩笑、哪些是懂了真格。因为自己很难把握开玩笑的界线，所以我说话时会竭力避免可能引起误会的词和可能让别人不舒服的举动，比如略带戏谑的外号我是不会叫的，发带有别人的照片时，也一定会征求同意，哪怕照片里只拍到了对方一只手。另一方面，由于不会判断，我就干脆默认把别人的发言都认为是认真的发言。所以我得出那个同学确实还不会读我的名字的结论，然后一遍遍教他；所以可能如果我是西片，我早就和擅长捉弄同学的高木同学彻底翻脸了。</p>
 <center>（三）</center>
-<p>今天晚上这两件事莫名突然一起出现在思绪里，忽然有点明白了什么。也许我一直清晰地记忆着说服爷奶父母失败的事情，并不是因为失败本身，而是因为，“&lsquo;懒虫'这两个字是骂人的话”这句话，在当时还不太懂人情世故的我的心中，第一次给我划了一条开玩笑和动真格的界线（并且显然这条界线画得离正确的位置太远了），导致了我总是“一本正经”的状态。</p>
+<p>今天晚上这两件事莫名突然一起出现在思绪里，忽然有点明白了什么。也许我一直清晰地记忆着说服爷奶父母失败的事情，并不是因为失败本身，而是因为，“&lsquo;懒虫&rsquo;这两个字是骂人的话”这句话，在当时还不太懂人情世故的我的心中，第一次给我划了一条开玩笑和动真格的界线（并且显然这条界线画得离正确的位置太远了），导致了我总是“一本正经”的状态。</p>
 ]]>
       
       </description>

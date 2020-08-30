@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="Introducing xhype: Virtual Machine Manager in Rust - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<title>Introducing xhype: Virtual Machine Manager in Rust | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="../../css/style.css">
+<script src="https://kit.fontawesome.com/8455592b61.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="../../js/gallery.js" defer></script>
+
+
+
+
+</head>
+  <body>
+        <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="../../">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+          
+        </div>
+      </nav>
+    </header>
+    
+    <article class="section">
+    
+      <h1 class="title">Introducing xhype: Virtual Machine Manager in Rust</h1>
+        
+        <time class="meta">August 30, 2020</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="../../categories/technology" rel="category">Technology</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="../../tags/rust/" rel="tag">Rust</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="../../tags/virtualization/" rel="tag">Virtualization</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+        <p>Homepage: <a href="https://github.com/akaros/vmm-akaros/tree/master/xhype/xhype">akaros/vmm-akaros</a></p>
+<p>xhype is a virtualization library on macOS written in Rust and based on the <a href="https://developer.apple.com/documentation/hypervisor">Hypervisor</a> framework. xhype requires at least macOS 10.15.</p>
+<h2 id="virtual-thread-model">Virtual thread model</h2>
+<p>xhype implements the virtual vthread model. The virtual thread model was proposed
+by Google engineers and first implemented in <a href="https://github.com/akaros/akaros">Akaros OS</a>,
+an experimental kernel from Berkeley. A slide introducing virtual threads can be found
+<a href="https://docs.google.com/presentation/d/1hViGuqqyFcg8KOWNpCPWUOLBIyNmsVQa5WP3cWeB6uQ/edit#slide=id.p">here</a>.</p>
+<p>In the virtual thread model, instead of a virtual machine being a special thing controlled by a device, as in Linux KVM, a VM, or a guest OS, is just some threads of the virtual machine manager. The physical memory address space a VM sees is the same as the virtual address space of the host process, thus a VM can easily share data with the host, which makes a VM’s IO more efficient.</p>
+<p><img src="../../img/xhype/vthreads.svg" alt="virtual threads and pthreads"></p>
+<p>As we see, the host process has several pthreads and several virtual threads. A virthral thread is nothing special but a pthread executing a guest OS’s instructions. For example here virtual threads 1, 2, and 3 are executing codes of Guest OS 1. Virtual threads 4 and 5 are executing Guest OS 2. Let us take vthreads 4 and 5 as an example. From the point of view of guest 2, threads 4 and 5 are just two CPUs. Guest OS 2 might have its own threads (marked by green in the right panel), and it has its own kernel scheduler, which determines how its own threads are executed by vthread 4 and 5. Therefore effectively, a guest’s own threads are just green threads of the whole VMM process.</p>
+<p>A guest sees the same memory space as the host, therefore it can share data with the host very easily. They can even share codes with the host. Here I show a very simple example. We just use a function called <code>doubel_a</code> of the host process as the kennel of a VM and spawn a virtual thread. This tiny guest just doubles the global variable <code>NUM_A</code> of the host process. As we could see, in the vthread model, starting a vm is just as easy as creating a few threads.</p>
+<pre><code class="language-rust">use xhype::{vthread, VMManager};
+use std::sync::Arc;
+
+static mut NUM_A: i32 = 1;
+
+fn double_a() {
+    unsafe {
+        NUM_A &lt;&lt;= 1;
+    }
+}
+
+fn main() {
+    let original_a = unsafe { NUM_A };
+    let vmm = VMManager::new().unwrap();
+    let vm = Arc::new(vmm.create_vm(1, None).unwrap());
+    let handle1 = vthread::spawn(&amp;vm, double_a);
+    handle1.join().unwrap();
+    unsafe {
+        assert_eq!(NUM_A, 2 * original_a);
+    }
+}
+</code></pre>
+<h2 id="the-design-of-xhype">The design of xhype</h2>
+<p><img src="../../img/xhype/xhype_design.svg" alt="xhype overview"></p>
+<p>So my goal for this summer is to bring this virtual thread model to macOS and develop a VMM based on Apple’s Hypervisor framework and intel’s VTx hardware virtualization.
+Here is the design of our VMM, we call it xhype. The VMM thread creates virtual machines, which contains the hardware provided to the guest OS.We implemented several kinds of Virtio hardware. The VMM spawns pthreads for hardware and virtual threads as virtual cpus. A virtual thread is either in the state of executing guest code or handling special requests of the guest OS. The interrupt from hardware to the virtual CPU is implemented with Rust channel.</p>
+<p>As of today, we have eight thousand lines of Rust code and a few C and objective C codes to interact with macOS api. We implemented MMIO based virtio net devices, block devices, and random number generators. We implemented a linux kernel loader and a multiboot compliant kernel loader. We successively booted LInux 5.5 flash kernel with a 1.8 megabyte vmm executable.</p>
+<p>In the future We might want to implement pci-based virti-io devices. We might want to use xhype as a tool to debug other OSes. We might also want to port xhype to other OSes or port it to ARM-based macOS. For sure in the current codebase, there are still several issues to be resolved.</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section" id="disqus"  >
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 
+            
+                2014-2020 Lencerf
+    | Generated by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+<script>
+  function changeCSS(media, link) {
+    if(media.matches) {
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
+    } else {
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
+    }
+  }
+
+  var head = document.getElementsByTagName('HEAD')[0];
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  head.appendChild(link);
+  
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  changeCSS(media, link);
+
+  media.addListener(() => {
+    changeCSS(media, link);
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>  
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/rust.min.js"></script>
+ 
+ 
+
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+
+
+<script type="text/javascript" defer>
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
+    }
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
+</script>
+    
+  </body>
+</html>
