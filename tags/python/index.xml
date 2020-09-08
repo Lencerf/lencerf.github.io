@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Lencerf&#39;s Walk</title>
+    <title>Python on Lencerf&#39;s Walk</title>
     <link>/tags/python/</link>
-    <description>Recent content in python on Lencerf&#39;s Walk</description>
+    <description>Recent content in Python on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 04 Mar 2018 17:50:11 -0500</lastBuildDate>
@@ -184,10 +184,10 @@ glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
     
     <item>
       <title>写了个辅助背单词的脚本</title>
-      <link>/post/2018-03-04-a-script-for-helping-memorize-english-words/</link>
+      <link>/diary/2018-03-04-a-script-for-helping-memorize-english-words/</link>
       <pubDate>Sun, 04 Mar 2018 17:50:11 -0500</pubDate>
       
-      <guid>/post/2018-03-04-a-script-for-helping-memorize-english-words/</guid>
+      <guid>/diary/2018-03-04-a-script-for-helping-memorize-english-words/</guid>
       <description>
       
       <![CDATA[<p>说来丢人，来美一年半英语依旧很挫，除了熟练掌握在句子中任意部位插入“kind of”以外毫无长进。原因多种多样，社交圈太小、没当过TA，以及过于信奉“闷声发大财”，当然最主要的还是自己懒，没有主动去提高英语水平。前几天被导师训斥“You really should improve your communication skills!”，再加上最近一些大形势上的变化，让我愈发感受到提升英语的迫切性，不能再像 Ph.D. 申请时一样被英语挡住上升通道了。</p>
