@@ -11,6 +11,35 @@
     
     
     <item>
+      <title>2020 总结</title>
+      <link>/post/2020-12-31-2020-review/</link>
+      <pubDate>Thu, 31 Dec 2020 23:59:59 -0500</pubDate>
+      
+      <guid>/post/2020-12-31-2020-review/</guid>
+      <description>
+      
+      <![CDATA[<p>2020年过去得如此之快，以至于又到了年终总结的时候。</p>
+<p>2020年最大的感受就是在大时代的背景下，个人是如此的渺小。</p>
+<p>一月和二月基本在写中期答辩报告和对付课程作业（网络安全和编译原理），以及忐忑不安地关注着新冠疫情的发展。</p>
+<p>到了三月，美国的情况开始变得糟糕。学校课程都改成线上，导师也让我们尽量呆在家，组会也改成Skype了。三月初通过了中期答辩以后，我就没别的要挂念的事了，有了几个可以完全静下心来思考之前研究课题的时间。由于被关在家，作息逐渐颠倒，但是另一方面夜晚的安静确实让我有了可以全身心投入的机会。至今依然很怀念那个晚上：经过了连续几天的奋战，我终于对困惑我大半年的问题有了突破性的进展，有了几个非常激进的想法，以至于连续演算到凌晨六点，躺到床上后激动得睡不着，起身下床完成最后了推导，直到九点才彻底撑不住了昏昏睡去。</p>
+<p>如我所料，我在组会上报告了这些（我自认为非常漂亮和优美）的新结果后，导师和学弟都很感兴趣。于是接下来的两个月，就是在和导师还有学弟合作全力把这个项目完成，因为国内有个组挂出了相关的工作，让导师有点紧张。期间连续Skype五六个小时都是家常便饭。5月10日晚上我把文章传到arXiv以后，难得以无比轻松的身心睡去。</p>
+<p>第二天醒来后的周一，我就进入了这一年的第二个阶段——Google 的 Software Engineering 实习。因为新冠持续恶化，实习改成了远程，实习内容也被告知从 Android UI 开发改成了用 Rust 写 Virtual Machine Manger，而且是正式开始前两三天才告诉我，对硬件虚拟化一无所知的我只能硬着头皮上。庆幸的事，新项目的 host 非常 nice，是个在 firmware 领域耕耘了几十年的大牛，组里的其他成员也很友好。背负着拿 return offer 的压力，我开始了全力爆肝的三个月，一天都没有休息，梦里都在想着下一步怎么做。 开始的几个星期一边读 Intel Vol.3，一边翻现有 VMM 的代码，为了搞懂操作系统的一些启动原理也尝试去改了 Linux 代码。这些都是我以前从未接触也从未想象有一天会接触的内容，虽然很艰难但确实又很有意思。</p>
+<p>到了六月，我把原理都搞懂的差不多了，用C写的一个模型也能跑几秒 Linux 了，于是开始正式用 Rust 开发。这期间是相当开心的，Rust 是我最喜欢的编程语言之一，在实践过程中对 Rust 很多概念和设计有了更深的理解。就这样很快到了八月初，我的 VMM 已经可以把一个简单的单核 Linux 跑起来，可以在终端里输命令，网络链接也有了。当我看到 <code>ping google.com</code> 顺利工作时，那种成就感是难以表达的。</p>
+<p>八月初告别 host 和 Google，我又“回到了学校”，至此，痛苦的日子便开始了。</p>
+<p>首先是跟负责我实习转正过程的 HR 较劲。在我请求了 host 帮忙催促以后，终于给我安排了八月底的面试，然而时间距离当时只剩不到一周。仓促准备之后就迎来了正式面试。第一轮很轻松，以至于后20分钟在和面试官扯淡；第二轮得意忘形，题是做出来了，但是面试完后两三天意识到我把简单的题做复杂了，瞬间感觉崩塌。</p>
+<p>怀着忐忑不安和懊悔的心情痛苦地熬过了一个月。期间也投了很多其他公司，只有苹果和 Bloomberg 给了我回应。苹果的面试体验很好，但是不出意外地挂在了最终面，Bloomberg 的面试流程让我很不爽，面试要么官盛气凌人要么感觉比我还菜，最终因为我“算法不过关”把我挂了，摊手。</p>
+<p>九月底，谷歌 HR 来信，我过了他们的Bar，加下来只需要等待分配组。长舒一口气，以为这四年来忐忑和焦虑的生活终于画上了句点。</p>
+<p>然而命运就是这么喜欢开玩笑，几天后的一个晚上和父母通话时，因为一件小事我大动肝火，愤怒到了极点，情绪完全失控。第二天醒来，耳内轰鸣。开始我以为仅仅是身体疲劳，几天后意识到，我患上了耳鸣。耳鸣的原因自然是因为长年的焦虑和熬夜，前一晚的情绪失控则是导火索。在上网查找资料、看医生、询问同样患耳鸣的同学之后，我不得不接受事实：很有可能耳鸣要伴随我一生了。</p>
+<p>经历了入睡困难、夜间每两个小时噩梦惊醒一次的三周后，十一月初得到了两个好消息，一个是 Google 的正式 offer，一个是上半年做的工作被 Physical Review Letters 接收了，耳鸣的情况也稍有好转。我意识到心态上压力的缓解是关键，于是干脆跟导师坦白，商量之后，就决定接下来的时间不做新的项目了，先写毕业论文，做点整理之前结果的轻松工作。</p>
+<p>导师让我“不要有任何压力”，他还表示惊讶，觉得我“一直是个很有计划的人，把科研和找工作都安排得井井有条”。通话结束后我回想这句评价，不禁无奈地笑了：正是因为“井井有条”，因为心中时刻都有一张计划表，因为时时刻刻都紧绷着神经对照着计划表评价着自己做的是否足够好，才最终压垮了自己，把自己折腾成了现在这个样子。</p>
+<p>于是这年剩余的两个月就像废人一样在家养病，慢慢悠悠地整理毕业论文。我也很感谢健身环大冒险这个游戏，在耳鸣最严重的时候，做运动可以让我暂时忘记痛苦。</p>
+<p>回望2020，我得到了曾经梦寐以求的东西（工作 offer 和 PRL 一作论文），却失去了手中最为宝贵的东西——健康，以至于我现在做什么事情都感到有心无力。新的一年，我只求身体能缓慢恢复，但也许是奢求吧。</p>
+]]>
+      
+      </description>
+    </item>
+    
+    <item>
       <title>Introducing xhype: Virtual Machine Manager in Rust</title>
       <link>/post/2020-08-30-introducing-xhype/</link>
       <pubDate>Sun, 30 Aug 2020 13:17:21 -0400</pubDate>
@@ -382,7 +411,7 @@ $$||a|| = \sqrt{3},\  ||b||=\sqrt{6}$$
       <guid>/post/2017-06-16-macbook-pro-15-mid-2017/</guid>
       <description>
       
-      <![CDATA[<p>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&rdquo;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&rdquo; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 <a href="http://refer.discover.com/s/tyfx6">Discover</a> 申请提额度，下单 256GB Silver。</p>
+      <![CDATA[<p>盼星星盼月亮，终于盼到了苹果更新 MacBook Pro 15&quot;。其实原本打算苹果16年更新 MacBook Pro 时就换新，然而还是不太敢做第一代 TouchBar 用户，加上老 MacBook Pro 13&quot; mid2012 虽然服役四年却没有什么大问题凑合能用，就决定再等等。喜剧的是没过多久老 Mac 的原配机械硬盘就坏了，只剩下 120GB 的固态硬盘可用，再加上开始用 Python 做科学计算，最近几个月明显感觉 Intel i5-3210 已经扛不住了。我原以为还得等到九月，没想到苹果在 WWDC 上就发布了更新。没有多想，我当晚就跟 <a href="http://refer.discover.com/s/tyfx6">Discover</a> 申请提额度，下单 256GB Silver。</p>
 <p><img src="https://i.imgur.com/lcFXy2v.png" alt="两个月的搬砖工钱 T_T" style="
 width: 416px"></p>
 <p>等了一个星期，UPS 终于把的新 Mac 从上海送到了我这 midwest 小村里。以下图片用 iPhone 6s 在我的昏暗小房间里拍摄，就不要吐槽拍摄质量了。</p>
@@ -1381,7 +1410,7 @@ ps2pdf paper.ps
 <h2 id="初始设置">初始设置</h2>
 <h3 id="latextools">LaTeXTools</h3>
 <ol>
-<li>初始化：按下<code>Command-Shift-P</code>，输入&quot;latextools&rdquo;，选择&quot;LaTeXTools:Reconfigure&hellip;&quot;，回车。
+<li>初始化：按下<code>Command-Shift-P</code>，输入&quot;latextools&quot;，选择&quot;LaTeXTools:Reconfigure&hellip;&quot;，回车。
 <img src="http://ww2.sinaimg.cn/large/eb7f99fcgw1emibebpra4j20jm0d5n05.jpg" alt="LaTeXTools 的初始化"></li>
 <li>设置编译时输出详细日志：前往<code>~/Library/Application Support/Sublime Text 3/Packages/User/</code>，打开<code>LaTeXTools.sublime-settings</code>，将<code>&quot;display_log&quot; : false,</code>改为<code>&quot;display_log&quot; : true,</code>。这样编译时心里有个底，看屏幕上输出一段一段高端大气的代码然后生成精美的 paper 的时候的快感怎么能少？</li>
 <li>设置默认使用 XeLaTeX 编译文件：虽然可以去修改<code>LaTeXTools.sublime-settings</code>,不过最简单安全的方法还是在自己的 TeX 源文件开头加上<code>%!TEX program = xelatex</code>，修改一下自己的模板就一劳永逸了，难道每次都从输入<code>\begin{document}</code>开始？</li>
@@ -1489,7 +1518,7 @@ $$</p>
 <img src="https://i.imgur.com/B5LGj8n.png" alt="TeXShop">
 TeXShop 还需稍微设置一番，才能完美适应要求。打开偏好设置：
 在“源代码”页，默认编码选择为Unicode(UTF-8)。不然处理中文的时候会有各种各样<del>奇奇怪怪</del>的问题。
-在“排版”页的默认指令处选择“采用键入的指令”，输入&quot;XeLaTeX&rdquo;。</p>
+在“排版”页的默认指令处选择“采用键入的指令”，输入&quot;XeLaTeX&quot;。</p>
 <p>现在来测试一下吧，在TeXShop里输入</p>
 <pre><code>\documentclass{article}
 \usepackage{xeCJK}
