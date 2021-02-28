@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sleep</title>
+        <style>
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                font-size: 16px;
+                }
+        </style>
+    </head>
+    <body>
+        <audio id="m1" src="https://e8b8e3q2.ssl.hwcdn.net/sounds/rain/rainbest160.mp3" loop></audio>
+        <audio id="m2" src="https://e8b8e3q2.ssl.hwcdn.net/sounds/rain/splashing-rainfall160.mp3" loop=""></audio>
+        <audio id="m3" src="https://e8b8e3q2.ssl.hwcdn.net/sounds/hipster/birds160.mp3" loop></audio>
+        <audio id="m4" src="https://e8b8e3q2.ssl.hwcdn.net/sounds/rain/thunder160.mp3" loop=""></audio>
+        <button class="button" id="1" onclick="play(this.id)">Downpour</button>
+        <button class="button" id="2" onclick="play(this.id)">Rain</button>
+        <button class="button" id="3" onclick="play(this.id)">Birds</button>
+        <button class="button" id="4" onclick="play(this.id)">Thunder</button>
+        <button class="button" id="stop" onclick="stop()">Stop</button>
+        <button class="button" id="timer" onclick="restart()">Restart Timer</button>
+        <p id="remaining"></p>
+        <script type="text/javascript">
+            var current = document.getElementById("m1");
+            current.play();
+            function play(clicked_id) {
+                var new_music = document.getElementById("m"+clicked_id);
+                if (new_music != current) {
+                    current.pause();
+                    current = new_music;
+                }
+                current.play();
+            }
+            function stop() {
+                current.pause();
+            }
+            var stopTime;
+            var countingDown = null;
+            var timeoutEvent = null;
+            const minutes = 60*60000;
+            function restart() {
+                if (timeoutEvent) {
+                    clearTimeout(timeoutEvent);
+                    console.log("time out cleared");
+                }
+                timeoutEvent = setTimeout(() => {
+                    current.pause();
+                }, minutes);
+                stopTime = Date.now() + minutes;
+                if(countingDown) {
+                    console.log("countingDown cleared");
+                    clearInterval(countingDown);
+                }
+                countingDown = setInterval(() => {
+                    update_counting_down();
+                }, 1000);
+            }
+            restart();
+
+            function update_counting_down() {
+                var now = Date.now();
+
+                // Find the distance between now and the count down date
+                var distance = stopTime - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                document.getElementById("remaining").innerHTML = minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text 
+                if (distance < 0) {
+                    clearInterval(countingDown);
+                    document.getElementById("remaining").innerHTML = "EXPIRED";
+                }
+            }
+        </script>
+    </body>
+</html>
