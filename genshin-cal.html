@@ -19,6 +19,9 @@
     <p>快速派遣</p>
     <span id="fast-expedition-status">已回归</span>
     <button id="fast-expedition-update">派遣20小时</button>
+    <p>参量质变仪</p>
+    <span id="transformer-status">可使用</span>
+    <button id="transformer-update">使用</button>
 
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
@@ -43,9 +46,12 @@
       const fastExpeditionUpdate = document.getElementById('fast-expedition-update');
       const normalExpeditionStatus = document.getElementById('normal-expedition-status');
       const normalExpeditionUpdate = document.getElementById('normal-expedition-update');
+      const transformerStatus = document.getElementById('transformer-status');
+      const transformerUpdate = document.getElementById('transformer-update');
       let artifactEventId = undefined;
       let fastExpeditionEventId = undefined;
       let normalExpeditionEventId = undefined;
+      let transformerEventId = undefined;
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -129,6 +135,8 @@
         if(startTime < now) {
           if (eventName === "圣遗物") {
             status.textContent = "可获取";
+          } else if (event == "参量质变仪") {
+            status.textContent = "可使用";
           } else {
             status.textContent = "已回归";
           }
@@ -185,6 +193,10 @@
       artifactUpdate.onclick = () => {
         updateEvent(artifactEventId, "圣遗物", 24);
       };
+
+      transformerUpdate.onclick = () => {
+        updateEvent(transformerEventId, "参量质变仪", 24*7);
+      }
       
       {
         const length = decideTime([15, 9, 6, 3]);
@@ -219,8 +231,8 @@
         let twoDaysBefore = new Date(today);
         let twoDaysAfter = new Date(today);
         
-        twoDaysBefore.setDate(today.getDate() - 2);
-        twoDaysAfter.setDate(today.getDate() + 2);
+        twoDaysBefore.setDate(today.getDate() - 8);
+        twoDaysAfter.setDate(today.getDate() + 8);
         gapi.client.calendar.events.list({
           'calendarId': 'primary',
           'timeMin': twoDaysBefore.toISOString(),
@@ -250,6 +262,9 @@
               normalExpeditionUpdate.onclick = () => {
                 updateEvent(normalExpeditionEventId, `普通派遣`, length);
               }
+            } else if (event.summary.startsWith("参量质变仪")) {
+              updateUI(event, "参量质变仪", today, transformerStatus, transformerUpdate);
+              transformerEventId = event.id;
             }
           }
         })
