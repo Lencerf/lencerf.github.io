@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>词条计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>
+        角色
+        <select id="char" onchange="fill_in(); calc()">
+            <option value="keqing">刻晴</option>
+            <option value="yoimiya">宵宫</option>
+        </select>
+        武器
+        <select id="weapon" onchange="calc()">
+            <option value="primordial_jade_cutter">磐岩结绿</option>
+            <option value="thundering_pulse">飞雷</option>
+            <option value="rust">弓藏</option>
+        </select>
+    </p>
+    <p>
+        圣遗物主属性
+    </p>
+    <p>
+        沙 <select id="sands" onchange="calc()">
+            <option value="atk_p">攻击力</option>
+        </select>
+        杯 <select id="goblet" onchange="calc()">
+            <option value="dmg">属性伤害</option>
+        </select>
+        冠 <select id="circlet" onchange="calc()">
+            <option value="cr">暴击率</option>
+            <option value="cd">暴击伤害</option>
+        </select>
+    </p>
+    <p>
+        圣遗物副属性值
+    <ul>
+        <li>
+            生命值：<input id="a_hp" type="number" value="0" oninput="calc()">
+        </li>
+        <li>
+            攻击力：<input id="a_atk" type="number" value="0" oninput="calc()">
+        </li>
+        <li>
+            暴击率：<input id="a_cr" type="number" value="0" oninput="calc()">
+        </li>
+        <li>
+            暴击伤害：<input id="a_cd" type="number" value="0" oninput="calc()">
+        </li>
+    </ul>
+    <input type="checkbox" id="pyro_reso" oninput="calc()"> 双火共鸣
+    <input type="checkbox" id="noblesse" oninput="calc()"> 宗室4
+    <input type="checkbox" id="millelith" oninput="calc()"> 千岩4
+    </p>
+    <!-- <button onclick="calc()">计算</button> -->
+    <p>
+        结果：<span id="f_atk"></span>&times;(1+<span id="f_cr"></span>&times;<span id="f_cd"></span>)=<span
+            id="f_r"></span>
+    </p>
+    <p>
+        词条数：
+    <ul>
+        <li>
+            攻击力：<span id="n_atk"></span>
+        </li>
+        <li>
+            暴击率：<span id="n_cr"></span>
+        </li>
+        <li>
+            暴击伤害：<span id="n_cd"></span>
+        </li>
+        <li>
+            总计：<span id="n_total"></span>
+        </li>
+    </ul>
+    </p>
+    <p>
+        词条转换
+    <ul>
+        <li>
+            暴击->爆伤：<span id="cr_to_cd"></span>
+        </li>
+        <li>
+            爆伤->攻击：<span id="cd_to_atk"></span>
+        </li>
+        <li>
+            暴击->攻击：<span id="cr_to_atk"></span>
+        </li>
+    </ul>
+    </p>
+    <script type="text/javascript">
+        const weapons = {
+            primordial_jade_cutter: {
+                atk: 541.8,
+                cr: 0.441,
+                cd: 0,
+                effect: (stat) => {
+                    stat.hp += 0.2 * stat.base_hp;
+                    stat.atk += 0.012 * stat.hp;
+                }
+            },
+            thundering_pulse: {
+                atk: 608.1,
+                cr: 0,
+                cd: 0.662,
+                effect: (stat) => {
+                    stat.atk += 0.2 * stat.base_atk
+                }
+            },
+            rust: {
+                atk: 510,
+                cr: 0,
+                cd: 0,
+                effect: (stat) => {
+                    stat.atk += 0.413 * stat.base_atk
+                }
+            }
+        }
+        const characters = {
+            keqing: {
+                hp: 13103,
+                atk: 322.9,
+                cr: 0.05,
+                cd: 0.884
+            },
+            yoimiya: {
+                hp: 10164,
+                atk: 322.9,
+                cr: 0.242,
+                cd: 0.5
+            }
+        }
+        const artifact_stat = {
+            atk_p: 0.05,
+            cr: 0.033,
+            cd: 0.066,
+        }
+        const artifact_main_stat = {
+            atk_p: 0.466,
+            cr: 0.311,
+            cd: 0.622,
+            atk: 311
+        }
+        const buff_atk = {
+            millelith: {
+                true: 0.2,
+                false: 0,
+            },
+            noblesse: {
+                true: 0.2,
+                false: 0,
+            },
+            pyro_reso: {
+                true: 0.25,
+                false: 0,
+            }
+        }
+        function calc_result(atk, cr, cd) {
+            return atk * (1 + Math.min(1, cr) * cd);
+        }
+        function fill_in() {
+            const character = document.getElementById('char').value;
+            if (typeof (Storage) !== "undefined") {
+                const stored_stat = localStorage.getItem(character);
+                if (stored_stat !== null) {
+                    const stat = JSON.parse(stored_stat);
+                    document.getElementById('a_atk').value = stat.a_atk;
+                    document.getElementById('a_cr').value = stat.a_cr;
+                    document.getElementById('a_cd').value = stat.a_cd;
+                    document.getElementById('a_hp').value = stat.a_hp;
+                    document.getElementById('weapon').value = stat.weapon;
+                    document.getElementById('sands').value = stat.sands;
+                    document.getElementById('goblet').value = stat.goblet;
+                    document.getElementById('circlet').value = stat.circlet;
+                    document.getElementById('pyro_reso').checked = stat.pyro_reso;
+                    document.getElementById('millelith').checked = stat.millelith;
+                    document.getElementById('noblesse').checked = stat.noblesse;
+                } else {
+                    console.error("local storage not found", character);
+                }
+            } else {
+                console.error("local storage not supported!");
+            }
+        }
+        function calc() {
+            const character = document.getElementById('char').value;
+            const weapon = document.getElementById('weapon').value;
+            const a_atk = parseFloat(document.getElementById('a_atk').value);
+            const a_cr = parseFloat(document.getElementById('a_cr').value);
+            const a_cd = parseFloat(document.getElementById('a_cd').value);
+            const a_hp = parseFloat(document.getElementById('a_hp').value);
+            const circlet = document.getElementById('circlet').value;
+            const goblet = document.getElementById('goblet').value;
+            const sands = document.getElementById('sands').value;
+            const pyro_reso = document.getElementById('pyro_reso').checked;
+            const millelith = document.getElementById('millelith').checked;
+            const noblesse = document.getElementById('noblesse').checked;
+            if (typeof (Storage) !== "undefined") {
+                const stat = {
+                    weapon: weapon,
+                    a_atk: a_atk,
+                    a_cr: a_cr,
+                    a_cd: a_cd,
+                    a_hp: a_hp,
+                    sands: sands,
+                    goblet: goblet,
+                    circlet: circlet,
+                    pyro_reso: pyro_reso,
+                    millelith: millelith,
+                    noblesse: noblesse
+                };
+                localStorage.setItem(character, JSON.stringify(stat));
+            } else {
+                console.error("local storage not supported!");
+            }
+            const buff_atk_p = buff_atk.millelith[millelith] + buff_atk.noblesse[noblesse] + buff_atk.pyro_reso[pyro_reso];
+            var stat = {
+                base_hp: characters[character].hp,
+                base_atk: characters[character].atk + weapons[weapon].atk,
+                hp: characters[character].hp + a_hp,
+                atk: (characters[character].atk + weapons[weapon].atk) * (1 + buff_atk_p) + a_atk,
+                cr: characters[character].cr + weapons[weapon].cr + a_cr,
+                cd: characters[character].cd + weapons[weapon].cd + a_cd
+            }
+            weapons[weapon].effect(stat)
+            stat.atk += 0.18 * stat.base_atk
+            const result = calc_result(stat.atk, stat.cr, stat.cd);
+            document.getElementById('f_atk').textContent = stat.atk.toFixed(0)
+            if (stat.cr > 1) {
+                document.getElementById('f_cr').textContent = 1
+            } else {
+                document.getElementById('f_cr').textContent = stat.cr.toFixed(3)
+            }
+            document.getElementById('f_cd').textContent = stat.cd.toFixed(3)
+            document.getElementById('f_r').textContent = result.toFixed(0)
+
+            var n_cr = a_cr / artifact_stat.cr;
+            if (circlet === 'cr') {
+                n_cr -= artifact_main_stat.cr / artifact_stat.cr;
+            }
+            var n_cd = a_cd / artifact_stat.cd;
+            if (circlet === 'cd') {
+                n_cd -= artifact_main_stat.cd / artifact_stat.cd;
+            }
+
+            var n_atk = (a_atk - artifact_main_stat.atk) / stat.base_atk;
+            if (sands === 'atk_p') {
+                n_atk -= artifact_main_stat.atk_p;
+            }
+            n_atk /= artifact_stat.atk_p;
+
+            document.getElementById('n_cr').textContent = n_cr.toFixed(2);
+            document.getElementById('n_cd').textContent = n_cd.toFixed(2);
+            document.getElementById('n_atk').textContent = n_atk.toFixed(2);
+            document.getElementById("n_total").textContent = (n_cr + n_cd + n_atk).toFixed(2);
+
+            const result_cr_cd = calc_result(stat.atk, stat.cr - artifact_stat.cr, stat.cd + artifact_stat.cd)
+            document.getElementById('cr_to_cd').textContent = result_cr_cd / result - 1
+            const result_cd_atk = calc_result(stat.atk + stat.base_atk * artifact_stat.atk_p, stat.cr, stat.cd - artifact_stat.cd)
+            document.getElementById('cd_to_atk').textContent = result_cd_atk / result - 1
+            const result_cr_atk = calc_result(stat.atk + stat.base_atk * artifact_stat.atk_p, stat.cr - artifact_stat.cr, stat.cd)
+            document.getElementById('cr_to_atk').textContent = result_cr_atk / result - 1
+        }
+        fill_in();
+        calc();
+    </script>
+</body>
+
+</html>
