@@ -92,6 +92,35 @@
         </li>
     </ul>
     </p>
+    <p>
+        材料计算:
+    <ul>
+        <input type="checkbox" id="material-return">25%概率返还
+        <input type="checkbox" id="material-double">10%双倍
+        <input type="checkbox" id="material-none">无buff
+        <li>
+            目标：
+            金<input type="number" id="material-dest-4" onchange="calcMaterialDiff();">
+            紫<input type="number" id="material-dest-3" onchange="calcMaterialDiff();">
+            蓝<input type="number" id="material-dest-2" onchange="calcMaterialDiff();">
+            绿<input type="number" id="material-dest-1" onchange="calcMaterialDiff();">
+        </li>
+        <li>
+            当前：
+            金<input type="number" id="material-curr-4" onchange="calcMaterialDiff();">
+            紫<input type="number" id="material-curr-3" onchange="calcMaterialDiff();">
+            蓝<input type="number" id="material-curr-2" onchange="calcMaterialDiff();">
+            绿<input type="number" id="material-curr-1" onchange="calcMaterialDiff();">
+        </li>
+        <li>
+            差距：
+            金<span id="material-diff-4"></span>
+            紫<span id="material-diff-3"></span>
+            蓝<span id="material-diff-2"></span>
+            绿<span id="material-diff-1"></span>
+        </li>
+    </ul>
+    </p>
     <script type="text/javascript">
         const weapons = {
             primordial_jade_cutter: {
@@ -265,8 +294,49 @@
             const result_cr_atk = calc_result(stat.atk + stat.base_atk * artifact_stat.atk_p, stat.cr - artifact_stat.cr, stat.cd)
             document.getElementById('cr_to_atk').textContent = result_cr_atk / result - 1
         }
+        function fillInMaterial() {
+            const stored_material = localStorage.getItem('material');
+            const stored = JSON.parse(stored_material);
+            if (stored !== null) {
+                for (var i = 1; i <= 4; i += 1) {
+                    const i_str = i.toString();
+                    document.getElementById("material-dest-" + i_str).value = stored.dest[i_str]
+                    document.getElementById("material-curr-" + i_str).value = stored.curr[i_str]
+                }
+            }
+        }
+        function getNumberFromId(element_id) {
+            const value = document.getElementById(element_id).value;
+            if (value === '') {
+                return 0.0;
+            } else {
+                return parseFloat(value)
+            }
+        }
+        function calcMaterialDiff() {
+            var fromPrevLevel = 0;
+            var material = { dest: {}, curr: {} };
+            for (var i = 1; i <= 4; i += 1) {
+                const i_str = i.toString();
+                const dest = getNumberFromId("material-dest-" + i_str);
+                const current = getNumberFromId("material-curr-" + i_str);
+                material.dest[i_str] = dest
+                material.curr[i_str] = current
+                const resultlabel = document.getElementById("material-diff-" + i_str);
+                if (current + fromPrevLevel >= dest) {
+                    fromPrevLevel = (current + fromPrevLevel - dest) / 3.0;
+                    resultlabel.textContent = "0";
+                } else {
+                    resultlabel.textContent = (dest - current - fromPrevLevel).toFixed(2);
+                    fromPrevLevel = 0;
+                }
+            }
+            localStorage.setItem('material', JSON.stringify(material));
+        }
         fill_in();
         calc();
+        fillInMaterial();
+        calcMaterialDiff();
     </script>
 </body>
 
