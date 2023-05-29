@@ -10,6 +10,8 @@
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="display: none;">Authorize</button>
     <button id="signout_button" style="display: none;">Sign Out</button>
+    <p>恢复时间</p>
+    <div id="recover_time"></div>
     <p>圣遗物：</p>
     <span id="artifact-status">可获取</span>
     <button id="artifact-update">拾取</button>
@@ -307,6 +309,44 @@
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+    <script type="text/javascript">
+      function addMinutes(date, minutes) {
+        return new Date(date.getTime() + minutes*60000);
+      }
+    
+      const RESIN_CAP = 160;
+      const RECOVER_SPEED = 8;
+      
+      function capTime(start) {
+          return RECOVER_SPEED * (RESIN_CAP - start);
+      }
+
+      function formatDate(current, destTime) {
+        if (destTime.getDay() == current.getDay()) {
+          return "今天 " + destTime.getHours() + ":" + destTime.getMinutes();
+        } else {
+          return "明天" + destTime.getHours() + ":" + destTime.getMinutes();
+        }
+      }
+      
+      var current = new Date();
+      // current.getmi
+      // console.log(addMinutes(current, 0), current, "clyu")
+      let recoverDiv = document.getElementById("recover_time");
+      for (let resin = 80; resin > -1; resin -= 20) {
+        destTime = addMinutes(current, capTime(resin));
+        // console.log(t, current, destTime, destTime.toISOString())
+        let timeSpan = document.createElement('p');
+        timeSpan.textContent = resin + ": " + formatDate(current, destTime);
+        recoverDiv.appendChild(timeSpan);
+      }
+      // from_twenty = addMinutes(current, capTime(20));
+      // from_forty = addMinutes(current, capTime(40));
+      // console.log(from_zero)
+      // console.log(from_twenty)
+      // console.log(from_forty)
     </script>
   </body>
 </html>
