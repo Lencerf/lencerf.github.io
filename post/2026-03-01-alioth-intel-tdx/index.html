@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Lencerf" name="author">
+<meta property="og:title" content="Bringing Intel TDX Support to Alioth - Lencerf&#39;s Walk">
+<meta property="og:description" content="to hit the marked point">
+<meta property="og:type" content="website">
+<title>Bringing Intel TDX Support to Alioth | Lencerf&#39;s Walk</title>
+<link rel="stylesheet" href="../../css/style.css">
+<script src="https://kit.fontawesome.com/8455592b61.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" media="screen" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="../../js/gallery.js" defer></script>
+
+
+
+
+</head>
+  <body>
+        <div id="homeWhite" style="margin-top:30px"></div>
+    <header class="section">
+      <nav class="nav">
+        <div class="nav-left">
+          <h1 class="page-title">
+            <a class="nav-item" href="../../">Lencerf&#39;s Walk</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+          
+        </div>
+      </nav>
+    </header>
+    
+    <article class="section">
+    
+      <h1 class="title">Bringing Intel TDX Support to Alioth</h1>
+        
+        <time class="meta">March 1, 2026</time>
+        
+      <div class="meta">
+        
+          <span class="metagroup">
+            
+            
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <a href="../../categories/technology" rel="category">Technology</a>
+            
+          </span>
+        
+        
+          <span class="metagroup">
+            
+              <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            
+              
+              <a href="../../tags/virtualization/" rel="tag">Virtualization</a>
+            
+              
+                <span id="tagcomma">,</span>
+              
+              <a href="../../tags/tdx/" rel="tag">TDX</a>
+            
+          </span>
+        
+      </div>
+      <main class="content entry-content entry clearfix">
+        <p>I&rsquo;m excited to share a significant milestone in my hobby project, <a href="https://github.com/google/alioth">Alioth</a>, a from-scratch Virtual Machine Monitor (VMM) written in Rust. In my quest to explore the frontiers of confidential computing, I&rsquo;ve just landed initial support for Intel Trust Domain Extensions (TDX). This post will walk you through the journey, the challenges I encountered, and the interesting discoveries I made along the way.</p>
+<p>For those unfamiliar with Alioth, it&rsquo;s my personal endeavor to build a lightweight and modern VMM, similar in spirit to QEMU but with a much smaller scope. The goal is to learn and experiment with virtualization technologies in a hands-on way.</p>
+<h2 id="the-path-to-tdx">The Path to TDX</h2>
+<p>My primary reference for this implementation was the excellent work done in QEMU. The patches from <a href="https://lore.kernel.org/all/20250508150002.689633-1-xiaoyao.li@intel.com/">Xiaoyao Li at Intel</a> were an invaluable guide. The process involved several stages, mainly done in <a href="https://github.com/google/alioth/pull/406">#406</a>. You can see the complete history starting from <a href="https://github.com/google/alioth/commit/6f7f070254a9002af6742b55d04a444a8cc0cbd0"><code>6f7f070254a9</code></a>.</p>
+<p>Here&rsquo;s a brief overview of the key steps:</p>
+<ul>
+<li><strong>Initial Scaffolding:</strong> I started by defining the necessary TDX-specific data structures and constants <a href="https://github.com/google/alioth/pull/392">#392</a>, and added a <code>Coco</code> (Confidential Computing Orchestrator) variant for Intel TDX <a href="https://github.com/google/alioth/pull/399">#399</a>.</li>
+<li><strong>KVM Integration:</strong> This involved enabling the <code>KvmVmType::TDX</code> <a href="https://github.com/google/alioth/pull/400">#400</a> and creating a <code>guest_memfd</code> for the trusted guest <a href="https://github.com/google/alioth/pull/401">#401</a>. I also configured the required KVM capabilities for TDX and initialized the TDX VM with supported CPUID features.</li>
+<li><strong>Firmware and Memory:</strong> A significant part of the work was handling the TDX firmware. I implemented parsing for the Trust Domain Virtualization Firmware (TDVF) and generated the UEFI Hand-Off Block (HOB) <a href="https://github.com/google/alioth/pull/405">#405</a>. This is crucial for the guest to boot correctly. I also added the logic to initialize memory regions and finalize the TDX VM.</li>
+<li><strong>VCPU Initialization:</strong> Each VCPU was then initialized with the HOB address, allowing it to start in a known state.</li>
+</ul>
+<p>While implementing TDX support, I also refactored the existing codebase a lot (<a href="https://github.com/google/alioth/pull/393">#393</a>, <a href="https://github.com/google/alioth/pull/395">#395</a>, <a href="https://github.com/google/alioth/pull/403">#403</a>), mainly to remove hardcoded code paths for AMD-SEV and create a more modular architecture.</p>
+<h2 id="firmware-stage0-for-now">Firmware: Stage0 for Now</h2>
+<p>One important point to note is that the current implementation relies on <a href="https://github.com/project-oak/oak/tree/main/stage0_bin_tdx">oak/stage0</a> as the firmware. This is a minimal firmware designed for confidential computing scenarios. As a result, traditional OVMF-based boot is not yet supported.</p>
+<h2 id="an-unexpected-bug-in-ovmf">An Unexpected Bug in OVMF</h2>
+<p>While using QEMU and OVMF as a reference, I stumbled upon a bug in OVMF&rsquo;s Intel TDX support. I was happy to contribute a fix for this, which you can find in <a href="https://github.com/tianocore/edk2/pull/12216">pull request #12216</a>. It&rsquo;s always rewarding to contribute back to the projects I learn from.</p>
+<h2 id="wrestling-with-kvmtdx">Wrestling with KVM/TDX</h2>
+<p>The journey wasn&rsquo;t without its challenges. I ran into a couple of interesting issues with the KVM/TDX interface:</p>
+<ol>
+<li>
+<p><strong>Missing <code>SIGNIFICANT_INDEX</code> Flag:</strong> I discovered that the <code>struct kvm_cpuid_entry2</code> returned by <code>KVM_TDX_CAPABILITIES</code> were missing the <code>SIGNIFICANT_INDEX</code> flag. This caused the CPUID index to be parsed as <code>None</code>, breaking CPUID capability matching against <code>KVM_GET_SUPPORTED_CPUID</code>. I&rsquo;ve reported this to the KVM community (<a href="https://lore.kernel.org/all/20260223214336.722463-1-changyuanl@google.com/">link to mailing list post</a>) and implemented a workaround in Alioth (commit <a href="https://github.com/google/alioth/commit/f5bf11ab2634"><code>f5bf11ab2634</code></a>) to handle this.</p>
+</li>
+<li>
+<p><strong>TDX Guest Kernel Probing ROMs:</strong> I also found that the TDX guest Linux kernel was still probing for ROMs, which would cause guest crashes because the memory is not backed. With the help of Gemini, I was able to patch the guest kernel to work around this issue:</p>
+<pre><code class="language-diff">--- a/arch/x86/coco/tdx/tdx.c
++++ b/arch/x86/coco/tdx/tdx.c
+@@ -1127,6 +1127,9 @@ void __init tdx_early_init(void)
+
+        cc_vendor = CC_VENDOR_INTEL;
+
++       /* Prevent probe_roms() from crashing on unbacked private MMIO */
++       x86_init.resources.probe_roms = x86_init_noop;
++
+        /* Configure the TD */
+        tdx_setup(&amp;cc_mask);
+</code></pre>
+</li>
+</ol>
+<h2 id="whats-next">What&rsquo;s Next?</h2>
+<p>Getting TDX support to this stage has been a rewarding challenge. There&rsquo;s still more to do, like exploring OVMF support, upstreaming local kernel patches, and continuing to improve the robustness of the implementation. I&rsquo;m excited to see where this journey takes me next.</p>
+<p>I hope this gives you a good overview of what&rsquo;s been happening with Alioth. As always, feel free to check out the project on <a href="https://github.com/google/alioth">GitHub</a> and share your thoughts!</p>
+
+      </main>
+    </article>
+    
+    
+<section class="section" id="disqus"  >
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'changyuanme';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+    
+    <footer class="section">
+  <div class="container has-text-centered">
+    &copy; 2014-2026 Lencerf
+    | Generated by 
+   <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a> | 
+   <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+  </div>
+</footer>
+
+
+<script>
+  function changeCSS(media, link) {
+    if(media.matches) {
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark.min.css";
+    } else {
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/foundation.min.css";
+    }
+  }
+
+  var head = document.getElementsByTagName('HEAD')[0];
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  head.appendChild(link);
+  
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  changeCSS(media, link);
+
+  media.addListener(() => {
+    changeCSS(media, link);
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>  
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/diff.min.js"></script>
+ 
+ 
+
+
+
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" defer>
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+  
+
+
+<script type="text/javascript" defer>
+  var changeExternalTarget = function() {
+    function extractHostname(url) {
+      var hostname;
+      if (url.indexOf("://") > -1) {
+          hostname = url.split('/')[2];
+      }
+      else {
+          hostname = url.split('/')[0];
+      }
+      hostname = hostname.split(':')[0];
+      return hostname;
+    }
+    links = document.getElementsByTagName('a')
+    for (var i = 0; i < links.length; i++) {
+        if (extractHostname(links[i].href) != window.location.hostname) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', changeExternalTarget, false);
+</script>
+<script type="text/javascript" defer>
+  var resize = function() {
+    var bodyHeight = document.body.clientHeight;
+    if (bodyHeight < window.innerHeight - 30) {
+      document.getElementById("homeWhite").style.marginTop = 0.382 * (window.innerHeight - bodyHeight) + "px";
+    } else {
+      document.getElementById("homeWhite").style.marginTop = "30px";
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize, false);
+  function onElementHeightChange(elm, callback){
+    var lastHeight = elm.clientHeight, newHeight;
+    (function run(){
+        newHeight = elm.clientHeight;
+        if( lastHeight != newHeight )
+            callback();
+        lastHeight = newHeight;
+
+        if( elm.onElementHeightChangeTimer )
+            clearTimeout(elm.onElementHeightChangeTimer);
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+  onElementHeightChange(document.body, function(){
+    resize();
+    console.log("changed", document.body.clientHeight, window.innerHeight);
+
+  });
+</script>
+    
+  </body>
+</html>
