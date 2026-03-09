@@ -5,10 +5,48 @@
     <description>Recent content in Posts on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Mar 2026 23:24:11 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2026 22:12:41 -0700</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introducing UEFI Support for Alioth with AVMF</title>
+      <link>/post/2026-03-08-alioth-uefi-support/</link>
+      <pubDate>Sun, 08 Mar 2026 22:12:41 -0700</pubDate>
+      
+      <guid>/post/2026-03-08-alioth-uefi-support/</guid>
+      <description>
+      
+      <![CDATA[<p>Following up on my <a href="/post/2026-03-01-alioth-intel-tdx/">recent work</a> adding Intel TDX support to <a href="https://github.com/google/alioth">Alioth</a>, I am thrilled to announce another major milestone for the project: full UEFI support. This enables Alioth to boot standard Linux distributions seamlessly, taking us one step closer to running fully featured confidential virtual machines.</p>
+<h2 id="avmf-alioth-virtual-machine-firmware">AVMF: Alioth Virtual Machine Firmware</h2>
+<p>To achieve this, I forked <a href="https://github.com/tianocore/edk2">EDK2/OVMF</a> (which is traditionally used for QEMU) to create a new, UEFI-compatible firmware specifically tailored for Alioth. I&rsquo;m calling it <strong>AVMF</strong> (Alioth Virtual Machine Firmware).</p>
+<p>The code for AVMF is available on GitHub at <a href="https://github.com/Lencerf/edk2/tree/feat/alioth/avmf"><code>https://github.com/Lencerf/edk2</code></a> on the <code>feat/alioth/avmf</code> branch. Here is a summary of the core changes made to EDK2 to support Alioth:</p>
+<ul>
+<li><strong>Forked QEMU&rsquo;s OVMF:</strong> Created a new <code>AliothPkg</code> by copying and adapting the OVMF configuration (<code>.dsc</code> and <code>.fdf</code> files).</li>
+<li><strong>Added Alioth-Specific Libraries:</strong> Implemented new <code>AcpiTimerLib</code> and <code>ResetSystemLib</code> instances tailored for Alioth&rsquo;s hardware model.</li>
+<li><strong>Platform Initialization Updates:</strong> Modified memory detection and platform initialization code to recognize the PCI Host Bridge Device ID of Alioth. This includes configuring the correct 32-bit MMIO base and size, setting up PCI IO port space, and skipping QEMU-specific hardware routines.</li>
+</ul>
+<h2 id="upgrading-alioth-for-uefi">Upgrading Alioth for UEFI</h2>
+<p>On the hypervisor side, supporting a complex firmware environment like UEFI required adding a few more emulated devices and ironing out several bugs. I&rsquo;ve made significant improvements to the device model, including:</p>
+<ul>
+<li><strong>New Emulated Devices:</strong> Added a <code>fw_dbg</code> device specifically for capturing firmware logs <a href="https://github.com/google/alioth/pull/426">#426</a>, an emulated CMOS for x86 <a href="https://github.com/google/alioth/pull/421">#421</a>, and an ACPI Power Management timer <a href="https://github.com/google/alioth/pull/419">#419</a>.</li>
+<li><strong>fw_cfg Enhancements:</strong> Added CPU count and memory size to <code>fw_cfg</code> <a href="https://github.com/google/alioth/pull/423">#423</a> so the firmware can dynamically read the VM configuration instead of relying on hardcoded platform initialization.</li>
+<li><strong>MMIO and ACPI Fixes:</strong> Fixed MMIO to properly return all-ones when reading unmapped addresses <a href="https://github.com/google/alioth/pull/422">#422</a> (a common behavior firmware expects) and fixed an issue with clearing ACPI table checksums before recalculation <a href="https://github.com/google/alioth/pull/417">#417</a>.</li>
+<li><strong>AMD-SNP related Fixes:</strong> Removed unsupported CPUID features <a href="https://github.com/google/alioth/pull/424">#424</a> and fixed unknown page descriptors as zero pages for AMD-SNP <a href="https://github.com/google/alioth/pull/425">#425</a>.</li>
+</ul>
+<h2 id="ai-assisted-firmware-development">AI-Assisted Firmware Development</h2>
+<p>One of the most exciting aspects of developing AVMF was the workflow. I used <strong>Gemini AI</strong> to assist with the firmware development, guiding it with a comprehensive prompt file called <code>project.md</code>. This prompt contained the project goals, repository paths, build instructions, and tips on the architectural differences between QEMU and Alioth&rsquo;s hardware models.</p>
+<p>I have to say, it was amazingly effective. Once I spent the time to properly set up the development environment and clearly define the context and goals in <code>project.md</code>, Gemini was able to navigate the complex EDK2 codebase, strip out QEMU-specific dependencies, and help construct the new AliothPkg almost seamlessly.</p>
+<h2 id="the-result-booting-confidential-linux">The Result: Booting Confidential Linux</h2>
+<p>The combination of AVMF and the updated Alioth VMM is a massive leap forward. With AVMF, we can now successfully boot confidential VMs using both <strong>AMD-SNP</strong> and <strong>Intel-TDX</strong>.</p>
+<p>I have successfully tested booting <strong>Fedora Linux 43</strong> as a confidential guest, proving that the firmware and device model are capable of handling a modern, unmodified OS boot process.</p>
+<p>However, I observed some random crashes of the firmware when rebooting the VM, so more efforts are needed to polish the firmware to a truly robust state.</p>
+<p>This is an exciting step for the Alioth project. Stay tuned for more updates as I continue to refine the hypervisor and explore more advanced confidential computing features!</p>
+]]>
+      
+      </description>
+    </item>
     
     <item>
       <title>Bringing Intel TDX Support to Alioth</title>
