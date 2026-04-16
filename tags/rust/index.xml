@@ -5,10 +5,107 @@
     <description>Recent content in Rust on Lencerf&#39;s Walk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2020 13:17:21 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 08:14:40 -0700</lastBuildDate>
     
         <atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mastering Low-Level Constants in Rust: The consts! Macro from Alioth</title>
+      <link>/post/2026-04-16-alioth-consts/</link>
+      <pubDate>Thu, 16 Apr 2026 08:14:40 -0700</pubDate>
+      
+      <guid>/post/2026-04-16-alioth-consts/</guid>
+      <description>
+      
+      <![CDATA[<p>When writing systems software—especially virtual machine monitors (VMMs) like Alioth, operating systems, or drivers—you inevitably find yourself swimming in a sea of magic numbers. Hardware registers, hypercall ABIs, and binary file formats define strict integer values for their constants.</p>
+<p>In Rust, the traditional <code>enum</code> is fantastic for exhaustive pattern matching, but it falls short when dealing with external interfaces. Why? Because an external source (like a guest OS or a hardware device) might send you a value that your <code>enum</code> doesn&rsquo;t know about. If you use <code>unsafe</code> to cast an unknown integer into a standard Rust <code>enum</code>, you trigger undefined behavior.</p>
+<p>To solve this, systems programmers often use the &ldquo;newtype&rdquo; pattern combined with associated constants. In the <a href="https://github.com/changyuanl/alioth">Alioth</a> project—a virtualization hypervisor written in Rust—this pattern is beautifully abstracted away into a single, powerful declarative macro: <code>consts!</code>.</p>
+<p>In this post, we&rsquo;ll dive into how the <code>consts!</code> macro works, why it&rsquo;s designed this way, and the immense benefits it brings to systems programming in Rust.</p>
+<h2 id="the-consts-macro">The <code>consts!</code> Macro</h2>
+<p>Here is the core definition of the macro from <code>alioth/src/utils/utils.rs</code>:</p>
+<pre><code class="language-rust">#[macro_export]
+macro_rules! consts {
+    (
+        $(#[$attr:meta])*
+        $vs:vis struct $EnumName:ident($TyName:ty) {
+            $( $(#[$vattr:meta])* $VARIANT:ident = $value:expr;)*
+        }
+    ) =&gt; {
+        #[repr(transparent)]
+        #[derive(PartialEq, Eq, Copy, Clone)]
+        $(#[$attr])*
+        $vs struct $EnumName($TyName);
+
+        impl $EnumName {
+            $($(#[$vattr])* pub const $VARIANT: $EnumName = $EnumName($value);)*
+
+            #[allow(dead_code)]
+            pub const fn raw(self) -&gt; $TyName {
+                self.0
+            }
+
+            #[allow(dead_code)]
+            pub const fn name(self) -&gt; &amp;'static str {
+                match self {
+                    $($EnumName::$VARIANT =&gt; stringify!($VARIANT),)*
+                    #[allow(unreachable_patterns)]
+                    _ =&gt; &quot;Unknown&quot;
+                }
+            }
+        }
+
+        /* ... Custom Debug &amp; From impls ... */
+    }
+}
+</code></pre>
+<p>This macro takes a syntax that looks like a C-style struct/enum and expands it into a fully-featured Rust &ldquo;newtype&rdquo; struct.</p>
+<h2 id="how-its-used">How It&rsquo;s Used</h2>
+<p>In Alioth, you&rsquo;ll find this macro used everywhere—from ARM PSCI (Power State Coordination Interface) function IDs to QCOW2 compression types and FUSE filesystem opcodes.</p>
+<p>Here is an example of defining PSCI function IDs from <code>alioth/src/arch/aarch64/psci.rs</code>:</p>
+<pre><code class="language-rust">consts! {
+    /// https://developer.arm.com/documentation/den0022/latest/
+    pub struct PsciFunc(u32) {
+        PSCI_VERSION = 0x8400_0000;
+        CPU_SUSPEND_32 = 0x8400_0001;
+        CPU_SUSPEND_64 = 0xc400_0001;
+        CPU_OFF = 0x8400_0002;
+        // ... more constants
+    }
+}
+</code></pre>
+<h2 id="the-benefits-of-consts">The Benefits of <code>consts!</code></h2>
+<h3 id="1-open-and-extensible-by-design">1. Open and Extensible by Design</h3>
+<p>Unlike Rust&rsquo;s standard <code>enum</code>, the underlying storage is explicitly defined as a raw integer (e.g., <code>u32</code>). This means you can safely construct a <code>PsciFunc</code> from <em>any</em> <code>u32</code> value without causing Undefined Behavior. If a guest OS sends an unknown or reserved PSCI function ID, the VMM can safely receive it, realize it doesn&rsquo;t match known constants, and return a &ldquo;Not Supported&rdquo; error rather than crashing or panicking.</p>
+<h3 id="2-type-safety">2. Type Safety</h3>
+<p>By wrapping the raw integer in a new struct, <code>consts!</code> prevents accidental mixing of different domains of constants. You can&rsquo;t accidentally pass a <code>FuseOpcode</code> to a function expecting a <code>PsciFunc</code>, even if they are fundamentally both <code>u32</code> under the hood. The compiler guarantees domain correctness.</p>
+<h3 id="3-transparent-ffi-and-zero-copy-serialization">3. Transparent FFI and Zero-Copy Serialization</h3>
+<p>Notice the <code>#[repr(transparent)]</code> attribute injected by the macro. This guarantees to the compiler that the memory layout of <code>PsciFunc</code> is exactly identical to a bare <code>u32</code>.</p>
+<p>Furthermore, the macro allows passing through custom derive macros. In Alioth, it is frequently combined with crates like <code>zerocopy</code> for zero-allocation binary parsing:</p>
+<pre><code class="language-rust">consts! {
+    #[derive(FromBytes, Immutable, IntoBytes)]
+    pub struct FuseOpcode(u32) {
+        LOOKUP = 1;
+        FORGET = 2;
+        GETATTR = 3;
+        // ...
+    }
+}
+</code></pre>
+<p>Thanks to <code>#[repr(transparent)]</code> and <code>FromBytes</code>, Alioth can cast a raw byte slice fetched from a FUSE socket directly into a strongly-typed <code>FuseOpcode</code> safely.</p>
+<h3 id="4-excellent-developer-ergonomics">4. Excellent Developer Ergonomics</h3>
+<p>The macro generates highly useful boilerplate automatically:</p>
+<ul>
+<li><strong><code>raw()</code></strong>: Easily extract the underlying primitive.</li>
+<li><strong><code>From</code> Trait Impls</strong>: Convert seamlessly between the raw integer and the newtype using <code>.into()</code>.</li>
+<li><strong>Human-Readable Formatting</strong>: The generated <code>Debug</code> implementation provides a fantastic developer experience. If the value matches a known constant, it prints beautifully (e.g., <code>PsciFunc::CPU_OFF</code>). If it&rsquo;s an unknown value (like <code>0x9999_9999</code>), it falls back to printing the raw wrapped data <code>PsciFunc(2576980377)</code>. This makes logs significantly easier to read and debug compared to a stream of raw hexadecimal numbers.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The <code>consts!</code> macro is a quintessential example of Rust&rsquo;s declarative macros solving real-world systems programming problems. By automating the &ldquo;newtype&rdquo; pattern, it gives Alioth the type safety and developer ergonomics of Rust enums, without sacrificing the ABI guarantees and &ldquo;open&rdquo; nature required to interface with raw hardware, external protocols, and untrusted guest environments.</p>
+]]>
+      
+      </description>
+    </item>
     
     <item>
       <title>Introducing UEFI Support for Alioth with AVMF</title>
